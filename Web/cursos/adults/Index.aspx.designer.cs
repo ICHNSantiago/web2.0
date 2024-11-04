@@ -42,6 +42,15 @@ namespace Web.cursos.adults
         protected global::System.Web.UI.WebControls.LinkButton LinkButtonDescripcion;
 
         /// <summary>
+        /// Control LinkButtonSummer.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonSummer;
+
+        /// <summary>
         /// Control LinkButtonObjetivo.
         /// </summary>
         /// <remarks>
@@ -256,5 +265,14 @@ namespace Web.cursos.adults
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_niveles;
+
+        /// <summary>
+        /// Control div_summer.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_summer;
     }
 }

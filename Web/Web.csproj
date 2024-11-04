@@ -241,6 +241,7 @@
     <Content Include="img\programas\preschool_largo.png" />
     <Content Include="img\programas\preschool_niveles.png" />
     <Content Include="img\programas\spring_largo.png" />
+    <Content Include="img\programas\summer_adults.jpg" />
     <Content Include="img\programas\teens_largo.png" />
     <Content Include="img\programas\teens_niveles.png" />
     <Content Include="img\programas\toefl01.png" />
@@ -843,6 +844,7 @@
     <Content Include="img\programas\teens_niveles.webp" />
     <Content Include="img\programas\kids_niveles.webp" />
     <Content Include="img\programas\preschool_niveles.webp" />
+    <Content Include="img\programas\summer_adults.webp" />
     <None Include="packages.config" />
     <Content Include="Tematica\18sep\volantin.webp" />
     <Content Include="Tematica\hallo\halloween2.webp" />

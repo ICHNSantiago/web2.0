@@ -9,7 +9,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-        <!-- Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7349HX"
             height="0" width="0" style="display: none; visibility: hidden"></iframe>
@@ -73,6 +73,9 @@
                         <ul class="nav nav-pills nav-fill nav-tabs" role="tablist">
                             <li class="nav-item active" role="presentation">
                                 <asp:LinkButton ID="LinkButtonDescripcion" class="nav-link" runat="server" OnClick="LinkButtonDescripcion_Click">Descripción</asp:LinkButton>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <asp:LinkButton ID="LinkButtonSummer" class="nav-link" runat="server" OnClick="LinkButtonSummer_Click">Summer School</asp:LinkButton>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <asp:LinkButton ID="LinkButtonObjetivo" class="nav-link" runat="server" OnClick="LinkButtonObjetivo_Click">Objetivos</asp:LinkButton>
@@ -278,8 +281,6 @@
 
                             </div>
 
-
-
                             <div class="col-xl-12" runat="server" id="div_descripcion" visible="false">
                                 <div class="row mt-5 text-dark">
                                     <div class="col-md-12">
@@ -388,8 +389,68 @@
 
                             <div class="col-xl-12" runat="server" id="div_niveles" visible="false">
                                 <div class="row mt-5">
-                                    <div class="col-md-12">                                 
+                                    <div class="col-md-12">
                                         <img class="img-fluid rou" src="../../img/programas/adultos_niveles.webp" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-12" runat="server" id="div_summer" visible="false">
+                                <div class="row mt-5 text-dark">
+                                    <div class="col-md-12">
+                                        <h2>English | <span class="text-primary">Summer School</span></h2>
+                                        <hr />
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="../../img/programas/summer_adults.jpg" class="img-fluid rounded w-100" alt="">                                       
+                                    </div>
+                                    <div class="col-md-9">
+
+                                        <table class="table text-dark">
+                                            <tr>
+                                                <td>
+                                                    <h5>Edad</h5>
+                                                </td>
+                                                <td>
+                                                    <h5>Desde los 17 años</h5>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <h5>Inicios</h5>
+                                                </td>
+                                                <td>
+                                                    <h5>Enero | Febrero</h5>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <h5>Duración</h5>
+                                                </td>
+                                                <td>
+                                                    <h5>1 mes por curso</h5>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <h5>Metodología</h5>
+                                                </td>
+                                                <td>
+                                                    <h5>Integración del drama y la improvisación para aprender idiomas</h5>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <h5>Este verano lleva tu inglés a un nuevo nivel. El programa incluye talleres de improvisación teatral, simulaciones y juegos de roles.
+                                                    </h5>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                   Observación: Estudiantes que llegan por renovación deben solicitar homologación hacia el nivel más próximo abierto por temporada de verano.
+                                                </td>
+                                            </tr>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
