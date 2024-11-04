@@ -1,0 +1,90 @@
+﻿using Datos;
+using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Negocio
+{
+    public class Ndiagnostico
+    {
+        readonly Diagnostico alumno = new Diagnostico();
+
+        public DataTable BuscarAdultos(string alumnoID)
+        {
+            return alumno.BuscarAdultos(alumnoID);
+        }
+
+        public DataTable BuscarTeens(string alumnoID)
+        {
+            return alumno.BuscarTeens(alumnoID);
+        }
+
+       
+        public DataTable PruebaAdultos(int nivel, int test)
+        {
+            return alumno.PruebaAdultos(nivel, test);
+        }
+
+        public DataTable PruebaTeens(int nivel, int test)
+        {
+            return alumno.PruebaTeens(nivel, test);
+        }
+
+
+
+
+        public DataTable PruebaRespuestaAdultos(int nivel, int test)
+        {
+            return alumno.PruebaRespuestaAdultos(nivel, test);
+        }
+
+        public DataTable PruebaRespuestaTeens(int nivel, int test)
+        {
+            return alumno.PruebaRespuestaTeens(nivel, test);
+        }
+
+        public string IngresarRespuestasAdultos(int diagnosticoID, int testID, int cursoID, int preguntaID, string respuesta, DateTime fecha)
+        {
+            return alumno.IngresarRespuestasAdultos(diagnosticoID, testID, cursoID, preguntaID, respuesta, fecha);
+        }
+
+        public string IngresarRespuestasTeens(int diagnosticoID, int testID, int cursoID, int preguntaID, string respuesta, DateTime fecha)
+        {
+            return alumno.IngresarRespuestasTeens(diagnosticoID, testID, cursoID, preguntaID, respuesta, fecha);
+        }
+
+        public string NivelNombre(int idCurso)
+        {
+            DataTable data = alumno.NivelNombre(idCurso);
+            string var = data.Rows[0]["NombreCurso"].ToString().ToLower().Replace("-", string.Empty);
+            string[] nombres = var.Split(' ');
+            return nombres[0];
+        }
+
+        public string NivelNombreTeens(int idCurso)
+        {
+            DataTable data = alumno.NivelNombre(idCurso);
+            string var = data.Rows[0]["NombreCurso"].ToString().ToLower().Replace("-", string.Empty);
+            string[] nombres = var.Split(' ');
+            return nombres[1];
+        }
+
+        public string ActualizarEstado(int diagnosticoID, int nivelID, string estado)
+        {
+            return alumno.ActualizarEstado(diagnosticoID, nivelID, estado);
+        }
+
+        public DataTable ValidarAlumno(string alumnoID)
+        {
+            return alumno.ValidarAlumno(alumnoID);
+        }
+
+        public string Ingreso(string rut, int nivel, string usuario, int lead)
+        {
+            return alumno.Ingresar(rut, nivel, usuario, lead);
+        }
+    }
+}

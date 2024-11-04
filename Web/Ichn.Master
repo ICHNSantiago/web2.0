@@ -1,0 +1,351 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Ichn.master.cs" Inherits="Web.Ichn" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:slnt,wght@-10..0,100..900&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+   
+
+    <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" href="<%=Page.ResolveUrl("~/lib/animate/animate.min.css") %>" />
+    <link rel="stylesheet" href="<%=Page.ResolveUrl("~/lib/lightbox/css/lightbox.min.css") %>">
+    <link rel="stylesheet" href="<%=Page.ResolveUrl("~/lib/owlcarousel/assets/owl.carousel.min.css") %>">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link rel="stylesheet" href="<%=Page.ResolveUrl("~/lib/ls/bootstrap.min.css") %>" />
+    <!-- Template Stylesheet -->
+    <link rel="stylesheet" href="<%=Page.ResolveUrl("~/lib/ls/style.css") %>" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!-- Topbar Start -->
+
+        <%--        <div class="container-fluid topbar px-0 px-lg-4 py-2 d-none d-lg-block bg-warning">
+            <div class="container">
+                <div class="row gx-0 align-items-center">
+                    <div class="col-lg-4 text-center text-lg-start mb-lg-0 text-dark">
+                        <strong>Modo Desarrollo</strong>
+                    </div>
+                    <div class="col-lg-4 text-center text-lg-start mb-lg-0 text-dark">
+                        <asp:DropDownList ID="Fiestas" AutoPostBack="true" CssClass="form-select" runat="server" OnSelectedIndexChanged="Fiestasiestas_SelectedIndexChanged"></asp:DropDownList>
+                    </div>
+                </div>
+            </div>
+        </div>--%>
+
+
+        <div class="container-fluid topbar px-0 px-lg-4 py-2 d-none d-lg-block" style="background-color: #00285d;">
+            <div class="container">
+                <div class="row gx-0 align-items-center">
+                    <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                        <div class="d-flex flex-wrap">
+                            <div class="border-end border-primary pe-3 ">
+                                <a href="<%=Page.ResolveUrl("~/Sedes.aspx") %>" class="small text-white"><i class="fas fa-map-marker-alt me-2"></i>Encuentra tu Sede</a>
+                            </div>
+                            <div class="border-end border-primary pe-3 ps-3">
+                                <a href="mailto:contacto@norteamericano.cl" class="text-white small"><i class="fas fa-envelope text-light me-2"></i>contacto@norteamericano.cl</a>
+                            </div>
+                            <div class="ps-3 ">
+                                <a href="https://alumnos.sam.norteamericano.cl" target="_blank" class="small text-white"><i class="fas fa-user me-2"></i>Acceso Alumnos</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center text-lg-end">
+                        <div class="d-flex justify-content-end">
+                            <div class="d-flex pe-3 ">
+                                <a class="btn p-0 text-primary me-3 text-white" target="_blank" href="https://www.facebook.com/ICHNorteamericano"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn p-0 text-primary me-3 text-white" target="_blank" href="https://x.com/i/flow/login?redirect_after_login=%2Fichnsantiago"><i class="fab fa-twitter"></i></a>
+                                <a class="btn p-0 text-primary me-3 text-white" target="_blank" href="https://www.instagram.com/ichnorteamericano/"><i class="fab fa-instagram"></i></a>
+                                <a class="btn p-0 text-primary me-3 text-white" target="_blank" href="https://www.linkedin.com/company/instituto-norteamericano"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn p-0 text-primary me-3 text-white" target="_blank" href="https://www.youtube.com/channel/UCH2h9HUTqfuXKOtCvPJ0DBg"><i class="fab fa-youtube"></i></a>
+                                <a class="btn p-0 text-primary me-0 text-white" target="_blank" href="https://www.tiktok.com/@institutochnortemericano?_t=8o6EXXmID5C&_r=1"><i class="fab fa-tiktok"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Topbar End -->
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
+            <div>
+                <nav class="navbar navbar-expand-lg navbar-light">
+
+                    <img class="img-fluid  w-1" runat="server" id="gif_fiesta" />
+
+                    <a href="<%=Page.ResolveUrl("~/index.aspx") %>" class="navbar-brand p-0">
+                        <img class="img-fluid w-75" src="<%=Page.ResolveUrl("~/img/logo.webp") %>" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav mx-0 mx-lg-auto">
+                            <a href="<%=Page.ResolveUrl("~/index.aspx") %>" class="nav-item nav-link active">Home</a>
+                            <a href="<%=Page.ResolveUrl("~/programas.aspx") %>" class="nav-item nav-link">Programas</a>
+                          <%--  <a href="https://alumnos.sam.norteamericano.cl" target="_blank" class="nav-item nav-link">Alumnos</a>--%>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                                    <span class="dropdown-toggle">Sobre Nosotros</span>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a href="<%=Page.ResolveUrl("~/AmericanSpace.aspx") %>" class="dropdown-item">American Space</a>
+                                    <a href="<%=Page.ResolveUrl("~/Intranet.aspx") %>" class="dropdown-item">Intranet</a>
+                                    <a href="<%=Page.ResolveUrl("~/Sedes.aspx") %>" class="dropdown-item">Sedes</a>
+                                    <a href="<%=Page.ResolveUrl("~/About.aspx") %>" class="dropdown-item">Nuestra Institución</a>
+                                </div>
+                            </div>
+                            <div class="nav-btn px-2">
+                                <a href="<%=Page.ResolveUrl("~/Contact.aspx") %>" class="btn btn-success rounded-pill">Contáctanos</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-none d-xl-flex flex-shrink-0 ps-4">
+                        <a href="#" class="btn btn-light btn-lg-square rounded-circle position-relative wow tada" data-wow-delay="1.9s">
+                            <i class="fas fa-mobile-alt fa-2x"></i>
+                        </a>
+                        <div class="d-flex flex-column ms-3">
+                            <span>Venta Telefónica</span>
+                            <a href="tel:+56 2 3210 8280"><span class="text-dark">+56 2 3210 8280</span></a>
+                        </div>
+                    </div>
+
+                </nav>
+            </div>
+
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-xl-12">
+                    <div class="mb-5">
+                        <div class="row g-4">
+                            <div class="col-md-6 col-lg-6 col-xl-4">
+                                <div class="footer-item">
+                                    <a href="index.html" class="p-0">
+                                        <h3 class="text-white">
+                                            <img class="img-fluid" style="width: 15%" src="<%=Page.ResolveUrl("~/img/favicon.webp") %>" />
+                                            Norteameriano</h3>
+                                        <!-- <img src="img/logo.png" alt="Logo"> -->
+                                    </a>
+                                    <h4 class="text-white mt-4 mb-4">Síguenos</h4>
+                                    <div class="footer-btn d-flex">
+                                        <a class="btn btn-md-square rounded-circle me-3" target="_blank" href="https://www.facebook.com/ICHNorteamericano"><i class="fab fa-facebook-f"></i></a>
+                                        <a class="btn btn-md-square rounded-circle me-3" target="_blank" href="https://x.com/i/flow/login?redirect_after_login=%2Fichnsantiago"><i class="fab fa-twitter"></i></a>
+                                        <a class="btn btn-md-square rounded-circle me-3" target="_blank" href="https://www.instagram.com/ichnorteamericano/"><i class="fab fa-instagram"></i></a>
+                                        <a class="btn btn-md-square rounded-circle me-3" target="_blank" href="https://www.linkedin.com/company/instituto-norteamericano"><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                    <div class="footer-btn d-flex mt-2">
+                                        <a class="btn btn-md-square rounded-circle me-3" target="_blank" href="https://www.youtube.com/channel/UCH2h9HUTqfuXKOtCvPJ0DBg"><i class="fab fa-youtube"></i></a>
+                                        <a class="btn btn-md-square rounded-circle me-0" target="_blank" href="https://www.tiktok.com/@institutochnortemericano?_t=8o6EXXmID5C&_r=1"><i class="fab fa-tiktok"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-xl-3">
+                                <div class="footer-item">
+                                    <h4 class="text-white mb-4">Links</h4>
+                                    <a href="<%=Page.ResolveUrl("~/About.aspx") %>"  class="text-white"><i class="fas fa-angle-right me-2"></i>Nuestra Institución</a>
+                                    <a href="<%=Page.ResolveUrl("~/AmericanSpace.aspx") %>"  class="text-white"><i class="fas fa-angle-right me-2"></i>American Space</a>
+                                    <a href="<%=Page.ResolveUrl("~/Intranet.aspx") %>"  class="text-white"><i class="fas fa-angle-right me-2"></i>Intranet</a>
+                                    <a href="<%=Page.ResolveUrl("~/Sedes.aspx") %>"  class="text-white"><i class="fas fa-angle-right me-2"></i>Sedes</a>
+                                    <a href="<%=Page.ResolveUrl("~/PoliticaPrivacidad.aspx") %>" class="text-white"><i class="fas fa-angle-right me-2"></i>Política de privacidad</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-6 col-xl-5">
+                                <div class="footer-item">
+                                    <h4 class="text-white mb-4">Atención al Cliente</h4>
+                                    <a href="#" class="text-white"><i class="fas fa-angle-right me-2"></i>Sede Moneda +56 22677 7131</a>
+                                    <a href="#" class="text-white"><i class="fas fa-angle-right me-2"></i>Sede Providencia +56 22677 7052</a>
+                                    <a href="#" class="text-white"><i class="fas fa-angle-right me-2"></i>Sede La Florida +56 22677 7071</a>
+                                    <a href="#" class="text-white"><i class="fas fa-angle-right me-2"></i>Sede Online +56 22677 7170</a>
+                                    <a href="#" class="text-white"><i class="fas fa-angle-right me-2"></i>Empresas +56 22677 7146</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-5" style="border-top: 1px solid rgba(255, 255, 255, 0.08);">
+                        <div class="row g-0">
+                            <div class="col-12">
+                                <div class="row g-4">
+                                    <div class="col-lg-6 col-xl-4">
+                                        <div class="d-flex">
+                                            <div class="btn-xl-square bg-primary text-white rounded p-4 me-4">
+                                                <i class="fas fa-map-marker-alt fa-2x"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="text-white">Address</h4>
+                                                <p class="mb-0">Moneda 1467, Santiago. CHILE</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-xl-4">
+                                        <div class="d-flex">
+                                            <div class="btn-xl-square bg-primary text-white rounded p-4 me-4">
+                                                <i class="fas fa-envelope fa-2x"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="text-white">Mail Us</h4>
+                                                <p class="mb-0">contacto@norteamericano.cl</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-xl-4">
+                                        <div class="d-flex">
+                                            <div class="btn-xl-square bg-primary text-white rounded p-4 me-4">
+                                                <i class="fa fa-phone-alt fa-2x"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="text-white">Venta Telefónica</h4>
+                                                <p class="mb-0">+56 2 3210 8280</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-end mb-md-0">
+                    <span class="text-white"><a class="border-bottom text-white"><i class="fas fa-copyright text-white me-2"></i>Norteamericano.cl</a>, All right reserved.</span>
+                </div>
+                <div class="col-md-6 text-center text-md-start text-white">
+                    Designed By <a class="border-bottom text-white">Departamento de informática </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
+
+    <style>
+        .btn-flotante {
+            font-size: 35px; /* Cambiar el tamaño de la tipografia */
+            text-transform: uppercase; /* Texto en mayusculas */
+
+            color: #ffffff; /* Color del texto */
+            border-radius: 30px; /* Borde del boton */
+            background-color: #3D912F; /* Color de fondo */
+            padding: 2px 12px; /* Relleno del boton */
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            transition: all 300ms ease 0ms;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            z-index: 99;
+        }
+
+            .btn-flotante:hover {
+                background-color: #3D912F; /* Color de fondo al pasar el cursor */
+                box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+                transform: translateY(-7px);
+                color: white;
+            }
+
+        @media only screen and (max-width: 600px) {
+            .btn-flotante {
+                font-size: 35px;
+                padding: -1px 20px;
+                bottom: 90px;
+                right: 30px;
+            }
+        }
+    </style>
+
+    <div class="btn-flotante  wow bounceInRight" data-wow-delay="1s">
+        <a target="_blank" href="https://web.whatsapp.com/send?phone=+56994408529&text=Hola,%20estuve%20revisando%20su%20pagina%20web%20y%20me%20gustaria%20obtener%20mas%20informacion"><i class="fab fa-whatsapp text-white"></i></a>
+    </div>
+
+
+    <!-- JavaScript Libraries -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src='<%=Page.ResolveUrl("~/lib/wow/wow.min.js") %>'></script>
+    <script src='<%=Page.ResolveUrl("~/lib/easing/easing.min.js") %>'></script>
+    <script src='<%=Page.ResolveUrl("~/lib/waypoints/waypoints.min.js") %>'></script>
+    <script src='<%=Page.ResolveUrl("~/lib/counterup/counterup.min.js") %>'></script>
+    <script src='<%=Page.ResolveUrl("~/lib/lightbox/js/lightbox.min.js") %>'></script>
+    <script src='<%=Page.ResolveUrl("~/lib/owlcarousel/owl.carousel.min.js") %>'></script>
+
+
+    <!-- Template Javascript -->
+    <script src='<%=Page.ResolveUrl("~/lib/ls/main.js") %>'></script>
+
+    <!-- Toky  -->
+    <script>
+        const isMobile = navigator.userAgentData.mobile;
+
+        if (!isMobile) {
+            (function (p) {
+                var s = document.createElement('script');
+                s.src = 'https://call-widget.toky.co/toky-call-widget';
+                s.onload = function () { Toky("boot", p); };
+                document.head.appendChild(s);
+            })({ "$username": "norteamericano", "$position": "left", "$text": "Llámanos Gratis" })
+        }
+    </script>
+
+    <script>
+        $('.dropdown-menu a.dropdown-toggle').on('click', function (e) {
+            if (!$(this).next().hasClass('show')) {
+                $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+            }
+            var $subMenu = $(this).next(".dropdown-menu");
+            $subMenu.toggleClass('show');
+
+
+            $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function (e) {
+                $('.dropdown-submenu .show').removeClass("show");
+            });
+
+
+            return false;
+        });
+    </script>
+
+
+</body>
+
+</html>
