@@ -9,7 +9,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
-        <!-- Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7349HX"
             height="0" width="0" style="display: none; visibility: hidden"></iframe>
@@ -33,9 +33,9 @@
                                   
                                 </span>
                                 <br />
-                                <span class="badge bg-warning text-dark mt-4" style="font-size: 20px" runat="server" id="div_inicio">
+                                <div class="btn btn-warning  mt-4" style="font-size: 18px" runat="server" id="div_inicio">
                                     <asp:Label ID="LabelInicios" CssClass="me-5 ms-5" runat="server" Text="Label"></asp:Label>
-                                </span>
+                                </div>
                             </div>
                             <div class="col-sm-3">
                                 <div class="row">
@@ -44,7 +44,7 @@
                                             <tr runat="server" id="btn_comprar">
                                                 <td>
                                                     <div class="d-grid gap-2">
-                                                        <a href="Shop.aspx" class="btn btn-success btn-lg"><i class="fas fa-shopping-cart me-2"></i>Comprar Curso </a>                                                      
+                                                        <a href="Shop.aspx" class="btn btn-success btn-lg"><i class="fas fa-shopping-cart me-2"></i>Comprar Curso </a>
                                                     </div>
                                                 </td>
                                             </tr>
@@ -57,9 +57,7 @@
                                             </tr>
                                         </table>
                                     </div>
-                                    <%--  <div class="col-lg-4">
-                                    <img src="../../img/programas/kids.jpg" class="img-fluid rounded w-100" alt="">
-                                </div>--%>
+                                  
                                 </div>
                             </div>
                         </div>
@@ -182,8 +180,8 @@
                                                                 <ItemTemplate>
                                                                     <table class="table table-sm  mb-0 text-dark" style="font-size: 14px">
                                                                         <tr>
-                                                                             <td class="text-center " style="width: 20%"><%# Convert.ToString(Eval("Programa")) == "TEENS" ? "<span class='badge rounded-pill bg-primary' style='font-size: 14px'> 40 hrs.</span>" : "<span class='badge rounded-pill bg-warning text-dark' style='font-size: 14px'> 30 hrs.</span>"  %></td>
-                                                                           <td class="text-center " style="width: 20%"><%# Eval("Sede") %></td>
+                                                                            <td class="text-center " style="width: 20%"><%# Convert.ToString(Eval("Programa")) == "TEENS" ? "<span class='badge rounded-pill bg-primary' style='font-size: 14px'> 40 hrs.</span>" : "<span class='badge rounded-pill bg-warning text-dark' style='font-size: 14px'> 30 hrs.</span>"  %></td>
+                                                                            <td class="text-center " style="width: 20%"><%# Eval("Sede") %></td>
                                                                             <td class="text-center " style="width: 20%"><%# Eval("Dias") %></td>
                                                                             <td class="text-center " style="width: 20%"><%# Eval("Horas") %></td>
                                                                             <td class="text-center " style="width: 20%"><%# Eval("Inicio") %></td>
@@ -219,7 +217,7 @@
                                                                 <ItemTemplate>
                                                                     <table class="table table-sm  mb-0 text-dark" style="font-size: 14px">
                                                                         <tr>
-                                                                           <td class="text-center " style="width: 20%"><%# Convert.ToString(Eval("Programa")) == "TEENS" ? "<span class='badge rounded-pill bg-primary' style='font-size: 14px'> 40 hrs.</span>" : "<span class='badge rounded-pill bg-warning text-dark' style='font-size: 14px'> 30 hrs.</span>"  %></td>
+                                                                            <td class="text-center " style="width: 20%"><%# Convert.ToString(Eval("Programa")) == "TEENS" ? "<span class='badge rounded-pill bg-primary' style='font-size: 14px'> 40 hrs.</span>" : "<span class='badge rounded-pill bg-warning text-dark' style='font-size: 14px'> 30 hrs.</span>"  %></td>
                                                                             <td class="text-center " style="width: 20%"><%# Eval("Sede") %></td>
                                                                             <td class="text-center " style="width: 20%"><%# Eval("Dias") %></td>
                                                                             <td class="text-center " style="width: 20%"><%# Eval("Horas") %></td>
@@ -314,7 +312,7 @@
                                                 </td>
                                             </tr>
                                             <tr style="text-align: justify">
-                                               <td colspan="3">Curso de inglés para pre-escolares para la adquisición de vocabulario genérico y la práctica sistemática 
+                                                <td colspan="3">Curso de inglés para pre-escolares para la adquisición de vocabulario genérico y la práctica sistemática 
                                                     a través de las unidades de los cursos. El vocabulario es aplicado en actividades se alínea con el currículum acorde a
                                                     la edad de los niños y la adquisición del lenguaje como tal. En los niveles pre-escolares, el desarrollo de los niños en 
                                                     relación con el aprendizaje del idioma permite a los alumnos expresarse creativa, física y socialmente en conjunto con 

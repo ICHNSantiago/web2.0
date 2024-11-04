@@ -34,9 +34,10 @@
                                     <i class="fas fa-laptop me-2"></i>Online
                                 </span>
                                 <br />
-                                <span class="badge bg-warning text-dark mt-4" style="font-size: 20px" runat="server" id="div_inicio">
+
+                                <div class="btn btn-warning  mt-4" style="font-size: 18px" runat="server" id="div_inicio">
                                     <asp:Label ID="LabelInicios" CssClass="me-5 ms-5" runat="server" Text="Label"></asp:Label>
-                                </span>
+                                </div>
                             </div>
                             <div class="col-sm-3">
                                 <div class="row">
@@ -75,7 +76,7 @@
                                 <asp:LinkButton ID="LinkButtonDescripcion" class="nav-link" runat="server" OnClick="LinkButtonDescripcion_Click">Descripción</asp:LinkButton>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <asp:LinkButton ID="LinkButtonSummer" class="nav-link" runat="server" OnClick="LinkButtonSummer_Click" >Summer School</asp:LinkButton>
+                                <asp:LinkButton ID="LinkButtonSummer" class="nav-link" runat="server" OnClick="LinkButtonSummer_Click">Summer School</asp:LinkButton>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <asp:LinkButton ID="LinkButtonObjetivo" class="nav-link" runat="server" OnClick="LinkButtonObjetivo_Click">Objetivos</asp:LinkButton>

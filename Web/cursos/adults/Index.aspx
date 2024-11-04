@@ -35,10 +35,10 @@
                                     <span class="me-2 ms-2">|</span>
                                     <i class="fas fa-laptop me-2"></i>Online
                                 </span>
-                                <br />
-                                <span class="badge bg-warning text-dark mt-4" style="font-size: 20px">
-                                    <asp:Label ID="LabelInicios" CssClass="me-5 ms-5" runat="server" Text="Label"></asp:Label>
-                                </span>
+                                <br />                           
+                                <div class="btn btn-warning  mt-4" style="font-size: 18px">
+                                     <asp:Label ID="LabelInicios"  CssClass="me-5 ms-5" runat="server" Text="Label"></asp:Label>
+                                </div>
                             </div>
                             <div class="col-sm-3">
                                 <div class="row">
