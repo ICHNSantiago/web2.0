@@ -294,6 +294,13 @@ namespace Web.cursos.kid
             if (!IsPostBack)
             {
                 HorarioSedes();
+
+                string token = Convert.ToString(Request["tipo"]);
+
+                if (token == "summer")
+                {
+                    LinkButtonSummer_Click(sender, e);
+                }
             }
         }
 
