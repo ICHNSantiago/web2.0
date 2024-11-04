@@ -402,14 +402,14 @@
                                         <hr />
                                     </div>
                                     <div class="col-md-3">
-                                        <img src="../../img/programas/summer_adults.jpg" class="img-fluid rounded w-100" alt="">                                       
+                                        <img src="../../img/programas/summer_adults.webp" class="img-fluid rounded w-100" alt="">                                       
                                     </div>
                                     <div class="col-md-9">
 
                                         <table class="table text-dark">
                                             <tr>
                                                 <td>
-                                                    <h5>Edad</h5>
+                                                    <h5 class="text-primary">Edad</h5>
                                                 </td>
                                                 <td>
                                                     <h5>Desde los 17 años</h5>
@@ -417,7 +417,7 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <h5>Inicios</h5>
+                                                    <h5 class="text-primary">Inicios</h5>
                                                 </td>
                                                 <td>
                                                     <h5>Enero | Febrero</h5>
@@ -425,7 +425,7 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <h5>Duración</h5>
+                                                    <h5 class="text-primary">Duración</h5>
                                                 </td>
                                                 <td>
                                                     <h5>1 mes por curso</h5>
@@ -433,7 +433,7 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <h5>Metodología</h5>
+                                                    <h5 class="text-primary">Metodología</h5>
                                                 </td>
                                                 <td>
                                                     <h5>Integración del drama y la improvisación para aprender idiomas</h5>

@@ -191,8 +191,11 @@ namespace Web.cursos.teen
             LinkButtonHorarioReg.Attributes.Clear();
             LinkButtonHorarioReg.Attributes.Add("class", "nav-link");
             div_horario_40.Visible = false;
-                        
 
+            LinkButtonSummer.Attributes.Clear();
+            LinkButtonSummer.Attributes.Add("class", "nav-link");
+            div_summer.Visible = false;
+            
             LinkButtonDescripcion.Attributes.Clear();
             LinkButtonDescripcion.Attributes.Add("class", "nav-link");
             div_descripcion.Visible = false;
@@ -226,6 +229,11 @@ namespace Web.cursos.teen
                     LinkButtonNiveles.Attributes.Clear();
                     LinkButtonNiveles.Attributes.Add("class", "nav-link active");
                     div_niveles.Visible = true;
+                    break;
+                case "summer":
+                    LinkButtonSummer.Attributes.Clear();
+                    LinkButtonSummer.Attributes.Add("class", "nav-link active");
+                    div_summer.Visible = true;
                     break;
                 default:
                     break;
@@ -284,7 +292,15 @@ namespace Web.cursos.teen
             if (!IsPostBack)
             {
                 HorarioSedes();
+
+                string token = Convert.ToString(Request["tipo"]);
+
+                if (token == "summer")
+                {
+                    LinkButtonSummer_Click(sender, e);
+                }
             }
+        
         }
 
         protected void LinkButtonHorarioReg_Click(object sender, EventArgs e)
@@ -328,6 +344,9 @@ namespace Web.cursos.teen
             Boton("nivel");
         }
 
-
+        protected void LinkButtonSummer_Click(object sender, EventArgs e)
+        {
+            Boton("summer");
+        }
     }
 }

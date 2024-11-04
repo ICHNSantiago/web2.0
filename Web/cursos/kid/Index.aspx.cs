@@ -205,6 +205,11 @@ namespace Web.cursos.kid
             LinkButtonNiveles.Attributes.Add("class", "nav-link");
             div_niveles.Visible = false;
 
+
+            LinkButtonSummer.Attributes.Clear();
+            LinkButtonSummer.Attributes.Add("class", "nav-link");
+            div_summer.Visible = false;
+
             switch (click)
             {
                 case "40":
@@ -226,6 +231,11 @@ namespace Web.cursos.kid
                     LinkButtonNiveles.Attributes.Clear();
                     LinkButtonNiveles.Attributes.Add("class", "nav-link active");
                     div_niveles.Visible = true;
+                    break;
+                case "summer":
+                    LinkButtonSummer.Attributes.Clear();
+                    LinkButtonSummer.Attributes.Add("class", "nav-link active");
+                    div_summer.Visible = true;
                     break;
                 default:
                     break;
@@ -328,6 +338,9 @@ namespace Web.cursos.kid
             Boton("nivel");
         }
 
-
+        protected void LinkButtonSummer_Click(object sender, EventArgs e)
+        {
+            Boton("summer");
+        }
     }
 }

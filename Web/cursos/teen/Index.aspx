@@ -9,7 +9,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-        <!-- Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7349HX"
             height="0" width="0" style="display: none; visibility: hidden"></iframe>
@@ -73,6 +73,9 @@
                         <ul class="nav nav-pills nav-fill nav-tabs" role="tablist">
                             <li class="nav-item active" role="presentation">
                                 <asp:LinkButton ID="LinkButtonDescripcion" class="nav-link" runat="server" OnClick="LinkButtonDescripcion_Click">Descripción</asp:LinkButton>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <asp:LinkButton ID="LinkButtonSummer" class="nav-link" runat="server" OnClick="LinkButtonSummer_Click" >Summer School</asp:LinkButton>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <asp:LinkButton ID="LinkButtonObjetivo" class="nav-link" runat="server" OnClick="LinkButtonObjetivo_Click">Objetivos</asp:LinkButton>
@@ -333,6 +336,63 @@
                                             </tr>
                                         </table>
 
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-xl-12" runat="server" id="div_summer" visible="false">
+                                <div class="row mt-5 text-dark">
+                                    <div class="col-md-12">
+                                        <h2>English | <span class="text-primary">Summer School</span></h2>
+                                        <hr />
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="../../img/programas/summer_teens_kid.webp" class="img-fluid rounded w-100" alt="">
+                                    </div>
+                                    <div class="col-md-9">
+
+                                        <table class="table text-dark">
+                                            <tr>
+                                                <td>
+                                                    <h5 class="text-primary">Edad</h5>
+                                                </td>
+                                                <td>
+                                                    <h5>12 a 17 años</h5>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <h5 class="text-primary">Inicios</h5>
+                                                </td>
+                                                <td>
+                                                    <h5>Enero | Febrero</h5>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <h5 class="text-primary">Duración</h5>
+                                                </td>
+                                                <td>
+                                                    <h5>1 mes por curso</h5>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <h5 class="text-primary">Metodología</h5>
+                                                </td>
+                                                <td>
+                                                    <h5>STEAM y Learning by Doing</h5>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <h5>Este verano aprende inglés y descubre nuevas aventuras. Incluye 3 emocionantes talleres con experimentos realizados junto a los tutores bilingües de <a href="www.thinkey.cl" target="_blank">www.thinkey.cl</a></h5>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">Observación: Estudiantes que llegan por renovación deben solicitar homologación hacia el nivel más próximo abierto por temporada de verano.</td>
+                                            </tr>
+                                        </table>
                                     </div>
                                 </div>
                             </div>

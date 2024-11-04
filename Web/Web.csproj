@@ -845,6 +845,7 @@
     <Content Include="img\programas\kids_niveles.webp" />
     <Content Include="img\programas\preschool_niveles.webp" />
     <Content Include="img\programas\summer_adults.webp" />
+    <Content Include="img\programas\summer_teens_kid.webp" />
     <None Include="packages.config" />
     <Content Include="Tematica\18sep\volantin.webp" />
     <Content Include="Tematica\hallo\halloween2.webp" />
