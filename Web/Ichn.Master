@@ -18,7 +18,7 @@
 
     <!-- Icon Font Stylesheet -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
-   
+
 
     <!-- Libraries Stylesheet -->
     <link rel="stylesheet" href="<%=Page.ResolveUrl("~/lib/animate/animate.min.css") %>" />
@@ -32,7 +32,29 @@
     <link rel="stylesheet" href="<%=Page.ResolveUrl("~/lib/ls/style.css") %>" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WXKF9VF4H9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
 
+        gtag('config', 'G-WXKF9VF4H9');
+    </script>
+
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-W7349HX');</script>
+    <!-- End Google Tag Manager -->
 
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
@@ -105,7 +127,7 @@
                         <div class="navbar-nav mx-0 mx-lg-auto">
                             <a href="<%=Page.ResolveUrl("~/index.aspx") %>" class="nav-item nav-link active">Home</a>
                             <a href="<%=Page.ResolveUrl("~/programas.aspx") %>" class="nav-item nav-link">Programas</a>
-                          <%--  <a href="https://alumnos.sam.norteamericano.cl" target="_blank" class="nav-item nav-link">Alumnos</a>--%>
+                            <%--  <a href="https://alumnos.sam.norteamericano.cl" target="_blank" class="nav-item nav-link">Alumnos</a>--%>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link" data-bs-toggle="dropdown">
                                     <span class="dropdown-toggle">Sobre Nosotros</span>
@@ -174,10 +196,10 @@
                             <div class="col-md-6 col-lg-6 col-xl-3">
                                 <div class="footer-item">
                                     <h4 class="text-white mb-4">Links</h4>
-                                    <a href="<%=Page.ResolveUrl("~/About.aspx") %>"  class="text-white"><i class="fas fa-angle-right me-2"></i>Nuestra Institución</a>
-                                    <a href="<%=Page.ResolveUrl("~/AmericanSpace.aspx") %>"  class="text-white"><i class="fas fa-angle-right me-2"></i>American Space</a>
-                                    <a href="<%=Page.ResolveUrl("~/Intranet.aspx") %>"  class="text-white"><i class="fas fa-angle-right me-2"></i>Intranet</a>
-                                    <a href="<%=Page.ResolveUrl("~/Sedes.aspx") %>"  class="text-white"><i class="fas fa-angle-right me-2"></i>Sedes</a>
+                                    <a href="<%=Page.ResolveUrl("~/About.aspx") %>" class="text-white"><i class="fas fa-angle-right me-2"></i>Nuestra Institución</a>
+                                    <a href="<%=Page.ResolveUrl("~/AmericanSpace.aspx") %>" class="text-white"><i class="fas fa-angle-right me-2"></i>American Space</a>
+                                    <a href="<%=Page.ResolveUrl("~/Intranet.aspx") %>" class="text-white"><i class="fas fa-angle-right me-2"></i>Intranet</a>
+                                    <a href="<%=Page.ResolveUrl("~/Sedes.aspx") %>" class="text-white"><i class="fas fa-angle-right me-2"></i>Sedes</a>
                                     <a href="<%=Page.ResolveUrl("~/PoliticaPrivacidad.aspx") %>" class="text-white"><i class="fas fa-angle-right me-2"></i>Política de privacidad</a>
                                 </div>
                             </div>
@@ -300,7 +322,7 @@
 
 
     <!-- JavaScript Libraries -->
-    
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src='<%=Page.ResolveUrl("~/lib/wow/wow.min.js") %>'></script>
     <script src='<%=Page.ResolveUrl("~/lib/easing/easing.min.js") %>'></script>
