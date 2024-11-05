@@ -15,7 +15,7 @@ namespace Web.cursos.teen
             {
                 btn_comprar.Visible = true;
                 div_inicio.Visible = true;
-                LabelInicios.Text = "Inicio de clases " + data.Rows[0]["Fecha Inicio"].ToString();
+                LabelInicios.Text = data.Rows[0]["Fecha Inicio"].ToString();
 
                 DataTable moneda = new DataTable();
                 DataTable provi = new DataTable();

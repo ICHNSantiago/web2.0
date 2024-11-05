@@ -24,17 +24,29 @@
                     <div class="bg-white rounded p-5 shadow">
                         <div class="row ">
                             <div class="col-sm-9">
-                                <span class="display-6 text-dark">Curso de Inglés | <span class="text-primary">Preescolares </span></span>
-                                <br />
-                                <span class="h5">
-                                    <i class="fas fa-clock me-2"></i>40 Horas 
-                                     <span class="me-2 ms-2">|</span>
-                                    <i class="fas fa-user me-2"></i>Presencial 
-                                  
-                                </span>
-                                <br />
-                                <div class="btn btn-warning  mt-4" style="font-size: 18px" runat="server" id="div_inicio">
-                                    <asp:Label ID="LabelInicios" CssClass="me-5 ms-5" runat="server" Text="Label"></asp:Label>
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <span class="display-6 text-dark">Curso de Inglés | <span class="text-primary">Preescolares </span></span>
+                                    </div>
+                                    <div class="col-sm-12 mt-2">
+                                        <span class="h5">
+                                            <i class="fas fa-clock me-2"></i>40 Horas 
+                                            <span class="me-2 ms-2">|</span>
+                                            <i class="fas fa-user me-2"></i>Presencial 
+    
+                                        </span>
+                                    </div>
+                                    <div class="col-sm-12" runat="server" id="div_inicio">
+                                        <div class="row">
+                                            <div class="col-sm-6 text-center">
+                                                <div class="d-grid gap-2">
+                                                    <div class="btn btn-warning text-center mt-4" style="font-size: 18px">
+                                                        <asp:Label ID="LabelInicios" runat="server" Text="Label"></asp:Label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="col-sm-3">
@@ -57,7 +69,7 @@
                                             </tr>
                                         </table>
                                     </div>
-                                  
+
                                 </div>
                             </div>
                         </div>
@@ -144,7 +156,7 @@
                                                                 <ItemTemplate>
                                                                     <table class="table table-sm  mb-0 text-dark" style="font-size: 14px">
                                                                         <tr>
-                                                                            <td class="text-center " style="width: 20%"><%# Convert.ToString(Eval("Programa")) == "TEENS" ? "<span class='badge rounded-pill bg-primary' style='font-size: 14px'> 40 hrs.</span>" : "<span class='badge rounded-pill bg-warning text-dark' style='font-size: 14px'> 30 hrs.</span>"  %></td>
+                                                                            <td class="text-center " style="width: 20%"><%# Convert.ToString(Eval("Programa")) == "TEENS" ? "<span class='badge rounded-pill bg-primary' style='font-size: 14px'>Regular</span>" : "<span class='badge rounded-pill bg-warning text-dark' style='font-size: 14px'>Summer</span>"  %></td>
                                                                             <td class="text-center " style="width: 20%"><%# Eval("Sede") %></td>
                                                                             <td class="text-center " style="width: 20%"><%# Eval("Dias") %></td>
                                                                             <td class="text-center " style="width: 20%"><%# Eval("Horas") %></td>
@@ -180,7 +192,7 @@
                                                                 <ItemTemplate>
                                                                     <table class="table table-sm  mb-0 text-dark" style="font-size: 14px">
                                                                         <tr>
-                                                                            <td class="text-center " style="width: 20%"><%# Convert.ToString(Eval("Programa")) == "TEENS" ? "<span class='badge rounded-pill bg-primary' style='font-size: 14px'> 40 hrs.</span>" : "<span class='badge rounded-pill bg-warning text-dark' style='font-size: 14px'> 30 hrs.</span>"  %></td>
+                                                                            <td class="text-center " style="width: 20%"><%# Convert.ToString(Eval("Programa")) == "TEENS" ? "<span class='badge rounded-pill bg-primary' style='font-size: 14px'>Regular</span>" : "<span class='badge rounded-pill bg-warning text-dark' style='font-size: 14px'>Summer</span>"  %></td>
                                                                             <td class="text-center " style="width: 20%"><%# Eval("Sede") %></td>
                                                                             <td class="text-center " style="width: 20%"><%# Eval("Dias") %></td>
                                                                             <td class="text-center " style="width: 20%"><%# Eval("Horas") %></td>
@@ -217,7 +229,7 @@
                                                                 <ItemTemplate>
                                                                     <table class="table table-sm  mb-0 text-dark" style="font-size: 14px">
                                                                         <tr>
-                                                                            <td class="text-center " style="width: 20%"><%# Convert.ToString(Eval("Programa")) == "TEENS" ? "<span class='badge rounded-pill bg-primary' style='font-size: 14px'> 40 hrs.</span>" : "<span class='badge rounded-pill bg-warning text-dark' style='font-size: 14px'> 30 hrs.</span>"  %></td>
+                                                                            <td class="text-center " style="width: 20%"><%# Convert.ToString(Eval("Programa")) == "TEENS" ? "<span class='badge rounded-pill bg-primary' style='font-size: 14px'>Regular</span>" : "<span class='badge rounded-pill bg-warning text-dark' style='font-size: 14px'>Summer</span>"  %></td>
                                                                             <td class="text-center " style="width: 20%"><%# Eval("Sede") %></td>
                                                                             <td class="text-center " style="width: 20%"><%# Eval("Dias") %></td>
                                                                             <td class="text-center " style="width: 20%"><%# Eval("Horas") %></td>
@@ -254,7 +266,7 @@
                                                                 <ItemTemplate>
                                                                     <table class="table table-sm  mb-0 text-dark" style="font-size: 14px">
                                                                         <tr>
-                                                                            <td class="text-center " style="width: 20%"><%# Convert.ToString(Eval("Programa")) == "TEENS" ? "<span class='badge rounded-pill bg-primary' style='font-size: 14px'> 40 hrs.</span>" : "<span class='badge rounded-pill bg-warning text-dark' style='font-size: 14px'> 30 hrs.</span>"  %></td>
+                                                                            <td class="text-center " style="width: 20%"><%# Convert.ToString(Eval("Programa")) == "TEENS" ? "<span class='badge rounded-pill bg-primary' style='font-size: 14px'>Regular</span>" : "<span class='badge rounded-pill bg-warning text-dark' style='font-size: 14px'>Summer</span>"  %></td>
                                                                             <td class="text-center " style="width: 20%"><%# Eval("Sede") %></td>
                                                                             <td class="text-center " style="width: 20%"><%# Eval("Dias") %></td>
                                                                             <td class="text-center " style="width: 20%"><%# Eval("Horas") %></td>
