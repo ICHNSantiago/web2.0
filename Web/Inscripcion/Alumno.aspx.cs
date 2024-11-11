@@ -1,6 +1,7 @@
 ﻿using Negocio;
 using System;
 using System.Data;
+using System.Web.Routing;
 using System.Web.UI.WebControls;
 
 namespace Web.Inscripcion
@@ -175,7 +176,7 @@ namespace Web.Inscripcion
                             break;
                     }
                 }
-                if (programa == "adolescentes")
+                else if (programa == "adolescentes")
                 {
                     switch (tipo)
                     {
@@ -186,9 +187,26 @@ namespace Web.Inscripcion
                         case "Regular":
                             nivel = 30;
                             LabelNivel.Text = "TEENS: BEGINNER";
-                            break;                       
+                            break;
                         default:
                             nivel = 30;
+                            break;
+                    }
+                }
+                else if (programa == "kid")
+                {
+                    switch (tipo)
+                    {
+                        case "Summer School":
+                            nivel = 190;
+                            LabelNivel.Text = "30HS KIDS BEGINNER 1";
+                            break;
+                        case "Regular":
+                            nivel = 14;
+                            LabelNivel.Text = "KIDS: BEGINNER 1";
+                            break;
+                        default:
+                            nivel = 14;
                             break;
                     }
                 }
@@ -223,7 +241,7 @@ namespace Web.Inscripcion
                         LabelNivel.Text = nombre;
                         break;
                 }
-               
+
                 LabelNivelID.Text = nivel.ToString();
             }
 
@@ -277,6 +295,36 @@ namespace Web.Inscripcion
 
         }
 
+        public string NuevoNivelCurso(int curso, int programa)
+        {
+            NCompra compra = new NCompra();
+            DataTable data = compra.BuscarSiguienteNivelPrograma(programa);
+
+            string nuevoCurso = string.Empty;
+
+            if (data.Rows.Count > 0)
+            {
+                bool cursoEncontrado = false;
+                for (int i = 0; i < data.Rows.Count; i++)
+                {
+                    string varCurso = data.Rows[i]["Curso"].ToString();
+                    int varNivel = int.Parse(data.Rows[i]["idCursos"].ToString());
+
+                    if (cursoEncontrado)
+                    {
+                        nuevoCurso = varNivel + ";" + varCurso;
+                        break;
+                    }
+                    else if (varNivel == curso)
+                    {
+                        cursoEncontrado = true;
+                    }
+                }
+            }
+
+            return nuevoCurso;
+        }
+
         public void CargaDatos(string id)
         {
             NCompra nCompra = new NCompra();
@@ -317,6 +365,19 @@ namespace Web.Inscripcion
                     LabelCompraModalidad.Text = "Presencial";
                     LabelCompraSedeModal.Text = "Presencial";
                 }
+
+                data = nCompra.BuscarContratos(id);
+
+                if (data.Rows.Count > 0)
+                {
+                    int cant = data.Rows.Count - 1;
+                    int idCurso = int.Parse(data.Rows[cant]["idCursos"].ToString());
+                    int idPrograma = int.Parse(data.Rows[cant]["idPlanDeEstudios"].ToString());
+                    string nuevo = NuevoNivelCurso(idCurso, idPrograma);
+                    string[] nuevoNivel = nuevo.Split(';');
+                    SelectCurso(sede, "diagnostico", int.Parse(nuevoNivel[0]), nuevoNivel[1]);
+                }
+
             }
             else
             {
@@ -334,7 +395,7 @@ namespace Web.Inscripcion
             if (data.Rows.Count > 0)
             {
                 info_apo_disponibles.Visible = true;
-                info_alumno_login.Visible=false;
+                info_alumno_login.Visible = false;
 
                 DataListApoderado.DataSource = data;
                 DataListApoderado.DataBind();
@@ -364,7 +425,7 @@ namespace Web.Inscripcion
                 {
                     string tipo = Convert.ToString(Request["tipo"]);
 
-                    if(tipo == "alumno")
+                    if (tipo == "alumno")
                     {
                         CargaDatos(id);
                         string token = Convert.ToString(Request["diagnostico"]);
@@ -656,12 +717,16 @@ namespace Web.Inscripcion
             string id = LabelAlumnoID.Text;
 
             if (programa.Equals("adultos"))
-            {                
+            {
                 Response.Redirect("~/Diagnostico/Adults/Index.aspx?alum=" + id);
             }
             else if (programa.Equals("adolescentes"))
             {
                 Response.Redirect("~/Diagnostico/Teens/Index.aspx?alum=" + id);
+            }
+            else if (programa.Equals("kid"))
+            {
+                Response.Redirect("~/Diagnostico/Kid/Index.aspx?alum=" + id);
             }
         }
 
@@ -681,7 +746,7 @@ namespace Web.Inscripcion
 
         protected void LinkButtonBuscarApo_Click(object sender, EventArgs e)
         {
-            string id= TextBoxInscpApo.Text;
+            string id = TextBoxInscpApo.Text;
             CargaDatosApoderado(id);
         }
     }

@@ -166,16 +166,16 @@ namespace Web.cursos
                 link = "../Inscripcion/Alumno.aspx?usuario=" + alumnoID + "&tipo=alumno";
                     break;
                 case "preescolares":
-                    link = "../Inscripcion/Alumno.aspx?usuario=" + alumnoID + "&tipo=apoderado";
+                    link = "../Inscripcion/Alumno.aspx";
                     break;
                 case "kid":
-                    link = "../Inscripcion/Alumno.aspx?usuario=" + alumnoID + "&tipo=apoderado";
+                    link = "../Inscripcion/Alumno.aspx";
                     break;
                 case "adolescentes":
-                    link = "../Inscripcion/Alumno.aspx?usuario=" + alumnoID + "&tipo=apoderado";
+                    link = "../Inscripcion/Alumno.aspx";
                     break;
                 default:
-                    link = "../Inscripcion/Alumno.aspx?usuario=" + alumnoID + "&tipo=alumno";
+                    link = "../Inscripcion/Alumno.aspx";
                     break;
             }
             Response.Redirect(link);

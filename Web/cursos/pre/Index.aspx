@@ -29,9 +29,7 @@
                                         <span class="display-6 text-dark">Curso de Inglés | <span class="text-primary">Preescolares </span></span>
                                     </div>
                                     <div class="col-sm-12 mt-2">
-                                        <span class="h5">
-                                            <i class="fas fa-clock me-2"></i>40 Horas 
-                                            <span class="me-2 ms-2">|</span>
+                                        <span class="h5">                                           
                                             <i class="fas fa-user me-2"></i>Presencial 
     
                                         </span>
@@ -303,7 +301,7 @@
                                                     <h5 class="text-primary">Modalidad</h5>
                                                 </td>
                                                 <th>
-                                                    <h5>Regular (40 horas)</h5>
+                                                    <h5>Regular (1 clase por semana)</h5>
                                                 </th>
                                                 <th></th>
                                             </tr>

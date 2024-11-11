@@ -6,7 +6,23 @@
     <link rel="canonical" href="https://norteamericano.cl/" />
     <link href="../../lib/css/check-radio.css" rel="stylesheet" />
 
-
+    <style>
+        .service .service-item .service-img .service-icon {
+            position: absolute;
+            width: 162px;
+            bottom: 0;
+            right: 25px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            background: #ffc107;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.5s;
+            z-index: 9;
+            color: black;
+        }
+    </style>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -17,7 +33,7 @@
             <div class="container">
                 <div class="row g-4 justify-content-center">
                     <div class="col-lg-12">
-                        <h1>Nortamericano | <span class="text-primary"><strong>Inscripción</strong></span>  </h1>
+                        <h1>Norteamericano | <span class="text-primary"><strong>Inscripción</strong></span>  </h1>
                         <hr />
                     </div>
                     <div class="col-lg-6">
@@ -54,7 +70,7 @@
                                         <asp:Label ID="LabelCompraSedeModal" runat="server" Text="Tipo Curso"></asp:Label>
                                     </td>
                                 </tr>
-                                <tr>
+                                <tr runat="server" visible="false">
                                     <td>Cantidad</td>
                                     <td class="text-capitalize">
                                         <asp:Label ID="LabelCompraCant" runat="server" Text="Tipo Curso"></asp:Label>
@@ -173,48 +189,74 @@
 
         <!-- Blog Start -->
         <div class="container-fluid  bg-white">
-            <div class="container py-5">
-                <div class="row g-4" runat="server" id="div_opciones">
-                    <div class="text-center">
-                        <h3><strong class="text-primary">Opciones</strong> <strong>Inscripción</strong> </h3>
-                    </div>
+            <div class="container py-5 service" runat="server" id="div_opciones">
+                <div class="text-center mx-auto pb-5">
+                    <h1><span class="text-primary"><strong>Opciones</strong></span> Inscripción</h1>
+                    <hr />
+                </div>
+                <div class="row g-4 justify-content-center">
 
-                    <div class="row g-4 text-center">
-                        <div class="col-md-2"></div>
-                        <div class="col-md-4">
-                            <div class="p-4 bg-light rounded">
-                                <div class="feature-item text-dark p-4 pt-0">
-
-                                    <div class="feature-icon p-4">
-                                        <i class="fas fa-user text-primary fa-3x"></i>
-                                    </div>
-                                    <h3 class="mb-4 text-primary">Inicial</h3>
-                                    <p class="mb-4">
-                                        Si estás comenzando desde cero con el idioma inglés, esta es tu mejor opción, inicia con el curso Beginner 
-                                    </p>
-                                    <asp:LinkButton class="btn btn-primary rounded-pill py-2 px-4" ID="LinkButtonInicial" runat="server" OnClick="LinkButtonInicial_Click">Ingresar</asp:LinkButton>
+                    <div class="col-md-6 col-lg-6 col-xl-4">
+                        <div class="service-item shadow">
+                            <div class="service-img">
+                                <img src="../../img/inicial.png" class="img-fluid rounded-top w-100" alt="">
+                            </div>
+                            <div class="p-4 bg-white rounded-bottom">
+                                <div class="service-content-inner">
+                                    <table class="table text-dark">
+                                        <tr class="text-center">
+                                            <th>
+                                                <h5>Si estás comenzando desde cero con el idioma inglés, esta es tu mejor opción, inicia con el curso Beginner 
+                                                </h5>
+                                            </th>
+                                        </tr>
+                                        <tr class="text-center">
+                                            <th>
+                                                <div class="d-grid gap-2">
+                                                    <asp:LinkButton class="btn btn-secondary text-white rounded-pill py-2 px-4" ID="LinkButtonInicial" runat="server" OnClick="LinkButtonInicial_Click">Ingresar</asp:LinkButton>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-4">
-                            <div class="p-4 bg-light rounded">
-                                <div class="feature-item text-dark p-4 pt-0">
-                                    <div class="feature-icon p-4">
-                                        <i class="fa fa-user-tie text-dark fa-3x"></i>
-                                    </div>
-                                    <h3 class="mb-4 text-dark">Avanzada</h3>
-                                    <p class="mb-4">
-                                        Si ya tiene conocimiento de idioma inglés , evaluaremos tu nivel con una prueba de diagnóstico 
-                                    </p>
-                                    <asp:LinkButton class="btn btn-primary rounded-pill py-2 px-4" ID="LinkButtonDiagnostico" runat="server" OnClick="LinkButtonDiagnostico_Click">Ingresar</asp:LinkButton>
+                    </div>
+
+                    <div class="col-md-6 col-lg-6 col-xl-4">
+                        <div class="service-item shadow">
+                            <div class="service-img">
+                                <img src="../img/evaluacion.png" class="img-fluid rounded-top w-100" alt="">
+                                <div class="service-icon p-3 text-center">
+                                    <strong>Recomendado
+                                    </strong>
+                                </div>
+                            </div>
+                            <div class="p-4 bg-white rounded-bottom">
+                                <div class="service-content-inner">
+                                    <table class="table text-dark">
+                                        <tr class="text-center">
+                                            <th>
+                                                <h5>Si ya tiene conocimiento de idioma inglés , evaluaremos tu nivel con una prueba de diagnóstico</h5>
+                                            </th>
+                                        </tr>
+                                        <tr class="text-center">
+                                            <th>
+                                                <div class="d-grid gap-2">
+                                                    <asp:LinkButton class="btn btn-warning rounded-pill py-2 px-4" ID="LinkButtonDiagnostico" runat="server" OnClick="LinkButtonDiagnostico_Click">Ingresar</asp:LinkButton>
+                                                </div>
+                                            </th>
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-
-                <div class="row g-4" runat="server" id="div_horario" visible="false">
+            <div class="container py-5" runat="server" id="div_horario" visible="false">
+                <div class="row g-4">
                     <div>
                         <h3><strong class="text-primary">Inscripción </strong>| Horarios </h3>
                     </div>
@@ -228,7 +270,7 @@
                                         </th>
                                     </tr>
                                     <tr>
-                                        <td style="width: 30%">Nivel</td>
+                                        <td style="width: 30%">Curso</td>
                                         <th>
                                             <asp:Label ID="LabelNivel" runat="server" Text="Label"></asp:Label>
                                             <asp:Label ID="LabelNivelRespaldo" Visible="false" runat="server" Text="Label"></asp:Label>
@@ -300,8 +342,10 @@
                                     <h3><strong class="text-primary">Elige tu </strong>Horario </h3>
                                 </div>
                                 <div class="col-md-12 ">
-                                    <h5>Mostrando cursos para :
-                                    <asp:Label ID="LabelSedeMostrar" CssClass="text-primary" runat="server" Text="Label"></asp:Label></h5>
+                                    <h5>Mostrando Horario para :
+                                        <strong>
+                                            <asp:Label ID="LabelSedeMostrar" CssClass="text-primary" runat="server" Text="Label"></asp:Label></strong>
+                                    </h5>
                                 </div>
                                 <div class="col-md-12">
 
@@ -409,7 +453,7 @@
             <div class="container">
                 <div class="row g-4 text-center mb-5">
                     <div class="col-lg-12">
-                        <h1><span class="text-primary"><strong>Nortamericano</strong></span> | Inscripción</h1>
+                        <h1><span class="text-primary"><strong>Norteamericano</strong></span> | Inscripción</h1>
                         <hr />
                     </div>
 
@@ -529,7 +573,7 @@
                                             <th style="width: 10%"></th>
                                             <th style="width: 10%" class="text-center ">Run</th>
                                             <th style="width: 60%">Alumno </th>
-                                            <th style="width: 20%">Curso</th>                                          
+                                            <th style="width: 20%">Curso</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -543,7 +587,8 @@
                                                             </td>
                                                             <td class="text-center " style="width: 10%"><%# Eval("alumnoID") %></td>
                                                             <td class="text-start " style="width: 60%"><%# string.Concat(Eval("Nombres")," ", Eval("AP_Paterno") ," ", Eval("AP_Materno") )%></td>
-                                                            <td class="text-start " style="width: 20%"><%# Eval("curso") %></td>                                                                </tr>
+                                                            <td class="text-start " style="width: 20%"><%# Eval("curso") %></td>
+                                                        </tr>
                                                     </tbody>
                                                 </table>
                                             </ItemTemplate>

@@ -30,9 +30,7 @@
                                         <span class="display-6 text-dark">Curso de Inglés | <span class="text-primary">Niños Niñas </span></span>
                                     </div>
                                     <div class="col-sm-12 mt-2">
-                                        <span class="h5">
-                                            <i class="fas fa-clock me-2"></i>40 Horas 
-                                            <span class="me-2 ms-2">|</span>
+                                        <span class="h5">                                           
                                             <i class="fas fa-user me-2"></i>Presencial 
                                             <span class="me-2 ms-2">|</span>
                                             <i class="fas fa-laptop me-2"></i>Online
@@ -58,8 +56,8 @@
                                             <tr runat="server" id="btn_comprar">
                                                 <td>
                                                     <div class="d-grid gap-2">
-                                                        <%--<a href="Shop.aspx" class="btn btn-success btn-lg"><i class="fas fa-shopping-cart me-2"></i>Comprar Curso </a>--%>
-                                                        <a href="https://diagnostico.norteamericano.cl/kid" target="_blank" class="btn btn-success btn-lg"><i class="fas fa-shopping-cart me-2"></i>Comprar Curso </a>
+                                                        <a href="Shop.aspx" class="btn btn-success btn-lg"><i class="fas fa-shopping-cart me-2"></i>Comprar Curso </a>
+                                                        <%--<a href="https://diagnostico.norteamericano.cl/kid" target="_blank" class="btn btn-success btn-lg"><i class="fas fa-shopping-cart me-2"></i>Comprar Curso </a>--%>
                                                     </div>
                                                 </td>
                                             </tr>
@@ -311,7 +309,7 @@
                                                     <h5 class="text-primary">Modalidad</h5>
                                                 </td>
                                                 <th>
-                                                    <h5>Regular (40 horas)</h5>
+                                                    <h5>Regular (1 o 2 clases por semana)</h5>
                                                 </th>
                                                 <th></th>
                                             </tr>
@@ -387,7 +385,7 @@
                                                     <h5 class="text-primary">Duración</h5>
                                                 </td>
                                                 <td>
-                                                    <h5>1 mes por curso</h5>
+                                                    <h5>Un mes (4 clases por semana)</h5>
                                                 </td>
                                             </tr>
                                             <tr>

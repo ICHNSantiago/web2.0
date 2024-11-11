@@ -63,6 +63,29 @@ namespace Datos
             }
         }
 
+        public DataTable BuscarKids(string alumnoID)
+        {
+            DataTable tabla = new DataTable();
+
+            try
+            {
+                Comando = new MySqlCommand("sam_diagnostico.BuscarDiagnosticoKids", Conexion.AbrirConnectionMySqlSam())
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                Comando.Parameters.AddWithValue("@AlumnoID", alumnoID);
+                Adaptador = new MySqlDataAdapter(Comando);
+                Adaptador.Fill(tabla);
+                Conexion.CerrarConnectionMysql();
+                return tabla;
+
+            }
+            catch (MySqlException)
+            {
+                Conexion.CerrarConnectionMysql();
+                return tabla;
+            }
+        }
 
         public DataTable PruebaAdultos(int nivel, int test)
         {
@@ -96,6 +119,31 @@ namespace Datos
             try
             {
                 Comando = new MySqlCommand("sam_diagnostico.CargarTestTeens", Conexion.AbrirConnectionMySqlSam())
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                Comando.Parameters.AddWithValue("@cursoNivel", nivel);
+                Comando.Parameters.AddWithValue("@testNivel", test);
+                Adaptador = new MySqlDataAdapter(Comando);
+                Adaptador.Fill(tabla);
+                Conexion.CerrarConnectionMysql();
+                return tabla;
+
+            }
+            catch (MySqlException)
+            {
+                Conexion.CerrarConnectionMysql();
+                return tabla;
+            }
+        }
+
+        public DataTable PruebaKids(int nivel, int test)
+        {
+            DataTable tabla = new DataTable();
+
+            try
+            {
+                Comando = new MySqlCommand("sam_diagnostico.CargarTestKids", Conexion.AbrirConnectionMySqlSam())
                 {
                     CommandType = CommandType.StoredProcedure
                 };
@@ -164,6 +212,31 @@ namespace Datos
             }
         }
 
+        public DataTable PruebaRespuestaKids(int nivel, int test)
+        {
+            DataTable tabla = new DataTable();
+
+            try
+            {
+                Comando = new MySqlCommand("sam_diagnostico.CargarTestRespuestasKids", Conexion.AbrirConnectionMySqlSam())
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                Comando.Parameters.AddWithValue("@cursoNivel", nivel);
+                Comando.Parameters.AddWithValue("@testNivel", test);
+                Adaptador = new MySqlDataAdapter(Comando);
+                Adaptador.Fill(tabla);
+                Conexion.CerrarConnectionMysql();
+                return tabla;
+
+            }
+            catch (MySqlException)
+            {
+                Conexion.CerrarConnectionMysql();
+                return tabla;
+            }
+        }
+
         public string IngresarRespuestasAdultos(int diagnosticoID, int testID, int cursoID, int preguntaID, string respuesta, DateTime fecha)
         {
             string resultado = string.Empty;
@@ -191,11 +264,35 @@ namespace Datos
         }
 
         public string IngresarRespuestasTeens(int diagnosticoID, int testID, int cursoID, int preguntaID, string respuesta, DateTime fecha)
-        {
-            string resultado = string.Empty;
+        {           
             try
             {
                 Comando = new MySqlCommand("sam_diagnostico.GrabaRespuestaTeens", Conexion.AbrirConnectionMySql())
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                Comando.Parameters.AddWithValue("@idDiagnostico", diagnosticoID);
+                Comando.Parameters.AddWithValue("@testTipo", testID);
+                Comando.Parameters.AddWithValue("@idCurso", cursoID);
+                Comando.Parameters.AddWithValue("@pregunta", preguntaID);
+                Comando.Parameters.AddWithValue("@respuestaPregunta", respuesta);
+                Comando.Parameters.AddWithValue("@fechaIngreso", fecha);
+                Comando.ExecuteReader();
+                Conexion.CerrarConnectionMysql();
+                return "ok";
+            }
+            catch (MySqlException ex)
+            {
+                Conexion.CerrarConnectionMysql();
+                return "Error: " + ex.Message;
+            }
+        }
+
+        public string IngresarRespuestasKids(int diagnosticoID, int testID, int cursoID, int preguntaID, string respuesta, DateTime fecha)
+        {
+            try
+            {
+                Comando = new MySqlCommand("sam_diagnostico.GrabaRespuestaKids", Conexion.AbrirConnectionMySql())
                 {
                     CommandType = CommandType.StoredProcedure
                 };

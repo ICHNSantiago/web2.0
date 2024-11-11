@@ -21,5 +21,15 @@ namespace Negocio
         {
             return GetCompra.BuscarApo(apoderadoID);
         }
+
+        public DataTable BuscarContratos(string id)
+        {
+            return GetCompra.BuscarContratos(id);
+        }
+
+        public DataTable BuscarSiguienteNivelPrograma(int programaID)
+        {
+            return GetCompra.BuscarSiguienteNivel("PROGRAMA", programaID);
+        }
     }
 }

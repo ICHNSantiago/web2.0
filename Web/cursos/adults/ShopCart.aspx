@@ -153,7 +153,7 @@
                                 </del>
                             </th>
                         </tr>
-                        <tr class="text-center">
+                        <tr class="text-center" runat="server" visible="false">
                             <td class="text-end">
                                 <asp:LinkButton ID="LinkButtonMenos" CssClass="btn btn-primary" runat="server" OnClick="LinkButtonMenos_Click"> - </asp:LinkButton>
                             </td>

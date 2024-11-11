@@ -116,8 +116,63 @@
     <Content Include="Contact.aspx" />
     <Content Include="cursos\kid\ShopCart.aspx" />
     <Content Include="cursos\pre\ShopCart.aspx" />
+    <Content Include="Diagnostico\Kid\Beginner.aspx" />
+    <Content Include="Diagnostico\Kid\Elementary.aspx" />
+    <Content Include="Diagnostico\Kid\img\14\kid01.png" />
+    <Content Include="Diagnostico\Kid\img\14\kid02_01.png" />
+    <Content Include="Diagnostico\Kid\img\14\kid02_02.png" />
+    <Content Include="Diagnostico\Kid\img\14\kid02_03.gif" />
+    <Content Include="Diagnostico\Kid\img\14\kid03.png" />
+    <Content Include="Diagnostico\Kid\img\14\kid04_01.png" />
+    <Content Include="Diagnostico\Kid\img\14\kid04_02.png" />
+    <Content Include="Diagnostico\Kid\img\14\kid04_03.png" />
+    <Content Include="Diagnostico\Kid\img\15\kid01.png" />
+    <Content Include="Diagnostico\Kid\img\15\kid02.png" />
+    <Content Include="Diagnostico\Kid\img\15\kid03.png" />
+    <Content Include="Diagnostico\Kid\img\15\kid04.png" />
+    <Content Include="Diagnostico\Kid\img\16\kid01.png" />
+    <Content Include="Diagnostico\Kid\img\16\kid02.png" />
+    <Content Include="Diagnostico\Kid\img\16\kid03.png" />
+    <Content Include="Diagnostico\Kid\img\16\kid04.png" />
+    <Content Include="Diagnostico\Kid\img\17\kid01_01.png" />
+    <Content Include="Diagnostico\Kid\img\17\kid01_02.png" />
+    <Content Include="Diagnostico\Kid\img\17\kid01_03.png" />
+    <Content Include="Diagnostico\Kid\img\17\kid02.png" />
+    <Content Include="Diagnostico\Kid\img\17\kid03.png" />
+    <Content Include="Diagnostico\Kid\img\17\kid04.png" />
+    <Content Include="Diagnostico\Kid\img\18\kid01.png" />
+    <Content Include="Diagnostico\Kid\img\18\kid02.png" />
+    <Content Include="Diagnostico\Kid\img\18\kid03.png" />
+    <Content Include="Diagnostico\Kid\img\18\kid04.png" />
+    <Content Include="Diagnostico\Kid\img\19\kid01_01.png" />
+    <Content Include="Diagnostico\Kid\img\19\kid01_02.png" />
+    <Content Include="Diagnostico\Kid\img\19\kid02.png" />
+    <Content Include="Diagnostico\Kid\img\19\kid03.png" />
+    <Content Include="Diagnostico\Kid\img\19\kid04_01.png" />
+    <Content Include="Diagnostico\Kid\img\19\kid04_02.png" />
+    <Content Include="Diagnostico\Kid\img\19\kid04_03.png" />
+    <Content Include="Diagnostico\Kid\img\19\kid04_04.png" />
+    <Content Include="Diagnostico\Kid\img\20\kid01_01.png" />
+    <Content Include="Diagnostico\Kid\img\20\kid01_02.png" />
+    <Content Include="Diagnostico\Kid\img\20\kid01_03.png" />
+    <Content Include="Diagnostico\Kid\img\20\kid02_01.png" />
+    <Content Include="Diagnostico\Kid\img\20\kid02_02.png" />
+    <Content Include="Diagnostico\Kid\img\20\kid04.png" />
+    <Content Include="Diagnostico\Kid\img\20\kid05_01.gif" />
+    <Content Include="Diagnostico\Kid\img\20\kid05_02.png" />
+    <Content Include="Diagnostico\Kid\img\21\kid01.png" />
+    <Content Include="Diagnostico\Kid\img\21\kid02.png" />
+    <Content Include="Diagnostico\Kid\img\21\kid03.png" />
+    <Content Include="Diagnostico\Kid\Index.aspx" />
+    <Content Include="Diagnostico\Kid\LowIntermediate.aspx" />
+    <Content Include="Diagnostico\Kid\PreAdvanced.aspx" />
+    <Content Include="Diagnostico\Kid\PreIntermediate.aspx" />
+    <Content Include="Diagnostico\Kid\Resultado.aspx" />
+    <Content Include="Diagnostico\Kid\Validador.aspx" />
     <Content Include="Error\404.aspx" />
     <Content Include="Error\GenericError.aspx" />
+    <Content Include="img\evaluacion.png" />
+    <Content Include="img\inicial.png" />
     <Content Include="img\programas\adultos_niveles.png" />
     <Content Include="cursos\adults\Index.aspx" />
     <Content Include="cursos\adults\Shop.aspx" />
@@ -681,6 +736,62 @@
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Diagnostico\Adults\Validador.aspx.designer.cs">
+      <DependentUpon>Validador.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Diagnostico\Kid\Beginner.aspx.cs">
+      <DependentUpon>Beginner.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Diagnostico\Kid\Beginner.aspx.designer.cs">
+      <DependentUpon>Beginner.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Diagnostico\Kid\Elementary.aspx.cs">
+      <DependentUpon>Elementary.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Diagnostico\Kid\Elementary.aspx.designer.cs">
+      <DependentUpon>Elementary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Diagnostico\Kid\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Diagnostico\Kid\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Diagnostico\Kid\LowIntermediate.aspx.cs">
+      <DependentUpon>LowIntermediate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Diagnostico\Kid\LowIntermediate.aspx.designer.cs">
+      <DependentUpon>LowIntermediate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Diagnostico\Kid\PreAdvanced.aspx.cs">
+      <DependentUpon>PreAdvanced.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Diagnostico\Kid\PreAdvanced.aspx.designer.cs">
+      <DependentUpon>PreAdvanced.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Diagnostico\Kid\PreIntermediate.aspx.cs">
+      <DependentUpon>PreIntermediate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Diagnostico\Kid\PreIntermediate.aspx.designer.cs">
+      <DependentUpon>PreIntermediate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Diagnostico\Kid\Resultado.aspx.cs">
+      <DependentUpon>Resultado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Diagnostico\Kid\Resultado.aspx.designer.cs">
+      <DependentUpon>Resultado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Diagnostico\Kid\Validador.aspx.cs">
+      <DependentUpon>Validador.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Diagnostico\Kid\Validador.aspx.designer.cs">
       <DependentUpon>Validador.aspx</DependentUpon>
     </Compile>
     <Compile Include="Diagnostico\Teens\Advanced.aspx.cs">

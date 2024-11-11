@@ -30,9 +30,9 @@
                                     </div>
                                     <div class="col-sm-12 mt-2">
                                         <span class="h5">
-                                            <i class="fas fa-clock me-2"></i>40 Horas 
+                                            <i class="fas fa-clock me-2"></i>Regular
                                      <span class="me-2 ms-2">|</span>
-                                            <i class="fas fa-clock me-2"></i>80 Horas 
+                                            <i class="fas fa-clock me-2"></i>Intensivo
                                     <span class="me-2 ms-2">|</span>
                                             <i class="fas fa-user me-2"></i>Presencial 
                                     <span class="me-2 ms-2">|</span>
@@ -59,8 +59,8 @@
                                             <tr>
                                                 <td>
                                                     <div class="d-grid gap-2">
-                                                        <%--<a href="Shop.aspx" class="btn btn-success btn-lg"><i class="fas fa-shopping-cart me-2"></i>Comprar Curso </a>--%>
-                                                        <a href="https://diagnostico.norteamericano.cl/adultos/" target="_blank" class="btn btn-success btn-lg"><i class="fas fa-shopping-cart me-2"></i>Comprar Curso </a>
+                                                        <a href="Shop.aspx" class="btn btn-success btn-lg"><i class="fas fa-shopping-cart me-2"></i>Comprar Curso </a>
+                                                        <%--<a href="https://diagnostico.norteamericano.cl/adultos/" target="_blank" class="btn btn-success btn-lg"><i class="fas fa-shopping-cart me-2"></i>Comprar Curso </a>--%>
                                                     </div>
                                                 </td>
                                             </tr>
@@ -310,10 +310,10 @@
                                                     <h5 class="text-primary">Modalidad</h5>
                                                 </td>
                                                 <th>
-                                                    <h5>Regular (40 horas)</h5>
+                                                    <h5>Regular (2 clases por semana)</h5>
                                                 </th>
                                                 <th>
-                                                    <h5>Intensivo (80 horas)</h5>
+                                                    <h5>Intensivo (4 clases por semana)</h5>
                                                 </th>
                                             </tr>
                                             <tr>
@@ -330,14 +330,7 @@
                                                     <h5>Online</h5>
                                                 </td>
                                             </tr>
-                                            <tr>
-                                                <td>
-                                                    <h5 class="text-primary">Edad</h5>
-                                                </td>
-                                                <td>
-                                                    <h5>Desde los 17 Años</h5>
-                                                </td>
-                                            </tr>
+                                           
                                             <tr style="text-align: justify">
                                                 <td colspan="3">Curso de inglés para aplicar vocabulario y expresiones para soluciones comunicativas prácticas y 
                                                    para el uso funcional de expresiones de presentación, saludo y despedida; entrega de datos propios, de otras personas, 
@@ -418,15 +411,7 @@
                                     </div>
                                     <div class="col-md-9">
 
-                                        <table class="table text-dark">
-                                            <tr>
-                                                <td>
-                                                    <h5 class="text-primary">Edad</h5>
-                                                </td>
-                                                <td>
-                                                    <h5>Desde los 17 años</h5>
-                                                </td>
-                                            </tr>
+                                        <table class="table text-dark">                                            
                                             <tr>
                                                 <td>
                                                     <h5 class="text-primary">Inicios</h5>
@@ -440,7 +425,7 @@
                                                     <h5 class="text-primary">Duración</h5>
                                                 </td>
                                                 <td>
-                                                    <h5>30 horas (1 mes por curso)</h5>
+                                                    <h5>Un mes (4 clases por semana)</h5>
                                                 </td>
                                             </tr>
                                             <tr>

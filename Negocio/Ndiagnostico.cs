@@ -22,7 +22,13 @@ namespace Negocio
             return alumno.BuscarTeens(alumnoID);
         }
 
-       
+        public DataTable BuscarKids(string alumnoID)
+        {
+            return alumno.BuscarKids(alumnoID);
+        }
+
+
+
         public DataTable PruebaAdultos(int nivel, int test)
         {
             return alumno.PruebaAdultos(nivel, test);
@@ -33,7 +39,10 @@ namespace Negocio
             return alumno.PruebaTeens(nivel, test);
         }
 
-
+        public DataTable PruebaKids(int nivel, int test)
+        {
+            return alumno.PruebaKids(nivel, test); 
+        }
 
 
         public DataTable PruebaRespuestaAdultos(int nivel, int test)
@@ -46,6 +55,11 @@ namespace Negocio
             return alumno.PruebaRespuestaTeens(nivel, test);
         }
 
+        public DataTable PruebaRespuestaKids(int nivel, int test)
+        {
+            return alumno.PruebaRespuestaKids(nivel, test);
+        }
+
         public string IngresarRespuestasAdultos(int diagnosticoID, int testID, int cursoID, int preguntaID, string respuesta, DateTime fecha)
         {
             return alumno.IngresarRespuestasAdultos(diagnosticoID, testID, cursoID, preguntaID, respuesta, fecha);
@@ -54,6 +68,11 @@ namespace Negocio
         public string IngresarRespuestasTeens(int diagnosticoID, int testID, int cursoID, int preguntaID, string respuesta, DateTime fecha)
         {
             return alumno.IngresarRespuestasTeens(diagnosticoID, testID, cursoID, preguntaID, respuesta, fecha);
+        }
+
+        public string IngresarRespuestasKids(int diagnosticoID, int testID, int cursoID, int preguntaID, string respuesta, DateTime fecha)
+        {
+            return alumno.IngresarRespuestasKids(diagnosticoID, testID, cursoID, preguntaID, respuesta, fecha);
         }
 
         public string NivelNombre(int idCurso)
@@ -65,6 +84,14 @@ namespace Negocio
         }
 
         public string NivelNombreTeens(int idCurso)
+        {
+            DataTable data = alumno.NivelNombre(idCurso);
+            string var = data.Rows[0]["NombreCurso"].ToString().ToLower().Replace("-", string.Empty);
+            string[] nombres = var.Split(' ');
+            return nombres[1];
+        }
+
+        public string NivelNombreKids(int idCurso)
         {
             DataTable data = alumno.NivelNombre(idCurso);
             string var = data.Rows[0]["NombreCurso"].ToString().ToLower().Replace("-", string.Empty);

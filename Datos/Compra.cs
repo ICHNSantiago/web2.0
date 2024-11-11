@@ -63,5 +63,54 @@ namespace Datos
                 return tabla;
             }
         }
+
+        public DataTable BuscarContratos(string id)
+        {
+            DataTable tabla = new DataTable();
+
+            try
+            {
+                Comando = new MySqlCommand("sam.BuscarAlumnoCursosHistorial", Conexion.AbrirConnectionMySql())
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                Comando.Parameters.AddWithValue("@alumnoID", id);
+
+                Adaptador = new MySqlDataAdapter(Comando);
+                Adaptador.Fill(tabla);
+                Conexion.CerrarConnectionMysql();
+                return tabla;
+
+            }
+            catch (MySqlException)
+            {
+                Conexion.CerrarConnectionMysql();
+                return tabla;
+            }
+        }
+
+        public DataTable BuscarSiguienteNivel(string tipoBusqueda, int programaID )
+        {
+            DataTable tabla = new DataTable();
+
+            try
+            {
+                Comando = new MySqlCommand("sige_sam_V3.BuscarCurso", Conexion.AbrirConnectionMySql())
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                Comando.Parameters.AddWithValue("@tipoBusqueda", tipoBusqueda);
+                Comando.Parameters.AddWithValue("@cursoNombre", programaID);
+                Adaptador = new MySqlDataAdapter(Comando);
+                Adaptador.Fill(tabla);
+                Conexion.CerrarConnectionMysql();
+                return tabla;
+            }
+            catch (MySqlException)
+            {
+                Conexion.CerrarConnectionMysql();
+                return tabla;
+            }
+        }
     }
 }

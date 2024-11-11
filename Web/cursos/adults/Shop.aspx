@@ -8,7 +8,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-        <!-- Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7349HX"
             height="0" width="0" style="display: none; visibility: hidden"></iframe>
@@ -43,25 +43,17 @@
                                             </h3>
                                         </th>
                                     </tr>
-
                                     <tr>
-                                        <td>Modalidad</td>
-                                        <th><i class="fas fa-user me-2"></i>Presencial
-                                            <br />
-                                            <i class="fas fa-laptop me-2"></i>Online
-                                        </th>
-                                    </tr>
-                                    <tr>
-                                        <td>Edad</td>
-                                        <th><i class="fas fa-user me-2"></i>17 años</th>
+                                        <td>Alumno</td>
+                                        <th><i class="fas fa-user me-2"></i>Adultos</th>
                                     </tr>
                                     <tr>
                                         <td>Duración</td>
-                                        <th><i class="fas fa-clock me-2"></i>40 horas</th>
+                                        <th><i class="fas fa-clock me-2"></i>3 meses <small>aprox.</small></th>
                                     </tr>
                                     <tr>
-                                        <td>Clases</td>
-                                        <th><i class="fas fa-clock me-2"></i>2 por Semana</th>
+                                        <td>Clases x Semana</td>
+                                        <th><i class="fas fa-clock me-2"></i>2 clases</th>
                                     </tr>
                                     <tr>
                                         <td>Inicios *</td>
@@ -120,23 +112,16 @@
                                         </th>
                                     </tr>
                                     <tr>
-                                        <td>Modalidad</td>
-                                        <th><i class="fas fa-user me-2"></i>Presencial
-                                            <br />
-                                            <i class="fas fa-laptop me-2"></i>Online
-                                        </th>
-                                    </tr>
-                                    <tr>
-                                        <td>Edad</td>
-                                        <th><i class="fas fa-user me-2"></i>17 años</th>
+                                        <td>Alumno</td>
+                                        <th><i class="fas fa-user me-2"></i>Adultos</th>
                                     </tr>
                                     <tr>
                                         <td>Duración</td>
-                                        <th><i class="fas fa-clock me-2"></i>80 horas</th>
+                                        <th><i class="fas fa-clock me-2"></i>3 meses <small>aprox.</small></th>
                                     </tr>
                                     <tr>
-                                        <td>Clases</td>
-                                        <th><i class="fas fa-clock me-2"></i>4 por Semana</th>
+                                        <td>Clases x Semana</td>
+                                        <th><i class="fas fa-clock me-2"></i>4 clases</th>
                                     </tr>
                                     <tr>
                                         <td>Inicios *</td>
@@ -195,23 +180,16 @@
                                         </th>
                                     </tr>
                                     <tr>
-                                        <td>Modalidad</td>
-                                        <th><i class="fas fa-user me-2"></i>Presencial
-                                            <br />
-                                            <i class="fas fa-laptop me-2"></i>Online
-                                        </th>
-                                    </tr>
-                                    <tr>
-                                        <td>Edad</td>
-                                        <th><i class="fas fa-user me-2"></i>17 años</th>
+                                        <td>Alumno</td>
+                                        <th><i class="fas fa-user me-2"></i>Adultos</th>
                                     </tr>
                                     <tr>
                                         <td>Duración</td>
-                                        <th><i class="fas fa-clock me-2"></i>30 horas</th>
+                                        <th><i class="fas fa-clock me-2"></i>1 mes</th>
                                     </tr>
                                     <tr>
-                                        <td>Clases</td>
-                                        <th><i class="fas fa-clock me-2"></i>4 por Semana</th>
+                                        <td>Clases x Semana</td>
+                                        <th><i class="fas fa-clock me-2"></i>4 clases</th>
                                     </tr>
                                     <tr>
                                         <td>Inicio</td>
