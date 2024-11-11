@@ -238,10 +238,12 @@ namespace Web.Diagnostico.Teens
 
             if (estadoDiagnostico.Equals("FINALIZADO"))
             {
-                // lead ???????????
+                ndiagnostico.ActualizarEstadoFin(diagnosticoID, nivel, estadoDiagnostico);
             }
-
-            ndiagnostico.ActualizarEstado(diagnosticoID, nivel, estadoDiagnostico);
+            else
+            {
+                ndiagnostico.ActualizarEstadoNivel(diagnosticoID, nivel, estadoDiagnostico);
+            }
             return link;
         }
 

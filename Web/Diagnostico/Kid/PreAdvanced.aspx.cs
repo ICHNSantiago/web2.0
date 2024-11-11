@@ -143,8 +143,6 @@ namespace Web.Diagnostico.Kid
                                 break;
                         }
                         break;
-                  
-                        break;
                     default:
                         break;
                 }

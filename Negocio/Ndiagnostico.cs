@@ -99,9 +99,14 @@ namespace Negocio
             return nombres[1];
         }
 
-        public string ActualizarEstado(int diagnosticoID, int nivelID, string estado)
+        public string ActualizarEstadoNivel(int diagnosticoID, int nivelID, string estado)
         {
-            return alumno.ActualizarEstado(diagnosticoID, nivelID, estado);
+            return alumno.ActualizarEstado(diagnosticoID, nivelID, estado, "Nivel");
+        }
+
+        public string ActualizarEstadoFin(int diagnosticoID, int nivelID, string estado)
+        {
+            return alumno.ActualizarEstado(diagnosticoID, nivelID, estado, "fin");
         }
 
         public DataTable ValidarAlumno(string alumnoID)
@@ -109,9 +114,9 @@ namespace Negocio
             return alumno.ValidarAlumno(alumnoID);
         }
 
-        public string Ingreso(string rut, int nivel, string usuario, int lead)
+        public string Ingreso(string rut, int nivel, string usuario)
         {
-            return alumno.Ingresar(rut, nivel, usuario, lead);
+            return alumno.Ingresar(rut, nivel, usuario, 14);
         }
     }
 }

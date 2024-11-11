@@ -337,17 +337,18 @@ namespace Datos
             }
         }
 
-        public string ActualizarEstado(int diagnosticoID, int nivelID, string estado)
+        public string ActualizarEstado(int diagnosticoID, int nivelID, string estado, string estadoTest)
         {
             try
             {
-                Comando = new MySqlCommand("sige_sam_V3.ActualizarEstadoDiagnostico", Conexion.AbrirConnectionMySql())
+                Comando = new MySqlCommand("sam_diagnostico.ActualizarEstadoDiagnostico", Conexion.AbrirConnectionMySql())
                 {
                     CommandType = CommandType.StoredProcedure
                 };
                 Comando.Parameters.AddWithValue("@idDiagnostico", diagnosticoID);
                 Comando.Parameters.AddWithValue("@cursoID", nivelID);
                 Comando.Parameters.AddWithValue("@estadoTest", estado);
+                Comando.Parameters.AddWithValue("@tipo", estadoTest);
 
                 Comando.ExecuteReader();
                 Conexion.CerrarConnectionMysql();

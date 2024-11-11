@@ -120,10 +120,13 @@ namespace Web.Diagnostico.Kid
                 int diagnosticoID = int.Parse(ticket.UserData.ToString());
 
                 Ndiagnostico ndiagnostico = new Ndiagnostico();
-                ndiagnostico.ActualizarEstado(diagnosticoID, 39, "PENDIENTE");
+                ndiagnostico.ActualizarEstadoFin(diagnosticoID, 14, "PENDIENTE");
+
+                byte[] encryted = System.Text.Encoding.Unicode.GetBytes("si");
+                string resultado = Convert.ToBase64String(encryted);
 
                 string token = Convert.ToString(Request["alumno"]);
-                Response.Redirect("Index.aspx?alum=" + token);
+                Response.Redirect("Index.aspx?alum=" + token + "&repertir=" + resultado);
             }
         }
     }
