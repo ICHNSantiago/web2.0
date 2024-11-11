@@ -413,9 +413,7 @@
                                     <tr>
                                     <tr class="table-primary">
                                         <td colspan="2">
-                                            <a href="#"></a>
-                                            <a class="alert-link text-primary" style="cursor: pointer" data-bs-toggle="modal" data-bs-target="#exampleModal">Ver los Terminos y condiciones
-                                            </a>
+                                            <a href="<%=Page.ResolveUrl("~/TerminosCondiciones.aspx") %>" class="text-primary" target="_blank"><i class="fas fa-angle-right me-2"></i><strong>Ver los Términos y condiciones</strong></a>
                                         </td>
                                     </tr>
                                     <tr class="table-primary text-dark">

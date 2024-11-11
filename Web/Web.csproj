@@ -392,6 +392,7 @@
     <Content Include="Tematica\Valentin\love.gif" />
     <Content Include="Tematica\Valentin\valentine-6.gif" />
     <Content Include="Tematica\Valentin\Valentine01.png" />
+    <Content Include="TerminosCondiciones.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -927,6 +928,13 @@
     </Compile>
     <Compile Include="Sedes.aspx.designer.cs">
       <DependentUpon>Sedes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TerminosCondiciones.aspx.cs">
+      <DependentUpon>TerminosCondiciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TerminosCondiciones.aspx.designer.cs">
+      <DependentUpon>TerminosCondiciones.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

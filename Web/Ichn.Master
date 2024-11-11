@@ -134,6 +134,7 @@
                                 </a>
                                 <div class="dropdown-menu">
                                     <a href="<%=Page.ResolveUrl("~/AmericanSpace.aspx") %>" class="dropdown-item">American Space</a>
+                                    <a href="<%=Page.ResolveUrl("https://testingcenter.cl") %>" target="_blank" class="dropdown-item">Testing Center</a>
                                     <a href="<%=Page.ResolveUrl("~/Intranet.aspx") %>" class="dropdown-item">Intranet</a>
                                     <a href="<%=Page.ResolveUrl("~/Sedes.aspx") %>" class="dropdown-item">Sedes</a>
                                     <a href="<%=Page.ResolveUrl("~/About.aspx") %>" class="dropdown-item">Nuestra Institución</a>
@@ -198,8 +199,10 @@
                                     <h4 class="text-white mb-4">Links</h4>
                                     <a href="<%=Page.ResolveUrl("~/About.aspx") %>" class="text-white"><i class="fas fa-angle-right me-2"></i>Nuestra Institución</a>
                                     <a href="<%=Page.ResolveUrl("~/AmericanSpace.aspx") %>" class="text-white"><i class="fas fa-angle-right me-2"></i>American Space</a>
+                                    <a href="https://testingcenter.cl" class="text-white" target="_blank"><i class="fas fa-angle-right me-2"></i>Testing Center</a>
                                     <a href="<%=Page.ResolveUrl("~/Intranet.aspx") %>" class="text-white"><i class="fas fa-angle-right me-2"></i>Intranet</a>
                                     <a href="<%=Page.ResolveUrl("~/Sedes.aspx") %>" class="text-white"><i class="fas fa-angle-right me-2"></i>Sedes</a>
+                                    <a href="<%=Page.ResolveUrl("~/TerminosCondiciones.aspx") %>" class="text-white"><i class="fas fa-angle-right me-2"></i>Términos y condiciones</a>
                                     <a href="<%=Page.ResolveUrl("~/PoliticaPrivacidad.aspx") %>" class="text-white"><i class="fas fa-angle-right me-2"></i>Política de privacidad</a>
                                 </div>
                             </div>
@@ -265,13 +268,16 @@
 
     <!-- Copyright Start -->
     <div class="container-fluid copyright py-4">
+
+
+
         <div class="container">
             <div class="row g-4 align-items-center">
                 <div class="col-md-6 text-center text-md-end mb-md-0">
-                    <span class="text-white"><a class="border-bottom text-white"><i class="fas fa-copyright text-white me-2"></i>Norteamericano.cl</a>, All right reserved.</span>
+                    <span class="text-white"><span class="border-bottom text-white"><i class="fas fa-copyright text-white me-2"></i>Norteamericano.cl - <span id="demo"></span></span>, All right reserved.</span>
                 </div>
                 <div class="col-md-6 text-center text-md-start text-white">
-                    Designed By <a class="border-bottom text-white">Departamento de informática </a>
+                    Designed By <span class="border-bottom text-white">Departamento de Informática</span>
                 </div>
             </div>
         </div>
@@ -367,6 +373,12 @@
         });
     </script>
 
+    
+        <script>
+            const d = new Date();
+            let year = d.getFullYear();
+            document.getElementById("demo").innerHTML = year;
+        </script>
 
 </body>
 
