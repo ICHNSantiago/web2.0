@@ -43,23 +43,18 @@
                                             </h3>
                                         </th>
                                     </tr>
-
-                                    <tr>
-                                        <td>Modalidad</td>
-                                        <th><i class="fas fa-user me-2"></i>Presencial</th>
-                                    </tr>
                                     <tr>
                                         <td>Edad</td>
                                         <th><i class="fas fa-user me-2"></i>4 a 6 años</th>
                                     </tr>
                                     <tr>
                                         <td>Duración</td>
-                                        <th><i class="fas fa-clock me-2"></i>40 horas</th>
+                                        <th><i class="fas fa-clock me-2"></i>6 meses</th>
                                     </tr>
                                     <tr>
-                                        <td>Clases</td>
+                                        <td>Clases x Semana</td>
                                         <th>
-                                            <i class="fas fa-clock me-2"></i>1 por semana                                           
+                                            <i class="fas fa-clock me-2"></i>1 clase                                           
                                         </th>
                                     </tr>
                                     <tr>
@@ -117,22 +112,18 @@
                                                 <strong class="text-primary">Summer School</strong>
                                             </h3>
                                         </th>
-                                    </tr>
-                                    <tr>
-                                        <td>Modalidad</td>
-                                        <th><i class="fas fa-user me-2"></i>Presencial</th>
-                                    </tr>
+                                    </tr>                                 
                                     <tr>
                                         <td>Edad</td>
                                         <th><i class="fas fa-user me-2"></i>4 a 6 años</th>
                                     </tr>
                                     <tr>
                                         <td>Duración</td>
-                                        <th><i class="fas fa-clock me-2"></i>30 horas</th>
+                                        <th><i class="fas fa-clock me-2"></i>1 mes</th>
                                     </tr>
                                     <tr>
-                                        <td>Clases</td>
-                                        <th><i class="fas fa-clock me-2"></i>4 por semana</th>
+                                        <td>Clases x Semana</td>
+                                        <th><i class="fas fa-clock me-2"></i>4 clases</th>
                                     </tr>
                                     <tr>
                                         <td>Inicio</td>
