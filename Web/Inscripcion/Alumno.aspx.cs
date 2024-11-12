@@ -1,14 +1,137 @@
 ﻿using Negocio;
 using System;
+using System.ComponentModel;
 using System.Data;
 using System.Web.Routing;
 using System.Web.UI.WebControls;
+using Web.wsAmazonSige;
 
 namespace Web.Inscripcion
 {
     public partial class Alumno : System.Web.UI.Page
     {
-        public int CambioRegularSummer(int nivel)
+        public string GrabaVentaSige(NUsuario nUsuario, int totalVenta, int tipoDescuento, string rutCliente, decimal montoDescuento, DateTime fecha, int cotizacionID, int netoVenta, string sedeVenta)
+        {
+            try
+            {
+                CodigoVenta codigoVenta = CodigoVenta.Matricula;
+                int varDescuento = 0;             
+
+                switch (tipoDescuento)
+                {
+                    case 5:
+                        decimal valor = montoDescuento / 100;
+                        decimal descuentoValor = netoVenta * valor;
+                        varDescuento = int.Parse(decimal.Round(descuentoValor, 0).ToString());
+                        break;
+                    case 6:
+                        valor = montoDescuento / 100;
+                        descuentoValor = netoVenta * valor;
+                        varDescuento = int.Parse(decimal.Round(descuentoValor, 0).ToString());
+                        break;
+                    case 7:
+                        valor = montoDescuento / 100;
+                        descuentoValor = netoVenta * valor;
+                        varDescuento = int.Parse(decimal.Round(descuentoValor, 0).ToString());
+                        break;
+
+                    default:
+                        varDescuento = int.Parse(montoDescuento.ToString());
+                        break;
+                }
+
+                NVenta nVenta = new NVenta
+                {
+                    IdCliente = rutCliente,
+                    NumeroMatricula = cotizacionID,
+                    TipoVenta = codigoVenta,
+                    FechaBoleta = fecha,
+                    IdCurso = "CURSO SAM",
+                    ValorCurso = totalVenta,
+                    CantidadCursos = 1,
+                    TotalVenta = totalVenta,
+                    GlosaVenta = "VENTA CURSO",
+                    MontoDescuento = varDescuento,
+                    GlosaDescuento = string.Empty,
+                    MontoRecargo = 0,
+                    GlosaRecargo = string.Empty,
+                    TipoBoleta = "BX",
+                    Contrato = 0,
+                    Vendedor = nUsuario.Usuario, // id vendedor
+                };
+
+                switch (sedeVenta)
+                {
+                    case "MONEDA":
+                        nVenta.Sede = CodigoSede.Moneda;
+                        break;
+                    case "PROVIDENCIA":
+                        nVenta.Sede = CodigoSede.Providencia;
+                        break;
+                    case "LA FLORIDA":
+                        nVenta.Sede = CodigoSede.LaFlorida;
+                        break;
+                    case "ONLINE":
+                        nVenta.Sede = CodigoSede.Online;
+                        break;
+                    case "EMPRESA":
+                        nVenta.Sede = CodigoSede.Empresa;
+                        break;
+                    default:
+                        nVenta.Sede = CodigoSede.Moneda;
+                        break;
+                }
+
+                ServiceSoapClient service = new ServiceSoapClient();
+                ServiceEmisionRespuesta respuesta = new ServiceEmisionRespuesta();
+                respuesta = service.GrabaVenta(nVenta, nUsuario);
+
+
+                if (respuesta.Mensaje.Equals("ok"))
+                {
+                    return respuesta.NumeroBoleta.ToString();
+                }
+                else
+                {
+                    return respuesta.Mensaje;
+                }
+            }
+            catch (Exception ex)
+            {
+                return ex.Message.ToString();
+            }
+        }
+
+
+
+        public void FinalizarVenta()
+        {
+            string cotizacionID = LabelCotizacionID.Text;
+
+            try
+            {
+                FechaApi fecha = new FechaApi();
+                DateTime fechaEmision = fecha.GetNetworkTime();
+                int idCotizacion = int.Parse(cotizacionID);
+
+                NUsuario nUsuario = new NUsuario
+                {
+                    Usuario = "1",
+                    Clave = "456789",
+                };
+
+                // string mensaje = GrabaVentaSige(nUsuario, );
+
+
+            }
+            catch (Exception ex)
+            {
+                // "Error en el sistema. vuelva a intentar mas tarde, detalle: "
+            }
+        }
+
+
+            public int CambioRegularSummer(int nivel)
         {
             int nuevoID;
 
@@ -242,6 +365,7 @@ namespace Web.Inscripcion
                         break;
                 }
 
+
                 LabelNivelID.Text = nivel.ToString();
             }
 
@@ -329,13 +453,17 @@ namespace Web.Inscripcion
         {
             NCompra nCompra = new NCompra();
             DataTable data = nCompra.Buscar(id);
+            string edad;
 
             if (data.Rows.Count > 0)
             {
                 info_alumno.Visible = true;
                 info_alumno_login.Visible = false;
+                edad = data.Rows[0]["Pre"].ToString();
                 LabelAlumnoNombre.Text = data.Rows[0]["Nombres"].ToString().ToLower() + " " + data.Rows[0]["AP_Paterno"].ToString().ToLower() + " " + data.Rows[0]["AP_Materno"].ToString().ToLower();
                 LabelAlumnoID.Text = data.Rows[0]["alumnoID"].ToString();
+                LabelCotizacionID.Text = data.Rows[0]["idCotizacion"].ToString();
+                LabelTarifaID.Text = data.Rows[0]["idPromo"].ToString();
                 LabelApoderadoID.Text = data.Rows[0]["apoderadoID"].ToString();
                 LabelCursoComprado.Text = data.Rows[0]["curso"].ToString();
                 LabelCompraTipoCurso.Text = data.Rows[0]["cursoTipo"].ToString();
@@ -377,7 +505,26 @@ namespace Web.Inscripcion
                     string[] nuevoNivel = nuevo.Split(';');
                     SelectCurso(sede, "diagnostico", int.Parse(nuevoNivel[0]), nuevoNivel[1]);
                 }
-
+                else
+                {
+                    if (LabelCursoComprado.Text == "preescolares")
+                    {
+                        switch (edad)
+                        {
+                            case "4":
+                                SelectCurso(sede, "diagnostico", 11, "YOUNG LEARNERS 1");
+                                break;
+                            case "5":
+                                SelectCurso(sede, "diagnostico", 12, "YOUNG LEARNERS 2");
+                                break;
+                            case "6":
+                                SelectCurso(sede, "diagnostico", 13, "YOUNG LEARNERS 3");
+                                break;
+                            default:
+                                break;
+                        }
+                    }
+                }
             }
             else
             {
@@ -682,6 +829,13 @@ namespace Web.Inscripcion
         {
             if (CheckBoxValidar.Checked)
             {
+                Ncotizacion ncotizacion = new Ncotizacion();
+                int cotiID = int.Parse(LabelCotizacionID.Text);
+                string alumnoID = LabelAlumnoID.Text;
+                int cursoID = int.Parse(LabelCursoID.Text);
+                int tarifaID = int.Parse(LabelTarifaID.Text);
+                string resultado = ncotizacion.IngresarInscripcion(cotiID, alumnoID, cursoID, tarifaID);
+
                 div_horario.Visible = false;
                 div_fin_Inscripc.Visible = true;
                 LinkButtonActualizar.Visible = false;

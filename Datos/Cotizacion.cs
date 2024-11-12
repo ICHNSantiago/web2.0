@@ -51,7 +51,7 @@ namespace Datos
             }
         }
 
-        public string IngresarDetalle(int cotizacion, string curso, string modalidad, string sede, int cantidad, int tarifa, int idDescto, int totalPago, string alumID, int alumEdad,string apoID)
+        public string IngresarDetalle(int cotizacion, string curso, string modalidad, string sede, int cantidad, int tarifa, int idDescto, int totalPago, string alumID, int alumEdad,string apoID, int tarifaID)
         {
             try
             {
@@ -70,7 +70,8 @@ namespace Datos
                 Comando.Parameters.AddWithValue("@alumno", alumID);
                 Comando.Parameters.AddWithValue("@apoderado", apoID);
                 Comando.Parameters.AddWithValue("@edadAlum", alumEdad);
-                
+                Comando.Parameters.AddWithValue("@tarifaCurso", tarifaID);
+
                 Comando.ExecuteReader();
                 Conexion.CerrarConnectionMysql();
                 return "ok";
@@ -283,6 +284,31 @@ namespace Datos
             {
                 Conexion.CerrarConnectionMysql();
                 return tabla;
+            }
+        }
+
+        public string IngresarInscripcion(int cotizacion, string idAlumno, int codigoCurso, int cantidad, int tarifa)
+        {
+            try
+            {
+                Comando = new MySqlCommand("sige_sam_V3.IngresarCotizacionDetalle", Conexion.AbrirConnectionMySql())
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                Comando.Parameters.AddWithValue("@cotizaion", cotizacion);
+                Comando.Parameters.AddWithValue("@alumno", idAlumno);
+                Comando.Parameters.AddWithValue("@codigoCurso", codigoCurso);
+                Comando.Parameters.AddWithValue("@cantidad", cantidad);
+                Comando.Parameters.AddWithValue("@tarifa", tarifa);
+
+                Comando.ExecuteReader();
+                Conexion.CerrarConnectionMysql();
+                return "ok";
+            }
+            catch (MySqlException ex)
+            {
+                Conexion.CerrarConnectionMysql();
+                return "Error: " + ex.Message;
             }
         }
     }

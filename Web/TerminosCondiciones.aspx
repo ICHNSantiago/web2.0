@@ -90,7 +90,7 @@
                     <span style="font-size: 120px">2</span>
                 </div>
                 <div class="col-lg-11">
-                    <h1><span class="text-primary"><strong>Obligaciones  </strong></span>del Alumno:</h1>
+                    <h1><span class="text-primary"><strong>Obligaciones  </strong></span>del Alumno</h1>
                     <hr />
                     <table style="text-align: justify" class="text-dark table">
                         <tr>

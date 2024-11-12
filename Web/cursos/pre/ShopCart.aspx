@@ -73,7 +73,7 @@
                         </tr>
                         <tr>
                             <td>Duración</td>
-                            <th><i class="fas fa-clock me-2"></i>30 horas</th>
+                            <th><i class="fas fa-clock me-2"></i>1 mes</th>
                         </tr>
                         <tr>
                             <td>Clases</td>
@@ -102,7 +102,7 @@
 
                         <tr>
                             <td>Duración</td>
-                            <th><i class="fas fa-clock me-2"></i>40 horas</th>
+                            <th><i class="fas fa-clock me-2"></i>6 meses</th>
                         </tr>
                         <tr>
                             <td>Clases</td>
@@ -123,15 +123,7 @@
                                 <asp:DropDownList ID="ListaEdad" CssClass="form-select" runat="server"></asp:DropDownList>
                                 <span class="badge bg-danger" runat="server" id="error_edad" visible="false" style="font-size: 14px">Tiene que seleccionar la edad del alumno</span>
                             </th>
-                        </tr>
-                        <%-- <tr>
-                            <td style="width: 40%">Modalidad de Clases</td>
-                            <th class="presente">
-                                <asp:RadioButton ID="RadioButtonMP" AutoPostBack="true" GroupName="Modalidad_clases" Text="Presencial" runat="server" OnCheckedChanged="RadioButtonMP_CheckedChanged" />
-                                <asp:RadioButton ID="RadioButtonMO" AutoPostBack="true" GroupName="Modalidad_clases" Text="Online" runat="server" OnCheckedChanged="RadioButtonMO_CheckedChanged" />
-                                <span class="badge bg-danger" runat="server" id="error_modalidad" visible="false" style="font-size: 14px">Tiene que seleccionar una modalidad de clases</span>
-                            </th>
-                        </tr>--%>
+                        </tr>                     
                         <tr>
                             <td>Sede</td>
                             <th>
@@ -147,6 +139,7 @@
                             <th colspan="3">
                                 <h1>$ 
                                     <asp:Label ID="LabelTarifa" runat="server" Text="Label"></asp:Label>
+                                     <asp:Label ID="LabelTarifaID" Visible="false" runat="server" Text="Label"></asp:Label>
                                 </h1>
                             </th>
                         </tr>

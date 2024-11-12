@@ -146,6 +146,7 @@
                             <th colspan="3">
                                 <h1>$ 
                                     <asp:Label ID="LabelTarifa" runat="server" Text="Label"></asp:Label>
+                                      <asp:Label ID="LabelTarifaID" Visible="false" runat="server" Text="Label"></asp:Label>
                                 </h1>
                             </th>
                         </tr>

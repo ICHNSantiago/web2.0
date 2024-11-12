@@ -51,6 +51,24 @@ namespace Web.Inscripcion
         protected global::System.Web.UI.WebControls.Label LabelApoderadoID;
 
         /// <summary>
+        /// Control LabelCotizacionID.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelCotizacionID;
+
+        /// <summary>
+        /// Control LabelTarifaID.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelTarifaID;
+
+        /// <summary>
         /// Control LabelCursoComprado.
         /// </summary>
         /// <remarks>

@@ -124,7 +124,7 @@ namespace Datos
                 Leer = Comando.ExecuteReader();
                 if (Leer.Read())
                 {
-                    resultado = Leer[3].ToString();
+                    resultado = Leer[1].ToString() + ";"+ Leer[3].ToString();
                 }
 
                 Conexion.CerrarConnectionMysql();

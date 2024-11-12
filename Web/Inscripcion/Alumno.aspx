@@ -53,6 +53,8 @@
                                     <td>
                                         <asp:Label ID="LabelAlumnoID" runat="server" Text="nombre apellido apellido"></asp:Label>
                                         <asp:Label ID="LabelApoderadoID" Visible="false" runat="server" Text="nombre apellido apellido"></asp:Label>
+                                        <asp:Label ID="LabelCotizacionID" Visible="false" runat="server" Text="nombre apellido apellido"></asp:Label>
+                                        <asp:Label ID="LabelTarifaID" Visible="false" runat="server" Text="nombre apellido apellido"></asp:Label>
                                     </td>
                                 </tr>
                                 <tr>
@@ -431,19 +433,19 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="row g-4" runat="server" id="div_fin_Inscripc" visible="false">
-                    <div class="row">
-                        <div class="col-md-12 mt-5 text-center">
-                            <h3><strong class="text-primary">Inscripción</strong> <strong>Finalizada</strong> </h3>
-                        </div>
-                        <div class="col-md-12  mt-5  text-center">
-                            <h5>En breve recibirás un mail de confirmación con tu boleta electrónica y contrato</h5>
-                        </div>
+            <div class="row g-4" runat="server" id="div_fin_Inscripc" visible="false">
+                <div class="row">
+                    <div class="col-md-12 mt-5 text-center">
+                        <h3><strong class="text-primary">Inscripción</strong> <strong>Finalizada</strong> </h3>
+                    </div>
+                    <div class="col-md-12  mt-5  text-center">
+                        <h5>En breve recibirás un mail de confirmación con tu boleta electrónica y contrato</h5>
                     </div>
                 </div>
-
             </div>
+
         </div>
         <!-- Blog End -->
     </div>

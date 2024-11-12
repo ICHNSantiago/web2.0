@@ -29,7 +29,9 @@
                                 <h5 runat="server" id="welcome">Aquí podrás evaluar tu nivel inglés de manera gratuita, obtendrás tu nivel actual y te ofreceremos la mejor opción para finalizar tu inscripción  
                                 </h5>
                             </div>
-
+                        </div>
+                        <div class="row ">
+                            <div class="col-md-3 text-center"></div>
                             <div class="col-md-6 text-center">
 
                                 <div class="alert-secondary text-dark rounded p-3  mb-1">
@@ -39,6 +41,9 @@
 
                                 </div>
                             </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-md-3 text-center"></div>
                             <div class="col-md-6 text-center">
                                 <div class="alert-secondary text-dark rounded p-3 ">
 
@@ -47,10 +52,21 @@
 
                                 </div>
                             </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-md-3 text-center"></div>
+                            <div class="col-md-6 mt-1 text-center">
+                                <div class="bg-warning text-dark rounded p-3 ">
+
+                                    <span><i class="fas fa-info-circle"></i></span>
+                                    <span><strong>Importante, Este diagnóstico debe ser realizado por el alumno</strong></span>
+
+                                </div>
+                            </div>
 
                             <div class="col-md-12 mt-5 text-center">
 
-                                <asp:LinkButton ID="LinkButtonIniciar" CssClass="btn btn-primary btn-lg" runat="server">Iniciar Diagnóstico</asp:LinkButton>
+                                <asp:LinkButton ID="LinkButtonIniciar" CssClass="btn btn-primary btn-lg cargando" runat="server">Iniciar Diagnóstico</asp:LinkButton>
 
                             </div>
                         </div>

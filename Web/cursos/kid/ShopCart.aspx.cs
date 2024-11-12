@@ -159,7 +159,8 @@ namespace Web.cursos.kid
                 int cantidad = int.Parse(LabelProductoCant.Text);
                 int tarifa = int.Parse(LabelProductoMonto.Text.Replace(".", string.Empty));
                 int descto = int.Parse(LabelPromoMontoID.Text);
-                cotizacion.IngresarDetalle(idCotizacion, curso, modalidad, sede, cantidad, tarifa, descto, total, rutAlu, 0,  rutApo);
+                int tarifaID = int.Parse(LabelTarifaID.Text);
+                cotizacion.IngresarDetalle(idCotizacion, curso, modalidad, sede, cantidad, tarifa, descto, total, rutAlu, 0,  rutApo, tarifaID);
             }
             return idCotizacion;
         }
@@ -210,7 +211,9 @@ namespace Web.cursos.kid
 
             Ncursos ncursos = new Ncursos();
             string tarifa = ncursos.BuscarTarifasV2(idPorgrama);
-            LabelTarifa.Text = int.Parse(tarifa).ToString("n0");
+            string[] tarifaDetalle = tarifa.Split(';');
+            LabelTarifa.Text = int.Parse(tarifaDetalle[1]).ToString("n0");
+            LabelTarifaID.Text = tarifaDetalle[0];
             LabelTarifaOld.Text = LabelTarifa.Text;
             LabelRespaldoTarifa.Text = LabelTarifa.Text;
         }

@@ -117,14 +117,14 @@ namespace Web.Diagnostico.Adults
         protected void LinkButtonInscripcion_Click(object sender, EventArgs e)
         {
             string token = Convert.ToString(Request["alumno"]);
-            
+
             byte[] encryted = System.Text.Encoding.Unicode.GetBytes(LabelNivel.Text);
             string resultado2 = Convert.ToBase64String(encryted);
 
             encryted = System.Text.Encoding.Unicode.GetBytes(LabelNivelID.Text);
             string resultado = Convert.ToBase64String(encryted);
 
-            string link = "~/Inscripcion/Alumno.aspx?alum=" + token +"&diagnostico=" + resultado + "&resultado=" + resultado2;
+            string link = "~/Inscripcion/Alumno.aspx?usuario=" + token + "&diagnostico=" + resultado + "&resultado=" + resultado2 + "&tipo=alumno";
             Response.Redirect(link);
         }
 

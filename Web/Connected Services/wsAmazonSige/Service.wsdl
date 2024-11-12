@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://www.norteamericano.cl/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://www.norteamericano.cl/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://www.norteamericano.cl/">
+      <s:element name="NivelIdiomaCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RutPasaporte" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="NivelIdiomaClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="NivelIdiomaClienteResult" type="tns:Resultado" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Resultado">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Rut" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombres" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AP_Paterno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AP_Materno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fecha_nacimiento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nivel" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GrabaVenta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="venta" type="tns:NVenta" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="tns:NUsuario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="NVenta">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="FechaBoleta" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumeroMatricula" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Sede" type="tns:CodigoSede" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdCliente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdCurso" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaInicioCurso" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaTerminoCurso" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="CantidadCursos" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TipoVenta" type="tns:CodigoVenta" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValorCurso" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="TotalVenta" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="GlosaVenta" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GlosaDescuento" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MontoDescuento" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="GlosaRecargo" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MontoRecargo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TipoBoleta" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Contrato" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Vendedor" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="CodigoSede">
+        <s:restriction base="s:string">
+          <s:enumeration value="Moneda" />
+          <s:enumeration value="Providencia" />
+          <s:enumeration value="LaFlorida" />
+          <s:enumeration value="Empresas" />
+          <s:enumeration value="Online" />
+          <s:enumeration value="Empresa" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="CodigoVenta">
+        <s:restriction base="s:string">
+          <s:enumeration value="Matricula" />
+          <s:enumeration value="SinMatricula" />
+          <s:enumeration value="CursosIndividuales" />
+          <s:enumeration value="EmpresasSinMatricula" />
+          <s:enumeration value="EmpresasConMatricula" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="NUsuario">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Usuario" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Clave" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GrabaVentaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GrabaVentaResult" type="tns:ServiceEmisionRespuesta" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ServiceEmisionRespuesta">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="NumeroBoleta" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mensaje" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GrabaVentaIchn">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="venta" type="tns:NVenta" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="tns:NUsuario" />
+            <s:element minOccurs="1" maxOccurs="1" name="numeroBoleta" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GrabaVentaIchnResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GrabaVentaIchnResult" type="tns:ServiceEmisionRespuesta" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GrabaPago">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pago" type="tns:Npago" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="tns:NUsuario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="Npago">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="NumeroBoleta" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FormaPago" type="tns:DocumentoPago" />
+          <s:element minOccurs="1" maxOccurs="1" name="Monto" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumeroCuota" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="FechaVencimiento" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Recargo" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="GlosaPago" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OrdernCompraWebpay" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="CodigoAutorizacionWebpay" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdDeudor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdCajero" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NumeroCheque" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="DocumentoPago">
+        <s:restriction base="s:string">
+          <s:enumeration value="Efec_internacional" />
+          <s:enumeration value="Efec_estado" />
+          <s:enumeration value="Cheque" />
+          <s:enumeration value="TarjetaCredito" />
+          <s:enumeration value="TarjetaDebito" />
+          <s:enumeration value="Pagare" />
+          <s:enumeration value="PorFacturar" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GrabaPagoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GrabaPagoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GrabaPagoCheque">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pago" type="tns:Npago" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="tns:NUsuario" />
+            <s:element minOccurs="0" maxOccurs="1" name="tipoVenta" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GrabaPagoChequeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GrabaPagoChequeResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GrabaCliente">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cliente" type="tns:NCliente" />
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="tns:NUsuario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="NCliente">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TipoDocumento" type="tns:Documento" />
+          <s:element minOccurs="0" maxOccurs="1" name="IdCliente" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nombre" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApellidoPaterno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ApellidoMaterno" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Direccion" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Comuna" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ciudad" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Fono" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="Documento">
+        <s:restriction base="s:string">
+          <s:enumeration value="Rut" />
+          <s:enumeration value="Pasaporte" />
+        </s:restriction>
+      </s:simpleType>
+      <s:element name="GrabaClienteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GrabaClienteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizaCorrelativoBoleta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="tns:NUsuario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ActualizaCorrelativoBoletaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="EliminarVentaSinBoleta">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="tns:NUsuario" />
+            <s:element minOccurs="1" maxOccurs="1" name="correlativo" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="EliminarVentaSinBoletaResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="InicioSesion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="usuario" type="tns:NUsuario" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="InicioSesionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="InicioSesionResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="NivelIdiomaClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:NivelIdiomaCliente" />
+  </wsdl:message>
+  <wsdl:message name="NivelIdiomaClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:NivelIdiomaClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="GrabaVentaSoapIn">
+    <wsdl:part name="parameters" element="tns:GrabaVenta" />
+  </wsdl:message>
+  <wsdl:message name="GrabaVentaSoapOut">
+    <wsdl:part name="parameters" element="tns:GrabaVentaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GrabaVentaIchnSoapIn">
+    <wsdl:part name="parameters" element="tns:GrabaVentaIchn" />
+  </wsdl:message>
+  <wsdl:message name="GrabaVentaIchnSoapOut">
+    <wsdl:part name="parameters" element="tns:GrabaVentaIchnResponse" />
+  </wsdl:message>
+  <wsdl:message name="GrabaPagoSoapIn">
+    <wsdl:part name="parameters" element="tns:GrabaPago" />
+  </wsdl:message>
+  <wsdl:message name="GrabaPagoSoapOut">
+    <wsdl:part name="parameters" element="tns:GrabaPagoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GrabaPagoChequeSoapIn">
+    <wsdl:part name="parameters" element="tns:GrabaPagoCheque" />
+  </wsdl:message>
+  <wsdl:message name="GrabaPagoChequeSoapOut">
+    <wsdl:part name="parameters" element="tns:GrabaPagoChequeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GrabaClienteSoapIn">
+    <wsdl:part name="parameters" element="tns:GrabaCliente" />
+  </wsdl:message>
+  <wsdl:message name="GrabaClienteSoapOut">
+    <wsdl:part name="parameters" element="tns:GrabaClienteResponse" />
+  </wsdl:message>
+  <wsdl:message name="ActualizaCorrelativoBoletaSoapIn">
+    <wsdl:part name="parameters" element="tns:ActualizaCorrelativoBoleta" />
+  </wsdl:message>
+  <wsdl:message name="ActualizaCorrelativoBoletaSoapOut">
+    <wsdl:part name="parameters" element="tns:ActualizaCorrelativoBoletaResponse" />
+  </wsdl:message>
+  <wsdl:message name="EliminarVentaSinBoletaSoapIn">
+    <wsdl:part name="parameters" element="tns:EliminarVentaSinBoleta" />
+  </wsdl:message>
+  <wsdl:message name="EliminarVentaSinBoletaSoapOut">
+    <wsdl:part name="parameters" element="tns:EliminarVentaSinBoletaResponse" />
+  </wsdl:message>
+  <wsdl:message name="InicioSesionSoapIn">
+    <wsdl:part name="parameters" element="tns:InicioSesion" />
+  </wsdl:message>
+  <wsdl:message name="InicioSesionSoapOut">
+    <wsdl:part name="parameters" element="tns:InicioSesionResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServiceSoap">
+    <wsdl:operation name="NivelIdiomaCliente">
+      <wsdl:input message="tns:NivelIdiomaClienteSoapIn" />
+      <wsdl:output message="tns:NivelIdiomaClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GrabaVenta">
+      <wsdl:input message="tns:GrabaVentaSoapIn" />
+      <wsdl:output message="tns:GrabaVentaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GrabaVentaIchn">
+      <wsdl:input message="tns:GrabaVentaIchnSoapIn" />
+      <wsdl:output message="tns:GrabaVentaIchnSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GrabaPago">
+      <wsdl:input message="tns:GrabaPagoSoapIn" />
+      <wsdl:output message="tns:GrabaPagoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GrabaPagoCheque">
+      <wsdl:input message="tns:GrabaPagoChequeSoapIn" />
+      <wsdl:output message="tns:GrabaPagoChequeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GrabaCliente">
+      <wsdl:input message="tns:GrabaClienteSoapIn" />
+      <wsdl:output message="tns:GrabaClienteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaCorrelativoBoleta">
+      <wsdl:input message="tns:ActualizaCorrelativoBoletaSoapIn" />
+      <wsdl:output message="tns:ActualizaCorrelativoBoletaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="EliminarVentaSinBoleta">
+      <wsdl:input message="tns:EliminarVentaSinBoletaSoapIn" />
+      <wsdl:output message="tns:EliminarVentaSinBoletaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="InicioSesion">
+      <wsdl:input message="tns:InicioSesionSoapIn" />
+      <wsdl:output message="tns:InicioSesionSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServiceSoap" type="tns:ServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="NivelIdiomaCliente">
+      <soap:operation soapAction="http://www.norteamericano.cl/NivelIdiomaCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GrabaVenta">
+      <soap:operation soapAction="http://www.norteamericano.cl/GrabaVenta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GrabaVentaIchn">
+      <soap:operation soapAction="http://www.norteamericano.cl/GrabaVentaIchn" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GrabaPago">
+      <soap:operation soapAction="http://www.norteamericano.cl/GrabaPago" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GrabaPagoCheque">
+      <soap:operation soapAction="http://www.norteamericano.cl/GrabaPagoCheque" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GrabaCliente">
+      <soap:operation soapAction="http://www.norteamericano.cl/GrabaCliente" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaCorrelativoBoleta">
+      <soap:operation soapAction="http://www.norteamericano.cl/ActualizaCorrelativoBoleta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarVentaSinBoleta">
+      <soap:operation soapAction="http://www.norteamericano.cl/EliminarVentaSinBoleta" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InicioSesion">
+      <soap:operation soapAction="http://www.norteamericano.cl/InicioSesion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServiceSoap12" type="tns:ServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="NivelIdiomaCliente">
+      <soap12:operation soapAction="http://www.norteamericano.cl/NivelIdiomaCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GrabaVenta">
+      <soap12:operation soapAction="http://www.norteamericano.cl/GrabaVenta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GrabaVentaIchn">
+      <soap12:operation soapAction="http://www.norteamericano.cl/GrabaVentaIchn" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GrabaPago">
+      <soap12:operation soapAction="http://www.norteamericano.cl/GrabaPago" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GrabaPagoCheque">
+      <soap12:operation soapAction="http://www.norteamericano.cl/GrabaPagoCheque" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GrabaCliente">
+      <soap12:operation soapAction="http://www.norteamericano.cl/GrabaCliente" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ActualizaCorrelativoBoleta">
+      <soap12:operation soapAction="http://www.norteamericano.cl/ActualizaCorrelativoBoleta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="EliminarVentaSinBoleta">
+      <soap12:operation soapAction="http://www.norteamericano.cl/EliminarVentaSinBoleta" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InicioSesion">
+      <soap12:operation soapAction="http://www.norteamericano.cl/InicioSesion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service">
+    <wsdl:port name="ServiceSoap" binding="tns:ServiceSoap">
+      <soap:address location="https://api.norteamericano.cl/wsSige/Service.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServiceSoap12" binding="tns:ServiceSoap12">
+      <soap12:address location="https://api.norteamericano.cl/wsSige/Service.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

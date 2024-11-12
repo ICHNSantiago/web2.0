@@ -18,7 +18,7 @@ namespace Web.Diagnostico.Adults
         public void DiagnosticoRepetir(string alumnoID)
         {
             Ndiagnostico ndiagnostico = new Ndiagnostico();
-            DataTable data = ndiagnostico.BuscarKids(alumnoID);
+            DataTable data = ndiagnostico.BuscarAdultos(alumnoID);
 
             if (data.Rows.Count > 0)
             {

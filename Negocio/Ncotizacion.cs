@@ -17,9 +17,9 @@ namespace Negocio
             return GetCotizacion.Ingresar(apoderado, vendedor, idSoliciutdDescto, descuento, tipoDescuento, fecha, alumnos, curso, monto, validez);
         }
 
-        public string IngresarDetalle(int cotizacion, string curso, string modalidad, string sede, int cantidad, int tarifa, int idDescto, int totalPago, string alumID, int alumEdad, string apoID)
+        public string IngresarDetalle(int cotizacion, string curso, string modalidad, string sede, int cantidad, int tarifa, int idDescto, int totalPago, string alumID, int alumEdad, string apoID, int tarifaID)
         {
-            return GetCotizacion.IngresarDetalle(cotizacion, curso, modalidad, sede, cantidad, tarifa, idDescto, totalPago, alumID, alumEdad, apoID); 
+            return GetCotizacion.IngresarDetalle(cotizacion, curso, modalidad, sede, cantidad, tarifa, idDescto, totalPago, alumID, alumEdad, apoID, tarifaID); 
         }
 
         public string IngresarAlumno(string idAlumno, string paterno, string materno, string nombre, int comunaID, string direccion, DateTime nace, int fono, string mail)
@@ -46,6 +46,11 @@ namespace Negocio
         public DataTable RecuperarCotizacion(int coti)
         {
             return GetCotizacion.RecuperarCotizacion(coti);
+        }
+
+        public string IngresarInscripcion(int cotizacion, string idAlumno, int codigoCurso, int tarifa)
+        {
+            return GetCotizacion.IngresarInscripcion(cotizacion, idAlumno, codigoCurso, 1, tarifa);
         }
     }
 }
