@@ -8,7 +8,7 @@ using System.Web.UI.WebControls;
 namespace Web.Inscripcion
 {
     public partial class Alumno : System.Web.UI.Page
-    {       
+    {
         public void FinalizarVenta()
         {
             try
@@ -55,7 +55,7 @@ namespace Web.Inscripcion
                     int codAutoriza = int.Parse(LabelTBKcodigoAuto.Text);
                     resultado = ncotizacion.GrabaPago(folioBoleta, monto, cuotas, tarjeta, codAutoriza, LabelApoID.Text);
 
-                    if(resultado.Equals("ok"))
+                    if (resultado.Equals("ok"))
                     {
                         Response.Redirect("FacturadorBoleta.aspx?cotizacion_id=" + idCotizacion.ToString() + "&folio_id=" + folioBoleta.ToString() + "&sitio_sam=SAM");
                     }
@@ -71,8 +71,7 @@ namespace Web.Inscripcion
             }
         }
 
-
-            public int CambioRegularSummer(int nivel)
+        public int CambioRegularSummer(int nivel)
         {
             int nuevoID;
 
@@ -435,6 +434,27 @@ namespace Web.Inscripcion
                     LabelCompraSedeModal.Text = "Presencial";
                 }
 
+                // INFO PARA GENERAR BOLETA Y CONTRATO
+                LabelCotizacionNeto.Text = data.Rows[0]["TarifaAcumulada"].ToString();
+                LabelCotizacionPago.Text = data.Rows[0]["Total"].ToString();
+                LabelCotizacionTipoDescto.Text = data.Rows[0]["idTipoDescuento"].ToString();
+                LabelCotizacionDesctoValor.Text = data.Rows[0]["DsctoMnt"].ToString();
+
+                // INFO DEL PAGO
+                LabelTBKcodigoAuto.Text = data.Rows[0]["CodAuto"].ToString();
+                LabelTBKcuotas.Text = data.Rows[0]["CuotaTbk"].ToString();
+                LabelTBKmonto.Text = data.Rows[0]["MontoTbk"].ToString();
+
+                string tipo = data.Rows[0]["TipoTarjeta"].ToString();
+                if (tipo == "VD")
+                {
+                    LabelTBKTrajetaCod.Text = "11050800";
+                }
+                else
+                {
+                    LabelTBKTrajetaCod.Text = "11050600";
+                }
+
                 data = nCompra.BuscarContratos(id);
 
                 if (data.Rows.Count > 0)
@@ -465,27 +485,6 @@ namespace Web.Inscripcion
                                 break;
                         }
                     }
-                }
-
-                // INFO PARA GENERAR BOLETA Y CONTRATO
-                LabelCotizacionNeto.Text = data.Rows[0]["TarifaAcumulada"].ToString();
-                LabelCotizacionPago.Text = data.Rows[0]["Total"].ToString();
-                LabelCotizacionTipoDescto.Text = data.Rows[0]["idTipoDescuento"].ToString();
-                LabelCotizacionDesctoValor.Text = data.Rows[0]["DsctoMnt"].ToString();
-
-                // INFO DEL PAGO
-                LabelTBKcodigoAuto.Text = data.Rows[0]["CodAuto"].ToString();
-                LabelTBKcuotas.Text = data.Rows[0]["CuotaTbk"].ToString();
-                LabelTBKmonto.Text = data.Rows[0]["MontoTbk"].ToString();
-
-                string tipo = data.Rows[0]["TipoTarjeta"].ToString();
-                if(tipo == "VD")
-                {
-                    LabelTBKTrajetaCod.Text = "11050800";
-                }
-                else
-                {
-                    LabelTBKTrajetaCod.Text = "11050600";
                 }
 
             }
@@ -792,16 +791,24 @@ namespace Web.Inscripcion
         {
             if (CheckBoxValidar.Checked)
             {
-                Ncotizacion ncotizacion = new Ncotizacion();
-                int cotiID = int.Parse(LabelCotizacionID.Text);
-                string alumnoID = LabelAlumnoID.Text;
-                int cursoID = int.Parse(LabelCursoID.Text);
-                int tarifaID = int.Parse(LabelTarifaID.Text);
-                string resultado = ncotizacion.IngresarInscripcion(cotiID, alumnoID, cursoID, tarifaID);
+                //Ncotizacion ncotizacion = new Ncotizacion();
+                //int cotiID = int.Parse(LabelCotizacionID.Text);
+                //string alumnoID = LabelAlumnoID.Text;
+                //int cursoID = int.Parse(LabelCursoID.Text);
+                //int tarifaID = int.Parse(LabelTarifaID.Text);
+                //string resultado = ncotizacion.IngresarInscripcion(cotiID, alumnoID, cursoID, tarifaID);
 
-                div_horario.Visible = false;
-                div_fin_Inscripc.Visible = true;
-                LinkButtonActualizar.Visible = false;
+                //if (resultado == "ok")
+                //{
+                //    FinalizarVenta();
+                //}
+                //else
+                //{
+
+                //}
+
+                Response.Redirect("Voucher.aspx");
+
             }
             else
             {

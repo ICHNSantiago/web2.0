@@ -472,13 +472,13 @@ namespace Web.Inscripcion
                     string estadoContrato = GrabaContrato(idCotizacion, boletaFolio, 1, fechaEmision.ToString("yyyy-MM-dd"), detalle);
                     string[] numeroDocumentos = estadoContrato.Split(',');
                     string contrato = numeroDocumentos[0].ToString();
-                    string link = "Voucher.aspx?contrato_id=" + contrato;                   
+                    string link = "Voucher.aspx?contrato=" + contrato;                   
                     Response.Redirect(link, false);
                 }
                 else
                 {
                     // error al emitir boleta facturaChile
-                    string link =  "Voucher.aspx?contrato_id=-1";
+                    string link = "Voucher.aspx?contrato=-1";
                     Response.Redirect(link, false);
                 }
             }
@@ -492,7 +492,7 @@ namespace Web.Inscripcion
                 {
 
                     case "SAM":
-                        link = "Voucher.aspx?contrato_id=0";
+                        link = "Voucher.aspx?contrato=0";
                         break;
                     default:
                         break;
