@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="3c3e7792-7854-4f50-a159-b014c9577b56" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ID="146882a9-ecea-408b-b36e-ab264500b589" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,10 +19,10 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="https://api.norteamericano.cl/wsSige/Service.asmx?WSDL" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://ws.facturachile.cl/WSServicios.asmx?WSDL" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Service.wsdl" MetadataType="Wsdl" ID="a06f80a9-5b1b-491d-8aa0-d3548f577986" SourceId="1" SourceUrl="https://api.norteamericano.cl/wsSige/Service.asmx?WSDL" />
+    <MetadataFile FileName="WSServicios.wsdl" MetadataType="Wsdl" ID="7abc8332-d7c5-4c7d-9fe7-2c8bae701587" SourceId="1" SourceUrl="http://ws.facturachile.cl/WSServicios.asmx?WSDL" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

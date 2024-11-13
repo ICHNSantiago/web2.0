@@ -28,6 +28,18 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
     <div runat="server" id="info_alumno" visible="false">
+
+        <asp:Label ID="LabelCotizacionID" Visible="false" runat="server" Text=""></asp:Label>
+        <asp:Label ID="LabelTarifaID" Visible="false" runat="server" Text=""></asp:Label>
+        <asp:Label ID="LabelCotizacionNeto" Visible="false" runat="server" Text=""></asp:Label>
+        <asp:Label ID="LabelCotizacionPago" Visible="false" runat="server" Text=""></asp:Label>
+        <asp:Label ID="LabelCotizacionTipoDescto" Visible="false" runat="server" Text=""></asp:Label>
+        <asp:Label ID="LabelCotizacionDesctoValor" Visible="false" runat="server" Text=""></asp:Label>
+        <asp:Label ID="LabelTBKcodigoAuto" Visible="false" runat="server" Text=""></asp:Label>
+        <asp:Label ID="LabelTBKTrajetaCod" Visible="false" runat="server" Text=""></asp:Label>
+        <asp:Label ID="LabelTBKcuotas" Visible="false" runat="server" Text=""></asp:Label>
+        <asp:Label ID="LabelTBKmonto" Visible="false" runat="server" Text=""></asp:Label>
+
         <!-- About Start -->
         <div class="container-fluid bg-light py-4">
             <div class="container">
@@ -53,8 +65,7 @@
                                     <td>
                                         <asp:Label ID="LabelAlumnoID" runat="server" Text="nombre apellido apellido"></asp:Label>
                                         <asp:Label ID="LabelApoderadoID" Visible="false" runat="server" Text="nombre apellido apellido"></asp:Label>
-                                        <asp:Label ID="LabelCotizacionID" Visible="false" runat="server" Text="nombre apellido apellido"></asp:Label>
-                                        <asp:Label ID="LabelTarifaID" Visible="false" runat="server" Text="nombre apellido apellido"></asp:Label>
+
                                     </td>
                                 </tr>
                                 <tr>

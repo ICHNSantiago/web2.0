@@ -52,5 +52,31 @@ namespace Negocio
         {
             return GetCotizacion.IngresarInscripcion(cotizacion, idAlumno, codigoCurso, 1, tarifa);
         }
+
+        public string GrabaVenta(string clienteID, int cotizacionID, DateTime fechaEmite, int neto, int total, int descto)
+        {
+            return GetCotizacion.GrabaVenta(clienteID, cotizacionID, fechaEmite, neto, total, descto);
+        }
+
+        public string GrabaPago(int boletaID, int montoPago, int cuotaPago, int tipoTarjeta, int codAutoriza, string apoderadoID)
+        {
+            return GetCotizacion.GrabaPago(boletaID, montoPago , cuotaPago, tipoTarjeta, codAutoriza , apoderadoID);
+        }
+
+        public DataTable CotizacionPago(string cotizacion)
+        {
+            return GetCotizacion.CotizacionInfo("PAGOCOTIZACION", cotizacion);
+        }
+
+        public DataTable Detalle(int cotizacion)
+        {
+            return GetCotizacion.Detalle(cotizacion);
+        }
+
+
+        public string ActualizaCorrelativoBoleta()
+        {
+            return GetCotizacion.ActualizaCorrelativoBoleta();
+        }
     }
 }

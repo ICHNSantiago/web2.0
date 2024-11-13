@@ -42,6 +42,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=4.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\lib\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -115,9 +118,9 @@
     <Content Include="Admin\Login.aspx" />
     <Content Include="Admin\Tematica.aspx" />
     <Content Include="AmericanSpace.aspx" />
-    <None Include="Connected Services\wsAmazonSige\configuration91.svcinfo" />
-    <None Include="Connected Services\wsAmazonSige\configuration.svcinfo" />
-    <None Include="Connected Services\wsAmazonSige\Reference.svcmap">
+    <None Include="Connected Services\WSFacturaChile\configuration91.svcinfo" />
+    <None Include="Connected Services\WSFacturaChile\configuration.svcinfo" />
+    <None Include="Connected Services\WSFacturaChile\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -311,6 +314,8 @@
     <Content Include="img\programas\toefl02.png" />
     <Content Include="img\webpay.png" />
     <Content Include="Inscripcion\Alumno.aspx" />
+    <Content Include="Inscripcion\FacturadorBoleta.aspx" />
+    <Content Include="Inscripcion\Voucher.aspx" />
     <Content Include="Intranet.aspx" />
     <Content Include="lib\css\check-radio.css" />
     <Content Include="PoliticaPrivacidad.aspx" />
@@ -460,7 +465,7 @@
     <Compile Include="AmericanSpace.aspx.designer.cs">
       <DependentUpon>AmericanSpace.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Connected Services\wsAmazonSige\Reference.cs">
+    <Compile Include="Connected Services\WSFacturaChile\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -913,12 +918,50 @@
     <Compile Include="Inscripcion\Alumno.aspx.designer.cs">
       <DependentUpon>Alumno.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Inscripcion\CDATA.cs" />
+    <Compile Include="Inscripcion\FacturaChileBoleta.cs" />
+    <Compile Include="Inscripcion\FacturadorBoleta.aspx.cs">
+      <DependentUpon>FacturadorBoleta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inscripcion\FacturadorBoleta.aspx.designer.cs">
+      <DependentUpon>FacturadorBoleta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Inscripcion\Voucher.aspx.cs">
+      <DependentUpon>Voucher.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Inscripcion\Voucher.aspx.designer.cs">
+      <DependentUpon>Voucher.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Intranet.aspx.cs">
       <DependentUpon>Intranet.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Intranet.aspx.designer.cs">
       <DependentUpon>Intranet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\CrystalReportAnexo.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportAnexo.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Planillas\CrystalReportContrato.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportContrato.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Planillas\DataSetAnexo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetAnexo.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Planillas\DataSetContrato.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetContrato.xsd</DependentUpon>
     </Compile>
     <Compile Include="PoliticaPrivacidad.aspx.cs">
       <DependentUpon>PoliticaPrivacidad.aspx</DependentUpon>
@@ -978,40 +1021,7 @@
     <Content Include="img\programas\preschool_niveles.webp" />
     <Content Include="img\programas\summer_adults.webp" />
     <Content Include="img\programas\summer_teens_kid.webp" />
-    <None Include="Connected Services\wsAmazonSige\Service.wsdl" />
-    <Content Include="Connected Services\wsAmazonSige\Web.wsAmazonSige.ActualizaCorrelativoBoletaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\wsAmazonSige\Web.wsAmazonSige.EliminarVentaSinBoletaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\wsAmazonSige\Web.wsAmazonSige.GrabaClienteResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\wsAmazonSige\Web.wsAmazonSige.GrabaPagoChequeResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\wsAmazonSige\Web.wsAmazonSige.GrabaPagoResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\wsAmazonSige\Web.wsAmazonSige.GrabaVentaIchnResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\wsAmazonSige\Web.wsAmazonSige.GrabaVentaResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\wsAmazonSige\Web.wsAmazonSige.InicioSesionResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\wsAmazonSige\Web.wsAmazonSige.NivelIdiomaClienteResponse.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\wsAmazonSige\Web.wsAmazonSige.Resultado.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
-    <Content Include="Connected Services\wsAmazonSige\Web.wsAmazonSige.ServiceEmisionRespuesta.datasource">
-      <DependentUpon>Reference.svcmap</DependentUpon>
-    </Content>
+    <None Include="Connected Services\WSFacturaChile\WSServicios.wsdl" />
     <None Include="packages.config" />
     <Content Include="Tematica\18sep\volantin.webp" />
     <Content Include="Tematica\hallo\halloween2.webp" />
@@ -1028,6 +1038,28 @@
     <Content Include="Tematica\hallo\halloween4.webp" />
     <Content Include="Tematica\pascua\navidad2.webp" />
     <Content Include="Tematica\Valentin\love.webp" />
+    <Content Include="Planillas\DataSetContrato.xsc">
+      <DependentUpon>DataSetContrato.xsd</DependentUpon>
+    </Content>
+    <Content Include="Planillas\DataSetAnexo.xsc">
+      <DependentUpon>DataSetAnexo.xsd</DependentUpon>
+    </Content>
+    <None Include="Planillas\DataSetAnexo.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetAnexo.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Planillas\DataSetAnexo.xss">
+      <DependentUpon>DataSetAnexo.xsd</DependentUpon>
+    </Content>
+    <None Include="Planillas\DataSetContrato.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetContrato.Designer.cs</LastGenOutput>
+    </None>
+    <Content Include="Planillas\DataSetContrato.xss">
+      <DependentUpon>DataSetContrato.xsd</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1048,7 +1080,20 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\wsAmazonSige\" />
+    <WCFMetadataStorage Include="Connected Services\WSFacturaChile\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Planillas\CrystalReportAnexo.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportAnexo.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\CrystalReportContrato.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportContrato.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

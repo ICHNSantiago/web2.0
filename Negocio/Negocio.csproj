@@ -42,8 +42,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FechaApi.cs" />
+    <Compile Include="Nalumnos.cs" />
     <Compile Include="NBanner.cs" />
     <Compile Include="NCompra.cs" />
+    <Compile Include="Ncontrato.cs" />
     <Compile Include="Ncotizacion.cs" />
     <Compile Include="Ncursos.cs" />
     <Compile Include="Ndiagnostico.cs" />
@@ -52,6 +54,7 @@
     <Compile Include="NRegionComuna.cs" />
     <Compile Include="Ntransbank.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValidarRut.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Datos\Datos.csproj">

@@ -54,7 +54,7 @@
                                             <tr runat="server" id="btn_comprar">
                                                 <td>
                                                     <div class="d-grid gap-2">
-                                                        <a href="Shop.aspx" class="btn btn-success btn-lg"><i class="fas fa-shopping-cart me-2"></i>Comprar Curso </a>
+                                                        <%--<a href="Shop.aspx" class="btn btn-success btn-lg"><i class="fas fa-shopping-cart me-2"></i>Comprar Curso </a>--%>
                                                     </div>
                                                 </td>
                                             </tr>

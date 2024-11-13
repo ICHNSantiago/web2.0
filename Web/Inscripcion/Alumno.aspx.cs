@@ -4,20 +4,24 @@ using System.ComponentModel;
 using System.Data;
 using System.Web.Routing;
 using System.Web.UI.WebControls;
-using Web.wsAmazonSige;
 
 namespace Web.Inscripcion
 {
     public partial class Alumno : System.Web.UI.Page
-    {
-        public string GrabaVentaSige(NUsuario nUsuario, int totalVenta, int tipoDescuento, string rutCliente, decimal montoDescuento, DateTime fecha, int cotizacionID, int netoVenta, string sedeVenta)
+    {       
+        public void FinalizarVenta()
         {
             try
             {
-                CodigoVenta codigoVenta = CodigoVenta.Matricula;
-                int varDescuento = 0;             
-
-                switch (tipoDescuento)
+                FechaApi fecha = new FechaApi();
+                DateTime fechaEmision = fecha.GetNetworkTime();
+                int idCotizacion = int.Parse(LabelCotizacionID.Text);
+                int netoVenta = int.Parse(LabelCotizacionNeto.Text);
+                int total = int.Parse(LabelCotizacionPago.Text);
+                int tipoDescto = int.Parse(LabelCotizacionTipoDescto.Text);
+                decimal montoDescuento = decimal.Parse(LabelCotizacionDesctoValor.Text);
+                int varDescuento = 0;
+                switch (tipoDescto)
                 {
                     case 5:
                         decimal valor = montoDescuento / 100;
@@ -40,89 +44,26 @@ namespace Web.Inscripcion
                         break;
                 }
 
-                NVenta nVenta = new NVenta
+                Ncotizacion ncotizacion = new Ncotizacion();
+                string resultado = ncotizacion.GrabaVenta(LabelApoID.Text, idCotizacion, fechaEmision, netoVenta, total, varDescuento);
+
+                if (int.TryParse(resultado, out int folioBoleta))
                 {
-                    IdCliente = rutCliente,
-                    NumeroMatricula = cotizacionID,
-                    TipoVenta = codigoVenta,
-                    FechaBoleta = fecha,
-                    IdCurso = "CURSO SAM",
-                    ValorCurso = totalVenta,
-                    CantidadCursos = 1,
-                    TotalVenta = totalVenta,
-                    GlosaVenta = "VENTA CURSO",
-                    MontoDescuento = varDescuento,
-                    GlosaDescuento = string.Empty,
-                    MontoRecargo = 0,
-                    GlosaRecargo = string.Empty,
-                    TipoBoleta = "BX",
-                    Contrato = 0,
-                    Vendedor = nUsuario.Usuario, // id vendedor
-                };
+                    int monto = int.Parse(LabelTBKmonto.Text);
+                    int cuotas = int.Parse(LabelTBKcuotas.Text);
+                    int tarjeta = int.Parse(LabelTBKTrajetaCod.Text);
+                    int codAutoriza = int.Parse(LabelTBKcodigoAuto.Text);
+                    resultado = ncotizacion.GrabaPago(folioBoleta, monto, cuotas, tarjeta, codAutoriza, LabelApoID.Text);
 
-                switch (sedeVenta)
-                {
-                    case "MONEDA":
-                        nVenta.Sede = CodigoSede.Moneda;
-                        break;
-                    case "PROVIDENCIA":
-                        nVenta.Sede = CodigoSede.Providencia;
-                        break;
-                    case "LA FLORIDA":
-                        nVenta.Sede = CodigoSede.LaFlorida;
-                        break;
-                    case "ONLINE":
-                        nVenta.Sede = CodigoSede.Online;
-                        break;
-                    case "EMPRESA":
-                        nVenta.Sede = CodigoSede.Empresa;
-                        break;
-                    default:
-                        nVenta.Sede = CodigoSede.Moneda;
-                        break;
-                }
-
-                ServiceSoapClient service = new ServiceSoapClient();
-                ServiceEmisionRespuesta respuesta = new ServiceEmisionRespuesta();
-                respuesta = service.GrabaVenta(nVenta, nUsuario);
-
-
-                if (respuesta.Mensaje.Equals("ok"))
-                {
-                    return respuesta.NumeroBoleta.ToString();
+                    if(resultado.Equals("ok"))
+                    {
+                        Response.Redirect("FacturadorBoleta.aspx?cotizacion_id=" + idCotizacion.ToString() + "&folio_id=" + folioBoleta.ToString() + "&sitio_sam=SAM");
+                    }
                 }
                 else
                 {
-                    return respuesta.Mensaje;
+                    // ??????????
                 }
-            }
-            catch (Exception ex)
-            {
-                return ex.Message.ToString();
-            }
-        }
-
-
-
-        public void FinalizarVenta()
-        {
-            string cotizacionID = LabelCotizacionID.Text;
-
-            try
-            {
-                FechaApi fecha = new FechaApi();
-                DateTime fechaEmision = fecha.GetNetworkTime();
-                int idCotizacion = int.Parse(cotizacionID);
-
-                NUsuario nUsuario = new NUsuario
-                {
-                    Usuario = "1",
-                    Clave = "456789",
-                };
-
-                // string mensaje = GrabaVentaSige(nUsuario, );
-
-
             }
             catch (Exception ex)
             {
@@ -525,6 +466,28 @@ namespace Web.Inscripcion
                         }
                     }
                 }
+
+                // INFO PARA GENERAR BOLETA Y CONTRATO
+                LabelCotizacionNeto.Text = data.Rows[0]["TarifaAcumulada"].ToString();
+                LabelCotizacionPago.Text = data.Rows[0]["Total"].ToString();
+                LabelCotizacionTipoDescto.Text = data.Rows[0]["idTipoDescuento"].ToString();
+                LabelCotizacionDesctoValor.Text = data.Rows[0]["DsctoMnt"].ToString();
+
+                // INFO DEL PAGO
+                LabelTBKcodigoAuto.Text = data.Rows[0]["CodAuto"].ToString();
+                LabelTBKcuotas.Text = data.Rows[0]["CuotaTbk"].ToString();
+                LabelTBKmonto.Text = data.Rows[0]["MontoTbk"].ToString();
+
+                string tipo = data.Rows[0]["TipoTarjeta"].ToString();
+                if(tipo == "VD")
+                {
+                    LabelTBKTrajetaCod.Text = "11050800";
+                }
+                else
+                {
+                    LabelTBKTrajetaCod.Text = "11050600";
+                }
+
             }
             else
             {

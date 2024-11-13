@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:tns="http://tempuri.org/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="emisionDocumento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="oDatosEmision" type="tns:DatosEmision" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DatosEmision">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RutEmisor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RutReceptor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TipoDocumento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Documento" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="GenerarPDF" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Folio" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Resultado" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Identificador" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mensaje" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PDFBase64" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="emisionDocumentoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="emisionDocumentoResult" type="tns:DatosEmision" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultarEstado">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="oDatosEstado" type="tns:DatosEstado" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DatosEstado">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TipoDocumento" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="GenerarPDF" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Resultado" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Identificador" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mensaje" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Estado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PDFBase64" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="consultarEstadoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultarEstadoResult" type="tns:DatosEstado" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="consultarEstadoAdv">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="oDatosEstadoAdv" type="tns:DatosEstadoAdv" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="DatosEstadoAdv">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Token" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TipoDocumento" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RutReceptor" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Folio" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="GenerarPDF" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Resultado" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Mensaje" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Trx" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CodigoSII" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FechaEmision" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Estado" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PDFBase64" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="consultarEstadoAdvResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="consultarEstadoAdvResult" type="tns:DatosEstadoAdv" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="emisionDocumentoSoapIn">
+    <wsdl:part name="parameters" element="tns:emisionDocumento" />
+  </wsdl:message>
+  <wsdl:message name="emisionDocumentoSoapOut">
+    <wsdl:part name="parameters" element="tns:emisionDocumentoResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarEstadoSoapIn">
+    <wsdl:part name="parameters" element="tns:consultarEstado" />
+  </wsdl:message>
+  <wsdl:message name="consultarEstadoSoapOut">
+    <wsdl:part name="parameters" element="tns:consultarEstadoResponse" />
+  </wsdl:message>
+  <wsdl:message name="consultarEstadoAdvSoapIn">
+    <wsdl:part name="parameters" element="tns:consultarEstadoAdv" />
+  </wsdl:message>
+  <wsdl:message name="consultarEstadoAdvSoapOut">
+    <wsdl:part name="parameters" element="tns:consultarEstadoAdvResponse" />
+  </wsdl:message>
+  <wsdl:portType name="WSServiciosSoap">
+    <wsdl:operation name="emisionDocumento">
+      <wsdl:input message="tns:emisionDocumentoSoapIn" />
+      <wsdl:output message="tns:emisionDocumentoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarEstado">
+      <wsdl:input message="tns:consultarEstadoSoapIn" />
+      <wsdl:output message="tns:consultarEstadoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="consultarEstadoAdv">
+      <wsdl:input message="tns:consultarEstadoAdvSoapIn" />
+      <wsdl:output message="tns:consultarEstadoAdvSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSServiciosSoap" type="tns:WSServiciosSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="emisionDocumento">
+      <soap:operation soapAction="http://tempuri.org/emisionDocumento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarEstado">
+      <soap:operation soapAction="http://tempuri.org/consultarEstado" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarEstadoAdv">
+      <soap:operation soapAction="http://tempuri.org/consultarEstadoAdv" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="WSServiciosSoap12" type="tns:WSServiciosSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="emisionDocumento">
+      <soap12:operation soapAction="http://tempuri.org/emisionDocumento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarEstado">
+      <soap12:operation soapAction="http://tempuri.org/consultarEstado" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="consultarEstadoAdv">
+      <soap12:operation soapAction="http://tempuri.org/consultarEstadoAdv" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WSServicios">
+    <wsdl:port name="WSServiciosSoap" binding="tns:WSServiciosSoap">
+      <soap:address location="http://ws.facturachile.cl/WSServicios.asmx" />
+    </wsdl:port>
+    <wsdl:port name="WSServiciosSoap12" binding="tns:WSServiciosSoap12">
+      <soap12:address location="http://ws.facturachile.cl/WSServicios.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

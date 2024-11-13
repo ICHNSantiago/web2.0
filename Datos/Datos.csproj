@@ -99,9 +99,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Alumnos.cs" />
     <Compile Include="Banner.cs" />
     <Compile Include="Compra.cs" />
     <Compile Include="Conexion.cs" />
+    <Compile Include="Contrato.cs" />
     <Compile Include="Cotizacion.cs" />
     <Compile Include="Cursos.cs" />
     <Compile Include="Diagnostico.cs" />

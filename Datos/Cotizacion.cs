@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Linq;
 using System.Net.Http.Headers;
+using System.Runtime.Remoting;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -146,7 +147,6 @@ namespace Datos
             }
         }
 
-
         public string IngresarApoderado(string idAlumno, string idApoderado, string paterno, string materno, string nombre, int comunaID, string direccion, int fono, string mail)
         {
             try
@@ -181,7 +181,6 @@ namespace Datos
                 }
             }
         }
-
 
         public string ActualizarApoderado(string idAlumno, string idApoderado, string paterno, string materno, string nombre, int comunaID, string direccion, int fono, string mail)
         {
@@ -311,5 +310,150 @@ namespace Datos
                 return "Error: " + ex.Message;
             }
         }
+
+
+        public string GrabaVenta(string clienteID, int cotizacionID, DateTime fechaEmite, int neto, int total, int descto)
+        {
+            string resultado = string.Empty;
+            try
+            {
+                Comando = new MySqlCommand("SIGECaja.GrabaVenta", Conexion.AbrirConnectionMySql())
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                Comando.Parameters.AddWithValue("@VCiD", clienteID);
+                Comando.Parameters.AddWithValue("@vMatricula", cotizacionID);
+                Comando.Parameters.AddWithValue("@vTipoVenta", 41010000);
+                Comando.Parameters.AddWithValue("@vFecha", fechaEmite);
+                Comando.Parameters.AddWithValue("@vSede", 0);
+                Comando.Parameters.AddWithValue("@vCurso", "CURSO WEB ICHN");
+                Comando.Parameters.AddWithValue("@vValor", neto);
+                Comando.Parameters.AddWithValue("@vCantidad", 1);
+                Comando.Parameters.AddWithValue("@vTotal", total);
+                Comando.Parameters.AddWithValue("@vGlosa", "VENTA CURSO POR WEB");
+                Comando.Parameters.AddWithValue("@vDescuento", descto);
+                Comando.Parameters.AddWithValue("@vGlosaDescto", string.Empty);
+                Comando.Parameters.AddWithValue("@vRecargo", 0);
+                Comando.Parameters.AddWithValue("@vGlosaRecargo", string.Empty);
+                Comando.Parameters.AddWithValue("@vTipoDocumento", "BX");
+                Comando.Parameters.AddWithValue("@vInicioCurso", DateTime.Now);
+                Comando.Parameters.AddWithValue("@vTerminoCurso", DateTime.Now);
+                Comando.Parameters.AddWithValue("@nContrato", 0);
+                Comando.Parameters.AddWithValue("@Vendedor", 1);
+
+                Leer = Comando.ExecuteReader();
+                if (Leer.Read())
+                {
+                    resultado = Leer[0].ToString();
+                }
+                Conexion.CerrarConnectionMysql();
+                return resultado;
+            }
+            catch (MySqlException ex)
+            {
+                Conexion.CerrarConnectionMysql();
+                return "Error: " + ex.Message;
+            }
+        }
+
+        public string GrabaPago(int boletaID, int montoPago, int cuotaPago, int tipoTarjeta, int codAutoriza, string apoderadoID)
+        {
+            try
+            {
+                Comando = new MySqlCommand("SIGECaja.GrabaPago", Conexion.AbrirConnectionMySql())
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                Comando.Parameters.AddWithValue("@boleta", boletaID);
+                Comando.Parameters.AddWithValue("@monto", montoPago);
+                Comando.Parameters.AddWithValue("@cuota", cuotaPago);
+                Comando.Parameters.AddWithValue("@fechaCuota", DateTime.Now);
+                Comando.Parameters.AddWithValue("@recargo", 0);
+                Comando.Parameters.AddWithValue("@glosaRecargo", string.Empty);
+                Comando.Parameters.AddWithValue("@tipoDocumento", tipoTarjeta);
+                Comando.Parameters.AddWithValue("@ordenCompra", 0);
+                Comando.Parameters.AddWithValue("@codigoAutorizacion", codAutoriza);
+                Comando.Parameters.AddWithValue("@idDeudor", apoderadoID);
+                Comando.Parameters.AddWithValue("@cajero", 1);
+
+                Comando.ExecuteReader();
+                Conexion.CerrarConnectionMysql();
+                return "ok";
+            }
+            catch (MySqlException ex)
+            {
+                Conexion.CerrarConnectionMysql();
+                return "Error: " + ex.Message;
+            }
+        }
+
+        public DataTable CotizacionInfo(string tipoBusqueda, string nombre)
+        {
+            DataTable tabla = new DataTable();
+
+            try
+            {
+                Comando = new MySqlCommand("sam.BuscarCotizaciones", Conexion.AbrirConnectionMySql())
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                Comando.Parameters.AddWithValue("@tipoBusqueda", tipoBusqueda);
+                Comando.Parameters.AddWithValue("@nombre", nombre);
+                Adaptador = new MySqlDataAdapter(Comando);
+                Adaptador.Fill(tabla);
+                Conexion.CerrarConnectionMysql();
+                return tabla;
+
+            }
+            catch (MySqlException)
+            {
+                Conexion.CerrarConnectionMysql();
+                return tabla;
+            }
+        }
+
+        public DataTable Detalle(int cotizacion)
+        {
+            DataTable tabla = new DataTable();
+
+            try
+            {
+                Comando = new MySqlCommand("sige_sam_V3.BuscarCotizacionDetalle", Conexion.AbrirConnectionMySql())
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                Comando.Parameters.AddWithValue("@cotizacion", cotizacion);
+                Adaptador = new MySqlDataAdapter(Comando);
+                Adaptador.Fill(tabla);
+                Conexion.CerrarConnectionMysql();
+                return tabla;
+
+            }
+            catch (MySqlException)
+            {
+                Conexion.CerrarConnectionMysql();
+                return tabla;
+            }
+        }
+
+        public string ActualizaCorrelativoBoleta()
+        {
+            try
+            {
+                Comando = new MySqlCommand("SIGECaja.ActualizaCorrelativoBoleta", Conexion.AbrirConnectionMySql())
+                {
+                    CommandType = CommandType.StoredProcedure
+                };              
+                Comando.ExecuteReader();
+                Conexion.CerrarConnectionMysql();
+                return "ok";
+            }
+            catch (MySqlException ex)
+            {
+                Conexion.CerrarConnectionMysql();
+                return "Error: " + ex.Message;
+            }
+        }
+
     }
 }
