@@ -20,10 +20,10 @@
     <div class="container-fluid alert-secondary about py-5">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-xl-12 ">
+                <div class="col-md-12 ">
                     <div class="bg-white rounded p-5 ">
                         <div class="row ">
-                            <div class="col-sm-8">
+                            <div class="col-md-8">
                                 <h4 class="text-primary">Programa</h4>
                                 <h5 class="display-6">Empresas</h5>
                                 <h5>
@@ -36,7 +36,7 @@
                                     <i class="fas fa-laptop me-2"></i>Online
                                 </h5>
                             </div>
-                            <div class="col-sm-4">
+                            <div class="col-md-4">
                                 <div class="d-grid gap-2">
 
                                     <a href="../../Contact.aspx?programa=Empresas" class="btn btn-primary mt-5"><i class="fas fa-user-tie me-2"></i>Contáctenos </a>
@@ -46,7 +46,7 @@
                     </div>
                 </div>
 
-                <div class="col-xl-12 ">
+                <div class="col-md-12 ">
                     <div class="bg-white rounded p-5 ">
 
                         <div class="row">

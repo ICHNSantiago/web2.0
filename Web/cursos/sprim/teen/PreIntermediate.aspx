@@ -21,10 +21,10 @@
             <div class="row g-5">
 
 
-                <div class="col-xl-12 ">
+                <div class="col-md-12 ">
                     <div class="bg-white rounded p-5 ">
                         <div class="row ">
-                            <div class="col-sm-9">
+                            <div class="col-md-9">
                                 <h4 class="text-primary">Spring Program</h4>
                                 <h5 class="display-6">Teens  | <span class="text-primary">Pre Intermediate</span></h5>
                                 <h5>
@@ -35,9 +35,9 @@
                                     <i class="fas fa-user me-2"></i>Presencial                                   
                                 </h5>
                             </div>
-                            <div class="col-sm-3">
+                            <div class="col-md-3">
                                 <div class="row">
-                                    <div class="col-lg-12 mt-3">
+                                    <div class="col-md-12 mt-3">
                                         <table class="text-dark text-center table table-borderless mb-0" runat="server" id="table_tarifas">
                                             <tr>
                                                 <td>
@@ -66,7 +66,7 @@
                     </div>
                 </div>
 
-                <div class="col-xl-12">
+                <div class="col-md-12">
                     <div class="bg-white rounded p-5 h-100">
                         <ul class="nav nav-pills nav-fill nav-tabs" role="tablist">
                             <li class="nav-item" role="presentation" runat="server" id="link_horario_40">
@@ -82,7 +82,7 @@
 
 
                         <div class="row">
-                            <div class="col-xl-12" runat="server" id="div_horario_40" visible="false">
+                            <div class="col-md-12" runat="server" id="div_horario_40" visible="false">
 
                                 <div class="row mt-5">
                                     <div class="col-md-3">
@@ -265,7 +265,7 @@
 
                             </div>
 
-                            <div class="col-xl-12" runat="server" id="div_descripcion" visible="false">
+                            <div class="col-md-12" runat="server" id="div_descripcion" visible="false">
                                 <div class="row mt-5 text-dark">
                                     <div class="col-md-12">
                                         <h2>Spring Program Teens  | <span class="text-primary">Pre Intermediate</span></h2>
@@ -280,7 +280,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-xl-12" runat="server" id="div_objetivos" visible="false">
+                            <div class="col-md-12" runat="server" id="div_objetivos" visible="false">
                                 <div class="mt-5">
                                     <h2>Spring Program Teens | <span class="text-primary">Objetivos</span></h2>
                                     <hr />
@@ -352,23 +352,23 @@
 
                 </div>
 
-                <div class="col-xl-12">
+                <div class="col-md-12">
                     <div class="bg-white rounded p-5 h-100">
                         <div class="row">
 
-                            <div class="col-sm-12 mb-5">
+                            <div class="col-md-12 mb-5">
                                 <h4><strong><span class="text-primary me-2">Cursos</span>Similares</strong></h4>
                                 <hr />
                             </div>
-                            <div class="col-sm-6">
+                            <div class="col-md-6">
                                 <div class="counter-item bg-light rounded p-3 h-100">
                                     <div class="counter-counting">
                                         <div class="row g-4 justify-content-center">
-                                            <div class="col-sm-8">
+                                            <div class="col-md-8">
                                                 <i class="fas fa-bookmark text-success fs-4"></i>
                                                 <span class="text-dark fs-4 fw-bold">Teens - Beginner</span>
                                             </div>
-                                            <div class="col-sm-4">
+                                            <div class="col-md-4">
                                                 <a class="btn btn-success py-2 px-4" href="Beginner.aspx">Saber más</a>
                                             </div>
                                         </div>
@@ -376,15 +376,15 @@
                                 </div>
                             </div>
 
-                            <div class="col-sm-6">
+                            <div class="col-md-6">
                                 <div class="counter-item bg-light rounded p-3 h-100">
                                     <div class="counter-counting">
                                         <div class="row g-4 justify-content-center">
-                                            <div class="col-sm-8">
+                                            <div class="col-md-8">
                                                 <i class="fas fa-bookmark text-success fs-4"></i>
                                                 <span class="text-dark fs-4 fw-bold">Teens - Elementary</span>
                                             </div>
-                                            <div class="col-sm-4">
+                                            <div class="col-md-4">
                                                 <a class="btn btn-success py-2 px-4" href="Elementary.aspx">Saber más</a>
                                             </div>
                                         </div>

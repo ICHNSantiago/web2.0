@@ -44,7 +44,7 @@ namespace Web.cursos.pre
 
             int.TryParse(TextBoxAlumnoFono.Text.Trim(), out int fono);
             DateTime.TryParse(TextBoxAlumnoNace.Text, out DateTime dateNace);
-            int comuma = int.Parse(LabelComunaID.Text);
+            string comuma = LabelComunaID.Text;
             Ncotizacion ncotizacion = new Ncotizacion();
             string resultado = ncotizacion.IngresarAlumno(id, paterno, materno, nombre, comuma, direccion, dateNace, fono, mail);
 
@@ -91,7 +91,7 @@ namespace Web.cursos.pre
                                     {
                                         if (!string.IsNullOrEmpty(direccion))
                                         {
-                                            int comuma = int.Parse(LabelComunaID.Text);
+                                            string comuma = LabelComunaID.Text;
                                             Ncotizacion ncotizacion = new Ncotizacion();
                                             string alumnoID = TextBoxAlumnoRun.Text;
 
@@ -556,7 +556,7 @@ namespace Web.cursos.pre
             int idRegion = int.Parse(LabelRegionID.Text);
 
             string comuna = ListaComuna.SelectedValue.ToString();
-            int comunaID = nRegion.ComunaID(idRegion, comuna);
+            string comunaID = nRegion.ComunaID(idRegion, comuna);
             LabelComunaID.Text = comunaID.ToString();
             TextBoxAlumnoDireccion.Focus();
         }

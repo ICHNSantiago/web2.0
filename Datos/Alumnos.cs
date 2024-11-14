@@ -9,8 +9,7 @@ namespace Datos
         private readonly Conexion Conexion = new Conexion();
         private MySqlCommand Comando;
         private MySqlDataAdapter Adaptador;
-        private MySqlDataReader Leer;
-
+        
         public DataTable BuscarBloqueo(string idAlumno)
         {
             DataTable tabla = new DataTable();

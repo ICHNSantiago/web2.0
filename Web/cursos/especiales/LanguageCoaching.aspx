@@ -18,10 +18,10 @@
     <div class="container-fluid alert-secondary about py-5">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-xl-12 ">
+                <div class="col-md-12 ">
                     <div class="bg-white rounded p-5 ">
                         <div class="row ">
-                            <div class="col-sm-8">
+                            <div class="col-md-8">
                                 <h4 class="text-primary">Curso</h4>
                                 <h5 class="display-6">Language | <span class="text-primary">Coaching</span></h5>
                                 <h5>
@@ -30,9 +30,9 @@
                                     <i class="fas fa-clock me-2"></i>20 Horas 
                                 </h5>
                             </div>
-                            <div class="col-sm-4">
+                            <div class="col-md-4">
                                 <div class="row">
-                                    <div class="col-lg-12 mt-3">
+                                    <div class="col-md-12 mt-3">
                                         <table class="text-dark text-center table table-borderless mb-0" runat="server" id="table_tarifas">
                                             <tr>
                                                 <td>
@@ -54,7 +54,7 @@
                                             </tr>
                                         </table>
                                     </div>
-                                    <%--  <div class="col-lg-4">
+                                    <%--  <div class="col-md-4">
     <img src="../../img/programas/kids.jpg" class="img-fluid rounded w-100" alt="">
 </div>--%>
                                 </div>
@@ -63,7 +63,7 @@
                     </div>
                 </div>
 
-                <div class="col-xl-12 ">
+                <div class="col-md-12 ">
                     <div class="bg-white rounded p-5 ">
 
                         <div class="row">

@@ -20,23 +20,23 @@
     <div class="container-fluid alert-secondary about py-5">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-xl-12 ">
+                <div class="col-md-12 ">
                     <div class="bg-white rounded p-5 shadow">
                         <div class="row ">
-                            <div class="col-sm-9">
+                            <div class="col-md-9">
                                 <div class="row">
-                                    <div class="col-sm-12">
+                                    <div class="col-md-12">
                                         <span class="display-6 text-dark">Curso de Inglés | <span class="text-primary">Preescolares </span></span>
                                     </div>
-                                    <div class="col-sm-12 mt-2">
+                                    <div class="col-md-12 mt-2">
                                         <span class="h5">                                           
                                             <i class="fas fa-user me-2"></i>Presencial 
     
                                         </span>
                                     </div>
-                                    <div class="col-sm-12" runat="server" id="div_inicio">
+                                    <div class="col-md-12" runat="server" id="div_inicio">
                                         <div class="row">
-                                            <div class="col-sm-6 text-center">
+                                            <div class="col-md-6 text-center">
                                                 <div class="d-grid gap-2">
                                                     <div class="btn btn-warning text-center mt-4" style="font-size: 18px">
                                                         <asp:Label ID="LabelInicios" runat="server" Text="Label"></asp:Label>
@@ -47,9 +47,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-sm-3">
+                            <div class="col-md-3">
                                 <div class="row">
-                                    <div class="col-lg-12">
+                                    <div class="col-md-12">
                                         <table class="text-dark text-center table table-borderless mb-0" runat="server" id="table_tarifas">
                                             <tr runat="server" id="btn_comprar">
                                                 <td>
@@ -74,7 +74,7 @@
                     </div>
                 </div>
 
-                <div class="col-xl-12">
+                <div class="col-md-12">
                     <div class="bg-white rounded p-5 h-100 shadow">
                         <ul class="nav nav-pills nav-fill nav-tabs" role="tablist">
                             <li class="nav-item active" role="presentation">
@@ -93,7 +93,7 @@
 
 
                         <div class="row">
-                            <div class="col-xl-12" runat="server" id="div_horario_40" visible="false">
+                            <div class="col-md-12" runat="server" id="div_horario_40" visible="false">
 
                                 <div class="row mt-5">
                                     <div class="col-md-3">
@@ -284,7 +284,7 @@
 
                             </div>
 
-                            <div class="col-xl-12" runat="server" id="div_descripcion" visible="false">
+                            <div class="col-md-12" runat="server" id="div_descripcion" visible="false">
                                 <div class="row mt-5 text-dark">
                                     <div class="col-md-12">
                                         <h2>Curso de Inglés | <span class="text-primary">Preschoolers</span></h2>
@@ -336,7 +336,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-xl-12" runat="server" id="div_objetivos" visible="false">
+                            <div class="col-md-12" runat="server" id="div_objetivos" visible="false">
                                 <div class="mt-5">
                                     <h2>Curso | <span class="text-primary">Objetivos</span></h2>
                                     <hr />
@@ -408,7 +408,7 @@
 
                             </div>
 
-                            <div class="col-xl-12" runat="server" id="div_niveles" visible="false">
+                            <div class="col-md-12" runat="server" id="div_niveles" visible="false">
                                 <div class="row mt-5">
                                     <div class="col-md-12">
                                         <img class="img-fluid" src="../../img/programas/preschool_niveles.webp" />

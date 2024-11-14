@@ -25,7 +25,7 @@
             <div class="container-fluid bg-white about">
                 <div class="container py-5">
                     <div class="row justify-content-center">
-                        <div class="col-lg-12">
+                        <div class="col-md-12">
                             <div class="mx-auto pb-5 text-center" style="max-width: 1000px;">
                                 <h4 class="text-primary">
                                     <img class="img-fluid" src="../img/favicon.png" style="width: 10%" />
@@ -42,18 +42,18 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-12">
+                        <div class="col-md-12">
                             <div>
                                 <div class="row">
-                                    <div class="col-lg-3">
+                                    <div class="col-md-3">
                                     </div>
-                                    <div class="col-lg-3">
+                                    <div class="col-md-3">
                                         <div class="d-grid gap-2">
                                             <a href="../Index.aspx" class="btn btn-secondary text-white">Volver al Home
                                             </a>
                                         </div>
                                     </div>
-                                    <div class="col-lg-3">
+                                    <div class="col-md-3">
                                         <div class="d-grid gap-2">
                                             <asp:LinkButton ID="LinkButtonContinuar" CssClass="btn btn-primary" runat="server" OnClick="LinkButtonContinuar_Click">Continuar con tu inscripción  </asp:LinkButton>
                                         </div>
@@ -70,7 +70,7 @@
             <div class="container-fluid  bg-light">
                 <div class="container py-5">
                     <div class="row g-4 justify-content-center">
-                        <div class="col-lg-12 text-center">
+                        <div class="col-md-12 text-center">
                             <h1><span class="text-primary"><strong>Información </strong></span>del pago</h1>
                             <hr />
                             <div class="row">
@@ -173,10 +173,10 @@
             <div class="container-fluid bg-white about py-5">
                 <div class="container py-5">
                     <div class="row g-4 justify-content-center">
-                        <div class="col-lg-1">
+                        <div class="col-md-1">
                             <i class="fas fa-times-circle text-danger" style="font-size: 60px; margin-top: 10px"></i>
                         </div>
-                        <div class="col-lg-11">
+                        <div class="col-md-11">
                             <table class="table text-dark">
                                 <tr>
                                     <td>

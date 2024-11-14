@@ -82,7 +82,7 @@
                                     <tr class="text-center">
                                         <th colspan="2">
                                             <div class="d-grid gap-2">
-                                                <a class="btn btn-primary rounded-pill py-2 px-4" href="ShopCart.aspx?tipo=regular"><i class="fas fa-shopping-cart me-2"></i>Comprar</a>
+                                                <a class="btn btn-primary rounded-pill py-2 px-4" href="ShopCart.aspx?tipo=regular"><i class="fas fa-shopping-cart me-2"></i>Seleccionar</a>
                                             </div>
                                         </th>
                                     </tr>
@@ -150,7 +150,7 @@
                                     <tr class="text-center">
                                         <th colspan="2">
                                             <div class="d-grid gap-2">
-                                                <a class="btn btn-primary rounded-pill py-2 px-4" href="ShopCart.aspx?tipo=intensivo"><i class="fas fa-shopping-cart me-2"></i>Comprar</a>
+                                                <a class="btn btn-primary rounded-pill py-2 px-4" href="ShopCart.aspx?tipo=intensivo"><i class="fas fa-shopping-cart me-2"></i>Seleccionar</a>
                                             </div>
                                         </th>
                                     </tr>
@@ -219,7 +219,7 @@
                                     <tr class="text-center">
                                         <th colspan="2">
                                             <div class="d-grid gap-2">
-                                                <a class="btn btn-primary rounded-pill py-2 px-4" href="ShopCart.aspx?tipo=summer"><i class="fas fa-shopping-cart me-2"></i>Comprar</a>
+                                                <a class="btn btn-primary rounded-pill py-2 px-4" href="ShopCart.aspx?tipo=summer"><i class="fas fa-shopping-cart me-2"></i>Seleccionar</a>
                                             </div>
                                         </th>
                                     </tr>

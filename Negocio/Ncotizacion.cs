@@ -22,12 +22,12 @@ namespace Negocio
             return GetCotizacion.IngresarDetalle(cotizacion, curso, modalidad, sede, cantidad, tarifa, idDescto, totalPago, alumID, alumEdad, apoID, tarifaID); 
         }
 
-        public string IngresarAlumno(string idAlumno, string paterno, string materno, string nombre, int comunaID, string direccion, DateTime nace, int fono, string mail)
+        public string IngresarAlumno(string idAlumno, string paterno, string materno, string nombre, string comunaID, string direccion, DateTime nace, int fono, string mail)
         {
             return GetCotizacion.IngresarAlumno(idAlumno, paterno, materno, nombre, comunaID, direccion, nace, fono, mail);
         }
 
-        public string IngresarApoderado(string idAlumno, string idApoderado, string paterno, string materno, string nombre, int comunaID, string direccion, int fono, string mail)
+        public string IngresarApoderado(string idAlumno, string idApoderado, string paterno, string materno, string nombre, string comunaID, string direccion, int fono, string mail)
         {
             return GetCotizacion.IngresarApoderado(idAlumno, idApoderado, paterno, materno, nombre, comunaID, direccion, fono, mail);
         }

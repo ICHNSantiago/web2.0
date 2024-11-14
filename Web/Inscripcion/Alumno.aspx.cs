@@ -65,7 +65,7 @@ namespace Web.Inscripcion
                     // ??????????
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 // "Error en el sistema. vuelva a intentar mas tarde, detalle: "
             }
@@ -681,7 +681,7 @@ namespace Web.Inscripcion
                                     {
                                         if (!string.IsNullOrEmpty(direccion))
                                         {
-                                            int comuma = int.Parse(LabelApoDireccionComunaID.Text);
+                                            string comuma = LabelApoDireccionComunaID.Text;
                                             Ncotizacion ncotizacion = new Ncotizacion();
                                             string resultado = ncotizacion.IngresarApoderado(idAlum, idApo, paterno, materno, nombre, comuma, direccion, fono, mail);
 
@@ -783,7 +783,7 @@ namespace Web.Inscripcion
             int idRegion = int.Parse(LabelApoDireccionRegionID.Text);
 
             string comuna = ListaEditarComuna.SelectedValue.ToString();
-            int comunaID = nRegion.ComunaID(idRegion, comuna);
+            string comunaID = nRegion.ComunaID(idRegion, comuna);
             LabelApoDireccionComunaID.Text = comunaID.ToString();
         }
 

@@ -84,7 +84,7 @@ namespace Datos
             }
         }
 
-        public string IngresarAlumno(string idAlumno, string paterno, string materno, string nombre, int comunaID, string direccion, DateTime nace, int fono, string mail)
+        public string IngresarAlumno(string idAlumno, string paterno, string materno, string nombre, string comunaID, string direccion, DateTime nace, int fono, string mail)
         {
             try
             {
@@ -119,7 +119,7 @@ namespace Datos
             }
         }
 
-        public string ActualizarAlumno(string idAlumno, string paterno, string materno, string nombre, int comunaID, string direccion, DateTime nace, int fono, string mail)
+        public string ActualizarAlumno(string idAlumno, string paterno, string materno, string nombre, string comunaID, string direccion, DateTime nace, int fono, string mail)
         {
             try
             {
@@ -147,7 +147,7 @@ namespace Datos
             }
         }
 
-        public string IngresarApoderado(string idAlumno, string idApoderado, string paterno, string materno, string nombre, int comunaID, string direccion, int fono, string mail)
+        public string IngresarApoderado(string idAlumno, string idApoderado, string paterno, string materno, string nombre, string comunaID, string direccion, int fono, string mail)
         {
             try
             {
@@ -182,7 +182,7 @@ namespace Datos
             }
         }
 
-        public string ActualizarApoderado(string idAlumno, string idApoderado, string paterno, string materno, string nombre, int comunaID, string direccion, int fono, string mail)
+        public string ActualizarApoderado(string idAlumno, string idApoderado, string paterno, string materno, string nombre, string comunaID, string direccion, int fono, string mail)
         {
             try
             {

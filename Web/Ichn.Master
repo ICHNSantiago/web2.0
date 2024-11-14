@@ -132,20 +132,21 @@
                                 <a href="#" class="nav-link" data-bs-toggle="dropdown">
                                     <span class="dropdown-toggle">Sobre Nosotros</span>
                                 </a>
-                                <div class="dropdown-menu">
-                                    <a href="<%=Page.ResolveUrl("~/AmericanSpace.aspx") %>" class="dropdown-item">American Space</a>
-                                    <a href="<%=Page.ResolveUrl("https://testingcenter.cl") %>" target="_blank" class="dropdown-item">Testing Center</a>
+                                <div class="dropdown-menu">                        
                                     <a href="<%=Page.ResolveUrl("~/Intranet.aspx") %>" class="dropdown-item">Intranet</a>
                                     <a href="<%=Page.ResolveUrl("~/Sedes.aspx") %>" class="dropdown-item">Sedes</a>
                                     <a href="<%=Page.ResolveUrl("~/About.aspx") %>" class="dropdown-item">Nuestra Institución</a>
                                 </div>
-                            </div>
+                            </div>                           
                             <div class="nav-btn px-2">
-                                <a href="<%=Page.ResolveUrl("~/Contact.aspx") %>" class="btn btn-success rounded-pill">Contáctanos</a>
+                                <a href="<%=Page.ResolveUrl("~/AmericanSpace.aspx") %>" class="btn btn-outline-primary btn-sm me-2">American Space</a>
+                                <a href="<%=Page.ResolveUrl("https://testingcenter.cl") %>" target="_blank" class="btn btn-sm btn-outline-danger me-2" >Testing Center</a>                              
                             </div>
                         </div>
                     </div>
+                      <a href="<%=Page.ResolveUrl("~/Contact.aspx") %>" class="ms-2 btn btn-success rounded-pill">Contáctanos</a>
                     <div class="d-none d-xl-flex flex-shrink-0 ps-4">
+                        
                         <a href="#" class="btn btn-light btn-lg-square rounded-circle position-relative wow tada" data-wow-delay="1.9s">
                             <i class="fas fa-mobile-alt fa-2x"></i>
                         </a>
@@ -373,12 +374,12 @@
         });
     </script>
 
-    
-        <script>
-            const d = new Date();
-            let year = d.getFullYear();
-            document.getElementById("demo").innerHTML = year;
-        </script>
+
+    <script>
+        const d = new Date();
+        let year = d.getFullYear();
+        document.getElementById("demo").innerHTML = year;
+    </script>
 
 </body>
 

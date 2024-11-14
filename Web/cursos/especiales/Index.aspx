@@ -19,15 +19,15 @@
     <div class="container-fluid alert-secondary">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-xl-12 text-center">
+                <div class="col-md-12 text-center">
                     <h1>
                         <span class="text-primary">Cursos </span>Especiales 
                     </h1>
                 </div>
 
-                <div class="col-xl-12">
+                <div class="col-md-12">
                     <div class="row g-4 justify-content-center">
-                        <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="col-md-6 col-md-6 col-md-3">
                             <div class="service-item shadow">
                                 <div class="service-img">
                                     <img src="../../img/programas/especial_largo.png" class="img-fluid rounded-top w-100" />
@@ -55,7 +55,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="col-md-6 col-md-6 col-md-3">
                             <div class="service-item shadow">
                                 <div class="service-img">
                                     <img src="../../img/programas/especial_largo.png" class="img-fluid rounded-top w-100" />
@@ -83,7 +83,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="col-md-6 col-md-6 col-md-3">
                             <div class="service-item shadow">
                                 <div class="service-img">
                                     <img src="../../img/programas/especial_largo.png" class="img-fluid rounded-top w-100" />
@@ -111,7 +111,7 @@
                             </div>
                         </div>
 
-                        <div class="col-md-6 col-lg-6 col-xl-3">
+                        <div class="col-md-6 col-md-6 col-md-3">
                             <div class="service-item shadow">
                                 <div class="service-img">
                                     <img src="../../img/programas/especial_largo.png" class="img-fluid rounded-top w-100" />

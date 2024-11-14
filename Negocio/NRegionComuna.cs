@@ -35,18 +35,18 @@ namespace Negocio
             return getRegion.ListarComunas(idRegion);
         }
 
-        public int ComunaID(int region, string comuna)
+        public string ComunaID(int region, string comuna)
         {
             DataTable data = ListarComunas(region);
             string var;
-            int id = 0;
+            string id = "1";
             for (int i = 0; i < data.Rows.Count; i++)
             {
                 var = data.Rows[i]["NombreComuna"].ToString().Trim();
 
                 if (var.Equals(comuna.Trim()))
                 {
-                    id = int.Parse(data.Rows[i]["idComunas"].ToString());
+                    id = data.Rows[i]["idComunas"].ToString();
                 }
             }
             return id;
