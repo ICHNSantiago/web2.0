@@ -9,7 +9,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-        <!-- Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7349HX"
             height="0" width="0" style="display: none; visibility: hidden"></iframe>
@@ -124,10 +124,10 @@
 
                             <div class="tab-pane" id="fill-tabpanel-1" role="tabpanel" aria-labelledby="fill-tab-1">
 
-                                   <h4><span class="text-primary">TOEFL</span> | Metodología de Trabajo</h4>
-                                    <hr />
+                                <h4><span class="text-primary">TOEFL</span> | Metodología de Trabajo</h4>
+                                <hr />
                                 <div class="row">
-                                    <div class="col-md-12">
+                                    <div class="col-md-12" style="text-align: justify; text-justify: none;">
                                         Acceda a un programa flexible en horarios e intensidad de estudio,
                                         donde le proponemos combinar sesiones de autoestudio asistido con
                                         material digital y sesiones sincrónicas con un tutor especializado vía
@@ -136,50 +136,52 @@
                                     </div>
 
                                     <div class="col-md-12 mt-5">
-                                        <table class="table text-dark table-bordered text-center" style="font-size: 22px">
-                                            <tr>
-                                                <th>
-                                                    <span class="text-primary">Esquema Estudio Semanal</span>
-                                                </th>
-                                                <th>
-                                                    <span class="text-primary">Grupal</span>
-                                                </th>
-                                                <th>
-                                                    <span class="text-primary">Dual</span>
-                                                </th>
-                                                <th>
-                                                    <span class="text-primary">Individual</span>
-                                                </th>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <p>2 sesiones autoestudio</p>
-                                                </td>
-                                                <td>
-                                                    <span>1 hr</span>
-                                                </td>
-                                                <td>
-                                                    <span>1,5 hrs</span>
-                                                </td>
-                                                <td>
-                                                    <span>1,5 hrs</span>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <span>1 sesión con Tutor</span>
-                                                </td>
-                                                <td>
-                                                    <span>1,5 hrs</span>
-                                                </td>
-                                                <td>
-                                                    <span>1,5 hrs</span>
-                                                </td>
-                                                <td>
-                                                    <span>1,5 hrs</span>
-                                                </td>
-                                            </tr>
-                                        </table>
+                                        <div class="table-responsive">
+                                            <table class="table text-dark table-bordered text-center" style="font-size: 22px">
+                                                <tr>
+                                                    <th>
+                                                        <span class="text-primary">Esquema Estudio Semanal</span>
+                                                    </th>
+                                                    <th>
+                                                        <span class="text-primary">Grupal</span>
+                                                    </th>
+                                                    <th>
+                                                        <span class="text-primary">Dual</span>
+                                                    </th>
+                                                    <th>
+                                                        <span class="text-primary">Individual</span>
+                                                    </th>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <p>2 sesiones autoestudio</p>
+                                                    </td>
+                                                    <td>
+                                                        <span>1 hr</span>
+                                                    </td>
+                                                    <td>
+                                                        <span>1,5 hrs</span>
+                                                    </td>
+                                                    <td>
+                                                        <span>1,5 hrs</span>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <span>1 sesión con Tutor</span>
+                                                    </td>
+                                                    <td>
+                                                        <span>1,5 hrs</span>
+                                                    </td>
+                                                    <td>
+                                                        <span>1,5 hrs</span>
+                                                    </td>
+                                                    <td>
+                                                        <span>1,5 hrs</span>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -190,7 +192,7 @@
                                     <div class="col-md-5">
                                         <img class="img-fluid rounded" src="../../img/programas/toefl02.png" />
                                     </div>
-                                    <div class="col-md-7">
+                                    <div class="col-md-7" style="text-align: justify; text-justify:none;">
                                         <h4><span class="text-primary">TOEFL</span> | Material de Trabajo</h4>
                                         <hr />
                                         Guías de estudio digitales incluidos para actual versión de TOEFL ibt. Acceso a recursos online para material de refuerzo y auto-estudio fuera de clase. Acceso a Test de Práctica exclusivo para estudiantes del Norteamericano en alianza con Testing Center Norteamericano.
@@ -222,41 +224,42 @@
 
                                     <h4><span class="text-primary">TOEFL</span> | Modalidad</h4>
                                     <hr />
-
-                                    <table class="table table-bordered text-dark text-center" style="font-size: 20px">
-                                        <tr>
-                                            <th>Modalidad</th>
-                                            <th>Semanas</th>
-                                            <th>Participantes</th>
-                                            <th>Horas Autoinstrucción</th>
-                                            <th>Horas con Tutor</th>
-                                            <th>Valor</th>
-                                        </tr>
-                                        <tr>
-                                            <td>Individual</td>
-                                            <td>6</td>
-                                            <td>1</td>
-                                            <td>18</td>
-                                            <td>9</td>
-                                            <td>$860.540</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Dual</td>
-                                            <td>6</td>
-                                            <td>2</td>
-                                            <td>18</td>
-                                            <td>9</td>
-                                            <td>$680.320</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Grupal</td>
-                                            <td>12</td>
-                                            <td>6</td>
-                                            <td>24</td>
-                                            <td>18</td>
-                                            <td>$548.400</td>
-                                        </tr>
-                                    </table>
+                                    <div class="table-responsive-sm">
+                                        <table class="table table-bordered text-dark text-center" style="font-size: 20px">
+                                            <tr>
+                                                <th>Modalidad</th>
+                                                <th>Semanas</th>
+                                                <th>Participantes</th>
+                                                <th>Horas Autoinstrucción</th>
+                                                <th>Horas con Tutor</th>
+                                                <th>Valor</th>
+                                            </tr>
+                                            <tr>
+                                                <td>Individual</td>
+                                                <td>6</td>
+                                                <td>1</td>
+                                                <td>18</td>
+                                                <td>9</td>
+                                                <td>$860.540</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Dual</td>
+                                                <td>6</td>
+                                                <td>2</td>
+                                                <td>18</td>
+                                                <td>9</td>
+                                                <td>$680.320</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Grupal</td>
+                                                <td>12</td>
+                                                <td>6</td>
+                                                <td>24</td>
+                                                <td>18</td>
+                                                <td>$548.400</td>
+                                            </tr>
+                                        </table>
+                                    </div>
                                 </div>
                             </div>
                         </div>

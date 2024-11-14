@@ -30,7 +30,7 @@
                                         <span class="display-6 text-dark">Curso de Inglés | <span class="text-primary">Niños Niñas </span></span>
                                     </div>
                                     <div class="col-md-12 mt-2">
-                                        <span class="h5">                                           
+                                        <span class="h5">
                                             <i class="fas fa-user me-2"></i>Presencial 
                                             <span class="me-2 ms-2">|</span>
                                             <i class="fas fa-laptop me-2"></i>Online
@@ -303,51 +303,49 @@
                                     </div>
                                     <div class="col-md-10">
 
-                                        <table class="table text-dark">
-                                            <tr>
-                                                <td style="width: 20%">
-                                                    <h5 class="text-primary">Modalidad</h5>
-                                                </td>
-                                                <th>
-                                                    <h5>Regular (1 o 2 clases por semana)</h5>
-                                                </th>
-                                                <th></th>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <h5 class="text-primary">Clases</h5>
-                                                </td>
-                                                <td colspan="2">
-                                                    <h5>Presencial | <a class="text-decoration-underline" href="../../Sedes.aspx" target="_blank">ver sedes</a> </h5>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td>
-                                                    <h5>Online</h5>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <h5 class="text-primary">Edad</h5>
-                                                </td>
-                                                <td>
-                                                    <h5>7 a 11 Años</h5>
-                                                </td>
-                                            </tr>
-                                            <tr style="text-align: justify">
-                                                <td colspan="3">Curso de Inglés para niños con énfasis en la comunicación y el uso de recursos léxicos de alta frecuencia. 
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <h5 class="text-primary">Modalidad</h5>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <h5>Regular (1 o 2 clases por semana)</h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <h5 class="text-primary">Clases</h5>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <h5>Presencial | <a class="text-decoration-underline" href="../../Sedes.aspx" target="_blank">ver sedes</a> </h5>
+                                            </div>
+                                            <div class="col-md-3">
+                                                <h5>Online</h5>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <h5 class="text-primary">Edad</h5>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <h5>7 a 11 Años</h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-md-12" style="text-align: justify; text-justify: none;">
+                                                <hr />
+                                                Curso de Inglés para niños con énfasis en la comunicación y el uso de recursos léxicos de alta frecuencia. 
                                                     Los contenidos del curso están centrados en el desarrollo de habilidades linguísticas, lógicas, inter e intrapersonales, 
                                                     y kinestésicas. Las actividades están estructuradas para la adquisición temprana de habilidades de pensamiento como 
                                                     la deducción, y el orden de conceptos.
                                                     <br />
-                                                    Tal integración del contenido para el desarrollo las competencias lingüísticas en este nivel incluye la consolidación de
+                                                Tal integración del contenido para el desarrollo las competencias lingüísticas en este nivel incluye la consolidación de
                                                     los contenidos de los niveles iniciales, y la extensión el aprendizaje para lograr la producción del idioma de forma más 
-                                                    natural e inteligible.  
-                                                </td>
-                                            </tr>
-                                        </table>
-
+                                                    natural e inteligible. 
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

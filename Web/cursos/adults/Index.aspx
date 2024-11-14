@@ -303,43 +303,33 @@
                                         <img src="../../img/programas/adulto.webp" class="img-fluid rounded w-100" alt="">
                                     </div>
                                     <div class="col-md-10">
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <h5 class="text-primary">Modalidad</h5>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <h5>Regular (2 clases por semana)</h5>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <h5>Intensivo (4 clases por semana)</h5>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-3">
+                                            <div class="col-md-3"><h5 class="text-primary">Clases</h5></div>
+                                            <div class="col-md-3">   <h5>Presencial | <a class="text-decoration-underline" href="../../Sedes.aspx" target="_blank">ver sedes</a> </h5></div>
+                                            <div class="col-md-3"> <h5>Online</h5></div>
+                                        </div>
 
-                                        <table class="table text-dark">
-                                            <tr>
-                                                <td style="width: 20%">
-                                                    <h5 class="text-primary">Modalidad</h5>
-                                                </td>
-                                                <th>
-                                                    <h5>Regular (2 clases por semana)</h5>
-                                                </th>
-                                                <th>
-                                                    <h5>Intensivo (4 clases por semana)</h5>
-                                                </th>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <h5 class="text-primary">Clases</h5>
-                                                </td>
-                                                <td colspan="2">
-                                                    <h5>Presencial | <a class="text-decoration-underline" href="../../Sedes.aspx" target="_blank">ver sedes</a> </h5>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td></td>
-                                                <td>
-                                                    <h5>Online</h5>
-                                                </td>
-                                            </tr>
-                                           
-                                            <tr style="text-align: justify">
-                                                <td colspan="3">Curso de inglés para aplicar vocabulario y expresiones para soluciones comunicativas prácticas y 
+                                         <div class="row">
+                                              <div class="col-md-12" style="text-align: justify; text-justify:none;" >
+                                                  <hr />
+                                                  Curso de inglés para aplicar vocabulario y expresiones para soluciones comunicativas prácticas y 
                                                    para el uso funcional de expresiones de presentación, saludo y despedida; entrega de datos propios, de otras personas, 
                                                    de lugares, actividades e instrucciones; e intercambio de ideas e información en tiempo real en situaciones contextualizadas
                                                    a través del uso interactivo de las competencias comunicativas de los participantes como muestra del cumplimiento de los objetivos.
-                                                </td>
-                                            </tr>
-                                        </table>
-
+                                                    
+                                              </div>
+                                         </div>
                                     </div>
                                 </div>
                             </div>
@@ -411,7 +401,7 @@
                                     </div>
                                     <div class="col-md-9">
 
-                                        <table class="table text-dark">                                            
+                                        <table class="table text-dark">
                                             <tr>
                                                 <td>
                                                     <h5 class="text-primary">Inicios</h5>

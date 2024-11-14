@@ -29,7 +29,7 @@
                                         <span class="display-6 text-dark">Curso de Inglés | <span class="text-primary">Preescolares </span></span>
                                     </div>
                                     <div class="col-md-12 mt-2">
-                                        <span class="h5">                                           
+                                        <span class="h5">
                                             <i class="fas fa-user me-2"></i>Presencial 
     
                                         </span>
@@ -295,43 +295,44 @@
                                     </div>
                                     <div class="col-md-10">
 
-                                        <table class="table text-dark">
-                                            <tr>
-                                                <td style="width: 20%">
-                                                    <h5 class="text-primary">Modalidad</h5>
-                                                </td>
-                                                <th>
-                                                    <h5>Regular (1 clase por semana)</h5>
-                                                </th>
-                                                <th></th>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <h5 class="text-primary">Clases</h5>
-                                                </td>
-                                                <td colspan="2">
-                                                    <h5>Presencial | <a class="text-decoration-underline" href="../../Sedes.aspx" target="_blank">ver sedes</a> </h5>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td>
-                                                    <h5 class="text-primary">Edad</h5>
-                                                </td>
-                                                <td>
-                                                    <h5>4 a 6  Años</h5>
-                                                </td>
-                                            </tr>
-                                            <tr style="text-align: justify">
-                                                <td colspan="3">Curso de inglés para pre-escolares para la adquisición de vocabulario genérico y la práctica sistemática 
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <h5 class="text-primary">Modalidad</h5>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <h5>Regular (1 clase por semana)</h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <h5 class="text-primary">Clases</h5>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <h5>Presencial | <a class="text-decoration-underline" href="../../Sedes.aspx" target="_blank">ver sedes</a> </h5>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3">
+                                                <h5 class="text-primary">Edad</h5>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <h5>4 a 6  Años</h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+
+                                            <div class="col-md-12" style="text-align: justify; text-justify: none;">
+                                                <hr />
+                                                Curso de inglés para pre-escolares para la adquisición de vocabulario genérico y la práctica sistemática 
                                                     a través de las unidades de los cursos. El vocabulario es aplicado en actividades se alínea con el currículum acorde a
                                                     la edad de los niños y la adquisición del lenguaje como tal. En los niveles pre-escolares, el desarrollo de los niños en 
                                                     relación con el aprendizaje del idioma permite a los alumnos expresarse creativa, física y socialmente en conjunto con 
                                                     sus capacidades cognitivas. La exposición al idioma en este primer acercamiento es en un ambiente significativo y natural 
-                                                    con objetivos positivos a largo plazo más que por el solo rendimiento académico.                            
-                                                </td>
-                                            </tr>
-                                        </table>
-
+                                                    con objetivos positivos a largo plazo más que por el solo rendimiento académico.  
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
