@@ -147,6 +147,7 @@
                                                 <td>Alumno Run</td>
                                                 <th>
                                                     <asp:Label ID="LabelRun" runat="server" Text="Label"></asp:Label>
+                                                      <asp:Label ID="LabelMail" Visible="false" runat="server" Text="Label"></asp:Label>
                                                 </th>
                                             </tr>
                                         </table>

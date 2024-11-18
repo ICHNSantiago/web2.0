@@ -691,7 +691,7 @@
             <div class="modal-content text-dark">
                 <div class="modal-header alert alert-secondary">
                     <h5 class=" float-start mt-2">
-                        <strong>Diagnostico</strong>
+                        <strong>Norteamericano</strong>
                     </h5>
                 </div>
                 <div class="modal-body alert" style="text-align: justify;">

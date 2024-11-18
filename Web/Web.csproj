@@ -126,6 +126,7 @@
     </None>
     <Content Include="BlackFriday.aspx" />
     <Content Include="Contact.aspx" />
+    <Content Include="Correos\inscripcion.html" />
     <Content Include="cursos\kid\ShopCart.aspx" />
     <Content Include="cursos\pre\ShopCart.aspx" />
     <Content Include="Diagnostico\Kid\Beginner.aspx" />
@@ -1031,6 +1032,7 @@
     <Content Include="img\programas\summer_adults.webp" />
     <Content Include="img\programas\summer_teens_kid.webp" />
     <None Include="Connected Services\WSFacturaChile\WSServicios.wsdl" />
+    <Content Include="img\blackfriday.webp" />
     <None Include="packages.config" />
     <Content Include="Tematica\18sep\volantin.webp" />
     <Content Include="Tematica\hallo\halloween2.webp" />

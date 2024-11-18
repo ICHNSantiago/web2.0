@@ -10,16 +10,16 @@
     <!-- Header Start -->
     <div class="container-fluid" style="background-color: #000000">
         <div class="container text-center py-5">
-            <img class="img-fluid" src="img/blackfriday.png" />
+            <img class="img-fluid" src="img/blackfriday.webp" />
         </div>
     </div>
     <!-- Header End -->
-
+    <span></span>
     <!-- Feature Start -->
     <div class="container-fluid service bg-light">
         <div class="container py-5">
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 1200px;">
-                <h1 class="display-4 mb-4">PreVenta Black Friday 2024</h1>
+                <h1 class="display-4 mb-4">Preventa Black Friday 2024</h1>
                 <p class="mb-0 h5">
                     El Black Friday 2024 ya casi está. ¡No te pierdas estos descuentos!
                     <br />
@@ -33,9 +33,9 @@
                         <div class="service-img">
                             <img src="../../img/programas/adulto_largo.webp" class="img-fluid rounded-top w-100" alt="">
 
-                            <div class="service-icon p-3 text-center" runat="server" id="div_descto_regular" visible="false">
+                            <div class="service-icon p-3 text-center" runat="server" id="div_descto_Adultos_regular" visible="false">
                                 <strong>
-                                    <asp:Label ID="LabelDesctoRegular" runat="server" Text="Label"></asp:Label>% dscto.</strong>
+                                    <asp:Label ID="LabelAdultosDesctoRegular" runat="server" Text="Label"></asp:Label>% dscto.</strong>
                             </div>
                         </div>
                         <div class="p-4 bg-white rounded-bottom">
@@ -55,7 +55,7 @@
                                         </th>
 
                                     </tr>
-                                    <tr class="text-center" runat="server" id="row_sin_promo_regular">
+                                    <tr class="text-center" runat="server" id="row_sin_promo_regular_Adultos">
                                         <th colspan="2">
                                             <h1>$ 
                                                 <asp:Label ID="LabelTarifaAdultosRegular" runat="server" Text="Label"></asp:Label>
@@ -66,7 +66,7 @@
                                     <tr class="text-center">
                                         <th colspan="2">
                                             <div class="d-grid gap-2">
-                                                <a class="btn btn-primary btn-sm py-2 px-4" href="cursos/adults/ShopCart.aspx?tipo=regular"><i class="fas fa-shopping-cart me-2"></i>Seleccionar</a>
+                                                <a class="btn btn-primary btn-sm py-2 px-4" href="cursos/adults/Index.aspx">Saber más </a>
                                             </div>
                                         </th>
                                     </tr>
@@ -80,9 +80,9 @@
                     <div class="service-item shadow">
                         <div class="service-img">
                             <img src="../../img/programas/adulto_largo.webp" class="img-fluid rounded-top w-100" alt="">
-                            <div class="service-icon p-3 text-center" runat="server" id="div_descto_intensivo" visible="false">
+                            <div class="service-icon p-3 text-center" runat="server" id="div_descto_intensivo_Adultos" visible="false">
                                 <strong>
-                                    <asp:Label ID="LabelDesctoIntensivo" runat="server" Text="Label"></asp:Label>% dscto.</strong>
+                                    <asp:Label ID="LabelDesctoIntensivoAdultos" runat="server" Text="Label"></asp:Label>% dscto.</strong>
                             </div>
                         </div>
                         <div class="p-4 bg-white rounded-bottom">
@@ -110,11 +110,11 @@
                                     <tr class="text-center">
                                         <th colspan="2">
                                             <div class="d-grid gap-2">
-                                                <a class="btn btn-primary btn-sm  py-2 px-4" href="cursos/adults/ShopCart.aspx?tipo=intensivo"><i class="fas fa-shopping-cart me-2"></i>Seleccionar</a>
+                                                <a class="btn btn-primary btn-sm  py-2 px-4" href="cursos/adults/Index.aspx">Saber más </a>
                                             </div>
                                         </th>
                                     </tr>
-                                    <tr class="text-center" runat="server" id="row_sin_promo_intensivo">
+                                    <tr class="text-center" runat="server" id="row_sin_promo_intensivo_Adultos">
                                         <th colspan="2">
                                             <h1>$
                                                 <asp:Label ID="LabelTarifaAdultosintensivo" runat="server" Text="Label"></asp:Label></h1>
@@ -131,9 +131,9 @@
                     <div class="service-item shadow">
                         <div class="service-img">
                             <img src="../../img/programas/adulto_largo.webp" class="img-fluid rounded-top w-100" alt="">
-                            <div class="service-icon p-3 text-center" runat="server" id="div_descto_summer" visible="false">
+                            <div class="service-icon p-3 text-center" runat="server" id="div_descto_summer_Adultos" visible="false">
                                 <strong>
-                                    <asp:Label ID="LabelDesctoSummer" runat="server" Text="Label"></asp:Label>% dscto.</strong>
+                                    <asp:Label ID="LabelDesctoSummerAdultos" runat="server" Text="Label"></asp:Label>% dscto.</strong>
                             </div>
                         </div>
                         <div class="p-4 bg-white rounded-bottom">
@@ -143,26 +143,222 @@
                                         <th colspan="2">
                                             <h5>Curso Inglés <strong class="text-primary">Summer School</strong></h5>
                                         </th>
-                                    </tr>                                  
-                                    <tr class="text-center" runat="server" id="row_sin_promo_summer">
+                                    </tr>
+                                    <tr class="text-center" runat="server" id="row_sin_promo_summer_Adultos">
                                         <th colspan="2">
-                                            <h1>$ <asp:Label ID="LabelTarifaAdultosSummer" runat="server" Text="Label"></asp:Label></h1>
+                                            <h1>$
+                                                <asp:Label ID="LabelTarifaAdultosSummer" runat="server" Text="Label"></asp:Label></h1>
                                             <h4>&nbsp;  </h4>
                                         </th>
                                     </tr>
                                     <tr class="text-center" runat="server" id="row_con_promo_summer">
-                                        <th class="text-end">                                          
+                                        <th class="text-end">
                                             <h3 class="text-primary">$  
                                                 <asp:Label ID="LabelTarifaAdultosSummerDescto" runat="server" Text="Label"></asp:Label></h3>
                                         </th>
                                         <th class="text-start">
-                                              <del><small>$ <asp:Label ID="LabelTarifaAdultosSummerOld" runat="server" Text="Label"></asp:Label></small>  </del>
+                                            <del><small>$
+                                                <asp:Label ID="LabelTarifaAdultosSummerOld" runat="server" Text="Label"></asp:Label></small>  </del>
                                         </th>
                                     </tr>
                                     <tr class="text-center">
                                         <th colspan="2">
                                             <div class="d-grid gap-2">
-                                                <a class="btn btn-primary btn-sm py-2 px-4" href="cursos/adults/ShopCart.aspx?tipo=summer"><i class="fas fa-shopping-cart me-2"></i>Seleccionar</a>
+                                                <a class="btn btn-primary btn-sm py-2 px-4" href="cursos/adults/Index.aspx?tipo=summer">Saber más </a>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 mt-5 justify-content-center">
+                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item shadow">
+                        <div class="service-img">
+                            <img src="../../img/programas/teens_largo.webp" class="img-fluid rounded-top w-100" alt="">
+
+                            <div class="service-icon p-3 text-center" runat="server" id="div_descto_Teens_regular" visible="false">
+                                <strong>
+                                    <asp:Label ID="LabelTeensDesctoRegular" runat="server" Text="Label"></asp:Label>% dscto.</strong>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-white rounded-bottom">
+                            <div class="service-content-inner">
+                                <table class="table text-dark">
+                                    <tr class="text-center">
+                                        <th colspan="2">
+                                            <h5>Curso de Inglés <strong class="text-primary">Regular</strong></h5>
+                                        </th>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <th class="text-end">
+                                            <h3 class="text-primary">$<asp:Label ID="LabelTarifaTeensRegularDescto" runat="server" Text="Label"></asp:Label></h3>
+                                        </th>
+                                        <th class="text-start">
+                                            <del><small>$<asp:Label ID="LabelTarifaTeensRegularOld" runat="server" Text="Label"></asp:Label></small></del>
+                                        </th>
+
+                                    </tr>
+                                    <tr class="text-center" runat="server" id="row_sin_promo_regular_Teens">
+                                        <th colspan="2">
+                                            <h1>$ 
+                                     <asp:Label ID="LabelTarifaTeensRegular" runat="server" Text="Label"></asp:Label>
+                                            </h1>
+                                            <h4>&nbsp;  </h4>
+                                        </th>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <th colspan="2">
+                                            <div class="d-grid gap-2">
+                                                <a class="btn btn-primary btn-sm py-2 px-4" href="cursos/teen/Index.aspx">Saber más </a>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s" runat="server" id="div_summer_teens" visible="false">
+                    <div class="service-item shadow">
+                        <div class="service-img">
+                            <img src="../../img/programas/teens_largo.webp" class="img-fluid rounded-top w-100" alt="">
+                            <div class="service-icon p-3 text-center" runat="server" id="div_descto_summer_Teens" visible="false">
+                                <strong>
+                                    <asp:Label ID="LabelDesctoSummerTeens" runat="server" Text="Label"></asp:Label>% dscto.</strong>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-white rounded-bottom">
+                            <div class="service-content-inner">
+                                <table class="table text-dark">
+                                    <tr class="text-center">
+                                        <th colspan="2">
+                                            <h5>Curso Inglés <strong class="text-primary">Summer School</strong></h5>
+                                        </th>
+                                    </tr>
+                                    <tr class="text-center" runat="server" id="row_sin_promo_summer_Teens">
+                                        <th colspan="2">
+                                            <h1>$
+                                     <asp:Label ID="LabelTarifaTeensSummer" runat="server" Text="Label"></asp:Label></h1>
+                                            <h4>&nbsp;  </h4>
+                                        </th>
+                                    </tr>
+                                    <tr class="text-center" runat="server" id="Tr1">
+                                        <th class="text-end">
+                                            <h3 class="text-primary">$  
+                                     <asp:Label ID="LabelTarifaTeensSummerDescto" runat="server" Text="Label"></asp:Label></h3>
+                                        </th>
+                                        <th class="text-start">
+                                            <del><small>$
+                                     <asp:Label ID="LabelTarifaTeensSummerOld" runat="server" Text="Label"></asp:Label></small>  </del>
+                                        </th>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <th colspan="2">
+                                            <div class="d-grid gap-2">
+                                                <a class="btn btn-primary btn-sm py-2 px-4" href="cursos/teen/Index.aspx?tipo=summer">Saber más </a>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-4 mt-5 justify-content-center">
+                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="service-item shadow">
+                        <div class="service-img">
+                            <img src="../../img/programas/Kids_largo.webp" class="img-fluid rounded-top w-100" alt="">
+
+                            <div class="service-icon p-3 text-center" runat="server" id="div_descto_Kids_regular" visible="false">
+                                <strong>
+                                    <asp:Label ID="LabelKidsDesctoRegular" runat="server" Text="Label"></asp:Label>% dscto.</strong>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-white rounded-bottom">
+                            <div class="service-content-inner">
+                                <table class="table text-dark">
+                                    <tr class="text-center">
+                                        <th colspan="2">
+                                            <h5>Curso de Inglés <strong class="text-primary">Regular</strong></h5>
+                                        </th>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <th class="text-end">
+                                            <h3 class="text-primary">$<asp:Label ID="LabelTarifaKidsRegularDescto" runat="server" Text="Label"></asp:Label></h3>
+                                        </th>
+                                        <th class="text-start">
+                                            <del><small>$<asp:Label ID="LabelTarifaKidsRegularOld" runat="server" Text="Label"></asp:Label></small></del>
+                                        </th>
+
+                                    </tr>
+                                    <tr class="text-center" runat="server" id="row_sin_promo_regular_Kids">
+                                        <th colspan="2">
+                                            <h1>$ 
+                            <asp:Label ID="LabelTarifaKidsRegular" runat="server" Text="Label"></asp:Label>
+                                            </h1>
+                                            <h4>&nbsp;  </h4>
+                                        </th>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <th colspan="2">
+                                            <div class="d-grid gap-2">
+                                                <a class="btn btn-primary btn-sm py-2 px-4" href="cursos/kid/Index.aspx">Saber más </a>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-6 col-xl-4 wow fadeInUp" data-wow-delay="0.2s" runat="server" id="div_summer_Kids" visible="false">
+                    <div class="service-item shadow">
+                        <div class="service-img">
+                            <img src="../../img/programas/Kids_largo.webp" class="img-fluid rounded-top w-100" alt="">
+                            <div class="service-icon p-3 text-center" runat="server" id="div_descto_summer_Kids" visible="false">
+                                <strong>
+                                    <asp:Label ID="LabelDesctoSummerKids" runat="server" Text="Label"></asp:Label>% dscto.</strong>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-white rounded-bottom">
+                            <div class="service-content-inner">
+                                <table class="table text-dark">
+                                    <tr class="text-center">
+                                        <th colspan="2">
+                                            <h5>Curso Inglés <strong class="text-primary">Summer School</strong></h5>
+                                        </th>
+                                    </tr>
+                                    <tr class="text-center" runat="server" id="row_sin_promo_summer_Kids">
+                                        <th colspan="2">
+                                            <h1>$
+                            <asp:Label ID="LabelTarifaKidsSummer" runat="server" Text="Label"></asp:Label></h1>
+                                            <h4>&nbsp;  </h4>
+                                        </th>
+                                    </tr>
+                                    <tr class="text-center" runat="server" id="Tr2">
+                                        <th class="text-end">
+                                            <h3 class="text-primary">$  
+                            <asp:Label ID="LabelTarifaKidsSummerDescto" runat="server" Text="Label"></asp:Label></h3>
+                                        </th>
+                                        <th class="text-start">
+                                            <del><small>$
+                            <asp:Label ID="LabelTarifaKidsSummerOld" runat="server" Text="Label"></asp:Label></small>  </del>
+                                        </th>
+                                    </tr>
+                                    <tr class="text-center">
+                                        <th colspan="2">
+                                            <div class="d-grid gap-2">
+                                                <a class="btn btn-primary btn-sm py-2 px-4" href="cursos/kid/Index.aspx?tipo=summer">Saber más </a>
                                             </div>
                                         </th>
                                     </tr>
@@ -245,5 +441,4 @@
 
         </div>
     </div>
-
 </asp:Content>

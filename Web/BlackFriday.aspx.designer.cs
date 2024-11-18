@@ -15,22 +15,22 @@ namespace Web
     {
 
         /// <summary>
-        /// Control div_descto_regular.
+        /// Control div_descto_Adultos_regular.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_descto_regular;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_descto_Adultos_regular;
 
         /// <summary>
-        /// Control LabelDesctoRegular.
+        /// Control LabelAdultosDesctoRegular.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelDesctoRegular;
+        protected global::System.Web.UI.WebControls.Label LabelAdultosDesctoRegular;
 
         /// <summary>
         /// Control LabelTarifaAdultosRegularDescto.
@@ -51,13 +51,13 @@ namespace Web
         protected global::System.Web.UI.WebControls.Label LabelTarifaAdultosRegularOld;
 
         /// <summary>
-        /// Control row_sin_promo_regular.
+        /// Control row_sin_promo_regular_Adultos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableRow row_sin_promo_regular;
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow row_sin_promo_regular_Adultos;
 
         /// <summary>
         /// Control LabelTarifaAdultosRegular.
@@ -69,22 +69,22 @@ namespace Web
         protected global::System.Web.UI.WebControls.Label LabelTarifaAdultosRegular;
 
         /// <summary>
-        /// Control div_descto_intensivo.
+        /// Control div_descto_intensivo_Adultos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_descto_intensivo;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_descto_intensivo_Adultos;
 
         /// <summary>
-        /// Control LabelDesctoIntensivo.
+        /// Control LabelDesctoIntensivoAdultos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelDesctoIntensivo;
+        protected global::System.Web.UI.WebControls.Label LabelDesctoIntensivoAdultos;
 
         /// <summary>
         /// Control LabelTarifaAdultosintensivoDescto.
@@ -105,13 +105,13 @@ namespace Web
         protected global::System.Web.UI.WebControls.Label LabelTarifaAdultosintensivoOld;
 
         /// <summary>
-        /// Control row_sin_promo_intensivo.
+        /// Control row_sin_promo_intensivo_Adultos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableRow row_sin_promo_intensivo;
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow row_sin_promo_intensivo_Adultos;
 
         /// <summary>
         /// Control LabelTarifaAdultosintensivo.
@@ -132,31 +132,31 @@ namespace Web
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_summer;
 
         /// <summary>
-        /// Control div_descto_summer.
+        /// Control div_descto_summer_Adultos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_descto_summer;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_descto_summer_Adultos;
 
         /// <summary>
-        /// Control LabelDesctoSummer.
+        /// Control LabelDesctoSummerAdultos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelDesctoSummer;
+        protected global::System.Web.UI.WebControls.Label LabelDesctoSummerAdultos;
 
         /// <summary>
-        /// Control row_sin_promo_summer.
+        /// Control row_sin_promo_summer_Adultos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableRow row_sin_promo_summer;
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow row_sin_promo_summer_Adultos;
 
         /// <summary>
         /// Control LabelTarifaAdultosSummer.
@@ -193,5 +193,257 @@ namespace Web
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelTarifaAdultosSummerOld;
+
+        /// <summary>
+        /// Control div_descto_Teens_regular.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_descto_Teens_regular;
+
+        /// <summary>
+        /// Control LabelTeensDesctoRegular.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelTeensDesctoRegular;
+
+        /// <summary>
+        /// Control LabelTarifaTeensRegularDescto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelTarifaTeensRegularDescto;
+
+        /// <summary>
+        /// Control LabelTarifaTeensRegularOld.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelTarifaTeensRegularOld;
+
+        /// <summary>
+        /// Control row_sin_promo_regular_Teens.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow row_sin_promo_regular_Teens;
+
+        /// <summary>
+        /// Control LabelTarifaTeensRegular.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelTarifaTeensRegular;
+
+        /// <summary>
+        /// Control div_summer_teens.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_summer_teens;
+
+        /// <summary>
+        /// Control div_descto_summer_Teens.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_descto_summer_Teens;
+
+        /// <summary>
+        /// Control LabelDesctoSummerTeens.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelDesctoSummerTeens;
+
+        /// <summary>
+        /// Control row_sin_promo_summer_Teens.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow row_sin_promo_summer_Teens;
+
+        /// <summary>
+        /// Control LabelTarifaTeensSummer.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelTarifaTeensSummer;
+
+        /// <summary>
+        /// Control Tr1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow Tr1;
+
+        /// <summary>
+        /// Control LabelTarifaTeensSummerDescto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelTarifaTeensSummerDescto;
+
+        /// <summary>
+        /// Control LabelTarifaTeensSummerOld.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelTarifaTeensSummerOld;
+
+        /// <summary>
+        /// Control div_descto_Kids_regular.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_descto_Kids_regular;
+
+        /// <summary>
+        /// Control LabelKidsDesctoRegular.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelKidsDesctoRegular;
+
+        /// <summary>
+        /// Control LabelTarifaKidsRegularDescto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelTarifaKidsRegularDescto;
+
+        /// <summary>
+        /// Control LabelTarifaKidsRegularOld.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelTarifaKidsRegularOld;
+
+        /// <summary>
+        /// Control row_sin_promo_regular_Kids.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow row_sin_promo_regular_Kids;
+
+        /// <summary>
+        /// Control LabelTarifaKidsRegular.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelTarifaKidsRegular;
+
+        /// <summary>
+        /// Control div_summer_Kids.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_summer_Kids;
+
+        /// <summary>
+        /// Control div_descto_summer_Kids.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_descto_summer_Kids;
+
+        /// <summary>
+        /// Control LabelDesctoSummerKids.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelDesctoSummerKids;
+
+        /// <summary>
+        /// Control row_sin_promo_summer_Kids.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow row_sin_promo_summer_Kids;
+
+        /// <summary>
+        /// Control LabelTarifaKidsSummer.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelTarifaKidsSummer;
+
+        /// <summary>
+        /// Control Tr2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow Tr2;
+
+        /// <summary>
+        /// Control LabelTarifaKidsSummerDescto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelTarifaKidsSummerDescto;
+
+        /// <summary>
+        /// Control LabelTarifaKidsSummerOld.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelTarifaKidsSummerOld;
     }
 }

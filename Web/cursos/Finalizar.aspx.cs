@@ -79,6 +79,7 @@ namespace Web.cursos
                 LabelSede.Text = data.Rows[0]["sede"].ToString();
                 LabelCantidad.Text = data.Rows[0]["cantidad"].ToString().ToLower();
                 LabelRun.Text = data.Rows[0]["alumnoID"].ToString().ToLower();
+                LabelMail.Text = data.Rows[0]["Email"].ToString().ToLower();
             }
         }
 
@@ -114,8 +115,8 @@ namespace Web.cursos
                     //string varEstado = codes[varResponseCode.ToString()];
                     // int.TryParse(response.InstallmentsAmount.ToString(), out int varInstallmentsAmount);
                     string varInstallmentsNumber = response.InstallmentsNumber.ToString();
-                    // string varBalance = response.Balance.ToString();
-
+                    string varDate = response.TransactionDate.ToString();
+                    DateTime fechaPago = DateTime.Parse(varDate);
 
                     LabelBuyOrder.Text = varBuyOrder;
                     LabeldescripcionPaymentTypeCode.Text = descripcionPaymentTypeCode;
@@ -124,6 +125,9 @@ namespace Web.cursos
                     LabelInstallmentsNumber.Text = varInstallmentsNumber;
 
                     InfoCompra();
+
+                    Mails mails = new Mails();
+                    mails.SendEmailPago(LabelMail.Text, varBuyOrder, fechaPago.ToString("dd-MM-yyyy"), descripcionPaymentTypeCode, varAuthorizationCode, int.Parse(varAmount).ToString("n0").ToString(), varCardNumber);
 
                 }
                 else
