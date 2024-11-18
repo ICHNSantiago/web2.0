@@ -9,7 +9,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-        <!-- Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7349HX"
             height="0" width="0" style="display: none; visibility: hidden"></iframe>
@@ -42,15 +42,11 @@
                         </tr>
                         <tr>
                             <td>Duración</td>
-                            <th><i class="fas fa-clock me-2"></i>30 horas</th>
-                        </tr>
-                        <tr>
-                            <td>Clases</td>
-                            <th><i class="fas fa-clock me-2"></i>4 por Semana</th>
+                            <th><i class="fas fa-clock me-2"></i>1 Mes</th>
                         </tr>
                         <tr>
                             <td>Inicio</td>
-                            <th><i class="fas fa-calendar me-2"></i>Ene - Feb
+                            <th><i class="fas fa-calendar me-2"></i>Ene | Feb
                                 <asp:Label ID="LabelYearSummer" runat="server" Text="Label"></asp:Label></th>
                         </tr>
                     </table>
@@ -70,11 +66,7 @@
                         </tr>
                         <tr>
                             <td>Duración</td>
-                            <th><i class="fas fa-clock me-2"></i>40 horas</th>
-                        </tr>
-                        <tr>
-                            <td>Clases</td>
-                            <th><i class="fas fa-clock me-2"></i>2 por Semana</th>
+                            <th><i class="fas fa-clock me-2"></i>3 | 6 Meses</th>
                         </tr>
                         <tr>
                             <td>Inicios *</td>
@@ -97,11 +89,7 @@
                         </tr>
                         <tr>
                             <td>Duración</td>
-                            <th><i class="fas fa-clock me-2"></i>80 horas</th>
-                        </tr>
-                        <tr>
-                            <td>Clases</td>
-                            <th><i class="fas fa-clock me-2"></i>4 por Semana</th>
+                            <th><i class="fas fa-clock me-2"></i>3 Meses</th>
                         </tr>
                         <tr>
                             <td>Inicios *</td>
@@ -163,6 +151,11 @@
                             </td>
                             <td class="text-start">
                                 <asp:LinkButton ID="LinkButtonMas" CssClass="btn btn-primary" runat="server" OnClick="LinkButtonMas_Click"> + </asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr class="text-center">
+                            <td colspan="3">
+                                <small>* Precio no incluye el valor del libro de clases. </small>
                             </td>
                         </tr>
                         <tr class="text-center">
@@ -450,47 +443,48 @@
 
 
     <script>
-       $(document).ready(function () {
-           $(".cargando").click(function () {
+        $(document).ready(function () {
+            $(".cargando").click(function () {
 
-               $("#mensajeCargando").modal("show");
-           });
-       });
+                $("#mensajeCargando").modal("show");
+            });
+        });
     </script>
 
-   <div class="modal fade" id="mensajeCargando" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="resultPreAdvanced" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-        <div class="modal-content text-dark">
-            <div class="modal-header alert alert-secondary">
-                <h5 class=" float-start mt-2">
-                    <strong>Diagnostico</strong>
-                </h5>
-            </div>
-            <div class="modal-body alert" style="text-align: justify;">
-                <div class="row">
-                    <div class="row mb-2">
-                        <div class="col-md-12 text-center"></div>
-                        <div class="col-md-12 text-center">
-                            <h5>
-                                <strong>Procesando, espere un momento</strong>
-                            </h5>
-                            <div class="spinner-grow spinner-grow-sm text-primary" role="status">
-                                <span class="sr-only"></span>
-                            </div>
-                            <div class="spinner-grow spinner-grow-sm text-danger" role="status">
-                                <span class="sr-only"></span>
-                            </div>
-                            <div class="spinner-grow spinner-grow-sm text-primary" role="status">
-                                <span class="sr-only"></span>
-                            </div>
-                            <div class="spinner-grow spinner-grow-sm text-danger" role="status">
-                                <span class="sr-only"></span>
-                            </div>
-                            <div class="spinner-grow spinner-grow-sm text-primary" role="status">
-                                <span class="sr-only"></span>
-                            </div>
-                            <div class="spinner-grow spinner-grow-sm text-danger" role="status">
-                                <span class="sr-only"></span>
+    <div class="modal fade" id="mensajeCargando" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="resultPreAdvanced" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content text-dark">
+                <div class="modal-header alert alert-secondary">
+                    <h5 class=" float-start mt-2">
+                        <strong>Diagnostico</strong>
+                    </h5>
+                </div>
+                <div class="modal-body alert" style="text-align: justify;">
+                    <div class="row">
+                        <div class="row mb-2">
+                            <div class="col-md-12 text-center"></div>
+                            <div class="col-md-12 text-center">
+                                <h5>
+                                    <strong>Procesando, espere un momento</strong>
+                                </h5>
+                                <div class="spinner-grow spinner-grow-sm text-primary" role="status">
+                                    <span class="sr-only"></span>
+                                </div>
+                                <div class="spinner-grow spinner-grow-sm text-danger" role="status">
+                                    <span class="sr-only"></span>
+                                </div>
+                                <div class="spinner-grow spinner-grow-sm text-primary" role="status">
+                                    <span class="sr-only"></span>
+                                </div>
+                                <div class="spinner-grow spinner-grow-sm text-danger" role="status">
+                                    <span class="sr-only"></span>
+                                </div>
+                                <div class="spinner-grow spinner-grow-sm text-primary" role="status">
+                                    <span class="sr-only"></span>
+                                </div>
+                                <div class="spinner-grow spinner-grow-sm text-danger" role="status">
+                                    <span class="sr-only"></span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -498,6 +492,5 @@
             </div>
         </div>
     </div>
-</div>
 
 </asp:Content>

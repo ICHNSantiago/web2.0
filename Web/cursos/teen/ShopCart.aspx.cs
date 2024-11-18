@@ -192,7 +192,6 @@ namespace Web.cursos.teen
             {
                 case "summer":
                     idPorgrama = 41;
-
                     DateTime date = DateTime.Now;
                     int year = date.Year;
                     int month = date.Month;
@@ -211,7 +210,9 @@ namespace Web.cursos.teen
 
             Ncursos ncursos = new Ncursos();
             string tarifa = ncursos.BuscarTarifasV2(idPorgrama);
-            LabelTarifa.Text = int.Parse(tarifa).ToString("n0");
+            string[] tarifaDetalle = tarifa.Split(';');
+            LabelTarifa.Text = int.Parse(tarifaDetalle[1]).ToString("n0");
+            LabelTarifaID.Text = tarifaDetalle[0];
             LabelTarifaOld.Text = LabelTarifa.Text;
             LabelRespaldoTarifa.Text = LabelTarifa.Text;
         }

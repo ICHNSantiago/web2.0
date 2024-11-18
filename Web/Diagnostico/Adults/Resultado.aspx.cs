@@ -26,66 +26,75 @@ namespace Web.Diagnostico.Adults
             switch (nivel)
             {
                 case 39:
-                    LabelNivel.Text = "BEGINNER 1";
-                    LabelCEFR.Text = "< A1";
-                    break;
-                case 40:
-                    LabelNivel.Text = "BEGINNER 2";
+                    LabelNivel.Text = "BEGINNER";
                     LabelCEFR.Text = "A1";
                     break;
+                case 40:
+                    LabelNivel.Text = "BEGINNER";
+                    LabelCEFR.Text = "A1";
+                    nivel = 39;
+                    break;
                 case 41:
-                    LabelNivel.Text = "ELEMENTARY 1";
+                    LabelNivel.Text = "ELEMENTARY";
                     LabelCEFR.Text = "A2";
                     break;
                 case 42:
-                    LabelNivel.Text = "ELEMENTARY 2";
+                    LabelNivel.Text = "ELEMENTARY";
                     LabelCEFR.Text = "A2";
+                    nivel = 41;
                     break;
                 case 43:
-                    LabelNivel.Text = "PRE INTERMEDIATE 1";
+                    LabelNivel.Text = "PRE INTERMEDIATE";
                     LabelCEFR.Text = "A2+";
                     break;
                 case 44:
-                    LabelNivel.Text = "PRE INTERMEDIATE 2";
+                    LabelNivel.Text = "PRE INTERMEDIATE";
                     LabelCEFR.Text = "A2+";
+                    nivel = 43;
                     break;
                 case 45:
-                    LabelNivel.Text = "LOW INTERMEDIATE 1";
+                    LabelNivel.Text = "LOW INTERMEDIATE";
                     LabelCEFR.Text = "B1";
                     break;
                 case 46:
-                    LabelNivel.Text = "LOW INTERMEDIATE 2";
+                    LabelNivel.Text = "LOW INTERMEDIATE";
                     LabelCEFR.Text = "B1+";
+                    nivel = 45;
                     break;
                 case 47:
-                    LabelNivel.Text = "UPPER INTERMEDIATE 1";
+                    LabelNivel.Text = "UPPER INTERMEDIATE";
                     LabelCEFR.Text = "B2";
                     break;
                 case 48:
-                    LabelNivel.Text = "UPPER INTERMEDIATE 2";
+                    LabelNivel.Text = "UPPER INTERMEDIATE";
                     LabelCEFR.Text = "B2";
+                    nivel = 47;
                     break;
                 case 90:
-                    LabelNivel.Text = "PRE ADVANCED 1";
+                    LabelNivel.Text = "PRE ADVANCED";
                     LabelCEFR.Text = "B2+";
                     break;
                 case 144:
-                    LabelNivel.Text = "PRE ADVANCED 2";
+                    LabelNivel.Text = "PRE ADVANCED";
                     LabelCEFR.Text = "B2+";
+                    nivel = 90;
                     break;
                 case 145:
-                    LabelNivel.Text = "ADVANCED 1";
+                    LabelNivel.Text = "ADVANCED";
                     LabelCEFR.Text = "C1";
                     break;
                 case 146:
-                    LabelNivel.Text = "ADVANCED 2";
+                    LabelNivel.Text = "ADVANCED";
                     LabelCEFR.Text = "C1";
+                    nivel = 145;
                     break;
                 default:
                     break;
             }
 
-            FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(1, "sam_login_id", DateTime.Now, DateTime.Now.AddMinutes(30), true, nivel.ToString());
+            LabelNivelID.Text = nivel.ToString();
+ 
+           FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(1, "sam_login_id", DateTime.Now, DateTime.Now.AddMinutes(30), true, nivel.ToString());
             string encrypt = FormsAuthentication.Encrypt(ticket);
             HttpCookie cookie = new HttpCookie("SAM_RESULTADO_NIVEL", encrypt);
             Response.Cookies.Add(cookie);
@@ -93,16 +102,7 @@ namespace Web.Diagnostico.Adults
             ticket = new FormsAuthenticationTicket(1, "sam_login_id", DateTime.Now, DateTime.Now.AddMinutes(30), true, alumnoID.ToString());
             encrypt = FormsAuthentication.Encrypt(ticket);
             cookie = new HttpCookie("SAM_USUARIO_ID", encrypt);
-            Response.Cookies.Add(cookie);
-
-            //HttpCookie cookie = Request.Cookies["SAM_VENDEDOR_LEAD"];
-            //FormsAuthenticationTicket ticket = FormsAuthentication.Decrypt(cookie.Value);
-            //int leadID = int.Parse(ticket.UserData.ToString());
-            //if (leadID > 14)
-            //{
-            //    Nlead nlead = new Nlead();
-            //    nlead.IngresarActividad(leadID, "SAM", "Alumno termina su evaluación resultado: " + LabelNivel.Text, "2");
-            //}
+            Response.Cookies.Add(cookie);           
         }
 
         protected void Page_Load(object sender, EventArgs e)

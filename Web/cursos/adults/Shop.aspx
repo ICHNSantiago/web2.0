@@ -49,11 +49,7 @@
                                     </tr>
                                     <tr>
                                         <td>Duración</td>
-                                        <th><i class="fas fa-clock me-2"></i>3 meses <small>aprox.</small></th>
-                                    </tr>
-                                    <tr>
-                                        <td>Clases x Semana</td>
-                                        <th><i class="fas fa-clock me-2"></i>2 clases</th>
+                                        <th><i class="fas fa-clock me-2"></i>3 | 6 meses</th>
                                     </tr>
                                     <tr>
                                         <td>Inicios *</td>
@@ -69,14 +65,14 @@
                                     </tr>
                                     <tr class="text-center" runat="server" id="row_con_promo_regular">
                                         <th colspan="2">
-                                            <h1 class="text-primary">$ 
-                                                <asp:Label ID="LabelTarifaRegularDescto" runat="server" Text="Label"></asp:Label>
-                                            </h1>
                                             <del>
                                                 <h4>$ 
                                                     <asp:Label ID="LabelTarifaRegularOld" runat="server" Text="Label"></asp:Label>
                                                 </h4>
                                             </del>
+                                            <h1 class="text-primary">$ 
+                                                <asp:Label ID="LabelTarifaRegularDescto" runat="server" Text="Label"></asp:Label>
+                                            </h1>
                                         </th>
                                     </tr>
                                     <tr class="text-center">
@@ -117,11 +113,7 @@
                                     </tr>
                                     <tr>
                                         <td>Duración</td>
-                                        <th><i class="fas fa-clock me-2"></i>3 meses <small>aprox.</small></th>
-                                    </tr>
-                                    <tr>
-                                        <td>Clases x Semana</td>
-                                        <th><i class="fas fa-clock me-2"></i>4 clases</th>
+                                        <th><i class="fas fa-clock me-2"></i>3 meses </th>
                                     </tr>
                                     <tr>
                                         <td>Inicios *</td>
@@ -137,14 +129,13 @@
                                     </tr>
                                     <tr class="text-center" runat="server" id="row_con_promo_intensivo">
                                         <th colspan="2">
-                                            <h1 class="text-primary">$ 
-                                                <asp:Label ID="LabelTarifaintensivoDescto" runat="server" Text="Label"></asp:Label>
-                                            </h1>
                                             <del>
                                                 <h4>$ 
                                                 <asp:Label ID="LabelTarifaintensivoOld" runat="server" Text="Label"></asp:Label>
                                                 </h4>
                                             </del>
+                                            <h1 class="text-primary">$ <asp:Label ID="LabelTarifaintensivoDescto" runat="server" Text="Label"></asp:Label>
+                                            </h1>
                                         </th>
                                     </tr>
                                     <tr class="text-center">
@@ -188,12 +179,8 @@
                                         <th><i class="fas fa-clock me-2"></i>1 mes</th>
                                     </tr>
                                     <tr>
-                                        <td>Clases x Semana</td>
-                                        <th><i class="fas fa-clock me-2"></i>4 clases</th>
-                                    </tr>
-                                    <tr>
                                         <td>Inicio</td>
-                                        <th><i class="fas fa-calendar me-2"></i>Ene - Feb
+                                        <th><i class="fas fa-calendar me-2"></i>Ene | Feb
                                             <asp:Label ID="LabelYearSummer" runat="server" Text="Label"></asp:Label></th>
                                     </tr>
                                     <tr class="text-center" runat="server" id="row_sin_promo_summer">
@@ -205,15 +192,13 @@
                                         </th>
                                     </tr>
                                     <tr class="text-center" runat="server" id="row_con_promo_summer">
-                                        <th colspan="2">
-                                            <span class="text-primary h1">$ 
-                                                <asp:Label ID="LabelTarifaSummerDescto" runat="server" Text="Label"></asp:Label>
-                                            </span>
+                                        <th colspan="2">                                           
                                             <del>
                                                 <h4>$ 
                                                 <asp:Label ID="LabelTarifaSummerOld" runat="server" Text="Label"></asp:Label>
                                                 </h4>
                                             </del>
+                                            <h1 class="text-primary">$   <asp:Label ID="LabelTarifaSummerDescto" runat="server" Text="Label"></asp:Label></h1>
                                         </th>
                                     </tr>
                                     <tr class="text-center">

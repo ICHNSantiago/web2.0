@@ -60,15 +60,6 @@ namespace Web.cursos.adults
         protected global::System.Web.UI.HtmlControls.HtmlTableRow row_con_promo_regular;
 
         /// <summary>
-        /// Control LabelTarifaRegularDescto.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelTarifaRegularDescto;
-
-        /// <summary>
         /// Control LabelTarifaRegularOld.
         /// </summary>
         /// <remarks>
@@ -76,6 +67,15 @@ namespace Web.cursos.adults
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelTarifaRegularOld;
+
+        /// <summary>
+        /// Control LabelTarifaRegularDescto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelTarifaRegularDescto;
 
         /// <summary>
         /// Control div_descto_intensivo.
@@ -123,15 +123,6 @@ namespace Web.cursos.adults
         protected global::System.Web.UI.HtmlControls.HtmlTableRow row_con_promo_intensivo;
 
         /// <summary>
-        /// Control LabelTarifaintensivoDescto.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelTarifaintensivoDescto;
-
-        /// <summary>
         /// Control LabelTarifaintensivoOld.
         /// </summary>
         /// <remarks>
@@ -139,6 +130,15 @@ namespace Web.cursos.adults
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelTarifaintensivoOld;
+
+        /// <summary>
+        /// Control LabelTarifaintensivoDescto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelTarifaintensivoDescto;
 
         /// <summary>
         /// Control div_summer.
@@ -204,15 +204,6 @@ namespace Web.cursos.adults
         protected global::System.Web.UI.HtmlControls.HtmlTableRow row_con_promo_summer;
 
         /// <summary>
-        /// Control LabelTarifaSummerDescto.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelTarifaSummerDescto;
-
-        /// <summary>
         /// Control LabelTarifaSummerOld.
         /// </summary>
         /// <remarks>
@@ -220,5 +211,14 @@ namespace Web.cursos.adults
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label LabelTarifaSummerOld;
+
+        /// <summary>
+        /// Control LabelTarifaSummerDescto.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelTarifaSummerDescto;
     }
 }

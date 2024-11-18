@@ -123,7 +123,7 @@
                                 <asp:DropDownList ID="ListaEdad" CssClass="form-select" runat="server"></asp:DropDownList>
                                 <span class="badge bg-danger" runat="server" id="error_edad" visible="false" style="font-size: 14px">Tiene que seleccionar la edad del alumno</span>
                             </th>
-                        </tr>                     
+                        </tr>
                         <tr>
                             <td>Sede</td>
                             <th>
@@ -139,7 +139,7 @@
                             <th colspan="3">
                                 <h1>$ 
                                     <asp:Label ID="LabelTarifa" runat="server" Text="Label"></asp:Label>
-                                     <asp:Label ID="LabelTarifaID" Visible="false" runat="server" Text="Label"></asp:Label>
+                                    <asp:Label ID="LabelTarifaID" Visible="false" runat="server" Text="Label"></asp:Label>
                                 </h1>
                             </th>
                         </tr>
@@ -169,6 +169,11 @@
                             </td>
                             <td class="text-start">
                                 <asp:LinkButton ID="LinkButtonMas" CssClass="btn btn-primary" runat="server" OnClick="LinkButtonMas_Click"> + </asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr class="text-center">
+                            <td colspan="3">
+                                <small>* Precio no incluye el valor del libro de clases. </small>
                             </td>
                         </tr>
                         <tr class="text-center">

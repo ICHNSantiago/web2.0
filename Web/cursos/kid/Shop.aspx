@@ -8,7 +8,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-        <!-- Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7349HX"
             height="0" width="0" style="display: none; visibility: hidden"></iframe>
@@ -53,12 +53,6 @@
                                         <th><i class="fas fa-clock me-2"></i>6 meses</th>
                                     </tr>
                                     <tr>
-                                        <td>Clases x Semana</td>
-                                        <th>
-                                            <i class="fas fa-clock me-2"></i>1 o 2 clases
-                                        </th>
-                                    </tr>
-                                    <tr>
                                         <td>Inicios *</td>
                                         <th><i class="fas fa-calendar me-2"></i>Mar | Ago</th>
                                     </tr>
@@ -72,14 +66,13 @@
                                     </tr>
                                     <tr class="text-center" runat="server" id="row_con_promo_regular">
                                         <th colspan="2">
-                                            <h1 class="text-primary">$ 
-                                                <asp:Label ID="LabelTarifaRegularDescto" runat="server" Text="Label"></asp:Label>
-                                            </h1>
                                             <del>
                                                 <h4>$ 
                                                     <asp:Label ID="LabelTarifaRegularOld" runat="server" Text="Label"></asp:Label>
                                                 </h4>
                                             </del>
+                                            <h1 class="text-primary">$
+                                                <asp:Label ID="LabelTarifaRegularDescto" runat="server" Text="Label"></asp:Label></h1>
                                         </th>
                                     </tr>
                                     <tr class="text-center">
@@ -113,22 +106,18 @@
                                                 <strong class="text-primary">Summer School</strong>
                                             </h3>
                                         </th>
-                                    </tr>                                  
+                                    </tr>
                                     <tr>
                                         <td>Edad</td>
                                         <th><i class="fas fa-user me-2"></i>7 a 11 años</th>
                                     </tr>
                                     <tr>
                                         <td>Duración</td>
-                                        <th><i class="fas fa-clock me-2"></i>1 mese</th>
-                                    </tr>
-                                    <tr>
-                                        <td>Clases x Semana</td>
-                                        <th><i class="fas fa-clock me-2"></i>4 clases</th>
+                                        <th><i class="fas fa-clock me-2"></i>1 mes</th>
                                     </tr>
                                     <tr>
                                         <td>Inicio</td>
-                                        <th><i class="fas fa-calendar me-2"></i>Ene - Feb
+                                        <th><i class="fas fa-calendar me-2"></i>Ene | Feb
                                             <asp:Label ID="LabelYearSummer" runat="server" Text="Label"></asp:Label></th>
                                     </tr>
                                     <tr class="text-center" runat="server" id="row_sin_promo_summer">
@@ -141,14 +130,14 @@
                                     </tr>
                                     <tr class="text-center" runat="server" id="row_con_promo_summer">
                                         <th colspan="2">
-                                            <span class="text-primary h1">$ 
-                                                <asp:Label ID="LabelTarifaSummerDescto" runat="server" Text="Label"></asp:Label>
-                                            </span>
                                             <del>
                                                 <h4>$ 
                                                 <asp:Label ID="LabelTarifaSummerOld" runat="server" Text="Label"></asp:Label>
                                                 </h4>
                                             </del>
+                                            <span class="text-primary h1">$      
+                                                <asp:Label ID="LabelTarifaSummerDescto" runat="server" Text="Label"></asp:Label>
+                                            </span>
                                         </th>
                                     </tr>
                                     <tr class="text-center">

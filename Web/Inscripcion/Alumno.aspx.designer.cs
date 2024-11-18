@@ -438,15 +438,6 @@ namespace Web.Inscripcion
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_opciones;
 
         /// <summary>
-        /// Control LinkButtonInicial.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButtonInicial;
-
-        /// <summary>
         /// Control LinkButtonDiagnostico.
         /// </summary>
         /// <remarks>

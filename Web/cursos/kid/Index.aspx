@@ -308,7 +308,7 @@
                                                 <h5 class="text-primary">Modalidad</h5>
                                             </div>
                                             <div class="col-md-9">
-                                                <h5>Regular (1 o 2 clases por semana)</h5>
+                                                <h5>Regular </h5>
                                             </div>
                                         </div>
 

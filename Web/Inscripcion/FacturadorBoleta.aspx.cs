@@ -442,8 +442,7 @@ namespace Web.Inscripcion
         }
 
         protected void Page_Load(object sender, EventArgs e)
-        {
-            string proyecto = Convert.ToString(Request["sitio_sam"]);
+        {         
             string cotizacionID = Convert.ToString(Request["cotizacion_id"]);
 
             if (cotizacionID != null)
@@ -458,10 +457,6 @@ namespace Web.Inscripcion
                 DataTable data = cotizacion.CotizacionPago(cotizacionID);
                 DataTable detalle = cotizacion.Detalle(idCotizacion);
 
-                string ejecutivo = data.Rows[0]["idUsuario"].ToString();
-                string pass = data.Rows[0]["Contrasena"].ToString();
-
-              
                 string resultado = BoletaFacturaChile(data, detalle, boletaFolio, fechaEmision);
 
                 if (resultado.Equals("Documento emitido correctamente"))
@@ -486,19 +481,7 @@ namespace Web.Inscripcion
             {
                 // no se encuentra el id de la cotizacion
 
-                string link = string.Empty;
-
-                switch (proyecto)
-                {
-
-                    case "SAM":
-                        link = "Voucher.aspx?contrato=0";
-                        break;
-                    default:
-                        break;
-                }
-
-                //
+                string link = "Voucher.aspx?contrato=0";             
                 // voucher de cada pagina
                 Response.Redirect(link, false);
             }

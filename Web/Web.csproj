@@ -124,6 +124,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="BlackFriday.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="cursos\kid\ShopCart.aspx" />
     <Content Include="cursos\pre\ShopCart.aspx" />
@@ -182,6 +183,7 @@
     <Content Include="Diagnostico\Kid\Validador.aspx" />
     <Content Include="Error\404.aspx" />
     <Content Include="Error\GenericError.aspx" />
+    <Content Include="img\blackfriday.png" />
     <Content Include="img\evaluacion.png" />
     <Content Include="img\inicial.png" />
     <Content Include="img\programas\adultos_niveles.png" />
@@ -464,6 +466,13 @@
     </Compile>
     <Compile Include="AmericanSpace.aspx.designer.cs">
       <DependentUpon>AmericanSpace.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BlackFriday.aspx.cs">
+      <DependentUpon>BlackFriday.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="BlackFriday.aspx.designer.cs">
+      <DependentUpon>BlackFriday.aspx</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\WSFacturaChile\Reference.cs">
       <AutoGen>True</AutoGen>

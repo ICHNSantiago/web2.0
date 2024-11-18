@@ -76,15 +76,11 @@
                         </tr>
                         <tr>
                             <td>Duración</td>
-                            <th><i class="fas fa-clock me-2"></i>30 horas</th>
-                        </tr>
-                        <tr>
-                            <td>Clases</td>
-                            <th><i class="fas fa-clock me-2"></i>4 por Semana</th>
+                            <th><i class="fas fa-clock me-2"></i>1 Mes</th>
                         </tr>
                         <tr>
                             <td>Inicio</td>
-                            <th><i class="fas fa-calendar me-2"></i>Ene - Feb
+                            <th><i class="fas fa-calendar me-2"></i>Ene | Feb
                                 <asp:Label ID="LabelYearSummer" runat="server" Text="Label"></asp:Label></th>
                         </tr>
                     </table>
@@ -108,11 +104,7 @@
                         </tr>
                         <tr>
                             <td>Duración</td>
-                            <th><i class="fas fa-clock me-2"></i>40 horas</th>
-                        </tr>
-                        <tr>
-                            <td>Clases</td>
-                            <th><i class="fas fa-clock me-2"></i>1 por Semana</th>
+                            <th><i class="fas fa-clock me-2"></i>6 Meses</th>
                         </tr>
                         <tr>
                             <td>Inicios *</td>
@@ -146,7 +138,7 @@
                             <th colspan="3">
                                 <h1>$ 
                                     <asp:Label ID="LabelTarifa" runat="server" Text="Label"></asp:Label>
-                                      <asp:Label ID="LabelTarifaID" Visible="false" runat="server" Text="Label"></asp:Label>
+                                    <asp:Label ID="LabelTarifaID" Visible="false" runat="server" Text="Label"></asp:Label>
                                 </h1>
                             </th>
                         </tr>
@@ -176,6 +168,11 @@
                             </td>
                             <td class="text-start">
                                 <asp:LinkButton ID="LinkButtonMas" CssClass="btn btn-primary" runat="server" OnClick="LinkButtonMas_Click"> + </asp:LinkButton>
+                            </td>
+                        </tr>
+                        <tr class="text-center">
+                            <td colspan="3">
+                                <small>* Precio no incluye el valor del libro de clases. </small>
                             </td>
                         </tr>
                         <tr class="text-center">

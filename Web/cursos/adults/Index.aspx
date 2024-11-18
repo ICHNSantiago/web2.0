@@ -308,10 +308,10 @@
                                                 <h5 class="text-primary">Modalidad</h5>
                                             </div>
                                             <div class="col-md-4">
-                                                <h5>Regular (2 clases por semana)</h5>
+                                                <h5>Regular</h5>
                                             </div>
                                             <div class="col-md-4">
-                                                <h5>Intensivo (4 clases por semana)</h5>
+                                                <h5>Intensivo</h5>
                                             </div>
                                         </div>
                                         <div class="row mt-3">

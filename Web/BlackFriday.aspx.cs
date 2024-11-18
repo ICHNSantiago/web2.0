@@ -7,29 +7,15 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-namespace Web.cursos.kid
+namespace Web
 {
-    public partial class Shop : System.Web.UI.Page
+    public partial class BlackFriday : System.Web.UI.Page
     {
-        public bool HorarioSedes()
+
+        public void CargaTarifasAdultos()
         {
             Ncursos ncursos = new Ncursos();
-            DataTable data = ncursos.BuscarHorarioKid();
-
-            if (data.Rows.Count > 0)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        public void CargaTarifas()
-        {
-            Ncursos ncursos = new Ncursos();
-            DataTable tarifa = ncursos.BuscarTarifasKids();
+            DataTable tarifa = ncursos.BuscarTarifasAdultos();
 
             int programa = 0;
             for (int i = 0; i < tarifa.Rows.Count; i++)
@@ -38,13 +24,17 @@ namespace Web.cursos.kid
 
                 switch (programa)
                 {
-                    case 2:
-                        LabelTarifaRegular.Text = int.Parse(tarifa.Rows[i]["TarifaIndividual"].ToString()).ToString("n0");
-                        LabelTarifaRegularOld.Text = LabelTarifaRegular.Text;
+                    case 5:
+                        LabelTarifaAdultosRegular.Text = int.Parse(tarifa.Rows[i]["TarifaIndividual"].ToString()).ToString("n0");
+                        LabelTarifaAdultosRegularOld.Text = LabelTarifaAdultosRegular.Text;
                         break;
-                    case 31:
-                        LabelTarifaSummer.Text = int.Parse(tarifa.Rows[i]["TarifaIndividual"].ToString()).ToString("n0");
-                        LabelTarifaSummerOld.Text = LabelTarifaSummer.Text;
+                    case 6:
+                        LabelTarifaAdultosintensivo.Text = int.Parse(tarifa.Rows[i]["TarifaIndividual"].ToString()).ToString("n0");
+                        LabelTarifaAdultosintensivoOld.Text = LabelTarifaAdultosintensivo.Text;
+                        break;
+                    case 30:
+                        LabelTarifaAdultosSummer.Text = int.Parse(tarifa.Rows[i]["TarifaIndividual"].ToString()).ToString("n0");
+                        LabelTarifaAdultosSummerOld.Text = LabelTarifaAdultosSummer.Text;
                         break;
                     default:
                         break;
@@ -61,8 +51,7 @@ namespace Web.cursos.kid
                 year++;
             }
 
-            LabelYearSummer.Text = year.ToString();
-
+           
             DateTime termino = new DateTime(year, 2, 10);
 
             if (date < termino)
@@ -75,13 +64,12 @@ namespace Web.cursos.kid
             }
         }
 
-        public void CargaPromos()
+        public void CargaPromosAdultos()
         {
-            row_con_promo_summer.Visible = false;
-            row_con_promo_regular.Visible = false;
+           
 
             Ncursos ncursos = new Ncursos();
-            DataTable data = ncursos.BuscarPromoKids();
+            DataTable data = ncursos.BuscarPromoAdultos();
 
             int programa = 0;
             for (int i = 0; i < data.Rows.Count; i++)
@@ -90,24 +78,33 @@ namespace Web.cursos.kid
 
                 switch (programa)
                 {
-                    case 2:
+                    case 5:
                         div_descto_regular.Visible = true;
                         LabelDesctoRegular.Text = int.Parse(data.Rows[i]["Valor"].ToString()).ToString("n0");
                         decimal promo = decimal.Parse(LabelDesctoRegular.Text);
-                        decimal tarifa = decimal.Parse(LabelTarifaRegular.Text.Replace(".", string.Empty));
+                        decimal tarifa = decimal.Parse(LabelTarifaAdultosRegular.Text.Replace(".", string.Empty));
                         decimal valor = tarifa - ((promo / 100) * tarifa);
-                        LabelTarifaRegularDescto.Text = valor.ToString("n0");
-                        row_con_promo_regular.Visible = true;
+                        LabelTarifaAdultosRegularDescto.Text = valor.ToString("n0");                      
                         row_sin_promo_regular.Visible = false;
                         break;
-                    case 31:
+                    case 6:
+                        div_descto_intensivo.Visible = true;
+                        LabelDesctoIntensivo.Text = int.Parse(data.Rows[i]["Valor"].ToString()).ToString("n0");
+                        promo = decimal.Parse(LabelDesctoIntensivo.Text);
+                        tarifa = decimal.Parse(LabelTarifaAdultosintensivo.Text.Replace(".", string.Empty));
+                        valor = tarifa - ((promo / 100) * tarifa);
+                        LabelTarifaAdultosintensivoDescto.Text = valor.ToString("n0");
+                       
+                        row_sin_promo_intensivo.Visible = false;
+                        break;
+                    case 30:
                         div_descto_summer.Visible = true;
                         LabelDesctoSummer.Text = int.Parse(data.Rows[i]["Valor"].ToString()).ToString("n0");
                         promo = decimal.Parse(LabelDesctoSummer.Text);
-                        tarifa = decimal.Parse(LabelTarifaSummer.Text.Replace(".", string.Empty));
+                        tarifa = decimal.Parse(LabelTarifaAdultosSummer.Text.Replace(".", string.Empty));
                         valor = tarifa - ((promo / 100) * tarifa);
-                        LabelTarifaSummerDescto.Text = valor.ToString("n0");
-                        row_con_promo_summer.Visible = true;
+                        LabelTarifaAdultosSummerDescto.Text = valor.ToString("n0");
+                       
                         row_sin_promo_summer.Visible = false;
                         break;
                     default:
@@ -118,17 +115,10 @@ namespace Web.cursos.kid
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if(!IsPostBack)
             {
-                if (HorarioSedes())
-                {
-                    CargaTarifas();
-                    CargaPromos();
-                }
-                else
-                {
-                    Response.Redirect("index.aspx");
-                }
+                CargaTarifasAdultos();
+                CargaPromosAdultos();
             }
         }
     }

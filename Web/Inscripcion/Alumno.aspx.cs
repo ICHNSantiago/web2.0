@@ -791,23 +791,28 @@ namespace Web.Inscripcion
         {
             if (CheckBoxValidar.Checked)
             {
-                //Ncotizacion ncotizacion = new Ncotizacion();
-                //int cotiID = int.Parse(LabelCotizacionID.Text);
-                //string alumnoID = LabelAlumnoID.Text;
-                //int cursoID = int.Parse(LabelCursoID.Text);
-                //int tarifaID = int.Parse(LabelTarifaID.Text);
-                //string resultado = ncotizacion.IngresarInscripcion(cotiID, alumnoID, cursoID, tarifaID);
+                Ncotizacion ncotizacion = new Ncotizacion();
+                int cotiID = int.Parse(LabelCotizacionID.Text);
+                string alumnoID = LabelAlumnoID.Text;
 
-                //if (resultado == "ok")
-                //{
-                //    FinalizarVenta();
-                //}
-                //else
-                //{
+                if(alumnoID == "15668563-1")
+                {
+                    int cursoID = int.Parse(LabelCursoID.Text);
+                    int tarifaID = int.Parse(LabelTarifaID.Text);
+                    string resultado = ncotizacion.IngresarInscripcion(cotiID, alumnoID, cursoID, tarifaID);
 
-                //}
+                    if (resultado == "ok")
+                    {
+                        FinalizarVenta();
+                    }                   
+                }
+                else
+                {
+                    Response.Redirect("Voucher.aspx");
+                }
+             
 
-                Response.Redirect("Voucher.aspx");
+              
 
             }
             else
