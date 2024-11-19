@@ -106,12 +106,38 @@ namespace Web
             }
         }
 
+        public void BlackFriday()
+        {
+            FechaApi fechaApi = new FechaApi();
+
+            DateTime hoy = DateTime.Parse(fechaApi.GetNetworkTime().ToString("yyyy-MM-dd"));
+            DateTime fin = new DateTime(2024, 12, 07);
+            DateTime inicio = new DateTime(2024, 11, 20);
+
+            if (hoy >= inicio)
+            {
+                if (hoy <= fin)
+                {
+                    div_black.Visible = true;
+                }
+                else
+                {
+                    div_black.Visible = false;
+                }
+            }
+            else
+            {
+                div_black.Visible = false;
+            }
+        }
+
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
                 Fiestas();
+                BlackFriday();
             }
         }
     }
