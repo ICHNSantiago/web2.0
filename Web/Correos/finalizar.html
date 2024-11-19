@@ -76,13 +76,13 @@
             padding: .375rem .75rem;
             font-size: 20px;
             border-radius: 10px;
-            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;           
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
             border-radius: 50rem !important;
-            padding-top: 1rem !important;
-            padding-bottom: 1rem !important;
+            padding-top: 0.5rem !important;
+            padding-bottom: 0.5rem !important;
             padding-right: 3rem !important;
             padding-left: 3rem !important;
-              color: white;
+            color: white;
         }
 
         .btn-primary {
@@ -206,7 +206,7 @@
                                                             <div style="color: #e5eaf5; line-height: 140%; text-align: center; word-wrap: break-word;">
                                                                 <p style="font-size: 14px; line-height: 140%;">
                                                                     <span style="font-size: 28px; line-height: 39.2px;">
-                                                                        <strong><span style="line-height: 39.2px; font-size: 28px;">¡Gracias por tu compra!</span></strong>
+                                                                        <strong><span style="line-height: 39.2px; font-size: 28px;">¡Ya está todo listo para que inicies tu curso!</span></strong>
                                                                     </span>
                                                                 </p>
                                                             </div>
@@ -243,38 +243,128 @@
                                             <table style="font-family:'Cabin',sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
                                                 <tbody>
                                                     <tr>
-                                                        <td style="overflow-wrap:break-word;word-break:break-word;padding:33px 55px;font-family:'Cabin',sans-serif;" align="left">
-
-                                                            <div style="line-height: 160%; word-wrap: break-word; text-align: justify; text-justify: inter-word;">
-                                                                <p style="line-height: 160%;">
-                                                                    <span style="font-size: 16px; line-height: 35.2px;">
-                                                                        En este correo te adjuntamos el comprobante de tu pago en el norteamericano. Recibirás tu contrato y la boleta de la compra cuando hayas rendido tu
-                                                                        Test Diagnóstico y te hayas matriculado, escogiendo sede, días y horarios de curso dentro de las opciones disponibles.
-                                                                    </span>
-                                                                </p>
-                                                                <p style="line-height: 160%; text-align: center">
-                                                                    <span style="font-size: 16px; line-height: 35.2px; ">
-                                                                        <strong>¡Completa hoy mismo los siguientes pasos!</strong>
-                                                                    </span>
-                                                                </p>
-                                                                <p style="line-height: 160%; text-align: center">
-                                                                    <span style="font-size: 16px; line-height: 35.2px; ">
-                                                                        ¡Ya queda menos para iniciar tu curso!
-                                                                    </span>
-                                                                </p>
-                                                                <p style="line-height: 160%; text-align: center">
-                                                                    <span style="font-size: 16px; line-height: 35.2px; ">
-                                                                      <br />
-                                                                    </span>
-                                                                </p>
-                                                                <p style="line-height: 160%; text-align: center">
-                                                                    <span style="font-size: 20px; line-height: 35.2px;">
-                                                                        <a href="https://norteamericano.cl/inscripcion/alumno.aspx" class="btn btn-primary" style=" color: white; text-decoration: none" target="_blank"> Continua con tu Inscripción</a>
-                                                                    </span>
-                                                                </p>
-                                                            </div>
+                                                        <td style="padding: 33px; font-family: 'Cabin',sans-serif; text-align: center">
+                                                            <span style="font-size: 20px;">
+                                                                ¡ [**VAR_ALUMNO**] has concluido con éxito tu inscripción y estás a un paso de comenzar tu curso!
+                                                            </span>
                                                         </td>
                                                     </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <table style="font-family:'Cabin',sans-serif; margin-bottom: 30px" role="presentation" width="100%" border="0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td colspan="2" style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;" align="left">
+                                                            <span style="font-size: 18px;">
+                                                                <strong>Información de tu curso</strong>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;" align="left">
+                                                            <span style="font-size: 16px;">
+                                                                Curso
+                                                            </span>
+                                                        </td>
+                                                        <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif; " align="left">
+                                                            <span style="font-size: 16px;">
+                                                                [**VAR_CURSO**]
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;" align="left">
+                                                            <span style="font-size: 16px;">
+                                                                Sede
+                                                            </span>
+                                                        </td>
+                                                        <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif; " align="left">
+                                                            <span style="font-size: 16px;">
+                                                                [**VAR_SEDE**]
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;" align="left">
+                                                            <span style="font-size: 16px;">
+                                                                Horario
+                                                            </span>
+                                                        </td>
+                                                        <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;" align="left">
+                                                            <span style="font-size: 16px;">
+                                                                [**VAR_HORA**]
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;" align="left">
+                                                            <span style="font-size: 16px;">
+                                                                Días
+                                                            </span>
+                                                        </td>
+                                                        <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;" align="left">
+                                                            <span style="font-size: 16px;">
+                                                                [**VAR_DIAS**]
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;" align="left">
+                                                            <span style="font-size: 16px;">
+                                                                Fecha de inicio
+                                                            </span>
+                                                        </td>
+                                                        <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;" align="left">
+                                                            <span style="font-size: 16px;">
+                                                                [**VAR_FECHA**]
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;" align="left">
+                                                            <span style="font-size: 16px;">
+                                                                Texto
+                                                            </span>
+                                                        </td>
+                                                        <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;" align="left">
+                                                            <span style="font-size: 16px;">
+                                                                [**VAR_TEXTO**]
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="2" style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;" align="left">
+                                                            <br />
+                                                            </td>
+                                                        </tr>
+                                                    <tr>
+                                                        <td colspan="2" style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;" align="left">
+                                                            <span style="font-size: 18px;">
+                                                                <strong>Tu boleta  y contrato van adjuntos en este mail. Puedes revisar el detalle en el portal de Alumnos. </strong>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+
+                                            <table style="font-family:'Cabin',sans-serif; margin-bottom: 30px" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;" align="left">
+                                                            <span style="font-size: 18px;">
+                                                                <strong>Acceso al Portal de Alumnos</strong>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;  text-align: justify; text-justify: inter-word;" " align="left">
+                                                            <span style="font-size: 18px; line-height: 10px; ">
+                                                                <a href="https://alumnos.sam.norteamericano.cl/" target="_blank"> Desde aquí puedes acceder a tu Portal de Alumnos </a> con tu run con el formato xxxxxxxx-x (sin puntos y con guión) donde podrás consultar información sobre tu curso como asistencia, notas, contenidos de clase y certificados de aprobación.
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+
                                                 </tbody>
                                             </table>
 
@@ -283,115 +373,108 @@
                                             <table style="font-family:'Cabin',sans-serif; margin-bottom: 30px" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
                                                 <tbody>
                                                     <tr>
-                                                        <td colspan="2" style="overflow-wrap:break-word;word-break:break-word;padding:33px 55px;font-family:'Cabin',sans-serif;" align="left">
-                                                            <span style="font-size: 16px; line-height: 35.2px;">
-                                                                <strong>Comprobante del pago</strong>
+                                                        <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;" align="left">
+                                                            <span style="font-size: 18px;">
+                                                                <strong>Texto de clases</strong>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;  text-align: justify; text-justify: inter-word;" " align="left">
+                                                            <span style="font-size: 18px; line-height: 10px; ">
+                                                                La compra del texto se puede realizar en La Librería Inglesa. Forma presencial disponible en las sedes del norteamericano, <a href="https://norteamericano.cl/Sedes.aspx" target="_blank">dónde encontrarnos</a>.
+                                                                Forma online <a href="https://norteamericano.cl/CompraLibros.asox" target="_blank">siguiendo este tutorial</a> o en <a target="_blank" href="https://www.libreriainglesa.cl">www.libreriainglesa.cl</a>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+
+                                                </tbody>
+                                            </table>
+                                            <hr />
+                                            <table style="font-family: 'Cabin',sans-serif; margin-bottom: 30px; display: [**VAR_PRESENCIAL**] " role="presentation" width="100%" border="0">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;" align="left">
+                                                            <span style="font-size: 18px;">
+                                                                <strong>Cursos presenciales</strong>
                                                             </span>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;" align="left">
                                                             <span style="font-size: 16px;">
-                                                                ID de Pago
-                                                            </span>
-                                                        </td>
-                                                        <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif; " align="left">
-                                                            <span style="font-size: 16px;">
-                                                                [**VAR_OC**]
+                                                                Recuerda pasar a Secretaría de Estudio para confirmar sala el primer día de clases.
                                                             </span>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;" align="left">
                                                             <span style="font-size: 16px;">
-                                                                Fecha de Pago
-                                                            </span>
-                                                        </td>
-                                                        <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif; " align="left">
-                                                            <span style="font-size: 16px;">
-                                                                [**VAR_F**]
+                                                                Se recomienda llegar 15 mins antes del inicio de la clase.
                                                             </span>
                                                         </td>
                                                     </tr>
                                                     <tr>
                                                         <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;" align="left">
                                                             <span style="font-size: 16px;">
-                                                                Tipo de Tarjeta
-                                                            </span>
-                                                        </td>
-                                                        <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;" align="left">
-                                                            <span style="font-size: 16px;">
-                                                                [**VAR_T**]
-                                                            </span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;" align="left">
-                                                            <span style="font-size: 16px;">
-                                                                Últimos 4 dígitos
-                                                            </span>
-                                                        </td>
-                                                        <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;" align="left">
-                                                            <span style="font-size: 16px;">
-                                                                [**VAR_TD**]
-                                                            </span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;" align="left">
-                                                            <span style="font-size: 16px;">
-                                                                Código Autorización
-                                                            </span>
-                                                        </td>
-                                                        <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;" align="left">
-                                                            <span style="font-size: 16px;">
-                                                                [**VAR_CA**]
-                                                            </span>
-                                                        </td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;" align="left">
-                                                            <span style="font-size: 16px;">
-                                                                Monto
-                                                            </span>
-                                                        </td>
-                                                        <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;" align="left">
-                                                            <span style="font-size: 16px;">
-                                                                [**VAR_M**]
+                                                                Si tu curso es presencial, en la eventualidad de no participar de una clase esta no es recuperable.
                                                             </span>
                                                         </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
-
-
-                                            <table style="font-family:'Cabin',sans-serif; margin-bottom: 30px" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+                                            <table style="font-family: 'Cabin',sans-serif; margin-bottom: 30px; display: [**VAR_ONLINE**] " role="presentation" width="100%" border="0">
                                                 <tbody>
                                                     <tr>
-                                                        <td colspan="2" style="overflow-wrap: break-word; word-break: break-word; padding: 33px 55px; font-family: 'Cabin',sans-serif; text-align: center;" align="left">
-                                                            <span style="font-size: 14px; line-height: 10px; ">
-                                                                <strong>Si deseas pedir ayuda para continuar nos puedes contactar por alguno de los siguientes canales: </strong>
+                                                        <td colspan="2" style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;" align="left">
+                                                            <span style="font-size: 18px;">
+                                                                <strong>Cursos online</strong>
                                                             </span>
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;" align="left">
-                                                            <span style="font-size: 12px; ">
-                                                                Para whatsapp escribe a +569 9440 8529
+                                                        <td colspan="2" style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif; text-align: justify; text-justify: inter-word;" align="left">
+                                                            <span style="font-size: 16px;">
+                                                                Si tu curso es online te recomendamos mantener la cámara web encendida durante la clase. Igualmente, para tu conocimiento todas las
+                                                                clases se realizan en vivo a la hora asociada a tu curso por lo que en la eventualidad de no participar de una clase no es recuperable.
                                                             </span>
                                                         </td>
                                                     </tr>
                                                     <tr>
-                                                        <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;" align="left">
-                                                            <span style="font-size: 12px;">
-                                                                Para llamar por teléfono comunícate al siguiente número 226 777 111
+                                                        <td colspan="2" style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif; text-align: justify; text-justify: inter-word;" align="left">
+                                                            <span style="font-size: 16px;">
+                                                                A considerar: en la eventualidad de que el curso haya sido activado y no asistas a clases durante el período, este curso se considerará realizado siendo responsabilidad del alumno justificar sus ausencias oportunamente por escrito al contacto sedeonline@norteamericano.cl
                                                             </span>
                                                         </td>
                                                     </tr>
                                                     <tr>
+                                                        <td colspan="2" style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;" align="left">
+                                                            <span style="font-size: 18px;">
+                                                                <strong>Especificaciones técnicas</strong>
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="padding: 5px 5px; font-family: 'Cabin',sans-serif; text-align:right"></td>
                                                         <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;" align="left">
-                                                            <span style="font-size: 12px; ">
-                                                                A través de internet visita <a href="https://norteamericano.cl" target="_blank">norteamericano.cl</a>
+                                                            <span style="font-size: 16px;">
+                                                                Un dispositivo [tablet, laptop, o computador de escritorio] con sistema operativo: Windows 7 o posterior (usuarios Mac con sistema operativo 10.6 o posterior).
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="padding: 5px 5px; font-family: 'Cabin',sans-serif; text-align:right"></td>
+                                                        <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;" align="left">
+                                                            <span style="font-size: 16px;">
+                                                                Navegador: Safari, Firefox, Chrome en su última versión (en dispositivos móviles: iOS: 7.0 o superior, Android 4.0 o superior)
+                                                            </span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td style="padding: 5px 5px; font-family: 'Cabin',sans-serif; text-align:right"></td>
+                                                        <td style="overflow-wrap: break-word; word-break: break-word; padding: 5px 55px; font-family: 'Cabin',sans-serif;" align="left">
+                                                            <span style="font-size: 16px;">
+                                                                Especificaciones de hardware: memoria ram de 3GB o superior, capacidad para reproducir sonido y gráficos multimedia, altavoces o auriculares, micrófono, webcam.
                                                             </span>
                                                         </td>
                                                     </tr>

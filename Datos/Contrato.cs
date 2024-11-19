@@ -265,5 +265,30 @@ namespace Datos
                 return tabla;
             }
         }
+
+        public DataTable BuscarAnexosContrato( string contratoid)
+        {
+            DataTable tabla = new DataTable();
+
+            try
+            {
+                Comando = new MySqlCommand("sam.BuscarCursosxContrato", Conexion.AbrirConnectionMySql())
+                {
+                    CommandType = CommandType.StoredProcedure
+                };          
+                Comando.Parameters.AddWithValue("@contratoID", contratoid);
+                Adaptador = new MySqlDataAdapter(Comando);
+                Adaptador.Fill(tabla);
+                Conexion.CerrarConnectionMysql();
+                return tabla;
+
+            }
+            catch (MySqlException)
+            {
+                Conexion.CerrarConnectionMysql();
+                return tabla;
+            }
+        }
+
     }
 }

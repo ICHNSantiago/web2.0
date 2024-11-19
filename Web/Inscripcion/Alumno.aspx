@@ -213,7 +213,7 @@
             <div class="container-fluid  bg-white">
                 <div class="container py-5 service" runat="server" id="div_opciones">
                     <div class="text-center mx-auto pb-5">
-                        <h1><span class="text-primary"><strong>Opciones</strong></span> Inscripción</h1>
+                        <h1><span class="text-primary"><strong>Inscripción</strong></span></h1>
                         <hr />
                     </div>
                     <div class="row g-4 justify-content-center">

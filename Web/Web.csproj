@@ -125,7 +125,9 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="BlackFriday.aspx" />
+    <Content Include="CompraLibros.aspx" />
     <Content Include="Contact.aspx" />
+    <Content Include="Correos\finalizar.html" />
     <Content Include="Correos\inscripcion.html" />
     <Content Include="cursos\kid\ShopCart.aspx" />
     <Content Include="cursos\pre\ShopCart.aspx" />
@@ -187,6 +189,11 @@
     <Content Include="img\blackfriday.png" />
     <Content Include="img\evaluacion.png" />
     <Content Include="img\inicial.png" />
+    <Content Include="img\libreria\libreria01.png" />
+    <Content Include="img\libreria\libreria02.png" />
+    <Content Include="img\libreria\libreria03.png" />
+    <Content Include="img\libreria\libreria04.png" />
+    <Content Include="img\libreria\libreria05.png" />
     <Content Include="img\programas\adultos_niveles.png" />
     <Content Include="cursos\adults\Index.aspx" />
     <Content Include="cursos\adults\Shop.aspx" />
@@ -474,6 +481,13 @@
     </Compile>
     <Compile Include="BlackFriday.aspx.designer.cs">
       <DependentUpon>BlackFriday.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CompraLibros.aspx.cs">
+      <DependentUpon>CompraLibros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CompraLibros.aspx.designer.cs">
+      <DependentUpon>CompraLibros.aspx</DependentUpon>
     </Compile>
     <Compile Include="Connected Services\WSFacturaChile\Reference.cs">
       <AutoGen>True</AutoGen>

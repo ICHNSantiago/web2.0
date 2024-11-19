@@ -147,7 +147,7 @@
                     <div class="collapse navbar-collapse" id="navbarCollapse">
                         <div class="navbar-nav mx-0 mx-lg-auto">
                             <a href="<%=Page.ResolveUrl("~/index.aspx") %>" class="nav-item nav-link active">Home</a>
-                            <a href="<%=Page.ResolveUrl("~/programas.aspx") %>" class="nav-item nav-link">Programas</a>                          
+                            <a href="<%=Page.ResolveUrl("~/programas.aspx") %>" class="nav-item nav-link">Programas</a>
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link" data-bs-toggle="dropdown">
                                     <span class="dropdown-toggle">Sobre Nosotros</span>
@@ -159,7 +159,7 @@
                                 </div>
                             </div>
                             <div class="nav-btn px-2">
-                                <a href="<%=Page.ResolveUrl("~/BlackFriday.aspx") %>" class="btn btn-dark me-2 "><i class="fas fa-shopping-bag me-2"></i> Black Friday</a>
+                                <a href="<%=Page.ResolveUrl("~/BlackFriday.aspx") %>" class="btn btn-dark me-2 "><i class="fas fa-shopping-bag me-2"></i>Black Friday</a>
                                 <a href="<%=Page.ResolveUrl("~/AmericanSpace.aspx") %>" class="btn btn-outline-primary btn-sm me-2">American Space</a>
                                 <a href="<%=Page.ResolveUrl("https://testingcenter.cl") %>" target="_blank" class="btn btn-sm btn-outline-danger me-2">Testing Center</a>
                                 <a href="<%=Page.ResolveUrl("~/Contact.aspx") %>" class="ms-2 btn btn-success rounded-pill">Contáctanos</a>
@@ -201,7 +201,7 @@
                                     <a href="index.html" class="p-0">
                                         <h3 class="text-white">
                                             <img class="img-fluid" style="width: 15%" src="<%=Page.ResolveUrl("~/img/favicon.webp") %>" />
-                                            Norteameriano</h3>                                       
+                                            Norteameriano</h3>
                                     </a>
                                     <h4 class="text-white mt-4 mb-4">Síguenos</h4>
                                     <div class="footer-btn d-flex">
@@ -225,6 +225,8 @@
                                     <a href="<%=Page.ResolveUrl("~/Sedes.aspx") %>" class="text-white"><i class="fas fa-angle-right me-2"></i>Sedes</a>
                                     <a href="<%=Page.ResolveUrl("~/TerminosCondiciones.aspx") %>" class="text-white"><i class="fas fa-angle-right me-2"></i>Términos y condiciones</a>
                                     <a href="<%=Page.ResolveUrl("~/PoliticaPrivacidad.aspx") %>" class="text-white"><i class="fas fa-angle-right me-2"></i>Política de privacidad</a>
+                                    <a href="<%=Page.ResolveUrl("~/CompraLibros.aspx") %>" class="text-white"><i class="fas fa-angle-right me-2"></i>Compra de Texto Librería Inglesa</a>
+
                                 </div>
                             </div>
                             <div class="col-md-6 col-lg-6 col-xl-5">
@@ -307,7 +309,7 @@
     <a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>
     <!-- Back to Top End-->
 
-      <!-- Boton Whatsapp-->
+    <!-- Boton Whatsapp-->
     <style>
         .btn-flotante {
             font-size: 35px; /* Cambiar el tamaño de la tipografia */

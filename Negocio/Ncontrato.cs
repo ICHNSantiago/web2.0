@@ -116,5 +116,10 @@ namespace Negocio
         {
             return GetContrato.InfoBienvenida(contrato);
         }
+
+        public DataTable BuscarAnexosContrato(string contratoid)
+        {
+            return GetContrato.BuscarAnexosContrato(contratoid);
+        }
     }
 }

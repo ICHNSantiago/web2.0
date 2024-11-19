@@ -325,7 +325,7 @@ namespace Datos
                 Comando.Parameters.AddWithValue("@vMatricula", cotizacionID);
                 Comando.Parameters.AddWithValue("@vTipoVenta", 41010000);
                 Comando.Parameters.AddWithValue("@vFecha", fechaEmite);
-                Comando.Parameters.AddWithValue("@vSede", 0);
+                Comando.Parameters.AddWithValue("@vSede", 130);
                 Comando.Parameters.AddWithValue("@vCurso", "CURSO WEB ICHN");
                 Comando.Parameters.AddWithValue("@vValor", neto);
                 Comando.Parameters.AddWithValue("@vCantidad", 1);

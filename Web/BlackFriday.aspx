@@ -412,6 +412,14 @@
                     <hr />
                 </div>
                 <div class="col-md-2 text-center">
+                    <i class="fas fa-calendar text-primary  mt-3" style="font-size: 50px"></i>
+                </div>
+                <div class="col-md-10">
+                    <h4 class="text-primary">Uso del programa</h4>
+                    <h5>El beneficiario del curso podrá hacer uso del curso en el programa respectivo comprado y no otro. Por ejemplo: Summer School Teens.</h5>
+                    <hr />
+                </div>
+                <div class="col-md-2 text-center">
                     <i class="fas fa-pencil-alt text-primary  mt-3" style="font-size: 50px"></i>
                 </div>
                 <div class="col-md-10">
