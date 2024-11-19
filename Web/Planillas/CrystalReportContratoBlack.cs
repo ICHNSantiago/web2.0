@@ -16,14 +16,14 @@ namespace Web.Planillas {
     using CrystalDecisions.CrystalReports.Engine;
     
     
-    public class CrystalReportContrato : ReportClass {
+    public class CrystalReportContratoBlack : ReportClass {
         
-        public CrystalReportContrato() {
+        public CrystalReportContratoBlack() {
         }
         
         public override string ResourceName {
             get {
-                return "CrystalReportContrato.rpt";
+                return "CrystalReportContratoBlack.rpt";
             }
             set {
                 // Do nothing
@@ -41,7 +41,7 @@ namespace Web.Planillas {
         
         public override string FullResourceName {
             get {
-                return "Web.Planillas.CrystalReportContrato.rpt";
+                return "Web.Planillas.CrystalReportContratoBlack.rpt";
             }
             set {
                 // Do nothing
@@ -114,9 +114,9 @@ namespace Web.Planillas {
     }
     
     [System.Drawing.ToolboxBitmapAttribute(typeof(CrystalDecisions.Shared.ExportOptions), "report.bmp")]
-    public class CachedCrystalReportContrato : Component, ICachedReport {
+    public class CachedCrystalReportContratoBlack : Component, ICachedReport {
         
-        public CachedCrystalReportContrato() {
+        public CachedCrystalReportContratoBlack() {
         }
         
         [Browsable(false)]
@@ -153,7 +153,7 @@ namespace Web.Planillas {
         }
         
         public virtual CrystalDecisions.CrystalReports.Engine.ReportDocument CreateReport() {
-            CrystalReportContrato rpt = new CrystalReportContrato();
+            CrystalReportContratoBlack rpt = new CrystalReportContratoBlack();
             rpt.Site = this.Site;
             return rpt;
         }

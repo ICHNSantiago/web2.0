@@ -218,7 +218,7 @@
                     </div>
                     <div class="row g-4 justify-content-center">
 
-                      <%--  <div class="col-md-6 col-lg-6 col-xl-4">
+                        <%--  <div class="col-md-6 col-lg-6 col-xl-4">
                             <div class="service-item shadow">
                                 <div class="service-img">
                                     <img src="../../img/inicial.png" class="img-fluid rounded-top w-100" alt="">
@@ -248,7 +248,7 @@
                         <div class="col-md-6 col-lg-6 col-xl-6">
                             <div class="service-item shadow">
                                 <div class="service-img">
-                                    <img src="../img/evaluacion.png" class="img-fluid rounded-top w-100" alt="">                                  
+                                    <img src="../img/evaluacion.png" class="img-fluid rounded-top w-100" alt="">
                                 </div>
                                 <div class="p-4 bg-white rounded-bottom">
                                     <div class="service-content-inner">
@@ -441,7 +441,7 @@
                                         </tr>
                                         <tr>
                                             <td class="text-center">
-                                                <asp:LinkButton ID="LinkButtonFinalizar" CssClass="btn btn-primary text-white" runat="server" OnClick="LinkButtonFinalizar_Click"> Finalizar la Inscripción</asp:LinkButton>
+                                                <asp:LinkButton ID="LinkButtonFinalizar" CssClass="btn btn-primary text-white cargando" runat="server" OnClick="LinkButtonFinalizar_Click"> Finalizar la Inscripción</asp:LinkButton>
                                             </td>
                                         </tr>
                                     </table>
@@ -621,7 +621,61 @@
                 </div>
             </div>
         </div>
+
+
     </div>
 
+
+
+    <script>
+        $(document).ready(function () {
+            $(".cargando").click(function () {
+
+                $("#mensajeCargando").modal("show");
+            });
+        });
+    </script>
+
+    <div class="modal fade" id="mensajeCargando" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="resultPreAdvanced" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+            <div class="modal-content text-dark">
+                <div class="modal-header alert alert-secondary">
+                    <h5 class=" float-start mt-2">
+                        <strong>Norteamericano</strong>
+                    </h5>
+                </div>
+                <div class="modal-body alert" style="text-align: justify;">
+                    <div class="row">
+                        <div class="row mb-2">
+                            <div class="col-md-12 text-center"></div>
+                            <div class="col-md-12 text-center">
+                                <h5>
+                                    <strong>Procesando, espere un momento</strong>
+                                </h5>
+                                <div class="spinner-grow spinner-grow-sm text-primary" role="status">
+                                    <span class="sr-only"></span>
+                                </div>
+                                <div class="spinner-grow spinner-grow-sm text-danger" role="status">
+                                    <span class="sr-only"></span>
+                                </div>
+                                <div class="spinner-grow spinner-grow-sm text-primary" role="status">
+                                    <span class="sr-only"></span>
+                                </div>
+                                <div class="spinner-grow spinner-grow-sm text-danger" role="status">
+                                    <span class="sr-only"></span>
+                                </div>
+                                <div class="spinner-grow spinner-grow-sm text-primary" role="status">
+                                    <span class="sr-only"></span>
+                                </div>
+                                <div class="spinner-grow spinner-grow-sm text-danger" role="status">
+                                    <span class="sr-only"></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </asp:Content>
 

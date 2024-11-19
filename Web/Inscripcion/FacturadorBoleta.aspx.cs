@@ -289,14 +289,34 @@ namespace Web.Inscripcion
         {
             try
             {
-                Ncontrato contrato = new Ncontrato();
-                DataTable data = contrato.BuscarInfoPdfContrato(contratoNumero);
-                Planillas.CrystalReportContrato crystal = new Planillas.CrystalReportContrato();
-                crystal.SetDataSource(data);
-                string archivo = @"C:/inetpub/wwwroot/sam/contrato/contrato" + contratoNumero + ".pdf";              
-                crystal.ExportToDisk(ExportFormatType.PortableDocFormat, archivo);
-                crystal.Close();
-                crystal.Dispose();
+                FechaApi fechaApi = new FechaApi();
+
+                DateTime hoy = DateTime.Parse(fechaApi.GetNetworkTime().ToString("yyyy-MM-dd"));
+                DateTime fin = new DateTime(2024, 12, 8);
+
+                if (hoy > fin)
+                {
+                    Ncontrato contrato = new Ncontrato();
+                    DataTable data = contrato.BuscarInfoPdfContrato(contratoNumero);
+                    Planillas.CrystalReportContrato crystal = new Planillas.CrystalReportContrato();
+                    crystal.SetDataSource(data);
+                    string archivo = @"C:/inetpub/wwwroot/sam/contrato/contrato" + contratoNumero + ".pdf";
+                    crystal.ExportToDisk(ExportFormatType.PortableDocFormat, archivo);
+                    crystal.Close();
+                    crystal.Dispose();
+                }
+                else
+                {
+                    Ncontrato contrato = new Ncontrato();
+                    DataTable data = contrato.BuscarInfoPdfContrato(contratoNumero);
+                    Planillas.CrystalReportContratoBlack crystal = new Planillas.CrystalReportContratoBlack();
+                    crystal.SetDataSource(data);
+                    string archivo = @"C:/inetpub/wwwroot/sam/contrato/contrato" + contratoNumero + ".pdf";
+                    crystal.ExportToDisk(ExportFormatType.PortableDocFormat, archivo);
+                    crystal.Close();
+                    crystal.Dispose();
+                }
+
             }
             catch (Exception)
             {

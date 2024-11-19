@@ -789,35 +789,50 @@ namespace Web.Inscripcion
 
         protected void LinkButtonFinalizar_Click(object sender, EventArgs e)
         {
-            if (CheckBoxValidar.Checked)
+            string alumnoID = LabelAlumnoID.Text;
+
+            NCompra nCompra = new NCompra();
+            DataTable data = nCompra.Buscar(alumnoID);
+
+            if (data.Rows.Count > 0)
             {
-                Ncotizacion ncotizacion = new Ncotizacion();
-                int cotiID = int.Parse(LabelCotizacionID.Text);
-                string alumnoID = LabelAlumnoID.Text;
-
-                if(alumnoID == "15668563-1")
+                if (CheckBoxValidar.Checked)
                 {
-                    int cursoID = int.Parse(LabelCursoID.Text);
-                    int tarifaID = int.Parse(LabelTarifaID.Text);
-                    string resultado = ncotizacion.IngresarInscripcion(cotiID, alumnoID, cursoID, tarifaID);
+                    Ncotizacion ncotizacion = new Ncotizacion();
+                    int cotiID = int.Parse(LabelCotizacionID.Text);
 
-                    if (resultado == "ok")
+
+                    if (alumnoID == "15668563-1")
                     {
-                        FinalizarVenta();
-                    }                   
+                        int cursoID = int.Parse(LabelCursoID.Text);
+                        int tarifaID = int.Parse(LabelTarifaID.Text);
+                        string resultado = ncotizacion.IngresarInscripcion(cotiID, alumnoID, cursoID, tarifaID);
+
+                        if (resultado == "ok")
+                        {
+                            FinalizarVenta();
+                        }
+                    }
+                    else
+                    {
+                        Response.Redirect("Voucher.aspx");
+                    }
+
+
+
+
                 }
                 else
                 {
-                    Response.Redirect("Voucher.aspx");
+                    row_validar_fin.Visible = true;
                 }
-             
-
-              
-
             }
             else
             {
-                row_validar_fin.Visible = true;
+                info_alumno.Visible = false;
+                info_alumno_login.Visible = true;
+                info_apo_disponibles.Visible = false;
+                div_error_login.Visible= true;
             }
         }
 

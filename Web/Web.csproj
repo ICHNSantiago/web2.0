@@ -977,6 +977,12 @@
       <DependentUpon>CrystalReportContrato.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Planillas\CrystalReportContratoBlack.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrystalReportContratoBlack.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Planillas\DataSetAnexo.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -1115,6 +1121,10 @@
     <EmbeddedResource Include="Planillas\CrystalReportContrato.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CrystalReportContrato.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Planillas\CrystalReportContratoBlack.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReportContratoBlack.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

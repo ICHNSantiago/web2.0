@@ -99,187 +99,53 @@ namespace Web.cursos.pre
 
                 bool horario = false;
 
-                bool btn_moneda = false;
-                bool btn_provi = false;
-                bool btn_florida = false;
-                bool btn_online = false;
-
                 if (moneda.Rows.Count > 0)
                 {
-                    btn_moneda = true;
                     horario = true;
                     div_m.Visible = true;
                     DataListHorariosRegularMoneda.DataSource = moneda;
                     DataListHorariosRegularMoneda.DataBind();
-                    LinkButtonM.Visible = true;
-                    btn_m.Visible = true;
+                    btn_m_x.Visible = true;
                 }
 
                 if (provi.Rows.Count > 0)
                 {
-                    btn_provi = true;
                     horario = true;
                     DataListHorariosRegularProvi.DataSource = provi;
                     DataListHorariosRegularProvi.DataBind();
-                    LinkButtonP.Visible = true;
-                    btn_p.Visible = true;
+                    btn_p_x.Visible = true;
                 }
 
                 if (florida.Rows.Count > 0)
                 {
-                    btn_florida = true;
                     horario = true;
                     DataListHorariosRegularFlorida.DataSource = florida;
                     DataListHorariosRegularFlorida.DataBind();
-                    LinkButtonF.Visible = true;
-                    btn_f.Visible = true;
+                    btn_f_x.Visible = true;
                 }
 
                 if (online.Rows.Count > 0)
                 {
-                    btn_online = true;
                     horario = true;
                     DataListHorariosRegularOnline.DataSource = online;
                     DataListHorariosRegularOnline.DataBind();
-                    LinkButtonO.Visible = true;
-                    btn_o.Visible = true;
+                    btn_o_x.Visible = true;
                 }
 
-                LinkButtonHorarioReg.Visible = horario;
-                link_horario_40.Visible = horario;
+                btn_horario.Visible = horario;
 
-                Boton("descripcion");
-
-                if (btn_moneda)
-                {
-                    BotonSedes("m");
-                }
-                else
-                {
-                    if (btn_provi)
-                    {
-                        BotonSedes("p");
-                    }
-                    else
-                    {
-                        if (btn_florida)
-                        {
-                            BotonSedes("f");
-                        }
-                        else
-                        {
-                            if (btn_online)
-                            {
-                                BotonSedes("o");
-                            }
-                        }
-                    }
-                }
             }
             else
             {
                 btn_comprar.Visible = false;
                 div_inicio.Visible = false;
-                LinkButtonHorarioReg.Visible = false;
-                Boton("descripcion");
+                btn_horario.Visible = false;
             }
 
             btn_comprar.Visible = false;
         }
 
-
-        public void Boton(string click)
-        {
-            LinkButtonHorarioReg.Attributes.Clear();
-            LinkButtonHorarioReg.Attributes.Add("class", "nav-link");
-            div_horario_40.Visible = false;
-
-
-            LinkButtonDescripcion.Attributes.Clear();
-            LinkButtonDescripcion.Attributes.Add("class", "nav-link");
-            div_descripcion.Visible = false;
-
-            LinkButtonObjetivo.Attributes.Clear();
-            LinkButtonObjetivo.Attributes.Add("class", "nav-link");
-            div_objetivos.Visible = false;
-
-            LinkButtonNiveles.Attributes.Clear();
-            LinkButtonNiveles.Attributes.Add("class", "nav-link");
-            div_niveles.Visible = false;
-
-            switch (click)
-            {
-                case "40":
-                    LinkButtonHorarioReg.Attributes.Clear();
-                    LinkButtonHorarioReg.Attributes.Add("class", "nav-link active");
-                    div_horario_40.Visible = true;
-                    break;
-                case "descripcion":
-                    LinkButtonDescripcion.Attributes.Clear();
-                    LinkButtonDescripcion.Attributes.Add("class", "nav-link active");
-                    div_descripcion.Visible = true;
-                    break;
-                case "objetivo":
-                    LinkButtonObjetivo.Attributes.Clear();
-                    LinkButtonObjetivo.Attributes.Add("class", "nav-link active");
-                    div_objetivos.Visible = true;
-                    break;
-                case "nivel":
-                    LinkButtonNiveles.Attributes.Clear();
-                    LinkButtonNiveles.Attributes.Add("class", "nav-link active");
-                    div_niveles.Visible = true;
-                    break;
-                default:
-                    break;
-            }
-        }
-
-        public void BotonSedes(string click)
-        {
-            LinkButtonM.Attributes.Clear();
-            LinkButtonM.Attributes.Add("class", "btn btn-secondary text-white");
-            div_m.Visible = false;
-
-            LinkButtonP.Attributes.Clear();
-            LinkButtonP.Attributes.Add("class", "btn btn-secondary text-white");
-            div_p.Visible = false;
-
-            LinkButtonF.Attributes.Clear();
-            LinkButtonF.Attributes.Add("class", "btn btn-secondary text-white");
-            div_f.Visible = false;
-
-            LinkButtonO.Attributes.Clear();
-            LinkButtonO.Attributes.Add("class", "btn btn-secondary text-white");
-            div_o.Visible = false;
-
-            switch (click)
-            {
-                case "m":
-                    LinkButtonM.Attributes.Clear();
-                    LinkButtonM.Attributes.Add("class", "btn btn-primary text-white");
-                    div_m.Visible = true;
-                    break;
-                case "p":
-                    LinkButtonP.Attributes.Clear();
-                    LinkButtonP.Attributes.Add("class", "btn btn-primary text-white");
-                    div_p.Visible = true;
-                    break;
-                case "f":
-                    LinkButtonF.Attributes.Clear();
-                    LinkButtonF.Attributes.Add("class", "btn btn-primary text-white");
-                    div_f.Visible = true;
-                    break;
-                case "o":
-                    LinkButtonO.Attributes.Clear();
-                    LinkButtonO.Attributes.Add("class", "btn btn-primary text-white");
-                    div_o.Visible = true;
-                    break;
-                default:
-                    break;
-            }
-        }
-
-
+     
         protected void Page_Load(object sender, EventArgs e)
         {
             MaintainScrollPositionOnPostBack = false;
@@ -289,47 +155,6 @@ namespace Web.cursos.pre
             }
         }
 
-        protected void LinkButtonHorarioReg_Click(object sender, EventArgs e)
-        {
-            Boton("40");
-        }
-
-
-        protected void LinkButtonDescripcion_Click(object sender, EventArgs e)
-        {
-            Boton("descripcion");
-        }
-
-        protected void LinkButtonObjetivo_Click(object sender, EventArgs e)
-        {
-            Boton("objetivo");
-        }
-
-        protected void LinkButtonM_Click(object sender, EventArgs e)
-        {
-            BotonSedes("m");
-        }
-
-        protected void LinkButtonP_Click(object sender, EventArgs e)
-        {
-            BotonSedes("p");
-        }
-
-        protected void LinkButtonF_Click(object sender, EventArgs e)
-        {
-            BotonSedes("f");
-        }
-
-        protected void LinkButtonO_Click(object sender, EventArgs e)
-        {
-            BotonSedes("o");
-        }
-
-        protected void LinkButtonNiveles_Click(object sender, EventArgs e)
-        {
-            Boton("nivel");
-        }
-
-
+      
     }
 }

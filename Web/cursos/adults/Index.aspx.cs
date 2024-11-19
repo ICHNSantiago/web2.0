@@ -108,8 +108,7 @@ namespace Web.cursos.adults
                     horario = true;
                     div_m.Visible = true;
                     DataListHorariosRegularMoneda.DataSource = moneda;
-                    DataListHorariosRegularMoneda.DataBind();
-                    LinkButtonM.Visible = true;
+                    DataListHorariosRegularMoneda.DataBind();                  
                     btn_m.Visible = true;
                 }
 
@@ -118,8 +117,7 @@ namespace Web.cursos.adults
                     btn_provi = true;
                     horario = true;
                     DataListHorariosRegularProvi.DataSource = provi;
-                    DataListHorariosRegularProvi.DataBind();
-                    LinkButtonP.Visible = true;
+                    DataListHorariosRegularProvi.DataBind();                   
                     btn_p.Visible = true;
                 }
 
@@ -128,8 +126,7 @@ namespace Web.cursos.adults
                     btn_florida = true;
                     horario = true;
                     DataListHorariosRegularFlorida.DataSource = florida;
-                    DataListHorariosRegularFlorida.DataBind();
-                    LinkButtonF.Visible = true;
+                    DataListHorariosRegularFlorida.DataBind();                   
                     btn_f.Visible = true;
                 }
 
@@ -138,144 +135,112 @@ namespace Web.cursos.adults
                     btn_online = true;
                     horario = true;
                     DataListHorariosRegularOnline.DataSource = online;
-                    DataListHorariosRegularOnline.DataBind();
-                    LinkButtonO.Visible = true;
+                    DataListHorariosRegularOnline.DataBind();                  
                     btn_o.Visible = true;
-                }
-
-                LinkButtonHorarioReg.Visible = horario;
-                link_horario_40.Visible = horario;
-
-                Boton("descripcion");
-
-                if (btn_moneda)
-                {
-                    BotonSedes("m");
-                }
-                else
-                {
-                    if (btn_provi)
-                    {
-                        BotonSedes("p");
-                    }
-                    else
-                    {
-                        if (btn_florida)
-                        {
-                            BotonSedes("f");
-                        }
-                        else
-                        {
-                            if (btn_online)
-                            {
-                                BotonSedes("o");
-                            }
-                        }
-                    }
                 }
             }
         }
 
        
 
-        public void Boton(string click)
-        {
-            LinkButtonHorarioReg.Attributes.Clear();
-            LinkButtonHorarioReg.Attributes.Add("class", "nav-link");
-            div_horario_40.Visible = false;
+        //public void Boton(string click)
+        //{
+        //    LinkButtonHorarioReg.Attributes.Clear();
+        //    LinkButtonHorarioReg.Attributes.Add("class", "nav-link");
+        //    div_horario_40.Visible = false;
 
-            LinkButtonSummer.Attributes.Clear();
-            LinkButtonSummer.Attributes.Add("class", "nav-link");
-            div_summer.Visible = false;
+        //    LinkButtonSummer.Attributes.Clear();
+        //    LinkButtonSummer.Attributes.Add("class", "nav-link");
+        //    div_summer.Visible = false;
 
-            LinkButtonDescripcion.Attributes.Clear();
-            LinkButtonDescripcion.Attributes.Add("class", "nav-link");
-            div_descripcion.Visible = false;
+        //    LinkButtonDescripcion.Attributes.Clear();
+        //    LinkButtonDescripcion.Attributes.Add("class", "nav-link");
+        //    div_descripcion.Visible = false;
 
-            LinkButtonObjetivo.Attributes.Clear();
-            LinkButtonObjetivo.Attributes.Add("class", "nav-link");
-            div_objetivos.Visible = false;
+        //    LinkButtonObjetivo.Attributes.Clear();
+        //    LinkButtonObjetivo.Attributes.Add("class", "nav-link");
+        //    div_objetivos.Visible = false;
 
-            LinkButtonNiveles.Attributes.Clear();
-            LinkButtonNiveles.Attributes.Add("class", "nav-link");
-            div_niveles.Visible = false;
+        //    LinkButtonNiveles.Attributes.Clear();
+        //    LinkButtonNiveles.Attributes.Add("class", "nav-link");
+        //    div_niveles.Visible = false;
 
-            switch (click)
-            {
-                case "40":
-                    LinkButtonHorarioReg.Attributes.Clear();
-                    LinkButtonHorarioReg.Attributes.Add("class", "nav-link active");
-                    div_horario_40.Visible = true;
-                    break;
-                case "summer":
-                    LinkButtonSummer.Attributes.Clear();
-                    LinkButtonSummer.Attributes.Add("class", "nav-link active");
-                    div_summer.Visible = true;
-                    break;
-                case "descripcion":
-                    LinkButtonDescripcion.Attributes.Clear();
-                    LinkButtonDescripcion.Attributes.Add("class", "nav-link active");
-                    div_descripcion.Visible = true;
-                    break;
-                case "objetivo":
-                    LinkButtonObjetivo.Attributes.Clear();
-                    LinkButtonObjetivo.Attributes.Add("class", "nav-link active");
-                    div_objetivos.Visible = true;
-                    break;
-                case "nivel":
-                    LinkButtonNiveles.Attributes.Clear();
-                    LinkButtonNiveles.Attributes.Add("class", "nav-link active");
-                    div_niveles.Visible = true;
-                    break;
-                default:
-                    break;
-            }
-        }
+        //    switch (click)
+        //    {
+        //        case "40":
+        //            LinkButtonHorarioReg.Attributes.Clear();
+        //            LinkButtonHorarioReg.Attributes.Add("class", "nav-link active");
+        //            div_horario_40.Visible = true;
+        //            break;
+        //        case "summer":
+        //            LinkButtonSummer.Attributes.Clear();
+        //            LinkButtonSummer.Attributes.Add("class", "nav-link active");
+        //            div_summer.Visible = true;
+        //            break;
+        //        case "descripcion":
+        //            LinkButtonDescripcion.Attributes.Clear();
+        //            LinkButtonDescripcion.Attributes.Add("class", "nav-link active");
+        //            div_descripcion.Visible = true;
+        //            break;
+        //        case "objetivo":
+        //            LinkButtonObjetivo.Attributes.Clear();
+        //            LinkButtonObjetivo.Attributes.Add("class", "nav-link active");
+        //            div_objetivos.Visible = true;
+        //            break;
+        //        case "nivel":
+        //            LinkButtonNiveles.Attributes.Clear();
+        //            LinkButtonNiveles.Attributes.Add("class", "nav-link active");
+        //            div_niveles.Visible = true;
+        //            break;
+        //        default:
+        //            break;
+        //    }
+        //}
 
-        public void BotonSedes(string click)
-        {
-            LinkButtonM.Attributes.Clear();
-            LinkButtonM.Attributes.Add("class", "btn btn-secondary text-white");
-            div_m.Visible = false;
+        //public void BotonSedes(string click)
+        //{
+        //    LinkButtonM.Attributes.Clear();
+        //    LinkButtonM.Attributes.Add("class", "btn btn-secondary text-white");
+        //    div_m.Visible = false;
 
-            LinkButtonP.Attributes.Clear();
-            LinkButtonP.Attributes.Add("class", "btn btn-secondary text-white");
-            div_p.Visible = false;
+        //    LinkButtonP.Attributes.Clear();
+        //    LinkButtonP.Attributes.Add("class", "btn btn-secondary text-white");
+        //    div_p.Visible = false;
 
-            LinkButtonF.Attributes.Clear();
-            LinkButtonF.Attributes.Add("class", "btn btn-secondary text-white");
-            div_f.Visible = false;
+        //    LinkButtonF.Attributes.Clear();
+        //    LinkButtonF.Attributes.Add("class", "btn btn-secondary text-white");
+        //    div_f.Visible = false;
 
-            LinkButtonO.Attributes.Clear();
-            LinkButtonO.Attributes.Add("class", "btn btn-secondary text-white");
-            div_o.Visible = false;
+        //    LinkButtonO.Attributes.Clear();
+        //    LinkButtonO.Attributes.Add("class", "btn btn-secondary text-white");
+        //    div_o.Visible = false;
 
-            switch (click)
-            {
-                case "m":
-                    LinkButtonM.Attributes.Clear();
-                    LinkButtonM.Attributes.Add("class", "btn btn-primary text-white");
-                    div_m.Visible = true;
-                    break;
-                case "p":
-                    LinkButtonP.Attributes.Clear();
-                    LinkButtonP.Attributes.Add("class", "btn btn-primary text-white");
-                    div_p.Visible = true;
-                    break;
-                case "f":
-                    LinkButtonF.Attributes.Clear();
-                    LinkButtonF.Attributes.Add("class", "btn btn-primary text-white");
-                    div_f.Visible = true;
-                    break;
-                case "o":
-                    LinkButtonO.Attributes.Clear();
-                    LinkButtonO.Attributes.Add("class", "btn btn-primary text-white");
-                    div_o.Visible = true;
-                    break;
-                default:
-                    break;
-            }
-        }
+        //    switch (click)
+        //    {
+        //        case "m":
+        //            LinkButtonM.Attributes.Clear();
+        //            LinkButtonM.Attributes.Add("class", "btn btn-primary text-white");
+        //            div_m.Visible = true;
+        //            break;
+        //        case "p":
+        //            LinkButtonP.Attributes.Clear();
+        //            LinkButtonP.Attributes.Add("class", "btn btn-primary text-white");
+        //            div_p.Visible = true;
+        //            break;
+        //        case "f":
+        //            LinkButtonF.Attributes.Clear();
+        //            LinkButtonF.Attributes.Add("class", "btn btn-primary text-white");
+        //            div_f.Visible = true;
+        //            break;
+        //        case "o":
+        //            LinkButtonO.Attributes.Clear();
+        //            LinkButtonO.Attributes.Add("class", "btn btn-primary text-white");
+        //            div_o.Visible = true;
+        //            break;
+        //        default:
+        //            break;
+        //    }
+        //}
 
        
 
@@ -289,55 +254,55 @@ namespace Web.cursos.adults
 
                 if(token == "summer")
                 {
-                    LinkButtonSummer_Click(sender, e);
+                    //LinkButtonSummer_Click(sender, e);
                 }
             }
         }
 
-        protected void LinkButtonHorarioReg_Click(object sender, EventArgs e)
-        {
-            Boton("40");
-        }
+        //protected void LinkButtonHorarioReg_Click(object sender, EventArgs e)
+        //{
+        //    Boton("40");
+        //}
               
 
-        protected void LinkButtonDescripcion_Click(object sender, EventArgs e)
-        {
-            Boton("descripcion");
-        }
+        //protected void LinkButtonDescripcion_Click(object sender, EventArgs e)
+        //{
+        //    Boton("descripcion");
+        //}
 
-        protected void LinkButtonObjetivo_Click(object sender, EventArgs e)
-        {
-            Boton("objetivo");
-        }
+        //protected void LinkButtonObjetivo_Click(object sender, EventArgs e)
+        //{
+        //    Boton("objetivo");
+        //}
 
-        protected void LinkButtonM_Click(object sender, EventArgs e)
-        {
-            BotonSedes("m");
-        }
+        //protected void LinkButtonM_Click(object sender, EventArgs e)
+        //{
+        //    BotonSedes("m");
+        //}
 
-        protected void LinkButtonP_Click(object sender, EventArgs e)
-        {
-            BotonSedes("p");
-        }
+        //protected void LinkButtonP_Click(object sender, EventArgs e)
+        //{
+        //    BotonSedes("p");
+        //}
 
-        protected void LinkButtonF_Click(object sender, EventArgs e)
-        {
-            BotonSedes("f");
-        }
+        //protected void LinkButtonF_Click(object sender, EventArgs e)
+        //{
+        //    BotonSedes("f");
+        //}
 
-        protected void LinkButtonO_Click(object sender, EventArgs e)
-        {
-            BotonSedes("o");
-        }
+        //protected void LinkButtonO_Click(object sender, EventArgs e)
+        //{
+        //    BotonSedes("o");
+        //}
 
-        protected void LinkButtonNiveles_Click(object sender, EventArgs e)
-        {
-            Boton("nivel");
-        }
+        //protected void LinkButtonNiveles_Click(object sender, EventArgs e)
+        //{
+        //    Boton("nivel");
+        //}
 
-        protected void LinkButtonSummer_Click(object sender, EventArgs e)
-        {
-            Boton("summer");
-        }
+        //protected void LinkButtonSummer_Click(object sender, EventArgs e)
+        //{
+        //    Boton("summer");
+        //}
     }
 }

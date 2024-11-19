@@ -1,4 +1,5 @@
-﻿using Negocio;
+﻿using CrystalDecisions.Shared;
+using Negocio;
 using System;
 using System.Data;
 using System.Web;
@@ -8,6 +9,8 @@ namespace Web
 {
     public partial class Index : System.Web.UI.Page
     {
+
+       
 
         public void CrearLead(string nombre, string correo, string fono, string programa)
         {
@@ -299,6 +302,8 @@ namespace Web
                 ListaPrograma.Items.Add("Preparación PTE");
                 ListaPrograma.Items.Add("Spring Program Kid");
                 ListaPrograma.Items.Add("Spring Program teen");
+
+                
             }
         }
 
