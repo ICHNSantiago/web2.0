@@ -95,17 +95,9 @@ namespace Web.cursos.adults
                     }
                 }
 
-                bool horario = false;
-
-                bool btn_moneda = false;
-                bool btn_provi = false;
-                bool btn_florida = false;
-                bool btn_online = false;
-
                 if (moneda.Rows.Count > 0)
                 {
-                    btn_moneda = true;
-                    horario = true;
+                
                     div_m.Visible = true;
                     DataListHorariosRegularMoneda.DataSource = moneda;
                     DataListHorariosRegularMoneda.DataBind();                  
@@ -113,9 +105,7 @@ namespace Web.cursos.adults
                 }
 
                 if (provi.Rows.Count > 0)
-                {
-                    btn_provi = true;
-                    horario = true;
+                {                  
                     DataListHorariosRegularProvi.DataSource = provi;
                     DataListHorariosRegularProvi.DataBind();                   
                     btn_p.Visible = true;
@@ -123,8 +113,6 @@ namespace Web.cursos.adults
 
                 if (florida.Rows.Count > 0)
                 {
-                    btn_florida = true;
-                    horario = true;
                     DataListHorariosRegularFlorida.DataSource = florida;
                     DataListHorariosRegularFlorida.DataBind();                   
                     btn_f.Visible = true;
@@ -132,8 +120,6 @@ namespace Web.cursos.adults
 
                 if (online.Rows.Count > 0)
                 {
-                    btn_online = true;
-                    horario = true;
                     DataListHorariosRegularOnline.DataSource = online;
                     DataListHorariosRegularOnline.DataBind();                  
                     btn_o.Visible = true;

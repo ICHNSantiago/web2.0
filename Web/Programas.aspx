@@ -92,7 +92,6 @@
                             </div>
                         </a>
                         <div class="service-content p-4 bg-light rounded">
-                            <div class="service-content-inner text-center">
                                 <a class="btn btn-primary rounded-pill py-2 px-4" href="cursos/kid/Index.aspx">Saber más</a>
                             </div>
                         </div>
