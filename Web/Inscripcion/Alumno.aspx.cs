@@ -800,27 +800,13 @@ namespace Web.Inscripcion
                 {
                     Ncotizacion ncotizacion = new Ncotizacion();
                     int cotiID = int.Parse(LabelCotizacionID.Text);
-
-
-                    if (alumnoID == "15668563-1")
+                    int cursoID = int.Parse(LabelCursoID.Text);
+                    int tarifaID = int.Parse(LabelTarifaID.Text);
+                    string resultado = ncotizacion.IngresarInscripcion(cotiID, alumnoID, cursoID, tarifaID);
+                    if (resultado == "ok")
                     {
-                        int cursoID = int.Parse(LabelCursoID.Text);
-                        int tarifaID = int.Parse(LabelTarifaID.Text);
-                        string resultado = ncotizacion.IngresarInscripcion(cotiID, alumnoID, cursoID, tarifaID);
-
-                        if (resultado == "ok")
-                        {
-                            FinalizarVenta();
-                        }
+                        FinalizarVenta();
                     }
-                    else
-                    {
-                        Response.Redirect("Voucher.aspx");
-                    }
-
-
-
-
                 }
                 else
                 {
@@ -832,7 +818,7 @@ namespace Web.Inscripcion
                 info_alumno.Visible = false;
                 info_alumno_login.Visible = true;
                 info_apo_disponibles.Visible = false;
-                div_error_login.Visible= true;
+                div_error_login.Visible = true;
             }
         }
 

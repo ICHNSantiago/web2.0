@@ -1053,6 +1053,10 @@
     <Content Include="img\programas\summer_teens_kid.webp" />
     <None Include="Connected Services\WSFacturaChile\WSServicios.wsdl" />
     <Content Include="img\blackfriday.webp" />
+    <Content Include="img\programas\corp.webp" />
+    <Content Include="img\programas\especial.webp" />
+    <Content Include="img\programas\preparar.webp" />
+    <Content Include="img\programas\spring.webp" />
     <None Include="packages.config" />
     <Content Include="Tematica\18sep\volantin.webp" />
     <Content Include="Tematica\hallo\halloween2.webp" />

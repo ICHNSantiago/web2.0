@@ -119,7 +119,7 @@
                     <div class="service-item shadow">
                         <a href="cursos/empresas/Index.aspx">
                             <div class="service-img">
-                                <img src="img/programas/corp.png" class="img-fluid rounded-top w-100" alt="">
+                                <img src="img/programas/corp.webp" class="img-fluid rounded-top w-100" alt="">
                             </div>
                         </a>
                         <div class="service-content p-4 bg-light rounded">
@@ -133,7 +133,7 @@
                     <div class="service-item shadow">
                         <a href="cursos/preparacion/Index.aspx">
                             <div class="service-img">
-                                <img src="img/programas/preparar.png" class="img-fluid rounded-top w-100" alt="">
+                                <img src="img/programas/preparar.webp" class="img-fluid rounded-top w-100" alt="">
                             </div>
                         </a>
                         <div class="service-content p-4 bg-light rounded">
@@ -147,7 +147,7 @@
                     <div class="service-item shadow">
                         <a href="cursos/sprim/Index.aspx">
                             <div class="service-img">
-                                <img src="img/programas/spring.png" class="img-fluid rounded-top w-100" alt="">
+                                <img src="img/programas/spring.webp" class="img-fluid rounded-top w-100" alt="">
                             </div>
                         </a>
                         <div class="service-content p-4 bg-light rounded">
@@ -161,7 +161,7 @@
                     <div class="service-item shadow">
                         <a href="cursos/especiales/Index.aspx">
                             <div class="service-img">
-                                <img src="img/programas/especial.png" class="img-fluid rounded-top w-100" alt="">
+                                <img src="img/programas/especial.webp" class="img-fluid rounded-top w-100" alt="">
                             </div>
                         </a>
                         <div class="service-content p-4 bg-light rounded">
