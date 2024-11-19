@@ -526,11 +526,11 @@ namespace Web.cursos.adults
                     int randomsessionId = random.Next(0, 100000);
                     string idSession = randomsessionId.ToString();
 
-                    //var tx = new Transaction(new Options("597032360084", "1947052d36f3ef833095e4bbb714f60f", WebpayIntegrationType.Live));
-                    //var response = tx.Create(buyOrder.ToString(), idSession, totalPago, "https://diagnostico.norteamericano.cl/adultos/Ecommerce/tbk_ws_token.aspx");
+                    var tx = new Transaction(new Options("597032360084", "1947052d36f3ef833095e4bbb714f60f", WebpayIntegrationType.Live));
+                    var response = tx.Create(buyOrder.ToString(), idSession, totalPago, "https://norteamericano.cl/cursos/tbk.aspx");
 
-                    var tx = new Transaction(new Options(IntegrationCommerceCodes.WEBPAY_PLUS, IntegrationApiKeys.WEBPAY, WebpayIntegrationType.Test));
-                    var response = tx.Create(buyOrder.ToString(), idSession, totalPago, "https://test.norteamericano.cl/cursos/tbk.aspx");
+                    //var tx = new Transaction(new Options(IntegrationCommerceCodes.WEBPAY_PLUS, IntegrationApiKeys.WEBPAY, WebpayIntegrationType.Test));
+                    //var response = tx.Create(buyOrder.ToString(), idSession, totalPago, "https://test.norteamericano.cl/cursos/tbk.aspx");
 
                     string url = response.Url;
                     string token = response.Token;

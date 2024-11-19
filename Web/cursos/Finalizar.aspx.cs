@@ -87,11 +87,12 @@ namespace Web.cursos
         {
             if (!token.Equals("error"))
             {
-                //var tx = new Transaction(new Options("597032360084", "1947052d36f3ef833095e4bbb714f60f", WebpayIntegrationType.Live));
+                var tx = new Transaction(new Options("597032360084", "1947052d36f3ef833095e4bbb714f60f", WebpayIntegrationType.Live));
+                var response = tx.Commit(token);
+
+                //var tx = new Transaction(new Options(IntegrationCommerceCodes.WEBPAY_PLUS, IntegrationApiKeys.WEBPAY, WebpayIntegrationType.Test));
                 //var response = tx.Commit(token);
 
-                var tx = new Transaction(new Options(IntegrationCommerceCodes.WEBPAY_PLUS, IntegrationApiKeys.WEBPAY, WebpayIntegrationType.Test));
-                var response = tx.Commit(token);
                 int.TryParse(response.ResponseCode.ToString(), out int varResponseCode);
 
                 if (varResponseCode == 0)
