@@ -217,6 +217,7 @@
                                 <td colspan="2">
                                     <span>
                                         <asp:TextBox ID="TextBoxAlumnoPaterno" CssClass="form-control" runat="server"></asp:TextBox>
+                                        <asp:Label ID="LabelIDLead" Visible="false" runat="server" Text="Label"></asp:Label>
                                     </span>
                                 </td>
                             </tr>
@@ -258,7 +259,7 @@
                                 </td>
                                 <td colspan="2">
                                     <span>
-                                        <asp:TextBox ID="TextBoxAlumnoMail" CssClass="form-control" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="TextBoxAlumnoMail"  AutoPostBack="true" CssClass="form-control" runat="server" OnTextChanged="TextBoxAlumnoMail_TextChanged"></asp:TextBox>
                                     </span>
                                 </td>
                             </tr>
@@ -404,7 +405,6 @@
                                                 <asp:Label ID="LabelTotalPago" runat="server" Text="Label"></asp:Label></h3>
                                         </td>
                                     </tr>
-                                    <tr>
                                     <tr class="table-primary">
                                         <td colspan="2">
                                             <a href="<%=Page.ResolveUrl("~/TerminosCondiciones.aspx") %>" class="text-primary" target="_blank"><i class="fas fa-angle-right me-2"></i><strong>Ver los Términos y condiciones</strong></a>

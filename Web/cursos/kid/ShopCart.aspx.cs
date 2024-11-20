@@ -15,6 +15,20 @@ namespace Web.cursos.kid
 {
     public partial class ShopCart : System.Web.UI.Page
     {
+        public void CrearLead()
+        {
+            string nomnbre = "BLACK FRIDAY " + TextBoxApoderadoNombre.Text + " " + TextBoxApoderadoPaterno.Text;
+            string mail = TextBoxApoderadoMail.Text;
+
+            Nlead nlead = new Nlead();
+            int leadID = nlead.CrearLead(nomnbre, mail, "0", "A");
+
+            if (leadID > 0)
+            {
+                LabelIDLead.Text = leadID.ToString();
+            }
+        }
+
         public void CargaRegion()
         {
             NRegionComuna nRegionComuna = new NRegionComuna();
@@ -150,7 +164,18 @@ namespace Web.cursos.kid
         {
             DateTime fechaEmision = DateTime.Now;
             Ncotizacion cotizacion = new Ncotizacion();
-            string cotizacionNumero = cotizacion.Crear(rutApo, "1", 1, desctoID, tipoDescuento, fechaEmision.ToString("yyyy-MM-dd"), 1, 1, total, fechaEmision.ToString("yyyy-MM-dd"));
+            int lead = int.Parse(LabelIDLead.Text);
+            string cotizacionNumero;
+            if (lead > 0)
+            {
+                cotizacionNumero = cotizacion.CrearMasLead(rutApo, "1", 1, desctoID, tipoDescuento, fechaEmision.ToString("yyyy-MM-dd"), 1, 1, total, fechaEmision.ToString("yyyy-MM-dd"), lead);
+            }
+            else
+            {
+                cotizacionNumero = cotizacion.Crear(rutApo, "1", 1, desctoID, tipoDescuento, fechaEmision.ToString("yyyy-MM-dd"), 1, 1, total, fechaEmision.ToString("yyyy-MM-dd"));
+            }
+
+
             if (int.TryParse(cotizacionNumero, out int idCotizacion))
             {
                 string curso = LabelProductoNombreCorto.Text;
@@ -736,7 +761,7 @@ namespace Web.cursos.kid
                 TextBoxApoderadoMaterno.Text = data.Rows[0]["AP_Materno"].ToString();
                 TextBoxApoderadoMail.Text = data.Rows[0]["Email"].ToString();
                 TextBoxApoderadoFono.Text = data.Rows[0]["Fono"].ToString();
-
+                CrearLead();
                 try
                 {
                     ListaRegion.SelectedValue = data.Rows[0]["NombreRegion"].ToString();
@@ -755,6 +780,11 @@ namespace Web.cursos.kid
             {
                 TextBoxApoderadoNombre.Focus();
             }
+        }
+
+        protected void TextBoxApoderadoMail_TextChanged(object sender, EventArgs e)
+        {
+            CrearLead();
         }
     }
 }

@@ -109,7 +109,7 @@
                                     <a class="nav-link active" id="tab1-tab" data-bs-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Descripción</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" id="tab2-tab" data-bs-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Summer School</a>
+                                    <a class="nav-link " id="tab2-tab" data-bs-toggle="tab" href="#tab2" role="tab" aria-controls="tab2" aria-selected="false">Summer School</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" id="tab3-tab" data-bs-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false">Objetivos</a>
@@ -170,6 +170,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
                                     <div class="row mt-5 text-dark">
                                         <div class="col-md-12">
@@ -220,6 +221,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="tab3-tab">
                                     <div class="row">
                                         <div class="col-md-1"></div>
@@ -271,6 +273,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <div class="tab-pane fade" id="tab4" role="tabpanel" aria-labelledby="tab4-tab">
                                     <div class="row mt-5">
                                         <div class="col-md-12">

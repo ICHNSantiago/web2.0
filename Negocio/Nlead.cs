@@ -1,16 +1,41 @@
 ﻿using Datos;
 using System;
 using System.Data;
+using System.Web.Security;
+using System.Web;
 
 namespace Negocio
 {
     public class Nlead
     {
-        private Lead GetLead = new Lead();
+        private readonly Lead GetLead = new Lead();
 
-        public string Ingresar(string nombre, string mail, string fono, string producto, int contacto, int usuario)
+        public string IngresarOK(string nombre, string mail, string fono, string producto, int contacto, int usuario)
         {
-            return GetLead.Ingresar(nombre, mail, fono, producto, contacto, usuario);
+            string var = GetLead.Ingresar(nombre, mail, fono, producto, contacto, usuario);
+
+            if(int.TryParse(var, out int id))
+            {
+                return "ok";
+            }
+            else
+            {
+                return var;
+            }           
+        }
+
+        public int IngresarNum(string nombre, string mail, string fono, string producto, int contacto, int usuario)
+        {
+            string var = GetLead.Ingresar(nombre, mail, fono, producto, contacto, usuario);
+
+            if (int.TryParse(var, out int id))
+            {
+                return id;
+            }
+            else
+            {
+                return 0;
+            }
         }
 
         public bool BuscarMail(string mailLead)
@@ -44,7 +69,7 @@ namespace Negocio
         public DataTable Ejecutivos()
         {
             return GetLead.BuscarEjecutivos();
-                    
+
         }
 
         public string ActulizarAtencion(int id)
@@ -52,5 +77,40 @@ namespace Negocio
             return GetLead.ActulizarAtencion(id);
         }
 
+        public string EstadoUpdate(int leadID, int estadoID)
+        {
+            return GetLead.EstadoUpdate(leadID, estadoID);
+        }
+
+        public int CrearLead(string nombre, string correo, string fono, string programa)
+        {
+            string programaSelect = string.Empty;
+            switch (programa)
+            {
+                case "A":
+                    programaSelect = "ADULTS REGULAR";
+                    break;
+                case "T":
+                    programaSelect = "TEENS";
+                    break;
+                case "K":
+                    programaSelect = "KIDS";
+                    break;              
+            }
+
+            DataTable dataEjecutivo = Ejecutivos();
+            int numn = int.Parse(dataEjecutivo.Rows[0]["idContacto"].ToString());
+            int usuario = int.Parse(dataEjecutivo.Rows[0]["idUsuario"].ToString());
+
+            int id = IngresarNum(nombre, correo, fono, programaSelect, 5, usuario);
+
+            if (id > 0)
+            {
+                numn++;
+                ActulizarAtencion(numn);              
+            }
+
+            return id;
+        }
     }
 }

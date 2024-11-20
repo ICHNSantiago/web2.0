@@ -17,9 +17,15 @@ namespace Negocio
             return GetCotizacion.Ingresar(apoderado, vendedor, idSoliciutdDescto, descuento, tipoDescuento, fecha, alumnos, curso, monto, validez);
         }
 
+        public string CrearMasLead(string apoderado, string vendedor, int idSoliciutdDescto, int descuento, int tipoDescuento, string fecha, int alumnos, int curso, int monto, string validez, int lead)
+        {
+            return GetCotizacion.IngresarLead(apoderado, vendedor, idSoliciutdDescto, descuento, tipoDescuento, fecha, alumnos, curso, monto, validez, lead);
+
+        }
+
         public string IngresarDetalle(int cotizacion, string curso, string modalidad, string sede, int cantidad, int tarifa, int idDescto, int totalPago, string alumID, int alumEdad, string apoID, int tarifaID)
         {
-            return GetCotizacion.IngresarDetalle(cotizacion, curso, modalidad, sede, cantidad, tarifa, idDescto, totalPago, alumID, alumEdad, apoID, tarifaID); 
+            return GetCotizacion.IngresarDetalle(cotizacion, curso, modalidad, sede, cantidad, tarifa, idDescto, totalPago, alumID, alumEdad, apoID, tarifaID);
         }
 
         public string IngresarAlumno(string idAlumno, string paterno, string materno, string nombre, string comunaID, string direccion, DateTime nace, int fono, string mail)
@@ -32,10 +38,10 @@ namespace Negocio
             return GetCotizacion.IngresarApoderado(idAlumno, idApoderado, paterno, materno, nombre, comunaID, direccion, fono, mail);
         }
 
-       
+
         public DataTable BuscarAlumno(string alumID)
         {
-            return GetCotizacion.BuscarAlumno(alumID);  
+            return GetCotizacion.BuscarAlumno(alumID);
         }
 
         public DataTable BuscarApoderado(string apoderadoID)
@@ -60,7 +66,7 @@ namespace Negocio
 
         public string GrabaPago(int boletaID, int montoPago, int cuotaPago, int tipoTarjeta, int codAutoriza, string apoderadoID)
         {
-            return GetCotizacion.GrabaPago(boletaID, montoPago , cuotaPago, tipoTarjeta, codAutoriza , apoderadoID);
+            return GetCotizacion.GrabaPago(boletaID, montoPago, cuotaPago, tipoTarjeta, codAutoriza, apoderadoID);
         }
 
         public DataTable CotizacionPago(string cotizacion)

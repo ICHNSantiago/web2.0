@@ -52,6 +52,44 @@ namespace Datos
             }
         }
 
+
+        public string IngresarLead(string apoderado, string vendedor, int idSoliciutdDescto, int descuento, int tipoDescuento, string fecha, int alumnos, int curso,
+        int monto, string validez, int lead)
+        {
+            string resultado = string.Empty;
+            try
+            {
+                Comando = new MySqlCommand("sam.WEB_IngresarCotizacionLead", Conexion.AbrirConnectionMySql())
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                Comando.Parameters.AddWithValue("@apoderado", apoderado);
+                Comando.Parameters.AddWithValue("@vendedor", vendedor);
+                Comando.Parameters.AddWithValue("@solicitudDescuento", idSoliciutdDescto);
+                Comando.Parameters.AddWithValue("@fecha", fecha);
+                Comando.Parameters.AddWithValue("@alumno", alumnos);
+                Comando.Parameters.AddWithValue("@cantidad", curso);
+                Comando.Parameters.AddWithValue("@monto", monto);
+                Comando.Parameters.AddWithValue("@validez", validez);
+                Comando.Parameters.AddWithValue("@desctoID", descuento);
+                Comando.Parameters.AddWithValue("@tipoDesctoID", tipoDescuento); 
+                Comando.Parameters.AddWithValue("@leadID", lead);
+                Leer = Comando.ExecuteReader();
+                if (Leer.Read())
+                {
+                    resultado = Leer[0].ToString();
+                }
+                Conexion.CerrarConnectionMysql();
+                return resultado;
+            }
+            catch (MySqlException ex)
+            {
+                Conexion.CerrarConnectionMysql();
+                return "Error: " + ex.Message;
+            }
+        }
+
+
         public string IngresarDetalle(int cotizacion, string curso, string modalidad, string sede, int cantidad, int tarifa, int idDescto, int totalPago, string alumID, int alumEdad,string apoID, int tarifaID)
         {
             try

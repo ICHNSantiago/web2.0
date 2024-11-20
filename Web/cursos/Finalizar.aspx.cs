@@ -80,6 +80,14 @@ namespace Web.cursos
                 LabelCantidad.Text = data.Rows[0]["cantidad"].ToString().ToLower();
                 LabelRun.Text = data.Rows[0]["alumnoID"].ToString().ToLower();
                 LabelMail.Text = data.Rows[0]["Email"].ToString().ToLower();
+
+                int leadID = int.Parse(data.Rows[0]["idLead"].ToString().ToLower());
+
+                if (leadID > 14)
+                {
+                    Nlead nlead = new Nlead();
+                    nlead.EstadoUpdate(leadID, 6);
+                }
             }
         }
 

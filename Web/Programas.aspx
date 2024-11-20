@@ -5,7 +5,7 @@
     <meta name="description" content="Norteamericano, Cursos de Inglés para adultos, jovenes, niños niñas, empresas  regulares e intensivos. Somos expertos en la enseñanza presencial. curso de inglés, español">
     <title>Norteamericano - Programas</title>
     <link rel="canonical" href="https://norteamericano.cl/" />
- 
+
 
     <style>
         .feature .feature-item-ichn {
@@ -34,7 +34,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
 
-        <!-- Google Tag Manager (noscript) -->
+    <!-- Google Tag Manager (noscript) -->
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7349HX"
             height="0" width="0" style="display: none; visibility: hidden"></iframe>
@@ -50,9 +50,9 @@
             <div class="text-center mx-auto pb-5" style="max-width: 1000px;">
                 <h4 class="text-primary">Cursos de inglés</h4>
                 <h1 class="display-4 mb-4">Programas</h1>
-                 <p class="mb-0 text-dark">
-                     El Instituto Chileno Norteamericano cree en la capacidad e interés de las personas para aprender y desarrollarse. Estamos convencidos del poder que tiene la educación para mejorar la calidad de vida de las personas. Por ello proveemos el mejor ambiente para el aprendizaje.
-                 </p>
+                <p class="mb-0 text-dark">
+                    El Instituto Chileno Norteamericano cree en la capacidad e interés de las personas para aprender y desarrollarse. Estamos convencidos del poder que tiene la educación para mejorar la calidad de vida de las personas. Por ello proveemos el mejor ambiente para el aprendizaje.
+                </p>
             </div>
 
             <div class="row g-4 justify-content-center">
@@ -92,11 +92,13 @@
                             </div>
                         </a>
                         <div class="service-content p-4 bg-light rounded">
+                            <div class="service-content-inner text-center">
                                 <a class="btn btn-primary rounded-pill py-2 px-4" href="cursos/kid/Index.aspx">Saber más</a>
                             </div>
                         </div>
                     </div>
                 </div>
+
                 <div class="col-md-6 col-lg-6 col-xl-3 ">
                     <div class="service-item shadow">
                         <a href="cursos/pre/Index.aspx">

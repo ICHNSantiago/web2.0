@@ -13,9 +13,11 @@ namespace Datos
         private readonly Conexion conexion = new Conexion();
         private MySqlCommand comando;
         private MySqlDataAdapter adaptador;
+        private MySqlDataReader Leer;
 
         public string Ingresar(string nombre, string mail, string fono, string producto, int contacto, int usuarioID)
         {
+            string resultado = string.Empty;
             try
             {
                 comando = new MySqlCommand("sige_sam_V3.GrabaLead", conexion.AbrirConnectionMySql())
@@ -28,9 +30,13 @@ namespace Datos
                 comando.Parameters.AddWithValue("@productoLead", producto);
                 comando.Parameters.AddWithValue("@contactoLead", contacto);
                 comando.Parameters.AddWithValue("@ejecutivoID", usuarioID);
-                comando.ExecuteReader();
+                Leer = comando.ExecuteReader();
+                if (Leer.Read())
+                {
+                    resultado = Leer[0].ToString();
+                }
                 conexion.CerrarConnectionMysql();
-                return "ok";
+                return resultado;
             }
             catch (MySqlException ex)
             {
@@ -97,6 +103,28 @@ namespace Datos
                     CommandType = CommandType.StoredProcedure,
                 };
                 comando.Parameters.AddWithValue("@ejeID", id);
+                comando.ExecuteReader();
+                conexion.CerrarConnectionMysql();
+                return "ok";
+            }
+            catch (MySqlException ex)
+            {
+                conexion.CerrarConnectionMysql();
+                return "Error: " + ex.Message;
+            }
+
+        }
+
+        public string EstadoUpdate(int leadID, int estadoID)
+        {
+            try
+            {
+                comando = new MySqlCommand("sige_sam_V3.ActualizarEstadoLead", conexion.AbrirConnectionMySql())
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                comando.Parameters.AddWithValue("@leadId", leadID);
+                comando.Parameters.AddWithValue("@estadoLead", estadoID);
                 comando.ExecuteReader();
                 conexion.CerrarConnectionMysql();
                 return "ok";

@@ -64,7 +64,7 @@ namespace Web
                     int numn = int.Parse(dataEjecutivo.Rows[0]["idContacto"].ToString());
                     int usuario = int.Parse(dataEjecutivo.Rows[0]["idUsuario"].ToString());
 
-                    string resultado = lead.Ingresar(nombre, correo, fono, programaSelect, 5, usuario);
+                    string resultado = lead.IngresarOK(nombre, correo, fono, programaSelect, 5, usuario);
 
                     if (resultado.Equals("ok"))
                     {

@@ -412,7 +412,8 @@
                                 </td>
                                 <td colspan="2">
                                     <span>
-                                        <asp:TextBox ID="TextBoxApoderadoMail" CssClass="form-control" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="TextBoxApoderadoMail" AutoPostBack="true"  CssClass="form-control" runat="server" OnTextChanged="TextBoxApoderadoMail_TextChanged"></asp:TextBox>
+                                        <asp:Label ID="LabelIDLead" Visible="false" runat="server" Text="Label"></asp:Label>
                                     </span>
                                 </td>
                             </tr>
