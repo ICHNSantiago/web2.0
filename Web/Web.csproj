@@ -328,6 +328,7 @@
     <Content Include="Inscripcion\Voucher.aspx" />
     <Content Include="Intranet.aspx" />
     <Content Include="lib\css\check-radio.css" />
+    <Content Include="lib\ls\validarRUT.js" />
     <Content Include="PoliticaPrivacidad.aspx" />
     <Content Include="Tematica\18sep\bandera3.png" />
     <Content Include="img\colaboradores\abla.png" />

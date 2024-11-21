@@ -98,18 +98,8 @@ namespace Negocio
                     break;              
             }
 
-            DataTable dataEjecutivo = Ejecutivos();
-            int numn = int.Parse(dataEjecutivo.Rows[0]["idContacto"].ToString());
-            int usuario = int.Parse(dataEjecutivo.Rows[0]["idUsuario"].ToString());
-
-            int id = IngresarNum(nombre, correo, fono, programaSelect, 5, usuario);
-
-            if (id > 0)
-            {
-                numn++;
-                ActulizarAtencion(numn);              
-            }
-
+          
+            int id = IngresarNum(nombre, correo, fono, programaSelect, 5, 1);         
             return id;
         }
     }

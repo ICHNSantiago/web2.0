@@ -21,7 +21,7 @@ namespace Web.cursos.teen
             string mail = TextBoxApoderadoMail.Text;
 
             Nlead nlead = new Nlead();
-            int leadID = nlead.CrearLead(nomnbre, mail, "0", "A");
+            int leadID = nlead.CrearLead(nomnbre, mail, "0", "T");
 
             if (leadID > 0)
             {

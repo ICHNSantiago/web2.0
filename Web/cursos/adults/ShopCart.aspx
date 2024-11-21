@@ -9,6 +9,23 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+    <script>
+        function mostrar(dato) {
+            if (dato == "1") {
+                document.getElementById("nombre").style.display = "block";
+                document.getElementById("apellidos").style.display = "none";
+                document.getElementById("ContentPlaceHolder1_LabelTipoDoc").innerText = "Run"
+
+            }
+            if (dato == "2") {
+                document.getElementById("nombre").style.display = "none";
+                document.getElementById("apellidos").style.display = "block";
+                document.getElementById("flexRadioDefault2").checked = true;
+                document.getElementById("ContentPlaceHolder1_LabelTipoDoc").innerText = "Pasaporte"
+            }
+        }
+    </script>
+
     <!-- Google Tag Manager (noscript) -->
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7349HX"
@@ -180,12 +197,32 @@
                         <table class="table table-sm table-borderless text-dark">
                             <tr>
                                 <td>
-                                    <span>Run | Pasaporte</span>
+                                    <span>Documento</span>
                                 </td>
                                 <td colspan="2">
-                                    <span>
-                                        <asp:TextBox ID="TextBoxAlumnoRun" AutoPostBack="true" CssClass="form-control" runat="server" OnTextChanged="TextBoxAlumnoRun_TextChanged"></asp:TextBox>
-                                    </span>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" checked name="flexRadioDefault" value="1" onchange="mostrar(this.value);" id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">Run</label>
+
+
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" value="2" onchange="mostrar(this.value);" id="flexRadioDefault2">
+                                        <label class="form-check-label" for="flexRadioDefault2">Pasaporte</label>
+                                    </div>
+
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>Numero</span>
+                                </td>
+                                <td colspan="2">
+                                    <div id="nombre" style="display: block;">
+                                        <asp:TextBox ID="TextBoxAlumnoRun" oninput="checkRut(this)" AutoPostBack="true" CssClass="form-control" runat="server" OnTextChanged="TextBoxAlumnoRun_TextChanged"></asp:TextBox>
+                                        <script src="../../lib/ls/validarRUT.js"></script>
+                                    </div>
+                                    <div class="form-group" id="apellidos" style="display: none;">
+                                        <asp:TextBox ID="TextBoxAlumnoPasaporte" AutoPostBack="true" CssClass="form-control" runat="server" OnTextChanged="TextBoxAlumnoPasa_TextChanged"></asp:TextBox>
+                                    </div>
                                 </td>
                             </tr>
                             <tr runat="server" id="Tr_id" visible="false">
@@ -255,22 +292,6 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <span>E-mail</span>
-                                </td>
-                                <td colspan="2">
-                                    <span>
-                                        <asp:TextBox ID="TextBoxAlumnoMail"  AutoPostBack="true" CssClass="form-control" runat="server" OnTextChanged="TextBoxAlumnoMail_TextChanged"></asp:TextBox>
-                                    </span>
-                                </td>
-                            </tr>
-                            <tr runat="server" id="Tr_mail" visible="false">
-                                <td></td>
-                                <td colspan="2">
-                                    <span class="badge bg-warning text-dark" style="font-size: 12px">Tiene que ingresar el correo del alumno</span>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
                                     <span>Teléfono </span>
                                 </td>
                                 <td style="width: 20%">
@@ -282,6 +303,23 @@
                                     </span>
                                 </td>
                             </tr>
+                            <tr>
+                                <td>
+                                    <span>E-mail</span>
+                                </td>
+                                <td colspan="2">
+                                    <span>
+                                        <asp:TextBox ID="TextBoxAlumnoMail" AutoPostBack="true" CssClass="form-control" runat="server" OnTextChanged="TextBoxAlumnoMail_TextChanged"></asp:TextBox>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr runat="server" id="Tr_mail" visible="false">
+                                <td></td>
+                                <td colspan="2">
+                                    <span class="badge bg-warning text-dark" style="font-size: 12px">Tiene que ingresar el correo del alumno</span>
+                                </td>
+                            </tr>
+
                             <tr runat="server" id="Tr_fono" visible="false">
                                 <td></td>
                                 <td colspan="2">
@@ -491,6 +529,10 @@
                 </div>
             </div>
         </div>
+    </div>
+
+    <div style="display: none">
+        <asp:Label ID="LabelTipoDoc" Text="Run" runat="server"></asp:Label>
     </div>
 
 </asp:Content>

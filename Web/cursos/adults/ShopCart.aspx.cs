@@ -7,6 +7,7 @@ using System.Web.Security;
 using Transbank.Common;
 using Transbank.Webpay.Common;
 using Transbank.Webpay.WebpayPlus;
+using Web.Inscripcion;
 
 namespace Web.cursos.adults
 {
@@ -16,9 +17,10 @@ namespace Web.cursos.adults
         {
             string nomnbre = "BLACK FRIDAY " + TextBoxAlumnoNombre.Text + " " + TextBoxAlumnoPaterno.Text;
             string mail = TextBoxAlumnoMail.Text;
+            string fono = TextBoxAlumnoFono.Text;
 
             Nlead nlead = new Nlead();
-            int leadID = nlead.CrearLead(nomnbre, mail, "0", "A");
+            int leadID = nlead.CrearLead(nomnbre, mail, fono, "A");
 
             if (leadID > 0)
             {
@@ -470,6 +472,11 @@ namespace Web.cursos.adults
             }
 
             ListaComuna.Items.Remove("Sin Comuna");
+
+            if(LabelTipoDoc.Text == "Pasaporte")
+            {
+                ClientScript.RegisterStartupScript(GetType(), "Popup", "mostrar(2);", true);
+            }
         }
 
         protected void RadioButtonMP_CheckedChanged(object sender, EventArgs e)
@@ -539,7 +546,18 @@ namespace Web.cursos.adults
                     }
                     else
                     {
-                        buyOrder = GenerarCotizacion(totalPago, TextBoxAlumnoRun.Text, desctoID, tipoID);
+                        string alumID;
+
+                        if (LabelTipoDoc.Text == "Pasaporte")
+                        {
+                            alumID = TextBoxAlumnoPasaporte.Text;
+                        }
+                        else
+                        {
+                            alumID = TextBoxAlumnoRun.Text;
+                        }
+
+                        buyOrder = GenerarCotizacion(totalPago, alumID, desctoID, tipoID);
                     }
 
                     FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(1, "sam_web_e_commercer", DateTime.Now, DateTime.Now.AddMinutes(30), true, buyOrder.ToString());
@@ -582,6 +600,11 @@ namespace Web.cursos.adults
             string comuna = ListaComuna.SelectedValue.ToString();
             string comunaID = nRegion.ComunaID(idRegion, comuna);
             LabelComunaID.Text = comunaID;
+
+            if (LabelTipoDoc.Text == "Pasaporte")
+            {
+                ClientScript.RegisterStartupScript(GetType(), "Popup", "mostrar(2);", true);
+            }
         }
 
         protected void CheckBoxTerminos_CheckedChanged(object sender, EventArgs e)
@@ -594,7 +617,7 @@ namespace Web.cursos.adults
             string id = TextBoxAlumnoRun.Text;
             Ncotizacion ncotizacion = new Ncotizacion();
             DataTable data = ncotizacion.BuscarAlumno(id);
-
+            LabelTipoDoc.Text = "Run";
             if (data.Rows.Count > 0)
             {
                 TextBoxAlumnoRun.Text = data.Rows[0]["idAlumno"].ToString();
@@ -632,9 +655,59 @@ namespace Web.cursos.adults
             }
         }
 
+        protected void TextBoxAlumnoPasa_TextChanged(object sender, EventArgs e)
+        {
+            string id = TextBoxAlumnoPasaporte.Text;
+            Ncotizacion ncotizacion = new Ncotizacion();
+            DataTable data = ncotizacion.BuscarAlumno(id);
+            LabelTipoDoc.Text = "Pasaporte";
+            if (data.Rows.Count > 0)
+            {
+                TextBoxAlumnoPasaporte.Text = data.Rows[0]["idAlumno"].ToString();
+                TextBoxAlumnoNombre.Text = data.Rows[0]["Nombres"].ToString();
+                TextBoxAlumnoPaterno.Text = data.Rows[0]["AP_Paterno"].ToString();
+                TextBoxAlumnoMaterno.Text = data.Rows[0]["AP_Materno"].ToString();
+                TextBoxAlumnoMail.Text = data.Rows[0]["Email"].ToString();
+                TextBoxAlumnoDireccion.Text = data.Rows[0]["Direccion"].ToString();
+                TextBoxAlumnoNace.Text = data.Rows[0]["FechaNacimiento"].ToString();
+                CrearLead();
+                try
+                {
+                    ListaRegion.SelectedValue = data.Rows[0]["NombreRegion"].ToString();
+                    ListaRegionAlumno_SelectedIndexChanged(sender, null);
+                }
+                catch (Exception)
+                {
+                }
+
+
+                try
+                {
+                    ListaComuna.SelectedValue = data.Rows[0]["NombreComuna"].ToString();
+                    ListaComuna_SelectedIndexChanged(sender, null);
+                }
+                catch (Exception)
+                {
+                }
+
+                TextBoxAlumnoFono.Text = data.Rows[0]["Fono"].ToString();
+            }
+            else
+            {
+                TextBoxAlumnoNombre.Focus();
+            }
+
+            ClientScript.RegisterStartupScript(GetType(), "Popup", "mostrar(2);", true);
+        }
+
         protected void TextBoxAlumnoMail_TextChanged(object sender, EventArgs e)
         {
             CrearLead();
+
+            if (LabelTipoDoc.Text == "Pasaporte")
+            {
+                ClientScript.RegisterStartupScript(GetType(), "Popup", "mostrar(2);", true);
+            }
         }
     }
 }

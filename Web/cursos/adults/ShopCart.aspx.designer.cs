@@ -258,6 +258,15 @@ namespace Web.cursos.adults
         protected global::System.Web.UI.WebControls.TextBox TextBoxAlumnoRun;
 
         /// <summary>
+        /// Control TextBoxAlumnoPasaporte.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxAlumnoPasaporte;
+
+        /// <summary>
         /// Control Tr_id.
         /// </summary>
         /// <remarks>
@@ -339,24 +348,6 @@ namespace Web.cursos.adults
         protected global::System.Web.UI.HtmlControls.HtmlTableRow Tr_nace;
 
         /// <summary>
-        /// Control TextBoxAlumnoMail.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxAlumnoMail;
-
-        /// <summary>
-        /// Control Tr_mail.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableRow Tr_mail;
-
-        /// <summary>
         /// Control TextBox8.
         /// </summary>
         /// <remarks>
@@ -373,6 +364,24 @@ namespace Web.cursos.adults
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextBoxAlumnoFono;
+
+        /// <summary>
+        /// Control TextBoxAlumnoMail.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxAlumnoMail;
+
+        /// <summary>
+        /// Control Tr_mail.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow Tr_mail;
 
         /// <summary>
         /// Control Tr_fono.
@@ -589,5 +598,14 @@ namespace Web.cursos.adults
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton LinkButtonTbk;
+
+        /// <summary>
+        /// Control LabelTipoDoc.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelTipoDoc;
     }
 }
