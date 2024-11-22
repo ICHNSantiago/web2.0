@@ -523,5 +523,26 @@ namespace Datos
             }
         }
 
+        public string EliminaDatosCoti(int coti)
+        {
+            try
+            {
+                Comando = new MySqlCommand("sam.WEB_ElimnaDatosAnexoCoti", Conexion.AbrirConnectionMySql())
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                Comando.Parameters.AddWithValue("@cotiID", coti);
+                Comando.ExecuteReader();
+                Conexion.CerrarConnectionMysql();
+                return "ok";
+            }
+            catch (MySqlException ex)
+            {
+                Conexion.CerrarConnectionMysql();
+                return "Error: " + ex.Message;
+            }
+        }
+
+
     }
 }

@@ -90,5 +90,10 @@ namespace Negocio
         {
             return GetCotizacion.ActualizaCorrelativoBoleta();
         }
+
+        public string EliminaDatosCoti(int coti)
+        {
+            return GetCotizacion.EliminaDatosCoti(coti);
+        }
     }
 }

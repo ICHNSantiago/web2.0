@@ -62,6 +62,7 @@ namespace Web.Inscripcion
                 }
                 else
                 {
+                    ncotizacion.EliminaDatosCoti(idCotizacion);
                     row_error_finalizar.Visible = true;
                 }
             }
