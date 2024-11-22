@@ -100,7 +100,7 @@ namespace Web.Diagnostico.Kid
             encryted = System.Text.Encoding.Unicode.GetBytes(LabelNivelID.Text);
             string resultado = Convert.ToBase64String(encryted);
 
-            string link = "~/Inscripcion/Alumno.aspx?usuario=" + token + "&diagnostico=" + resultado + "&resultado=" + resultado2 + "&tipo=alumno"; 
+            string link = "~/Inscripcion/Alumno.aspx?usuario=" + token + "&diagnostico=" + resultado + "&resultado=" + resultado2 + "&tipo=alumno";
             Response.Redirect(link);
         }
 
