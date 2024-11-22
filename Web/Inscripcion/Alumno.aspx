@@ -444,6 +444,11 @@
                                                 <asp:LinkButton ID="LinkButtonFinalizar" CssClass="btn btn-primary text-white cargando" runat="server" OnClick="LinkButtonFinalizar_Click"> Finalizar la Inscripción</asp:LinkButton>
                                             </td>
                                         </tr>
+                                        <tr runat="server" visible="false" id="row_error_finalizar">
+                                            <td>
+                                                <span class="text-danger">Sistema no se encuentra disponible, favor intente más tarde</span>
+                                            </td>
+                                        </tr>
                                     </table>
                                 </div>
                             </div>

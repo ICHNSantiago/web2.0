@@ -62,12 +62,12 @@ namespace Web.Inscripcion
                 }
                 else
                 {
-                    // ??????????
+                    row_error_finalizar.Visible = true;
                 }
             }
             catch (Exception)
             {
-                // "Error en el sistema. vuelva a intentar mas tarde, detalle: "
+                row_error_finalizar.Visible = true;
             }
         }
 
@@ -423,6 +423,11 @@ namespace Web.Inscripcion
                 LabelApoDireccionRegionID.Text = data.Rows[0]["idRegiones"].ToString();
                 LabelApoFono.Text = data.Rows[0]["Fono"].ToString();
                 LabelCompraCant.Text = data.Rows[0]["cantidad"].ToString();
+
+
+                Ncotizacion ncotizacion = new Ncotizacion();
+                ncotizacion.GrabaCliente(LabelApoID.Text, LabelApoName.Text, LabelApoPaterno.Text, LabelApoMaterno.Text, LabelApoDireccion.Text, "SANTIAGO", LabelApoDireccionComuna.Text, LabelApoFono.Text, LabelApoMail.Text);
+
                 if (sede == "Online")
                 {
                     LabelCompraModalidad.Text = "Online";

@@ -699,6 +699,15 @@ namespace Web.Inscripcion
         protected global::System.Web.UI.WebControls.LinkButton LinkButtonFinalizar;
 
         /// <summary>
+        /// Control row_error_finalizar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow row_error_finalizar;
+
+        /// <summary>
         /// Control div_fin_Inscripc.
         /// </summary>
         /// <remarks>

@@ -59,6 +59,12 @@ namespace Negocio
             return GetCotizacion.IngresarInscripcion(cotizacion, idAlumno, codigoCurso, 1, tarifa);
         }
 
+
+        public string GrabaCliente(string clienteID, string nombre, string paterno, string materno, string direccion, string ciudad, string comuna, string fono, string mail)
+        {
+            return GetCotizacion.GrabaCliente(clienteID, nombre, paterno, materno, direccion, ciudad, comuna, fono, mail);
+        }
+
         public string GrabaVenta(string clienteID, int cotizacionID, DateTime fechaEmite, int neto, int total, int descto)
         {
             return GetCotizacion.GrabaVenta(clienteID, cotizacionID, fechaEmite, neto, total, descto);

@@ -349,6 +349,36 @@ namespace Datos
             }
         }
 
+        public string GrabaCliente(string clienteID, string nombre, string paterno, string materno, string direccion, string ciudad, string comuna, string fono, string mail)
+        {
+            string resultado = string.Empty;
+            try
+            {
+                Comando = new MySqlCommand("SIGECaja.GrabaCliente", Conexion.AbrirConnectionMySql())
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                Comando.Parameters.AddWithValue("@cId", clienteID);
+                Comando.Parameters.AddWithValue("@cTipo", 1);
+                Comando.Parameters.AddWithValue("@boleta", 0);
+                Comando.Parameters.AddWithValue("@cNombre", nombre);
+                Comando.Parameters.AddWithValue("@cPaterno", paterno);
+                Comando.Parameters.AddWithValue("@cMaterno", materno);
+                Comando.Parameters.AddWithValue("@cDireccion", direccion);
+                Comando.Parameters.AddWithValue("@cCiudad", ciudad);
+                Comando.Parameters.AddWithValue("@cComuna", comuna);
+                Comando.Parameters.AddWithValue("@cFono", fono);
+                Comando.Parameters.AddWithValue("@cMail", mail);
+                Comando.ExecuteReader();
+                Conexion.CerrarConnectionMysql();
+                return "ok";
+            }
+            catch (MySqlException ex)
+            {
+                Conexion.CerrarConnectionMysql();
+                return "Error: " + ex.Message;
+            }
+        }
 
         public string GrabaVenta(string clienteID, int cotizacionID, DateTime fechaEmite, int neto, int total, int descto)
         {
