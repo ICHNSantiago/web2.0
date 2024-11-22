@@ -58,7 +58,16 @@ namespace Web.cursos.adults
             Tr_nombre.Visible = false;
             Tr_id.Visible = false;
 
-            string id = TextBoxAlumnoRun.Text.Trim().ToUpper();
+            string id;
+            if (LabelTipoDoc.Text == "Pasaporte")
+            {
+                id = TextBoxAlumnoPasaporte.Text.Trim().ToUpper();
+            }
+            else
+            {
+                id = TextBoxAlumnoRun.Text.Trim().ToUpper();
+            }
+
             string nombre = TextBoxAlumnoNombre.Text.Trim().ToUpper();
             string paterno = TextBoxAlumnoPaterno.Text.Trim().ToUpper();
             string materno = TextBoxAlumnoMaterno.Text.Trim().ToUpper();

@@ -9,6 +9,19 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+      <script type="text/javascript">
+          function fechas(elEvento) {
+              var evento = elEvento || window.event;
+              if (evento.keyCode == 8) {
+              } else {
+                  var fecha = document.getElementById("ContentPlaceHolder1_TextBoxAlumnoNace");
+                  if (fecha.value.length == 2 || fecha.value.length == 5) {
+                      fecha.value += "-";
+                  }
+              }
+          }
+      </script>
+
     <script>
         function mostrar(dato) {
             if (dato == "1") {
@@ -280,7 +293,7 @@
                                 </td>
                                 <td colspan="2">
                                     <span>
-                                        <asp:TextBox ID="TextBoxAlumnoNace" placeholder="ejemplo: 01-01-2000" CssClass="form-control" runat="server"></asp:TextBox>
+                                        <asp:TextBox ID="TextBoxAlumnoNace"  onkeydown="fechas(event);" placeholder="ejemplo: 01-01-2000" CssClass="form-control" runat="server"></asp:TextBox>
                                     </span>
                                 </td>
                             </tr>

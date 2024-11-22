@@ -258,6 +258,15 @@ namespace Web.cursos.teen
         protected global::System.Web.UI.WebControls.TextBox TextBoxAlumnoRun;
 
         /// <summary>
+        /// Control TextBoxAlumnoPasa.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxAlumnoPasa;
+
+        /// <summary>
         /// Control Tr_id.
         /// </summary>
         /// <remarks>
@@ -447,6 +456,15 @@ namespace Web.cursos.teen
         protected global::System.Web.UI.WebControls.TextBox TextBoxApoderadoRun;
 
         /// <summary>
+        /// Control TextBoxApoderadoPasaporte.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxApoderadoPasaporte;
+
+        /// <summary>
         /// Control Tr_apo_id.
         /// </summary>
         /// <remarks>
@@ -501,6 +519,24 @@ namespace Web.cursos.teen
         protected global::System.Web.UI.WebControls.TextBox TextBoxApoderadoMaterno;
 
         /// <summary>
+        /// Control TextBox1.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBox1;
+
+        /// <summary>
+        /// Control TextBoxApoderadoFono.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox TextBoxApoderadoFono;
+
+        /// <summary>
         /// Control TextBoxApoderadoMail.
         /// </summary>
         /// <remarks>
@@ -526,24 +562,6 @@ namespace Web.cursos.teen
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTableRow Tr_apo_mail;
-
-        /// <summary>
-        /// Control TextBox1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox1;
-
-        /// <summary>
-        /// Control TextBoxApoderadoFono.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxApoderadoFono;
 
         /// <summary>
         /// Control Tr_apo_fono.
@@ -841,5 +859,23 @@ namespace Web.cursos.teen
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton LinkButtonTbk;
+
+        /// <summary>
+        /// Control LabelTipoDoc.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelTipoDoc;
+
+        /// <summary>
+        /// Control LabelTipoDocAlum.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelTipoDocAlum;
     }
 }
