@@ -156,7 +156,7 @@ namespace Web.Diagnostico.Teens
                     if (result == "si")
                     {
                         string id = Convert.ToString(Request["id"]);
-                        DiagnosticoRepetir(token, id);
+                        DiagnosticoRepetir(token);
                     }
                     else
                     {

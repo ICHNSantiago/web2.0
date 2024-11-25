@@ -1,4 +1,5 @@
 ﻿using Negocio;
+using Newtonsoft.Json.Linq;
 using System;
 using System.ComponentModel;
 using System.Data;
@@ -9,6 +10,132 @@ namespace Web.Inscripcion
 {
     public partial class Alumno : System.Web.UI.Page
     {
+        
+        public void Diagnostico(string alumnoID, string tipo)
+        {
+            Ndiagnostico ndiagnostico = new Ndiagnostico();
+            DataTable data = new DataTable();
+
+            switch (tipo)
+            {
+                case "adultos":
+                    data = ndiagnostico.BuscarAdultos(alumnoID);
+                    break;
+
+                case "adolescentes":
+                    data = ndiagnostico.BuscarTeens(alumnoID);
+                    break;
+
+                case "kid":
+                    data = ndiagnostico.BuscarKids(alumnoID);
+                    break;
+                default:
+                    break;
+            }
+
+            if (data.Rows.Count > 0)
+            {
+                LabelNivelAlcanzado.Text = data.Rows[0]["NombreCurso"].ToString();
+                div_opciones.Visible = false;
+                div_resultado_diagnostico.Visible = true;
+            }
+            else
+            {
+                div_opciones.Visible = true;
+                div_resultado_diagnostico.Visible = false;
+            }
+        }
+
+        public void DiagnosticoContinuar(string alumnoID, string tipo)
+        {
+            Ndiagnostico ndiagnostico = new Ndiagnostico();
+            DataTable data = new DataTable();
+
+            switch (tipo)
+            {
+                case "adultos":
+                    data = ndiagnostico.BuscarAdultos(alumnoID);
+                    break;
+
+                case "adolescentes":
+                    data = ndiagnostico.BuscarTeens(alumnoID);
+                    break;
+
+                case "kid":
+                    data = ndiagnostico.BuscarKids(alumnoID);
+                    break;
+                default:
+                    break;
+            }
+
+            if (data.Rows.Count > 0)
+            {
+                string nivel = data.Rows[0]["NombreCurso"].ToString();
+                int nivelID = int.Parse(data.Rows[0]["idcursos"].ToString());
+
+
+                byte[] encryted = System.Text.Encoding.Unicode.GetBytes(nivel);
+                string resultado2 = Convert.ToBase64String(encryted);
+
+                encryted = System.Text.Encoding.Unicode.GetBytes(nivelID.ToString());
+                string resultado = Convert.ToBase64String(encryted);
+
+             
+                string linkC = "Alumno.aspx?usuario=" + alumnoID + "&diagnostico=" + resultado + "&resultado=" + resultado2 + "&tipo=alumno";
+                Response.Redirect(linkC);            
+            }            
+        }
+
+        public void DiagnosticoRepetir(string alumnoID, string tipo)
+        {
+            Ndiagnostico ndiagnostico = new Ndiagnostico();
+            DataTable data = new DataTable();
+
+            switch (tipo)
+            {
+                case "adultos":
+                    data = ndiagnostico.BuscarAdultos(alumnoID);
+                    break;
+
+                case "adolescentes":
+                    data = ndiagnostico.BuscarTeens(alumnoID);
+                    break;
+
+                case "kid":
+                    data = ndiagnostico.BuscarKids(alumnoID);
+                    break;
+                default:
+                    break;
+            }
+
+            if (data.Rows.Count > 0)
+            {
+                byte[] encryted = System.Text.Encoding.Unicode.GetBytes("si");
+                string resultado = Convert.ToBase64String(encryted);
+
+                string linkR = string.Empty;
+                switch (tipo)
+                {
+                    case "adultos":
+                        linkR = "~/Diagnostico/Adults/Index.aspx?alum=" + alumnoID + "&repertir=" + resultado;
+                        break;
+
+                    case "adolescentes":
+                        linkR = "~/Diagnostico/Teens/Index.aspx?alum=" + alumnoID + "&repertir=" + resultado;
+                        break;
+
+                    case "kid":
+                        linkR = "~/Diagnostico/Kid/Index.aspx?alum=" + alumnoID + "&repertir=" + resultado;
+                        break;
+                    default:
+                        break;
+                }
+
+                Response.Redirect(linkR);
+            }
+            
+        }
+
         public void FinalizarVenta()
         {
             try
@@ -340,8 +467,20 @@ namespace Web.Inscripcion
             div_horario.Visible = true;
 
             Ncursos ncursos = new Ncursos();
-            DataListDisponibles.DataSource = ncursos.BuscarHorario(sedeID, nivel);
-            DataListDisponibles.DataBind();
+            DataTable data = ncursos.BuscarHorario(sedeID, nivel);
+
+            if (data.Rows.Count > 0)
+            {
+                div_horarios_disponibles_no.Visible = false;
+                div_horarios_disponibles.Visible = true;
+                DataListDisponibles.DataSource = data;
+                DataListDisponibles.DataBind();
+            }
+            else
+            {
+                div_horarios_disponibles_no.Visible = true;
+                div_horarios_disponibles.Visible = false;
+            }
         }
 
         public void CargaRegion()
@@ -406,19 +545,21 @@ namespace Web.Inscripcion
                 LabelCotizacionID.Text = data.Rows[0]["idCotizacion"].ToString();
                 LabelTarifaID.Text = data.Rows[0]["idPromo"].ToString();
                 LabelApoderadoID.Text = data.Rows[0]["apoderadoID"].ToString();
-                LabelCursoComprado.Text = data.Rows[0]["curso"].ToString();
+
+                string cursoComprado = data.Rows[0]["curso"].ToString();
+                LabelCursoComprado.Text = cursoComprado;
                 LabelCompraTipoCurso.Text = data.Rows[0]["cursoTipo"].ToString();
                 string sede = data.Rows[0]["sede"].ToString();
                 LabelCompraSede.Text = sede;
                 LabelCompraSedeH.Text = sede;
                 LabelSedeMostrar.Text = sede;
                 LabelApoID.Text = data.Rows[0]["apoderadoID"].ToString();
-                LabelApoName.Text = data.Rows[0]["apoNombre"].ToString();
-                LabelApoPaterno.Text = data.Rows[0]["apoPaterno"].ToString();
-                LabelApoMaterno.Text = data.Rows[0]["AP_Materno"].ToString();
-                LabelApoMail.Text = data.Rows[0]["Email"].ToString();
-                LabelApoDireccion.Text = data.Rows[0]["Direccion"].ToString();
-                LabelApoDireccionComuna.Text = data.Rows[0]["NombreComuna"].ToString();
+                LabelApoName.Text = data.Rows[0]["apoNombre"].ToString().ToLower();
+                LabelApoPaterno.Text = data.Rows[0]["apoPaterno"].ToString().ToLower();
+                LabelApoMaterno.Text = data.Rows[0]["AP_Materno"].ToString().ToLower();
+                LabelApoMail.Text = data.Rows[0]["Email"].ToString().ToLower();
+                LabelApoDireccion.Text = data.Rows[0]["Direccion"].ToString().ToLower();
+                LabelApoDireccionComuna.Text = data.Rows[0]["NombreComuna"].ToString().ToLower();
                 LabelApoDireccionComunaID.Text = data.Rows[0]["idComunas"].ToString();
                 LabelApoDireccionRegion.Text = data.Rows[0]["NombreRegion"].ToString();
                 LabelApoDireccionRegionID.Text = data.Rows[0]["idRegiones"].ToString();
@@ -493,6 +634,8 @@ namespace Web.Inscripcion
                     }
                 }
 
+                Diagnostico(id, cursoComprado);
+
             }
             else
             {
@@ -559,6 +702,9 @@ namespace Web.Inscripcion
                                 LabelNivelRespaldo.Text = result;
                                 string sede = LabelCompraSede.Text;
                                 SelectCurso(sede, "diagnostico", nivelTest, result);
+
+                                div_opciones.Visible = false;
+                                div_resultado_diagnostico.Visible = false;
                             }
                         }
                     }
@@ -567,6 +713,10 @@ namespace Web.Inscripcion
                         CargaDatosApoderado(id);
                     }
                 }
+            }
+            else
+            {
+
             }
         }
 
@@ -591,8 +741,7 @@ namespace Web.Inscripcion
             Label lblnombre = (Label)e.Item.FindControl("lblCursoNom");
 
             table_cursos_seleccionado.Visible = true;
-            div_select_horario.Visible = false;
-            div_fin.Visible = true;
+            div_select_horario.Visible = false;           
             LinkButtonCambiarSede.Visible = false;
 
 
@@ -623,7 +772,7 @@ namespace Web.Inscripcion
             CargaRegion();
             ListaEditarRegion.SelectedValue = LabelApoDireccionRegion.Text;
             ListaEditarRegion_SelectedIndexChanged(sender, e);
-            ListaEditarComuna.SelectedValue = LabelApoDireccionComuna.Text;
+            ListaEditarComuna.SelectedValue = LabelApoDireccionComuna.Text.ToUpper();
         }
 
         protected void LinkButtonEditarCancelar_Click(object sender, EventArgs e)
@@ -634,9 +783,8 @@ namespace Web.Inscripcion
 
         protected void LinkButtonCambiarSede_Click(object sender, EventArgs e)
         {
-            row_sede.Visible = false;
-            row_sede_cambio.Visible = true;
-            row_sede_cambio_btn.Visible = true;
+            row_sede_x.Visible = false;
+            row_sede_cambio_x.Visible = true;            
 
             ListaSedes.Items.Clear();
             ListaSedes.Items.Add("Selecciona una sede");
@@ -648,15 +796,13 @@ namespace Web.Inscripcion
 
         protected void LinkButtonSedeCancelar_Click(object sender, EventArgs e)
         {
-            row_sede.Visible = true;
-            row_sede_cambio.Visible = false;
-            row_sede_cambio_btn.Visible = false;
+            row_sede_x.Visible = true;
+            row_sede_cambio_x.Visible = false;
         }
 
         protected void LinkButtonCambiar_Click(object sender, EventArgs e)
         {
-            div_select_horario.Visible = true;
-            div_fin.Visible = false;
+            div_select_horario.Visible = true;          
             table_cursos_seleccionado.Visible = false;
             LinkButtonCambiarSede.Visible = true;
         }
@@ -778,9 +924,8 @@ namespace Web.Inscripcion
             SelectCurso(sede, "CAMBIO", nivelID, LabelNivelRespaldo.Text);
             LabelCompraSedeH.Text = sede;
             LabelSedeMostrar.Text = sede;
-            row_sede.Visible = true;
-            row_sede_cambio.Visible = false;
-            row_sede_cambio_btn.Visible = false;
+            row_sede_x.Visible = true;
+            row_sede_cambio_x .Visible = false;
         }
 
         protected void ListaEditarComuna_SelectedIndexChanged(object sender, EventArgs e)
@@ -884,6 +1029,20 @@ namespace Web.Inscripcion
         {
             string id = TextBoxInscpApo.Text;
             CargaDatosApoderado(id);
+        }
+
+        protected void LinkButtonContinuar_Click(object sender, EventArgs e)
+        {
+            string id = LabelAlumnoID.Text;
+            string curso = LabelCursoComprado.Text;
+            DiagnosticoContinuar(id, curso);
+        }
+
+        protected void LinkButtonRepetir_Click(object sender, EventArgs e)
+        {
+            string id = LabelAlumnoID.Text;
+            string curso = LabelCursoComprado.Text;
+            DiagnosticoRepetir(id, curso);
         }
     }
 }

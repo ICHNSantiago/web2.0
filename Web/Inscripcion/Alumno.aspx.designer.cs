@@ -447,6 +447,42 @@ namespace Web.Inscripcion
         protected global::System.Web.UI.WebControls.LinkButton LinkButtonDiagnostico;
 
         /// <summary>
+        /// Control div_resultado_diagnostico.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_resultado_diagnostico;
+
+        /// <summary>
+        /// Control LabelNivelAlcanzado.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelNivelAlcanzado;
+
+        /// <summary>
+        /// Control LinkButtonContinuar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonContinuar;
+
+        /// <summary>
+        /// Control LinkButtonRepetir.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonRepetir;
+
+        /// <summary>
         /// Control div_horario.
         /// </summary>
         /// <remarks>
@@ -492,13 +528,13 @@ namespace Web.Inscripcion
         protected global::System.Web.UI.WebControls.Label LabelCompraModalidad;
 
         /// <summary>
-        /// Control row_sede.
+        /// Control row_sede_x.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableRow row_sede;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell row_sede_x;
 
         /// <summary>
         /// Control LabelCompraSedeH.
@@ -519,13 +555,13 @@ namespace Web.Inscripcion
         protected global::System.Web.UI.WebControls.LinkButton LinkButtonCambiarSede;
 
         /// <summary>
-        /// Control row_sede_cambio.
+        /// Control row_sede_cambio_x.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableRow row_sede_cambio;
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell row_sede_cambio_x;
 
         /// <summary>
         /// Control ListaSedes.
@@ -537,15 +573,6 @@ namespace Web.Inscripcion
         protected global::System.Web.UI.WebControls.DropDownList ListaSedes;
 
         /// <summary>
-        /// Control row_sede_cambio_btn.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableRow row_sede_cambio_btn;
-
-        /// <summary>
         /// Control LinkButtonSedeCancelar.
         /// </summary>
         /// <remarks>
@@ -553,15 +580,6 @@ namespace Web.Inscripcion
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton LinkButtonSedeCancelar;
-
-        /// <summary>
-        /// Control LinkButtonSedeCambiar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton LinkButtonSedeCambiar;
 
         /// <summary>
         /// Control table_cursos_seleccionado.
@@ -627,42 +645,6 @@ namespace Web.Inscripcion
         protected global::System.Web.UI.WebControls.LinkButton LinkButtonCambiar;
 
         /// <summary>
-        /// Control div_select_horario.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_select_horario;
-
-        /// <summary>
-        /// Control LabelSedeMostrar.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelSedeMostrar;
-
-        /// <summary>
-        /// Control DataListDisponibles.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DataListDisponibles;
-
-        /// <summary>
-        /// Control div_fin.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_fin;
-
-        /// <summary>
         /// Control CheckBoxValidar.
         /// </summary>
         /// <remarks>
@@ -706,6 +688,51 @@ namespace Web.Inscripcion
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTableRow row_error_finalizar;
+
+        /// <summary>
+        /// Control div_select_horario.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_select_horario;
+
+        /// <summary>
+        /// Control LabelSedeMostrar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelSedeMostrar;
+
+        /// <summary>
+        /// Control div_horarios_disponibles.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_horarios_disponibles;
+
+        /// <summary>
+        /// Control DataListDisponibles.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DataList DataListDisponibles;
+
+        /// <summary>
+        /// Control div_horarios_disponibles_no.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_horarios_disponibles_no;
 
         /// <summary>
         /// Control div_fin_Inscripc.
