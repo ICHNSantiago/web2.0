@@ -19,9 +19,9 @@ namespace Web.cursos.kid
         {
             string nomnbre = "BLACK FRIDAY " + TextBoxApoderadoNombre.Text + " " + TextBoxApoderadoPaterno.Text;
             string mail = TextBoxApoderadoMail.Text;
-
+            string fono = TextBoxApoderadoFono.Text;
             Nlead nlead = new Nlead();
-            int leadID = nlead.CrearLead(nomnbre, mail, "0", "K");
+            int leadID = nlead.CrearLead(nomnbre, mail, fono, "K");
 
             if (leadID > 0)
             {
@@ -48,7 +48,18 @@ namespace Web.cursos.kid
 
         public bool GrabaAlumno()
         {
-            string id = TextBoxAlumnoRun.Text.Trim().ToUpper();
+
+            string id;
+
+            if (LabelTipoDocAlum.Text == "Run")
+            {
+                id = TextBoxAlumnoRun.Text.Trim().ToUpper();
+            }
+            else
+            {
+                id = TextBoxAlumnoPasa.Text.Trim().ToUpper();
+            }
+            
             string nombre = TextBoxAlumnoNombre.Text.Trim().ToUpper();
             string paterno = TextBoxAlumnoPaterno.Text.Trim().ToUpper();
             string materno = TextBoxAlumnoMaterno.Text.Trim().ToUpper();
@@ -81,7 +92,15 @@ namespace Web.cursos.kid
             Tr_apo_nombre.Visible = false;
             Tr_apo_id.Visible = false;
 
-            string id = TextBoxApoderadoRun.Text.Trim().ToUpper();
+            string id;
+            if (LabelTipoDoc.Text == "Pasaporte")
+            {
+                id = TextBoxApoderadoPasaporte.Text;
+            }
+            else
+            {
+                id = TextBoxApoderadoRun.Text;
+            }
             string nombre = TextBoxApoderadoNombre.Text.Trim().ToUpper();
             string paterno = TextBoxApoderadoPaterno.Text.Trim().ToUpper();
             string materno = TextBoxApoderadoMaterno.Text.Trim().ToUpper();
@@ -107,7 +126,17 @@ namespace Web.cursos.kid
                                         {
                                             string comuma = LabelComunaID.Text;
                                             Ncotizacion ncotizacion = new Ncotizacion();
-                                            string alumnoID = TextBoxAlumnoRun.Text;
+
+                                            string alumnoID;
+                                            if (LabelTipoDocAlum.Text == "Pasaporte")
+                                            {
+                                                alumnoID = TextBoxAlumnoPasa.Text;
+                                            }
+                                            else
+                                            {
+                                                alumnoID = TextBoxAlumnoRun.Text;
+                                            }
+
 
                                             string resultado = ncotizacion.IngresarApoderado(alumnoID, id, paterno, materno, nombre, comuma, direccion, fono, mail);
 
@@ -473,6 +502,11 @@ namespace Web.cursos.kid
             }
 
             ListaComuna.Items.Remove("Sin Comuna");
+
+            if (LabelTipoDoc.Text == "Pasaporte")
+            {
+                ClientScript.RegisterStartupScript(GetType(), "Popup", "mostrar(2);", true);
+            }
         }
 
 
@@ -580,6 +614,11 @@ namespace Web.cursos.kid
             string comunaID = nRegion.ComunaID(idRegion, comuna);
             LabelComunaID.Text = comunaID.ToString();
             TextBoxAlumnoDireccion.Focus();
+
+            if (LabelTipoDoc.Text == "Pasaporte")
+            {
+                ClientScript.RegisterStartupScript(GetType(), "Popup", "mostrar(2);", true);
+            }
         }
 
         protected void CheckBoxTerminos_CheckedChanged(object sender, EventArgs e)
@@ -657,6 +696,80 @@ namespace Web.cursos.kid
             }
         }
 
+        protected void TextBoxAlumnoPasa_TextChanged(object sender, EventArgs e)
+        {
+            string id = TextBoxAlumnoPasa.Text;
+            Ncotizacion ncotizacion = new Ncotizacion();
+            DataTable data = ncotizacion.BuscarAlumno(id);
+
+            row_btn_next.Visible = true;
+            row_btn_mensaje_01.Visible = false;
+            row_btn_mensaje_02.Visible = false;
+
+            if (data.Rows.Count > 0)
+            {
+                TextBoxAlumnoNombre.Text = data.Rows[0]["Nombres"].ToString();
+                TextBoxAlumnoPaterno.Text = data.Rows[0]["AP_Paterno"].ToString();
+                TextBoxAlumnoMaterno.Text = data.Rows[0]["AP_Materno"].ToString();
+                TextBoxAlumnoMail.Text = data.Rows[0]["Email"].ToString();
+                TextBoxAlumnoNace.Text = data.Rows[0]["FechaNacimiento"].ToString();
+                TextBoxAlumnoFono.Text = data.Rows[0]["Fono"].ToString();
+                LabelTipoDocAlum.Text = "Pasaporte";
+
+                DateTime nace = DateTime.Parse(data.Rows[0]["FechaNacimiento"].ToString());
+                DateTime hoy = DateTime.Parse(DateTime.Now.ToString("yyyy-MM-dd"));
+
+                int year = hoy.Year - nace.Year;
+                if (hoy.Month < nace.Month || (hoy.Month == nace.Month && hoy.Day < nace.Day))
+                {
+                    year--;
+                }
+
+                bool validar = false;
+
+                if (year >= 12)
+                {
+                    if (year <= 17)
+                    {
+                        validar = true;
+                    }
+                }
+
+                if (!validar)
+                {
+                    row_btn_next.Visible = false;
+                    row_btn_mensaje_01.Visible = true;
+                    row_btn_mensaje_02.Visible = true;
+
+                    if (year > 17)
+                    {
+                        LinkButtonCambioPrograma.PostBackUrl = "~/cursos/adults/Index.aspx";
+                    }
+                    else if (year >= 11 || year <= 7)
+                    {
+                        LinkButtonCambioPrograma.PostBackUrl = "~/cursos/kid/Index.aspx";
+                    }
+                    else if (year >= 4 || year <= 6)
+                    {
+                        LinkButtonCambioPrograma.PostBackUrl = "~/cursos/pre/Index.aspx";
+                    }
+                    else if (year >= 12 || year <= 17)
+                    {
+                        LinkButtonCambioPrograma.PostBackUrl = "~/cursos/teen/Index.aspx";
+                    }
+                }
+            }
+            else
+            {
+                TextBoxAlumnoNombre.Focus();
+            }
+
+            if (LabelTipoDocAlum.Text == "Pasaporte")
+            {
+                ClientScript.RegisterStartupScript(GetType(), "Popup", "mostrarAlum(2);", true);
+            }
+        }
+
 
         protected void LinkButtonNextApo_Click(object sender, EventArgs e)
         {
@@ -696,36 +809,43 @@ namespace Web.cursos.kid
                                     else
                                     {
                                         Tr_fono2.Visible = true;
+                                        ClientScript.RegisterStartupScript(GetType(), "Popup", "mostrarAlum(2);", true);
                                     }
                                 }
                                 else
                                 {
                                     Tr_fono.Visible = true;
+                                    ClientScript.RegisterStartupScript(GetType(), "Popup", "mostrarAlum(2);", true);
                                 }
                             }
                             else
                             {
                                 Tr_mail.Visible = true;
+                                ClientScript.RegisterStartupScript(GetType(), "Popup", "mostrarAlum(2);", true);
                             }
                         }
                         else
                         {
                             Tr_nace.Visible = true;
+                            ClientScript.RegisterStartupScript(GetType(), "Popup", "mostrarAlum(2);", true);
                         }
                     }
                     else
                     {
                         Tr_paterno.Visible = true;
+                        ClientScript.RegisterStartupScript(GetType(), "Popup", "mostrarAlum(2);", true);
                     }
                 }
                 else
                 {
                     Tr_nombre.Visible = true;
+                    ClientScript.RegisterStartupScript(GetType(), "Popup", "mostrarAlum(2);", true);
                 }
             }
             else
             {
-                Tr_id.Visible = true;
+                Tr_id.Visible = true; ClientScript.RegisterStartupScript(GetType(), "Popup", "mostrarAlum(2);", true);
+
             }
         }
 
@@ -735,10 +855,31 @@ namespace Web.cursos.kid
             {
                 if (GrabaApoderado())
                 {
-                    LabelPagoALumnoID.Text = TextBoxAlumnoRun.Text;
+                    string apoID;
+                    if (LabelTipoDoc.Text == "Pasaporte")
+                    {
+                        apoID = TextBoxApoderadoPasaporte.Text;
+                    }
+                    else
+                    {
+                        apoID = TextBoxApoderadoRun.Text;
+                    }
+
+                    string alumID;
+                    if (LabelTipoDocAlum.Text == "Pasaporte")
+                    {
+                        alumID = TextBoxAlumnoPasa.Text;
+                    }
+                    else
+                    {
+                        alumID = TextBoxAlumnoRun.Text;
+                    }
+
+
+                    LabelPagoALumnoID.Text = alumID;
                     LabelPagoALumnoNombre.Text = TextBoxAlumnoNombre.Text + " " + TextBoxAlumnoPaterno.Text + " " + TextBoxAlumnoMaterno.Text;
                     LabelPagoApoderadoNombre.Text = TextBoxApoderadoNombre.Text + " " + TextBoxApoderadoPaterno.Text + " " + TextBoxApoderadoMaterno.Text;
-                    LabelPagoApoderadoID.Text = TextBoxApoderadoRun.Text;
+                    LabelPagoApoderadoID.Text = apoID;
                     LabelPagoApoderadoDireccion.Text = TextBoxAlumnoDireccion.Text + ", " + ListaComuna.SelectedItem.Text;
                     LabelPagoApoderadoFono.Text = "+56" + TextBoxApoderadoFono.Text;
                     LabelPagoApoderadoMail.Text = TextBoxApoderadoMail.Text;
@@ -782,9 +923,55 @@ namespace Web.cursos.kid
             }
         }
 
+        protected void TextBoxApoderadoPasa_TextChanged(object sender, EventArgs e)
+        {
+            string id = TextBoxApoderadoPasaporte.Text;
+            Ncotizacion ncotizacion = new Ncotizacion();
+            DataTable data = ncotizacion.BuscarApoderado(id);
+
+            if (data.Rows.Count > 0)
+            {
+                TextBoxApoderadoNombre.Text = data.Rows[0]["Nombres"].ToString();
+                TextBoxApoderadoPaterno.Text = data.Rows[0]["AP_Paterno"].ToString();
+                TextBoxApoderadoMaterno.Text = data.Rows[0]["AP_Materno"].ToString();
+                TextBoxApoderadoMail.Text = data.Rows[0]["Email"].ToString();
+                TextBoxApoderadoFono.Text = data.Rows[0]["Fono"].ToString();
+                CrearLead();
+                LabelTipoDoc.Text = "Pasaporte";
+                try
+                {
+                    ListaRegion.SelectedValue = data.Rows[0]["NombreRegion"].ToString();
+                    ListaRegionAlumno_SelectedIndexChanged(sender, e);
+                    ListaComuna.SelectedValue = data.Rows[0]["NombreComuna"].ToString();
+                    ListaComuna_SelectedIndexChanged(sender, e);
+                    TextBoxAlumnoDireccion.Text = data.Rows[0]["Direccion"].ToString();
+                }
+                catch (Exception)
+                {
+                    TextBoxAlumnoDireccion.Text = string.Empty;
+                }
+
+            }
+            else
+            {
+                TextBoxApoderadoNombre.Focus();
+            }
+
+
+            if (LabelTipoDoc.Text == "Pasaporte")
+            {
+                ClientScript.RegisterStartupScript(GetType(), "Popup", "mostrar(2);", true);
+            }
+        }
+
         protected void TextBoxApoderadoMail_TextChanged(object sender, EventArgs e)
         {
             CrearLead();
+
+            if (LabelTipoDoc.Text == "Pasaporte")
+            {
+                ClientScript.RegisterStartupScript(GetType(), "Popup", "mostrar(2);", true);
+            }
         }
     }
 }

@@ -21,8 +21,8 @@ namespace Web.Diagnostico.Adults
             int nivel = int.Parse(data.Rows[0]["idcursos"].ToString());
             LabelNivelID.Text = nivel.ToString();
             LabelIntentos.Text = data.Rows[0]["intentos"].ToString();
+            LabeldiagnosticoID.Text = data.Rows[0]["id"].ToString();
 
-            
             switch (nivel)
             {
                 case 39:
@@ -150,7 +150,9 @@ namespace Web.Diagnostico.Adults
                 string resultado = Convert.ToBase64String(encryted);
 
                 string token = Convert.ToString(Request["alumno"]);
-                Response.Redirect("Index.aspx?alum=" + token + "&repertir=" + resultado);
+
+                string idTest = LabeldiagnosticoID.Text;
+                Response.Redirect("Index.aspx?alum=" + token + "&repertir=" + resultado + "&id" + idTest);
             }
         }
     }

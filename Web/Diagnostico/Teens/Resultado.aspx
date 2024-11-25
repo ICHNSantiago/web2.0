@@ -13,6 +13,8 @@
 
     <asp:Label ID="LabelTestNivel" Visible="false" runat="server" Text="Label"></asp:Label>
     <asp:Label ID="LabelTestTipo" Visible="false" runat="server" Text="Label"></asp:Label>
+    <asp:Label ID="LabeldiagnosticoID" Visible="false" runat="server" Text="Label"></asp:Label>
+
     <div class="container-fluid alert-secondary about py-5"  onload="noBack();" onpageshow="if (event.persisted) noBack();" onunload=" ">
         <div class="row mt-2">
             <div class="col-md-2">

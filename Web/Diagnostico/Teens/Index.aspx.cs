@@ -15,7 +15,7 @@ namespace Web.Diagnostico.Teens
         public void DiagnosticoRepetir(string alumnoID)
         {
             Ndiagnostico ndiagnostico = new Ndiagnostico();
-            DataTable data = ndiagnostico.BuscarKids(alumnoID);
+            DataTable data = ndiagnostico.BuscarTeens(alumnoID);
 
             if (data.Rows.Count > 0)
             {
@@ -155,7 +155,8 @@ namespace Web.Diagnostico.Teens
 
                     if (result == "si")
                     {
-                        DiagnosticoRepetir(token);
+                        string id = Convert.ToString(Request["id"]);
+                        DiagnosticoRepetir(token, id);
                     }
                     else
                     {

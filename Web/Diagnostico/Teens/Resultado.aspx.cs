@@ -1,4 +1,5 @@
 ﻿using Negocio;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -20,7 +21,7 @@ namespace Web.Diagnostico.Teens
             int nivel = int.Parse(data.Rows[0]["idcursos"].ToString());
             LabelNivelID.Text = nivel.ToString();
             LabelIntentos.Text = data.Rows[0]["intentos"].ToString();
-
+            LabeldiagnosticoID.Text = data.Rows[0]["id"].ToString();
 
             switch (nivel)
             {
@@ -125,7 +126,9 @@ namespace Web.Diagnostico.Teens
                 string resultado = Convert.ToBase64String(encryted);
 
                 string token = Convert.ToString(Request["alumno"]);
-                Response.Redirect("Index.aspx?alum=" + token + "&repertir=" + resultado);
+
+                string idTest = LabeldiagnosticoID.Text;
+                Response.Redirect("Index.aspx?alum=" + token + "&repertir=" + resultado + "&id" + idTest);
             }
         }
     }
