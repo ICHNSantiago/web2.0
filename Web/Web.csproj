@@ -187,6 +187,7 @@
     <Content Include="Error\404.aspx" />
     <Content Include="Error\GenericError.aspx" />
     <Content Include="img\blackfriday.png" />
+    <Content Include="img\Black_Friday.jpg" />
     <Content Include="img\evaluacion.png" />
     <Content Include="img\inicial.png" />
     <Content Include="img\libreria\libreria01.png" />

@@ -38,7 +38,7 @@ namespace Negocio
             DateTime halloweenIni = halloween.AddDays(-20);
             DateTime halloweenFin = halloween.AddDays(1);
 
-            DateTime thanksgiving = new DateTime(hoy.Year, 11, 24);
+            DateTime thanksgiving = new DateTime(hoy.Year, 11, 28);
             DateTime thanksgivingIni = thanksgiving.AddDays(-20);
             DateTime thanksgivingFin = thanksgiving.AddDays(1);
                    
