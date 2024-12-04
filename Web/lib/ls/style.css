@@ -333,8 +333,26 @@
 
     .header-carousel .owl-nav .owl-next {
         bottom: -30px;
+        left: 60%;
+        transform: translateX(50%);
+        margin-left: 45px;
+    }
+
+    .american-carousel .american-carousel-item {
+        height: 950px;
+    }
+
+    .american-carousel .owl-nav .owl-prev {
+        bottom: -30px;
         left: 50%;
         transform: translateX(-50%);
+        margin-left: -45px;
+    }
+
+    .american-carousel .owl-nav .owl-next {
+        bottom: -30px;
+        left: 60%;
+        transform: translateX(50%);
         margin-left: 45px;
     }
 }

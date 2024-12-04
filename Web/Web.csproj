@@ -188,6 +188,7 @@
     <Content Include="Error\GenericError.aspx" />
     <Content Include="img\blackfriday.png" />
     <Content Include="img\Black_Friday.jpg" />
+    <Content Include="img\postBF.jpg" />
     <Content Include="img\evaluacion.png" />
     <Content Include="img\inicial.png" />
     <Content Include="img\libreria\libreria01.png" />
@@ -1059,6 +1060,7 @@
     <Content Include="img\programas\especial.webp" />
     <Content Include="img\programas\preparar.webp" />
     <Content Include="img\programas\spring.webp" />
+    <Content Include="img\Black_Friday.webp" />
     <None Include="packages.config" />
     <Content Include="Tematica\18sep\volantin.webp" />
     <Content Include="Tematica\hallo\halloween2.webp" />

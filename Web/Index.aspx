@@ -4,13 +4,44 @@
 
     <meta name="description" content="Norteamericano, Cursos de Inglés para adultos, jovenes, niños  regulares e intensivos. Somos expertos en la enseñanza presencial. curso de inglés, español">
     <title>Cursos de Inglés - Norteamericano </title>
-    <link rel="canonical" href="https://norteamericano.cl/" />   
+    <link rel="canonical" href="https://norteamericano.cl/" />
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+    <style>
+        .header-carousel .owl-nav .owl-next {
+            bottom: 200px;
+            right: 1%;
+            transform: translateX(70%);
+            margin-right: 30px;
+        }
 
-        <!-- Google Tag Manager (noscript) -->
+        .header-carousel .owl-nav .owl-prev {
+            bottom: 200px;
+            left: 1%;
+            transform: translateX(-50%);
+            margin-left: 30px;
+        }
+
+        .header-carousel .owl-nav .owl-prev,
+        .header-carousel .owl-nav .owl-next {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-radius: 60px;
+            background: var(--bs-light);
+            color: var(--bs-primary);
+            font-size: 65px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: 0.5s;
+        }
+    </style>
+
+
+    <!-- Google Tag Manager (noscript) -->
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7349HX"
             height="0" width="0" style="display: none; visibility: hidden"></iframe>
@@ -42,23 +73,25 @@
     <div class="header-carousel owl-carousel">
         <div class="item" runat="server" id="div_banner_01">
             <a runat="server" id="link_banner_01">
-                <img runat="server" id="banner_01" class="d-block w-100" /></a>
+                <img runat="server" id="banner_01"  class="d-block w-100" />
+
+            </a>
         </div>
         <div class="item" runat="server" id="div_banner_02">
             <a runat="server" id="link_banner_02">
-                <img runat="server" id="banner_02" class="d-block w-100" /></a>
+                <img runat="server" id="banner_02"  class="d-block w-100" /></a>
         </div>
         <div class="item" runat="server" id="div_banner_03">
             <a runat="server" id="link_banner_03">
-                <img runat="server" id="banner_03" class="d-block w-100" /></a>
+                <img runat="server" id="banner_03"  class="d-block w-100" /></a>
         </div>
         <div class="item" runat="server" id="div_banner_04">
             <a runat="server" id="link_banner_04">
-                <img runat="server" id="banner_04" class="d-block w-100" /></a>
+                <img runat="server" id="banner_04"  class="d-block w-100" /></a>
         </div>
         <div class="item" runat="server" id="div_banner_05">
             <a runat="server" id="link_banner_05">
-                <img runat="server" id="banner_05" class="d-block w-100" /></a>
+                <img runat="server" id="banner_05"  class="d-block w-100" /></a>
         </div>
     </div>
     <!-- Carousel End -->
@@ -287,7 +320,7 @@
     <!-- Blog End -->
 
     <!-- FAQs Start -->
-   <%-- <div class="container-fluid faq-section bg-light py-5">
+    <%-- <div class="container-fluid faq-section bg-light py-5">
         <div class="container py-5">
             <div class="row g-5 align-items-center">
                 <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
@@ -652,10 +685,10 @@
                                 </li>
                             </ul>
 
-                         <%--   <img class="img-fluid" src="img/modal/modal.png" />--%>
+                            <%--   <img class="img-fluid" src="img/modal/modal.png" />--%>
                         </div>
                         <div id="content" class="emoji">
-                       <%--     <img class="img-fluid" src="img/modal/modal.png" />--%>
+                            <%--     <img class="img-fluid" src="img/modal/modal.png" />--%>
                         </div>
                     </div>
                 </div>

@@ -313,7 +313,7 @@
                                                             </th>
                                                         </tr>
                                                         <tr>
-                                                            <th colspan="3">
+                                                            <th colspan="4">
                                                                 <br />
                                                                 <h5>
                                                                     <span class="text-primary"><i class="far fa-check-circle me-2"></i>Estás a un paso de</span> terminar con tu inscripción.
@@ -321,26 +321,26 @@
                                                             </th>
                                                         </tr>
                                                         <tr>
-                                                            <td colspan="3">Para finalizar debes confirmar que el curso y el horario seleccionados son correcto y estarás inscrito en el Norteamericano.</td>
+                                                            <td colspan="4">Para finalizar debes confirmar que el curso y el horario seleccionados son correcto y estarás inscrito en el Norteamericano.</td>
 
                                                         </tr>
                                                         <tr>
-                                                            <td colspan="2" class="presente text-center">
+                                                            <td colspan="4" class="presente text-center">
                                                                 <asp:CheckBox ID="CheckBoxValidar" AutoPostBack="true" Text="Estoy conforme con selección del curso y el horario " runat="server" OnCheckedChanged="CheckBoxValidar_CheckedChanged" />
                                                             </td>
                                                         </tr>
                                                         <tr runat="server" id="row_validar_fin" visible="false">
-                                                            <th class="text-center">
+                                                            <th colspan="4" class="text-center">
                                                                 <asp:Label ID="Label1" CssClass="text-danger" runat="server" Text="Tienes que confirmar para finalizar tu Inscripción "></asp:Label>
                                                             </th>
                                                         </tr>
                                                         <tr>
-                                                            <td class="text-center">
+                                                            <td colspan="4" class="text-center">
                                                                 <asp:LinkButton ID="LinkButtonFinalizar" CssClass="btn btn-primary text-white cargando" runat="server" OnClick="LinkButtonFinalizar_Click"> Finalizar la Inscripción</asp:LinkButton>
                                                             </td>
                                                         </tr>
                                                         <tr runat="server" visible="false" id="row_error_finalizar">
-                                                            <td>
+                                                            <td colspan="4">
                                                                 <span class="text-danger">Sistema no se encuentra disponible, favor intente más tarde</span>
                                                             </td>
                                                         </tr>

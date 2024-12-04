@@ -11,7 +11,7 @@ namespace Web.Inscripcion
     public partial class Alumno : System.Web.UI.Page
     {
         
-        public void Diagnostico(string alumnoID, string tipo)
+        public void Diagnostico(string alumnoID, string tipo, bool renovacion)
         {
             Ndiagnostico ndiagnostico = new Ndiagnostico();
             DataTable data = new DataTable();
@@ -41,7 +41,14 @@ namespace Web.Inscripcion
             }
             else
             {
-                div_opciones.Visible = true;
+                if (renovacion)
+                {
+                    div_opciones.Visible = false;
+                }
+                else
+                {
+                    div_opciones.Visible = true;
+                }
                 div_resultado_diagnostico.Visible = false;
             }
         }
@@ -271,6 +278,42 @@ namespace Web.Inscripcion
                 case 37:
                     nuevoID = 251;
                     break;
+                case 70:
+                    nuevoID = 251;
+                    break;
+                case 71:
+                    nuevoID = 251;
+                    break;
+                case 14:
+                    nuevoID = 190;
+                    break;
+                case 15:
+                    nuevoID = 192;
+                    break;
+                case 16:
+                    nuevoID = 158;
+                    break;
+                case 17:
+                    nuevoID = 193;
+                    break;
+                case 18:
+                    nuevoID = 194;
+                    break;
+                case 19:
+                    nuevoID = 195;
+                    break;
+                case 20:
+                    nuevoID = 196;
+                    break;
+                case 21:
+                    nuevoID = 197;
+                    break;
+                case 91:
+                    nuevoID = 198;
+                    break;
+                case 92:
+                    nuevoID = 199;
+                    break;
                 default:
                     nuevoID = nivel;
                     break;
@@ -471,6 +514,7 @@ namespace Web.Inscripcion
 
             if (data.Rows.Count > 0)
             {
+                LabelNivel.Text = data.Rows[0]["Curso"].ToString();
                 div_horarios_disponibles_no.Visible = false;
                 div_horarios_disponibles.Visible = true;
                 DataListDisponibles.DataSource = data;
@@ -604,14 +648,17 @@ namespace Web.Inscripcion
 
                 data = nCompra.BuscarContratos(id);
 
+                bool renovacion = false;
                 if (data.Rows.Count > 0)
                 {
+                    renovacion = true;
                     int cant = data.Rows.Count - 1;
                     int idCurso = int.Parse(data.Rows[cant]["idCursos"].ToString());
                     int idPrograma = int.Parse(data.Rows[cant]["idPlanDeEstudios"].ToString());
                     string nuevo = NuevoNivelCurso(idCurso, idPrograma);
                     string[] nuevoNivel = nuevo.Split(';');
                     SelectCurso(sede, "diagnostico", int.Parse(nuevoNivel[0]), nuevoNivel[1]);
+                    div_opciones.Visible = false;
                 }
                 else
                 {
@@ -634,7 +681,7 @@ namespace Web.Inscripcion
                     }
                 }
 
-                Diagnostico(id, cursoComprado);
+                Diagnostico(id, cursoComprado, renovacion);
 
             }
             else

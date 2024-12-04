@@ -10,7 +10,7 @@
     <!-- Header Start -->
      <div class="container-fluid" style="background-color: #000000">
         <div class="container text-center">
-            <img class="img-fluid" src="img/Black_Friday.webp" />
+            <img class="img-fluid" src="img/postBF.jpg" />
         </div>
     </div>
     <!-- Header End -->
@@ -19,9 +19,9 @@
     <div class="container-fluid service bg-light">
         <div class="container py-5">
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 1200px;">
-                <h1 class="display-4 mb-4">Black Friday 2024</h1>
+                <h1 class="display-4 mb-4">Black Friday </h1>
                 <p class="mb-0 h5">
-                    El Black Friday 2024 ya está en el Norteamericano. ¡No te pierdas estos descuentos!
+                   ¿Todavía no compraste a precios de BlackFriday?
                     <br />
                     Es tu momento para adelantar tus compras. Ahorra en nuestros programas ¡Prepárate!               
                 </p>

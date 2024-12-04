@@ -37,10 +37,10 @@
         smartSpeed: 800,
         dots: true,
         loop: true,
-        nav : false,
+        nav : true,
         navText: [
-            '<i class="bi bi-arrow-right"></i>',
-            '<i class="bi bi-arrow-left"></i>'
+            '<i class="fas fa-chevron-circle-left" ></i>',
+            '<i class="fas fa-chevron-circle-right" ></i>'
            
         ],
     });
@@ -95,7 +95,13 @@
         autoHeight: true,
         autoplay: true,
         smartSpeed: 800,
-        loop: true,         
+        loop: true,   
+        nav: true,
+        navText: [
+            '<i class="fas fa-chevron-circle-left" ></i>',
+            '<i class="fas fa-chevron-circle-right" ></i>'
+
+        ],
       
     });
 

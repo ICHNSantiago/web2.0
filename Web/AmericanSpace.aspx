@@ -7,6 +7,38 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+
+      <style>
+      .american-carousel .owl-nav .owl-next {
+          bottom: 180px;
+          right: 1%;
+          transform: translateX(70%);
+          margin-right: 30px;
+      }
+
+      .american-carousel .owl-nav .owl-prev {
+          bottom: 180px;
+          left: 1%;
+          transform: translateX(-50%);
+          margin-left: 30px;
+      }
+
+      .american-carousel .owl-nav .owl-prev,
+      .american-carousel .owl-nav .owl-next {
+          position: absolute;
+          width: 60px;
+          height: 60px;
+          border-radius: 60px;
+          background: var(--bs-light);
+          color: var(--bs-primary);
+          font-size: 65px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: 0.5s;
+      }
+  </style>
+
         <!-- Google Tag Manager (noscript) -->
     <noscript>
         <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W7349HX"
@@ -18,7 +50,8 @@
 
     <div class="american-carousel owl-carousel">
         <div class="item" runat="server" id="div_banner_01">
-            <a runat="server" id="link_banner_01"><img runat="server" id="banner_01" class="d-block w-100" /></a>
+            <a runat="server" id="link_banner_01">
+                <img runat="server"  id="banner_01" class="d-block w-100" /></a>
         </div>
         <div class="item" runat="server" id="div_banner_02">
             <a runat="server" id="link_banner_02">
@@ -26,15 +59,15 @@
         </div>
         <div class="item" runat="server" id="div_banner_03">
             <a runat="server" id="link_banner_03">
-                <img runat="server" id="banner_03" class="d-block w-100" /></a>
+                <img runat="server"  id="banner_03" class="d-block w-100" /></a>
         </div>
         <div class="item" runat="server" id="div_banner_04">
             <a runat="server" id="link_banner_04">
-                <img runat="server" id="banner_04" class="d-block w-100" /></a>
+                <img runat="server"  id="banner_04" class="d-block w-100" /></a>
         </div>
         <div class="item" runat="server" id="div_banner_05">
             <a runat="server" id="link_banner_05">
-                <img runat="server" id="banner_05" class="d-block w-100" /></a>
+                <img runat="server"  id="banner_05" class="d-block w-100" /></a>
         </div>
     </div>
     <!-- Carousel End -->
