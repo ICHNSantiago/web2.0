@@ -9,9 +9,6 @@ namespace Web
 {
     public partial class Index : System.Web.UI.Page
     {
-
-       
-
         public void CrearLead(string nombre, string correo, string fono, string programa)
         {
             string programaSelect = string.Empty;
@@ -114,6 +111,7 @@ namespace Web
             div_banner_05.Visible = false;
 
             string tipoBanner;
+
             if (Request.Browser.IsMobileDevice)
             {
                 tipoBanner = "mobil";
@@ -124,6 +122,7 @@ namespace Web
             }
 
             NBanner nBanner = new NBanner();
+
             DataTable data = nBanner.Buscar();
 
             for (int i = 0; i < data.Rows.Count; i++)
@@ -206,32 +205,6 @@ namespace Web
                         break;
                 }
             }
-
-
-            //if (Request.Browser.IsMobileDevice)
-            //{
-            //    div_banner_01.Visible = true;
-            //    banner_01.Src = "img/carousel/mobil/20241004-m.jpg";
-            //    link_banner_01.HRef = "Contact.aspx?programa=Adultos";
-
-            //    div_banner_02.Visible = false;
-            //    banner_02.Src = "img/carousel/20240905/mobile/banner_mobile_2.jpg";
-
-            //    div_banner_03.Visible = false;
-            //    banner_03.Src = "img/carousel/20240905/mobile/banner_mobile_3.jpg";
-            //}
-            //else
-            //{
-            //    div_banner_01.Visible = true;
-            //    banner_01.Src = "img/carousel/web/20241001-w.jpg";
-            //    link_banner_01.HRef = "Contact.aspx?programa=Adultos";
-
-            //    div_banner_02.Visible = false;
-            //    banner_02.Src = "img/carousel/20240905/web/banner_2.jpg";
-
-            //    div_banner_03.Visible = false;
-            //    banner_03.Src = "img/carousel/20240905/web/banner_3.jpg";
-            //}
         }
 
         public void Fiestas()
@@ -261,10 +234,28 @@ namespace Web
                     div_programa.Attributes.Add("style", "background-image: url('Tematica/hallo/halloween4.webp'); background-repeat: no-repeat; background-size: contain");
                     break;
                 case "navidad":
-                    div_programa.Attributes.Add("style", "background-image: url('Tematica/pascua/navidad2.webp'); background-repeat: no-repeat; background-size: contain");
+
+                    // prueba de imagen gif
+                    if (Request.Browser.IsMobileDevice)
+                    {
+                        div_programa.Attributes.Add("style", "background-image: url('Tematica/pascua/navidad3m.webp'); background-repeat: no-repeat; background-size: contain");
+                    }
+                    else
+                    {
+                        div_programa.Attributes.Add("style", "background-image: url('Tematica/pascua/navidad3.webp'); background-repeat: no-repeat; background-size: contain");
+                    }
+                   
                     break;
                 case "new year":
-                    div_programa.Attributes.Add("style", "background-image: url('Tematica/newYear/happtNew2.webp'); background-repeat: no-repeat; background-size: contain");
+                    // prueba de imagen gif
+                    if (Request.Browser.IsMobileDevice)
+                    {
+                        div_programa.Attributes.Add("style", "background-image: url('Tematica/newYear/happtNew2m.webp'); background-repeat: no-repeat; background-size: contain");
+                    }
+                    else
+                    {
+                        div_programa.Attributes.Add("style", "background-image: url('Tematica/newYear/happtNew2.webp'); background-repeat: no-repeat; background-size: contain");
+                    }
                     break;
                 case "independence":
                     div_programa.Attributes.Add("style", "background-image: url('Tematica/independence/IndDay.webp'); background-repeat: no-repeat; background-size: contain");

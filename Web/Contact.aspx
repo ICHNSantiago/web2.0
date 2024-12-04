@@ -23,6 +23,7 @@
         <div class="container py-5" runat="server" id="contacto_lead">
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                 <h1 class="display-4 mb-4">Contáctanos</h1>
+                <asp:Label ID="Labelrrss" Visible="false" runat="server" Text="Web"></asp:Label>
             </div>
             <div class="row g-5">
                 <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
@@ -34,8 +35,8 @@
                 </div>
                 <div class="col-xl-5 wow fadeInRight" data-wow-delay="0.4s">
                     <div>
-                        <h4 class="text-primary">No esperes más tiempo</h4>
-                        <p class="mb-4">Da tu primer paso para aprender inglés </p>
+                        <h4 class="text-primary">Lleva tu inglés</h4>
+                        <h5 class="mb-4">al siguiente nivel con el Norteamericano.</h5>
 
                         <div class="row g-3">
                             <table class="table table-borderless text-center">

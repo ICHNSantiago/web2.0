@@ -9,6 +9,36 @@ namespace Web
     public partial class Contact : System.Web.UI.Page
     {
 
+        public int TipoRRSS()
+        {
+            string rrss = Labelrrss.Text;
+            int id;
+
+            switch (rrss)
+            {
+                case "Web":
+                id = 5;
+                    break;
+                case "Facebook":
+                    id = 6;
+                    break;
+                case "Instagram":
+                    id = 7;
+                    break;
+                case "Whatsapp":
+                    id = 4;
+                    break;
+                case "Mail":
+                    id = 3;
+                    break;
+                default:
+                    id = 5;
+                    break;
+            }
+
+            return id;
+        }
+
         public void CrearLead(string nombre, string correo, string fono, string programa)
         {
             string programaSelect = string.Empty;
@@ -54,6 +84,8 @@ namespace Web
                 estado = ticket.UserData.ToString();
             }
 
+            estado = "no";
+
             if (!estado.Equals("YES"))
             {
                 Nlead lead = new Nlead();
@@ -63,8 +95,9 @@ namespace Web
                     DataTable dataEjecutivo = lead.Ejecutivos();
                     int numn = int.Parse(dataEjecutivo.Rows[0]["idContacto"].ToString());
                     int usuario = int.Parse(dataEjecutivo.Rows[0]["idUsuario"].ToString());
+                    int rrss = TipoRRSS();
 
-                    string resultado = lead.IngresarOK(nombre, correo, fono, programaSelect, 5, usuario);
+                    string resultado = lead.IngresarOK(nombre, correo, fono, programaSelect, rrss, usuario);
 
                     if (resultado.Equals("ok"))
                     {
@@ -111,6 +144,8 @@ namespace Web
 
                 string token = Convert.ToString(Request["programa"]);
 
+                string rrss = Convert.ToString(Request["rrss"]);
+
                 if (!string.IsNullOrEmpty(token))
                 {
                     token = token.Replace("_", " ");
@@ -121,6 +156,11 @@ namespace Web
                     }
 
                     ListaPrograma.SelectedValue = token;
+                }
+
+                if (!string.IsNullOrEmpty(rrss))
+                {
+                    Labelrrss.Text = rrss;
                 }
             }
         }

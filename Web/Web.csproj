@@ -406,10 +406,14 @@
     <Content Include="Tematica\independence\4thjuly05.gif" />
     <Content Include="Tematica\independence\IndDay.png" />
     <Content Include="Tematica\newYear\happtNew1.png" />
+    <Content Include="Tematica\newYear\happtNew2.gif" />
     <Content Include="Tematica\newYear\happtNew2.png" />
+    <Content Include="Tematica\newYear\happtNew2m.gif" />
     <Content Include="Tematica\newYear\hny.gif" />
+    <Content Include="Tematica\pascua\MerryChristmas.gif" />
     <Content Include="Tematica\pascua\navidad1.png" />
     <Content Include="Tematica\pascua\navidad2.png" />
+    <Content Include="Tematica\pascua\navidad3m.gif" />
     <Content Include="Tematica\pascua\tree.gif" />
     <Content Include="Tematica\Patrick\banner_patrick.png" />
     <Content Include="Tematica\Patrick\duende.gif" />
@@ -1075,7 +1079,6 @@
     <Content Include="Tematica\Patrick\banner_patrick.webp" />
     <Content Include="Tematica\newYear\happtNew2.webp" />
     <Content Include="Tematica\hallo\halloween4.webp" />
-    <Content Include="Tematica\pascua\navidad2.webp" />
     <Content Include="Tematica\Valentin\love.webp" />
     <Content Include="Planillas\DataSetContrato.xsc">
       <DependentUpon>DataSetContrato.xsd</DependentUpon>
@@ -1099,6 +1102,9 @@
     <Content Include="Planillas\DataSetContrato.xss">
       <DependentUpon>DataSetContrato.xsd</DependentUpon>
     </Content>
+    <Content Include="Tematica\pascua\navidad3.webp" />
+    <Content Include="Tematica\pascua\navidad3m.webp" />
+    <Content Include="Tematica\newYear\happtNew2m.webp" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
