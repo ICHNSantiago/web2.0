@@ -244,7 +244,7 @@ namespace Web
                     {
                         div_programa.Attributes.Add("style", "background-image: url('Tematica/pascua/navidad3.webp'); background-repeat: no-repeat; background-size: contain");
                     }
-                   
+
                     break;
                 case "new year":
                     // prueba de imagen gif
@@ -264,7 +264,14 @@ namespace Web
                     div_programa.Attributes.Add("style", "background-image: url('Tematica/Patrick/banner_patrick.webp'); background-repeat: no-repeat; background-size: contain");
                     break;
                 case "valentin":
-                    div_programa.Attributes.Add("style", "background-image: url('Tematica/Valentin/Valentine01.png'); background-repeat: no-repeat; background-size: contain");
+                    if (Request.Browser.IsMobileDevice)
+                    {
+                        div_programa.Attributes.Add("style", "background-image: url('Tematica/Valentin/Valentine01m.webp'); background-repeat: no-repeat; background-size: contain");
+                    }
+                    else
+                    {
+                        div_programa.Attributes.Add("style", "background-image: url('Tematica/Valentin/Valentine01.webp'); background-repeat: no-repeat; background-size: contain");
+                    }
                     break;
                 case "pascua":
                     div_programa.Attributes.Add("style", "background-image: url('Tematica/easter/banner_Easter.png'); background-repeat: no-repeat; background-size: contain");
@@ -294,7 +301,7 @@ namespace Web
                 ListaPrograma.Items.Add("Spring Program Kid");
                 ListaPrograma.Items.Add("Spring Program teen");
 
-                
+
             }
         }
 

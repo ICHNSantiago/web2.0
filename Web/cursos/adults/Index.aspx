@@ -38,8 +38,8 @@
 
     <!-- About Start -->
     <div class="container-fluid alert-secondary about py-5">
-        <div class="container py-5">
-            <div class="row g-5">
+        <div class="container">
+            <div class="row g-3">
                 <div class="col-md-12 ">
                     <div class="bg-white rounded p-5 shadow">
                         <div class="row ">
@@ -104,7 +104,7 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header bg-primary">
-                            <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist" style="font-size: 20px;">
+                            <ul class="nav nav-tabs card-header-tabs flex-column flex-sm-row" id="myTab" role="tablist" style="font-size: 20px;">
                                 <li class="nav-item">
                                     <a class="nav-link active" id="tab1-tab" data-bs-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Descripción</a>
                                 </li>
@@ -120,8 +120,10 @@
                                 <li class="nav-item">
                                     <a class="nav-link" id="tab5-tab" data-bs-toggle="tab" href="#tab5" role="tab" aria-controls="tab3" aria-selected="false">Horarios</a>
                                 </li>
+                              
                             </ul>
                         </div>
+
                         <div class="card-body">
                             <div class="tab-content" id="myTabContent">
                                 <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
@@ -328,50 +330,90 @@
                                                             <hr />
                                                         </div>
                                                         <div class="col-md-12 mt-3">
-                                                            <div class="accordion" id="accordionExample">
-                                                                <div class="accordion-item">
-                                                                    <h2 class="accordion-header" id="headingOne">
-                                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                                            <h5><span class="text-primary me-2">Objetivos</span>Beginner 1 (< A1)</h5>
-                                                                        </button>
-                                                                    </h2>
-                                                                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                                                                        <div class="accordion-body">
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Emplear expresiones de presentación, saludo y despedidas informales simples.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Identificar ocupaciones y expresar necesidad y posesión de objetos en una oficina.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Identificar y expresar la relación de miembros en una familia.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Informar y preguntar dónde viven y trabajan otras personas en diálogos cortos.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Identificar e informar la ubicación de lugares en la ciudad.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Preguntar por y describir la posición de los objetos en una habitación.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Informar una actividad de trabajo de acuerdo con la fecha y hora en la que ocurre.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Identificar acciones según instrucciones sobre cómo ir de un lugar a otro.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Describir las características del clima de acuerdo con factores determinantes de las clases del ambiente.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Identificar prendas de vestir de acuerdo con el clima de las estaciones del año.<br />
-                                                                        </div>
+                                                            <div class="row text-center">
+
+                                                                <div class="col-md-12 text-start mb-3">
+                                                                    <h3><span class="text-primary me-2">Objetivos</span>del curso </h3>
+                                                                </div>
+
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Emplear expresiones de presentación, saludo y despedidas informales simples.
                                                                     </div>
                                                                 </div>
-                                                                <div class="accordion-item">
-                                                                    <h2 class="accordion-header" id="headingTwo">
-                                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                                            <h5><span class="text-primary me-2">Objetivos</span> Beginner 2 (A1)</h5>
-                                                                        </button>
-                                                                    </h2>
-                                                                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                                                                        <div class="accordion-body">
-
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Preguntar por y describir la posición de los objetos en una habitación.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Informar una actividad de trabajo de acuerdo con la fecha y hora en la que ocurre.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Identificar acciones según instrucciones sobre cómo ir de un lugar a otro.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Describir las características del clima de acuerdo con factores determinantes de las clases del ambiente.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Identificar prendas de vestir de acuerdo con el clima de las estaciones del año.<br />
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Identificar ocupaciones y expresar necesidad y posesión de objetos en una oficina.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Identificar y expresar la relación de miembros en una familia.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Informar y preguntar dónde viven y trabajan otras personas en diálogos cortos.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Identificar e informar la ubicación de lugares en la ciudad.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Preguntar por y describir la posición de los objetos en una habitación.
+                                                                    </div>
+                                                                </div>
+                                                                <%-- <div class="col-md-6 mb-3">
+                                                                        <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                            Informar una actividad de trabajo de acuerdo con la fecha y hora en la que ocurre.
                                                                         </div>
+                                                                    </div>
+                                                                    <div class="col-md-6 mb-3">
+                                                                        <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                            Identificar acciones según instrucciones sobre cómo ir de un lugar a otro.
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6 mb-3">
+                                                                        <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                            Describir las características del clima de acuerdo con factores determinantes de las clases del ambiente.
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-md-6 mb-3">
+                                                                        <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                            Identificar prendas de vestir de acuerdo con el clima de las estaciones del año.
+                                                                        </div>
+                                                                    </div>--%>
+                                                            </div>
+
+                                                            <div class="row text-center">
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Informar una actividad de trabajo de acuerdo con la fecha y hora en la que ocurre.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Identificar acciones según instrucciones sobre cómo ir de un lugar a otro.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Describir las características del clima de acuerdo con factores determinantes de las clases del ambiente.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Identificar prendas de vestir de acuerdo con el clima de las estaciones del año.
                                                                     </div>
                                                                 </div>
                                                             </div>
+
                                                         </div>
 
                                                     </div>
-
                                                 </div>
 
                                                 <div class="tab-pane fade" id="tabElementary" role="tabpanel" aria-labelledby="tab1-tab">
@@ -390,70 +432,75 @@
                                                             </p>
                                                             <hr />
                                                         </div>
-                                                        <div class="col-md-12 mt-2" >
-                                                            <div class="accordion" id="accordionExampleEle">
-                                                                <div class="accordion-item">
-                                                                    <h2 class="accordion-header" id="headingOneEle">
-                                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneEle" aria-expanded="true" aria-controls="collapseOne">
-                                                                            <h5><span class="text-primary me-2">Objetivos</span>Elementary 1 (A2)</h5>
-                                                                        </button>
-                                                                    </h2>
-                                                                    <div id="collapseOneEle" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExampleEle">
-                                                                        <div class="accordion-body">
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar vocabulario para indicar acciones a través de oraciones cortas.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar vocabulario para describir el traslado desde un lugar a otro.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Emplear expresiones para preguntar sobre tareas y responsabilidades en el trabajo.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar vocabulario para describir personalidad propia y de otros.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar vocabulario para describir apariencia propia y de otros.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar vocabulario para hablar sobre habilidades propias y de otros.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar vocabulario para hablar sobre la ejecución de tareas domésticas.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Emplear expresiones para indicar, negar y preguntar qué están haciendo otros.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar vocabulario y expresiones para hacer invitaciones.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Emplear expresiones para aceptar y rechazar invitaciones.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar vocabulario para hablar sobre actividades de tiempo libre.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar vocabulario para describir objetos tecnológicos.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar vocabulario para indicar posesión de objetos.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Emplear expresiones para solicitar usar o hacer algo.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Emplear expresiones para dar o rechazar el permiso de usar o hacer algo.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar vocabulario para hacer comparaciones entre dos objetos.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar vocabulario para planear actividades.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Emplear vocabulario y expresiones para organizar un plan en grupo.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Expresar predicciones y eventos en futuro cercano.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Emplear expresiones para indicar un problema que imposibilita la ejecución de un plan.
-                                                                        </div>
+                                                        <div class="col-md-12 mt-2">
+                                                            <div class="row text-center">
+
+                                                                <div class="col-md-12 text-start mb-3">
+                                                                    <h3><span class="text-primary me-2">Objetivos</span>del curso </h3>
+                                                                </div>
+
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Usar vocabulario para indicar acciones a través de oraciones cortas.
                                                                     </div>
                                                                 </div>
-                                                                <div class="accordion-item">
-                                                                    <h2 class="accordion-header" id="headingTwoEle">
-                                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoEle" aria-expanded="false" aria-controls="collapseTwo">
-                                                                            <h5><span class="text-primary me-2">Objetivos</span>Elementary 2 (A2)</h5>
-                                                                        </button>
-                                                                    </h2>
-                                                                    <div id="collapseTwoEle" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExampleEle">
-                                                                        <div class="accordion-body">
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Emplear expresiones para hablar sobre rutinas diarias.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar vocabulario para indicar partes del cuerpo.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Emplear expresiones para describir y preguntar acerca de malestares y accidentes.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Expresar sugerencias de soluciones para aliviar malestares y enfermedades.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Identificar vocabulario para indicar atracciones turísticas en una ciudad.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar vocabulario para solicitar transporte público.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar vocabulario para indicar lugares en la ciudad y dentro de un edificio.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Expresar información para indicar cómo llegar a un lugar.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar vocabulario para describir un viaje de vacaciones.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Identificar expresiones que describen actividades típicas en un hotel.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar vocabulario sobre para hablar sobre comida.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Emplear vocabulario y expresiones para indicar y preguntar sobre cantidades de comida.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar vocabulario para indicar los pasos en la preparación de la comida.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Identificar vocabulario en un menú y emplear expresiones para ordenar comida.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar vocabulario y expresiones para hablar y preguntar sobre eventos importantes en la vida.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Emplear vocabulario para preguntar sobre acciones y eventos del pasado.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar vocabulario para indicar en un calendario cuándo ocurrieron eventos en el pasado .<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar expresiones de tiempo para describir eventos pasados.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Expresar objetivos y planes para el futuro cercano.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Emplear expresiones para indicar el momento de los objetivos y planes en el futuro cercano<br />
-                                                                        </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Usar vocabulario para describir el traslado desde un lugar a otro.
                                                                     </div>
                                                                 </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Emplear expresiones para preguntar sobre tareas y responsabilidades en el trabajo.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Usar vocabulario para describir personalidad propia y de otros.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Usar vocabulario para describir apariencia propia y de otros.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Usar vocabulario para hablar sobre habilidades propias y de otros.
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Emplear expresiones para hablar sobre rutinas diarias.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Usar vocabulario para indicar partes del cuerpo.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Emplear expresiones para describir y preguntar acerca de malestares y accidentes.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Expresar sugerencias de soluciones para aliviar malestares y enfermedades.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Usar vocabulario para describir un viaje de vacaciones.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Usar vocabulario sobre para hablar sobre comida.
+                                                                    </div>
+                                                                </div>
+
                                                             </div>
 
                                                         </div>
@@ -478,70 +525,77 @@
                                                             </p>
                                                             <hr />
                                                         </div>
-                                                        <div class="col-md-12 mt-2" >
-                                                            <div class="accordion" id="accordionExamplePre">
-                                                                <div class="accordion-item">
-                                                                    <h2 class="accordion-header" id="headingOnePre">
-                                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOnePre" aria-expanded="true" aria-controls="collapseOne">
-                                                                            <h5><span class="text-primary me-2">Objetivos</span>Pre Intermediate 1  (A2+)</h5>
-                                                                        </button>
-                                                                    </h2>
-                                                                    <div id="collapseOnePre" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExamplePre">
-                                                                        <div class="accordion-body">
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Hablar sobre lo que se está haciendo.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Hablar sobre la familia.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Hacer y responder a invitaciones.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Responder a asugerencias.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Describir objetos similares.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Describir características personales.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Hablar sobre cómo las personas ejecutan tareas.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Expresar desacuerdo.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Expresar estado personal.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Hablar sobre actividades del pasado.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Describir emociones.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar estrategias para cambiar el tema en una conversación.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Hablar sobre preferencias en la comida.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Hablar sobre costumbres relacionadas con la comida.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Expresar lo que se quiere y lo que se necesita.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar estrategias para demostrar duda.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Identificar problemas y soluciones.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Hablar sobre lo que se necesita hacer.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Demostrar entendimiento.<br />
-                                                                        </div>
+                                                        <div class="col-md-12 mt-2">
+                                                            <div class="row text-center">
+
+                                                                <div class="col-md-12 text-start mb-3">
+                                                                    <h3><span class="text-primary me-2">Objetivos</span>del curso </h3>
+                                                                </div>
+
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Hablar sobre lo que se está haciendo.
                                                                     </div>
                                                                 </div>
-                                                                <div class="accordion-item">
-                                                                    <h2 class="accordion-header" id="headingTwoPre">
-                                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoPre" aria-expanded="false" aria-controls="collapseTwo">
-                                                                            <h5><span class="text-primary me-2">Objetivos</span>Pre Intermediate 2 (A2+)</h5>
-                                                                        </button>
-                                                                    </h2>
-                                                                    <div id="collapseTwoPre" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExamplePre">
-                                                                        <div class="accordion-body">
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Emplear expresiones para hablar sobre rutinas diarias.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar vocabulario para indicar partes del cuerpo.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Emplear expresiones para describir y preguntar acerca de malestares y accidentes.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Expresar sugerencias de soluciones para aliviar malestares y enfermedades.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Identificar vocabulario para indicar atracciones turísticas en una ciudad.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar vocabulario para solicitar transporte público.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar vocabulario para indicar lugares en la ciudad y dentro de un edificio.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Expresar información para indicar cómo llegar a un lugar.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar vocabulario para describir un viaje de vacaciones.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Identificar expresiones que describen actividades típicas en un hotel.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar vocabulario sobre para hablar sobre comida.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Emplear vocabulario y expresiones para indicar y preguntar sobre cantidades de comida.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar vocabulario para indicar los pasos en la preparación de la comida.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Identificar vocabulario en un menú y emplear expresiones para ordenar comida.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar vocabulario y expresiones para hablar y preguntar sobre eventos importantes en la vida.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Emplear vocabulario para preguntar sobre acciones y eventos del pasado.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar vocabulario para indicar en un calendario cuándo ocurrieron eventos en el pasado .<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar expresiones de tiempo para describir eventos pasados.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Expresar objetivos y planes para el futuro cercano.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Emplear expresiones para indicar el momento de los objetivos y planes en el futuro cercano<br />
-                                                                        </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Hablar sobre la familia.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Hacer y responder a invitaciones.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Responder a asugerencias.
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Describir objetos similares.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Describir características personales.
+                                                                    </div>
+                                                                </div>
+                                                                <%-- fff--%>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Emplear expresiones para hablar sobre rutinas diarias.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Usar vocabulario para indicar partes del cuerpo.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Emplear expresiones para describir y preguntar acerca de malestares y accidentes.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Expresar sugerencias de soluciones para aliviar malestares y enfermedades.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Usar vocabulario para solicitar transporte público.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Identificar expresiones que describen actividades típicas en un hotel.
                                                                     </div>
                                                                 </div>
                                                             </div>
+
 
                                                         </div>
                                                     </div>
@@ -566,84 +620,72 @@
                                                             <hr />
                                                         </div>
                                                         <div class="col-md-12 mt-2">
-                                                            <div class="accordion" id="accordionExampleLow">
-                                                                <div class="accordion-item">
-                                                                    <h2 class="accordion-header" id="headingOneLow">
-                                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneLow" aria-expanded="true" aria-controls="collapseOne">
-                                                                            <h5><span class="text-primary me-2">Objetivos</span> Low Intermediate 1 (B1)</h5>
-                                                                        </button>
-                                                                    </h2>
-                                                                    <div id="collapseOneLow" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExampleLow">
-                                                                        <div class="accordion-body">
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp; Sostener de manera fluída una descripción de variados temas dentro de temas de interés personal presentándolo como una secuencia linear.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Iniciar y seguir sin preparación una conversación sobre temas cotidianos, expresando opinión personal e intercambiando información  sobre temas de interés personal o cotidianos como la familia, y actividades de tiempo libre.
- <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Seguir la conversación y volver a mencionar información sobre  tema de la conversación para confirmar comprensión mutua entre los interlocutores.
- <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Expresar opinión, creencia, acuerdo y desacuerdo.
- <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar medios de comunicación para entregar mensajes sobre rutinas como la organización de una reunión, y para obtener servicios básicos como la reserva de una habitación de hotel o una cita médica.
- <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar expresiones para requerir información detallada.
- <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Describir síntomas de forma simple y pedir consejo sobre el uso de servicios de salud.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Expresar consejo sobre temas simples de acuerdo a la experiencia personal.
- <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Lidiar con situaciones rutinarias en tiendas, oficinas, banco, etc. para hacer devolución de una adquisición insatisfactoria.
- <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Expresar quejas.
- <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Comparar y contrastar alternativas discutiendo qué hacer, dónde ir, con quién y qué elegir.
- <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Relatar el resumen de un texto y describir la reacción y preferencia.
- <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Responder al flujo de preguntas en una conversación y preguntar por clarificación o repetición.
- <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Relatar fluida y razonablemente una descripción como una secuencia linear.
- <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Comprender y seguir el argumento de una discusión cotidiana o un tema predecible.
- <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Descubrir y transmitir información factual.
- <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Expresar datos detallados acerca de experiencias describiendo sentimientos y reacciones.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Relatar detalles sobre ocurrencias impredecibles como, por ejemplo, un accidente. .<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Pedir y seguir instrucciones detalladas.<br />
-                                                                        </div>
+
+                                                            <div class="row text-center">
+
+                                                                <div class="col-md-12 text-start mb-3">
+                                                                    <h3><span class="text-primary me-2">Objetivos</span>del curso </h3>
+                                                                </div>
+
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Sostener de manera fluída una descripción de variados temas dentro de temas de interés personal presentándolo como una secuencia linear.
                                                                     </div>
                                                                 </div>
-                                                                <div class="accordion-item">
-                                                                    <h2 class="accordion-header" id="headingTwoLow">
-                                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoLow" aria-expanded="false" aria-controls="collapseTwo">
-                                                                            <h5><span class="text-primary me-2">Objetivos</span>Low Intermediate 2 (B1+)</h5>
-                                                                        </button>
-                                                                    </h2>
-                                                                    <div id="collapseTwoLow" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExampleLow">
-                                                                        <div class="accordion-body">
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Explicar los puntos principales en una idea o problema con precisión razonable.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Expresar claramente sentimientos acerca de experiencias y dar razones para explicarlos.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Dar información sobre actividades no ruitnarias y rutinarias relacionadas con intereses personales en el campo profesional.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Intercambiar, revisar y confirmar información y explicar las razones de un problema.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Iniciar una conversación sobre temas cotidianos y mantenerla  haciendo preguntas relativamente espontáneas acerca de una experiencia o evento expresando reacción y opinión .<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Seguir el flujo de la conversación sobre temas generales.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Describir cómo se hace algo dando instrucciones detalladas.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Explicar la razón de un problema, discutir la solución comparando y contrastando alternativas.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Expresar pensamientos sobre temas abstractos relacionados con la cultura.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Desarrollar un argumento que puede ser comprendido por otros sin dificultad.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Expresar empatía e interés haciendo preguntas y repondienco a enfoques simples.   
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Transmitir los puntos principales desde textos largos escritos en lenguaje simple y sobre temas de interés personal con el fin de comprender el significado de las expresiones empleadas.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Preparar presentaciones sobre un tema familiar concetado al área de trabajo e indicar similitudes y diferencias entre, por ejemplo, productos, lugares, planes.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Dar razones para justificar un punto de vista.  
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Resumir, reportar, y expresar la opinión acerca de información factual sobre actividades rutinarias y no rutinarias.  
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Explicar la razón de un problema.  
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Comentar y resumir las perspectivas de otros sobre información factual.  
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Transmitir anuncios cortos sobre temas pertinentes a ocurrencias diarias a pesar de las variantes de acento y entonación.
-   <br />
-                                                                        </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Seguir la conversación y volver a mencionar información sobre tema de la conversación para confirmar comprensión mutua entre los interlocutores.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Expresar opinión, creencia, acuerdo y desacuerdo.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Usar expresiones para requerir información detallada.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Expresar quejas.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Expresar datos detallados acerca de experiencias describiendo sentimientos y reacciones.
+                                                                    </div>
+                                                                </div>
+                                                                <%--   low 2--%>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Explicar los puntos principales en una idea o problema con precisión razonable.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Expresar claramente sentimientos acerca de experiencias y dar razones para explicarlos.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Seguir el flujo de la conversación sobre temas generales.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Describir cómo se hace algo dando instrucciones detalladas.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Desarrollar un argumento que puede ser comprendido por otros sin dificultad.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Dar razones para justificar un punto de vista.
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -661,93 +703,88 @@
                                                         <div class="col-md-12 mt-2" style="text-align: justify">
                                                             <p>
                                                                 Curso de Inglés nivel intermedio alto para adultos. Los contenidos están estructurados para el desarrollo de las habilidades 
-con significativa e inmediata retroalimentación para la gramática remedial. Incluye, además, la práctica de elocución variada. 
-El vocabulario se contextualiza en temas de interés general, y cubre las necesidades para adquirir competencias lingüísticas 
-de acercamiento a los niveles avanzados. Desde este nivel (Upper-Intermediate 2), los alumnos pueden optar a curso de preparación 
-de examen internacional TOEFL (Test of English as a Foreign Language) para obtener un resultado promedio de 80 puntos. 
+                                                                con significativa e inmediata retroalimentación para la gramática remedial. Incluye, además, la práctica de elocución variada. 
+                                                                El vocabulario se contextualiza en temas de interés general, y cubre las necesidades para adquirir competencias lingüísticas 
+                                                                de acercamiento a los niveles avanzados. Desde este nivel (Upper-Intermediate 2), los alumnos pueden optar a curso de preparación 
+                                                                de examen internacional TOEFL (Test of English as a Foreign Language) para obtener un resultado promedio de 80 puntos. 
                                                             </p>
                                                             <hr />
                                                         </div>
-                                                        <div class="col-md-12 mt-2" >
-                                                            <div class="accordion" id="accordionExampleUpper">
-                                                                <div class="accordion-item">
-                                                                    <h2 class="accordion-header" id="headingOneUpper">
-                                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneUpper" aria-expanded="true" aria-controls="collapseOne">
-                                                                            <h5><span class="text-primary me-2">Objetivos</span>Upper Intermediate 1 (B2)</h5>
-                                                                        </button>
-                                                                    </h2>
-                                                                    <div id="collapseOneUpper" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExampleUpper">
-                                                                        <div class="accordion-body">
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Transmitir diferentes grados de emoción y destacar el significado de eventos y experiencias personales.   
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Presentar y describir clara y detalladamente una variedad amplia de temas de interés personal con el apoyo de ideas, puntos secundarios y ejemplos relevantes.   
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Explicar un punto de vista sobre un tema expresando ventajas y desventajas en relación con varias opciones.   
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Destacar el significado personal de eventos y experiencias sosteniendo argunmentos y explicaciones relevantes.   
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Sostener una opinión, evaluar propuestas, y responder a hipótesis.   
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Participar activamente en discusiones de registro formal.   
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Describir calarmanete y con detalles la ejecución de un procedimiento.   
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Expresar opiniones incluyendo explicación , argumentos y comentarios relevantes.  
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Participar activamente en discusiones de registro informal sobre temas cotidianos incluyendo puntos de vista, haciendo y respondiendo hipótesis, y evaluando alternativas propuestas.   
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Planear lo que se quiere decir y los medios para hacerlo considerando los efectos en el receptor.   
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Describir claramente un asunto de interés o problema especulando  acerca de las causas o consecuencias, y tomando en cuenta ventajas y desventajas desde enfoques diferentes.  
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Desarrollar un argumento claro incluyendo ejemplos relevantes.   
-                                                                            <br />
-                                                                        </div>
+                                                        <div class="col-md-12 mt-2">
+
+
+                                                            <div class="row text-center">
+
+                                                                <div class="col-md-12 text-start mb-3">
+                                                                    <h3><span class="text-primary me-2">Objetivos</span>del curso </h3>
+                                                                </div>
+
+
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Transmitir diferentes grados de emoción y destacar el significado de eventos y experiencias personales.
                                                                     </div>
                                                                 </div>
-                                                                <div class="accordion-item">
-                                                                    <h2 class="accordion-header" id="headingTwoUpper">
-                                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwoUpper" aria-expanded="false" aria-controls="collapseTwo">
-                                                                            <h5><span class="text-primary me-2">Objetivos</span>Upper Intermediate 2 (B2)</h5>
-                                                                        </button>
-                                                                    </h2>
-                                                                    <div id="collapseTwoUpper" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExampleUpper">
-                                                                        <div class="accordion-body">
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Participar activamente en discusiones afirmando hechos y respondiendo opiniones sobre temas de interés común.  
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Transmitir información detallada y argumentos como, por ejemplo, los puntos importantes en textos estructurados y complejos sobre temas de interés profesional, académico, y personal.  
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Explicar un punto de vista incluyendo la opinión sobre ventajas y desventajas entre varias opciones.  
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Intervenir apropiadamente en discusiones. 
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Preparar presentaciones claras para expresar razones de apoyo a o en contra un punto de vista en particular incluyendo ventajas y desventajas en relación con variadas opciones. 
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Redactar noticias y puntos de vista de otros. 
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Redactar descripciones detalladas sobre temas relacionados con intereses personales.  
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Describir con detalles el significado de eventos y experiencias personales.  
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Contribuir efectivamentes en el intercambio comunicativo  en grupos con un moderador de la discusión. 
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Transmitir diferentes grados de emoción destacando el significado personal de eventos y experiencias relacionadas con acontecimientos de interés general.  
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Declarar requerimientos y hacer preguntas detalladas en relación con la entrega de servicios complejos. 
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Diferenciar entre opinión y hecho.  
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Explicar claramente conceptos y procedimientos con base en la expresión de comparación y contraste.  
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Participar de conversaciones extendidas en una amplia gama de temas general es a pesar de las interrupciones. 
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Recibir y reponder de forma escrita a información requerida  para un propósito en particular.<br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar medios de comunicación para variados propósitos personales y profesionales respondiendo a preguntas de clarificación por elocución o terminología.                                      
-                                                                        </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Explicar un punto de vista sobre un tema expresando ventajas y desventajas en relación con varias opciones.
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Destacar el significado personal de eventos y experiencias sosteniendo argunmentos y explicaciones relevantes.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Planear lo que se quiere decir y los medios para hacerlo considerando los efectos en el receptor.
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Desarrollar un argumento claro incluyendo ejemplos relevantes.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Participar activamente en discusiones de registro formal.
+                                                                    </div>
+                                                                </div>
+                                                                <%--   upper 2--%>
+
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Participar activamente en discusiones afirmando hechos y respondiendo opiniones sobre temas de interés común.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Explicar un punto de vista incluyendo la opinión sobre ventajas y desventajas entre varias opciones.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Redactar descripciones detalladas sobre temas relacionados con intereses personales.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Describir con detalles el significado de eventos y experiencias personales.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Explicar claramente conceptos y procedimientos con base en la expresión de comparación y contraste.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Participar de conversaciones extendidas en una amplia gama de temas general es a pesar de las interrupciones.
                                                                     </div>
                                                                 </div>
                                                             </div>
-
                                                         </div>
                                                     </div>
                                                 </div>
@@ -767,41 +804,74 @@ de examen internacional TOEFL (Test of English as a Foreign Language) para obten
                                                             </p>
                                                             <hr />
                                                         </div>
-                                                        <div class="col-md-12 mt-2" >
-                                                            <div class="accordion" id="accordionExamplePreA">
-                                                                <div class="accordion-item">
-                                                                    <h2 class="accordion-header" id="headingOnePreA">
-                                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOnePreA" aria-expanded="true" aria-controls="collapseOne">
-                                                                            <h5><span class="text-primary me-2">Objetivos</span>Pre-Advanced (B2+)</h5>
-                                                                        </button>
-                                                                    </h2>
-                                                                    <div id="collapseOnePreA" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExamplePreA">
-                                                                        <div class="accordion-body">
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Identificar la idea principal y ejemplos en historias.  
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar ejemplos para explicar una historia  
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar pausas efectivamente.  
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Escuchar explicaciones para palabras y conceptos específicos.  
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Explicar palabras y conceptos específicos.  
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Fomentar la participación de una audiencia.  
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Hacer preguntas mientras se escucha la información  
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Dar y explicar razones.  
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Uso efectivo de lenguaje corporal  
-                                                                            <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Analizar, predecir, interpretar, sintetizar y evaluar información.                                                                       
-                                                                        </div>
+                                                        <div class="col-md-12 mt-2">
+
+                                                            <div class="row text-center">
+
+                                                                <div class="col-md-12 text-start mb-3">
+                                                                    <h3><span class="text-primary me-2">Objetivos</span>del curso </h3>
+                                                                </div>
+
+
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Identificar la idea principal y ejemplos en historias.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Usar ejemplos para explicar una historia
                                                                     </div>
                                                                 </div>
 
-                                                            </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Usar pausas efectivamente.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Escuchar explicaciones para palabras y conceptos específicos.
+                                                                    </div>
+                                                                </div>
 
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Explicar palabras y conceptos específicos.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Fomentar la participación de una audiencia.
+                                                                    </div>
+                                                                </div>
+
+                                                                <%--  pre 2--%>
+
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Hacer preguntas mientras se escucha la información
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Dar y explicar razones.
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Uso efectivo de lenguaje corporal
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Analizar, predecir, interpretar, sintetizar y evaluar información.
+                                                                    </div>
+                                                                </div>
+
+
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -820,30 +890,56 @@ de examen internacional TOEFL (Test of English as a Foreign Language) para obten
                                                             </p>
                                                             <hr />
                                                         </div>
-                                                        <div class="col-md-12 mt-2" >
-                                                            <div class="accordion" id="accordionExampleAdv">
-                                                                <div class="accordion-item">
-                                                                    <h2 class="accordion-header" id="headingOneAdv">
-                                                                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOneAdv" aria-expanded="true" aria-controls="collapseOne">
-                                                                            <h5><span class="text-primary me-2">Objetivos</span>Advanced (C1)</h5>
-                                                                        </button>
-                                                                    </h2>
-                                                                    <div id="collapseOneAdv" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExampleAdv">
-                                                                        <div class="accordion-body">
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Comprender y expresar causas y efectos.   <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Usar variaciones de ritmo del discurso.   <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Identificar y usar marcadores discursivos de alta y baja frecuencia.   <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Preguntar por y entregar información clara.   <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Reconocer el tono y las funciones lingüísticas de los hablantes.   <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Explicar procesos y organiar información en secuencias lógicas.   <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Comprender material con contenidos específicos   <br />
-                                                                            <i class="fas fa-check" style="color: #22376c;"></i>&nbsp;Inferir, personalizar, analizar, sintetizar, y aplicar contenido e información. 
-                                                                        </div>
-                                                                    </div>
+                                                        <div class="col-md-12 mt-2">
+
+                                                            <div class="row text-center">
+
+                                                                <div class="col-md-12 text-start mb-3">
+                                                                    <h3><span class="text-primary me-2">Objetivos</span>del curso </h3>
                                                                 </div>
 
-                                                            </div>
 
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Comprender y expresar causas y efectos.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Usar variaciones de ritmo del discurso.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Identificar y usar marcadores discursivos de alta y baja frecuencia.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Preguntar por y entregar información clara.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Reconocer el tono y las funciones lingüísticas de los hablantes.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Explicar procesos y organiar información en secuencias lógicas.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-primary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Comprender material con contenidos específicos.
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-md-6 mb-3">
+                                                                    <div class="alert-secondary text-dark rounded p-3 " style="min-height: 80px;">
+                                                                        Inferir, personalizar, analizar, sintetizar, y aplicar contenido e información.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1037,6 +1133,8 @@ de examen internacional TOEFL (Test of English as a Foreign Language) para obten
                                         </div>
                                     </div>
                                 </div>
+
+                              
                             </div>
                         </div>
                     </div>
@@ -1046,6 +1144,5 @@ de examen internacional TOEFL (Test of English as a Foreign Language) para obten
     </div>
 
     <!-- About End -->
-
 </asp:Content>
 

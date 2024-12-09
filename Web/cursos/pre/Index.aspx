@@ -98,7 +98,7 @@
                 <div class="col-md-12">
                     <div class="card">
                         <div class="card-header bg-primary">
-                            <ul class="nav nav-tabs card-header-tabs" id="myTab" role="tablist" style="font-size: 20px;">
+                            <ul class="nav nav-tabs card-header-tabs flex-column flex-sm-row" id="myTab" role="tablist" style="font-size: 20px;">
                                 <li class="nav-item">
                                     <a class="nav-link active" id="tab1-tab" data-bs-toggle="tab" href="#tab1" role="tab" aria-controls="tab1" aria-selected="true">Descripción</a>
                                 </li>                                

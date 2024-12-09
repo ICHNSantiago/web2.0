@@ -421,7 +421,9 @@
     <Content Include="Tematica\tg\Thanksgiving2.png" />
     <Content Include="Tematica\Valentin\love.gif" />
     <Content Include="Tematica\Valentin\valentine-6.gif" />
+    <Content Include="Tematica\Valentin\Valentine01.gif" />
     <Content Include="Tematica\Valentin\Valentine01.png" />
+    <Content Include="Tematica\Valentin\Valentine01m.gif" />
     <Content Include="TerminosCondiciones.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
@@ -1105,6 +1107,8 @@
     <Content Include="Tematica\pascua\navidad3.webp" />
     <Content Include="Tematica\pascua\navidad3m.webp" />
     <Content Include="Tematica\newYear\happtNew2m.webp" />
+    <Content Include="Tematica\Valentin\Valentine01.webp" />
+    <Content Include="Tematica\Valentin\Valentine01m.webp" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

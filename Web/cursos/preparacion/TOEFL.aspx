@@ -46,7 +46,7 @@
 
                 <div class="col-md-12 ">
                     <div class="bg-white rounded p-5 ">
-                        <ul class="nav nav-pills nav-fill nav-tabs" role="tablist">
+                        <ul class="nav nav-pills nav-fill nav-tabs flex-column flex-sm-row" role="tablist">
                             <li class="nav-item" role="presentation">
                                 <a class="nav-link active" id="fill-tab-3" data-bs-toggle="tab" href="#fill-tabpanel-3" role="tab" aria-controls="fill-tabpanel-0" aria-selected="true">Descripción</a>
                             </li>

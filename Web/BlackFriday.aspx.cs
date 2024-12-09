@@ -282,14 +282,18 @@ namespace Web
 
         protected void Page_Load(object sender, EventArgs e)
         {
+
+            Response.Redirect("index.aspx");
+
             if(!IsPostBack)
             {
-                CargaTarifasAdultos();
-                CargaPromosAdultos();
-                CargaTarifasTeens();
-                CargaPromosTeens();
-                CargaTarifasKids();
-                CargaPromosKids();
+
+                //CargaTarifasAdultos();
+                //CargaPromosAdultos();
+                //CargaTarifasTeens();
+                //CargaPromosTeens();
+                //CargaTarifasKids();
+                //CargaPromosKids();
             }
         }
     }
