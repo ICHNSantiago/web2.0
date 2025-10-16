@@ -32,7 +32,7 @@ namespace Web
             string resultado = mails.SendEmailFundacion(nombre, Insti, Correo, fono, programa, mensaje);
 
             if(resultado == "ok")
-            {
+            { // 
                 error_icono.Visible = false;
                 ok_icono.Visible= true;
                 LabelMensajeError.Text = "Gracias por contactarnos. En breve recibirás una respuesta.";
