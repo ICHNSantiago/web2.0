@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-    <meta name="description" content="Norteamericano, sede, sedes, dirección , sucursal, Cursos de Inglés para adultos, regulares e intensivos. Somos expertos en la enseñanza presencial. curso de inglés, español">
+  <meta name="description" content="Norteamericano, sede, sedes, dirección , sucursal, Cursos de Inglés para adultos, regulares e intensivos. Somos expertos en la enseñanza presencial. curso de inglés, español">
     <title>Norteamericano | Sedes - Cursos de Inglés </title>
     <link rel="canonical" href="https://norteamericano.cl/" />
   
@@ -48,7 +48,7 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <i class="fas fa-mobile-alt me-2"></i>+56 2 3210 8280 anexo 115, 104
+                                                    <i class="fas fa-mobile-alt me-2"></i>+56 227127130 (anexo 801)
                                                 </td>
                                                 <td>
                                                     <i class="fas fa-clock me-2"></i>Sábados: 9:00 a 13:00 hrs
@@ -87,7 +87,7 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <i class="fas fa-mobile-alt me-2"></i>+56 2 3210 8280 anexo 111, 108
+                                                    <i class="fas fa-mobile-alt me-2"></i>+56 227127130 (anexo 805)
                                                 </td>
                                                 <td>
                                                     <i class="fas fa-clock me-2"></i>Sábados: 9:00 a 13:00 hrs
@@ -139,7 +139,7 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <i class="fas fa-mobile-alt me-2"></i>+56 2 3210 8280 anexo 110, 105
+                                                    <i class="fas fa-mobile-alt me-2"></i>+56 227127130 (anexo 806)
                                                 </td>
                                                 <td>
                                                     <i class="fas fa-clock me-2"></i>Sábados: 9:00 a 13:00 hrs
@@ -180,7 +180,7 @@
                                             </tr>
                                             <tr>
                                                 <td>
-                                                    <i class="fas fa-mobile-alt me-2"></i>+56 2 3210 8280 anexo 106
+                                                    <i class="fas fa-mobile-alt me-2"></i>+56 227127130 (anexo 807)
                                                 </td>
                                                 <td>
                                                     <i class="fas fa-clock me-2"></i>Sábados: 9:00 a 13:00 hrs
