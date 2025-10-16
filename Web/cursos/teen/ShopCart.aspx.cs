@@ -276,7 +276,7 @@ namespace Web.cursos.teen
         public void CargaPromos(string programa)
         {
             row_sin_promo.Visible = true;
-            row_con_promo.Visible = false;
+            // row_con_promo.Visible = false;
             LabelPromoActiva.Text = "no";
 
             Ncursos ncursos = new Ncursos();
@@ -303,7 +303,7 @@ namespace Web.cursos.teen
                 {
                     LabelPromoActiva.Text = "si";
                     row_sin_promo.Visible = false;
-                    row_con_promo.Visible = true;
+                    // row_con_promo.Visible = true;
                     decimal promo = int.Parse(data.Rows[i]["Valor"].ToString());
                     LabelPromoMonto.Text = promo.ToString() + "% Descto";
                     decimal tarifa = decimal.Parse(LabelTarifa.Text.Replace(".", ""));
@@ -368,7 +368,7 @@ namespace Web.cursos.teen
 
                 if (int.TryParse(tokenCant, out int val))
                 {
-                    TextBoxCantidad.Text = val.ToString();
+                   //  TextBoxCantidad.Text = val.ToString();
                     Valores(val);
                 }
 
@@ -439,7 +439,7 @@ namespace Web.cursos.teen
                             break;
                     }
 
-                    LabelProductoCant.Text = TextBoxCantidad.Text;
+                    // LabelProductoCant.Text = TextBoxCantidad.Text;
                     LabelProductoNombre.Text = "Curso de inglés adolescentes ";
                     LabelProductoNombreCorto.Text = "adolescentes";
                     LabelProductoModalidad.Text = producto;
@@ -531,22 +531,22 @@ namespace Web.cursos.teen
 
         protected void LinkButtonMenos_Click(object sender, EventArgs e)
         {
-            // resta
-            int cantidad = int.Parse(TextBoxCantidad.Text);
-            if (cantidad > 1)
-            {
-                cantidad--;
-            }
-            TextBoxCantidad.Text = cantidad.ToString();
-            Valores(cantidad);
+            //// resta
+            //int cantidad = int.Parse(TextBoxCantidad.Text);
+            //if (cantidad > 1)
+            //{
+            //    cantidad--;
+            //}
+            //TextBoxCantidad.Text = cantidad.ToString();
+            //Valores(cantidad);
         }
 
         protected void LinkButtonMas_Click(object sender, EventArgs e)
         {
-            int cantidad = int.Parse(TextBoxCantidad.Text);
-            cantidad++;
-            TextBoxCantidad.Text = cantidad.ToString();
-            Valores(cantidad);
+            //int cantidad = int.Parse(TextBoxCantidad.Text);
+            //cantidad++;
+            //TextBoxCantidad.Text = cantidad.ToString();
+            //Valores(cantidad);
         }
 
         protected void LinkButtonTbk_Click(object sender, EventArgs e)
