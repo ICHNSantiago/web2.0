@@ -138,7 +138,7 @@
                         </tr>
                         <tr>
                             <td>Duración</td>
-                            <th><i class="fas fa-clock me-2"></i>6 Meses</th>
+                            <th><i class="fas fa-clock me-2"></i>4 Meses</th>
                         </tr>
                         <tr>
                             <td>Inicios *</td>

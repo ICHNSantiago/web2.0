@@ -63,14 +63,14 @@ namespace Web.cursos.teen
 
             DateTime termino = new DateTime(year, 2, 10);
 
-            if (date < termino)
-            {
-                div_summer.Visible = true;
-            }
-            else
-            {
-                div_summer.Visible = false;
-            }
+            //if (date < termino)
+            //{
+            //    div_summer.Visible = true;
+            //}
+            //else
+            //{
+            //    div_summer.Visible = false;
+            //}
         }
 
         public void CargaPromos()
