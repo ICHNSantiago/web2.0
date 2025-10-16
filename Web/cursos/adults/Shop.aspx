@@ -49,7 +49,7 @@
                                     </tr>
                                     <tr>
                                         <td>Duración</td>
-                                        <th><i class="fas fa-clock me-2"></i>3 | 6 meses</th>
+                                        <th><i class="fas fa-clock me-2"></i>2 | 6 meses</th>
                                     </tr>
                                     <tr>
                                         <td>Inicios *</td>
@@ -57,7 +57,7 @@
                                     </tr>
                                     <tr class="text-center" runat="server" id="row_sin_promo_regular">
                                         <th colspan="2">
-                                            <h1>$ 
+                                            <h1> <span style="font-size: 20px">*</span> $  
                                                 <asp:Label ID="LabelTarifaRegular" runat="server" Text="Label"></asp:Label>
                                             </h1>
                                             <h4>&nbsp;  </h4>
@@ -113,7 +113,7 @@
                                     </tr>
                                     <tr>
                                         <td>Duración</td>
-                                        <th><i class="fas fa-clock me-2"></i>3 meses </th>
+                                        <th><i class="fas fa-clock me-2"></i>2 meses </th>
                                     </tr>
                                     <tr>
                                         <td>Inicios *</td>
@@ -121,7 +121,7 @@
                                     </tr>
                                     <tr class="text-center" runat="server" id="row_sin_promo_intensivo">
                                         <th colspan="2">
-                                            <h1>$ 
+                                            <h1> <span style="font-size: 20px">*</span> $ 
                                             <asp:Label ID="LabelTarifaintensivo" runat="server" Text="Label"></asp:Label>
                                             </h1>
                                             <h4>&nbsp;  </h4>
@@ -185,7 +185,7 @@
                                     </tr>
                                     <tr class="text-center" runat="server" id="row_sin_promo_summer">
                                         <th colspan="2">
-                                            <h1>$ 
+                                            <h1> <span style="font-size: 20px">*</span> $ 
                                              <asp:Label ID="LabelTarifaSummer" runat="server" Text="Label"></asp:Label>
                                             </h1>
                                             <h4>&nbsp;  </h4>
@@ -215,8 +215,8 @@
                 </div>
 
 
-                <div class="col-md-6 col-lg-6 col-xl-12 text-dark" data-wow-delay="0.2s">
-                    <h5>* Para más opciones de inicio comunícate con nuestro ejecutivos </h5>
+                <div class="col-md-12 text-center text-dark" data-wow-delay="0.2s">
+                    <h5>* Para más opciones de inicio comunícate con nuestros ejecutivos </h5>
                     <h5>* Precio no incluye el valor del libro de clases.</h5>
                 </div>
             </div>

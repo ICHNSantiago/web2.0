@@ -42,6 +42,15 @@ namespace Web.cursos.adults
         protected global::System.Web.UI.WebControls.Label LabelPromoActiva;
 
         /// <summary>
+        /// Control shop_oferta.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl shop_oferta;
+
+        /// <summary>
         /// Control shop_programa.
         /// </summary>
         /// <remarks>
@@ -159,13 +168,40 @@ namespace Web.cursos.adults
         protected global::System.Web.UI.WebControls.Label LabelTarifaID;
 
         /// <summary>
-        /// Control row_con_promo.
+        /// Control row_con_promo_a.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTableRow row_con_promo;
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow row_con_promo_a;
+
+        /// <summary>
+        /// Control LabelTarifaPromo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelTarifaPromo;
+
+        /// <summary>
+        /// Control row_con_promo_c.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow row_con_promo_c;
+
+        /// <summary>
+        /// Control span_promo.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl span_promo;
 
         /// <summary>
         /// Control LabelPromoMonto.
@@ -186,13 +222,13 @@ namespace Web.cursos.adults
         protected global::System.Web.UI.WebControls.Label LabelPromoMontoID;
 
         /// <summary>
-        /// Control LabelTarifaPromo.
+        /// Control row_con_promo_b.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelTarifaPromo;
+        protected global::System.Web.UI.HtmlControls.HtmlTableRow row_con_promo_b;
 
         /// <summary>
         /// Control LabelTarifaOld.
@@ -204,6 +240,15 @@ namespace Web.cursos.adults
         protected global::System.Web.UI.WebControls.Label LabelTarifaOld;
 
         /// <summary>
+        /// Control LinkButtonMenosDi.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonMenosDi;
+
+        /// <summary>
         /// Control LinkButtonMenos.
         /// </summary>
         /// <remarks>
@@ -213,13 +258,13 @@ namespace Web.cursos.adults
         protected global::System.Web.UI.WebControls.LinkButton LinkButtonMenos;
 
         /// <summary>
-        /// Control TextBoxCantidad.
+        /// Control LabelCantidad.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBoxCantidad;
+        protected global::System.Web.UI.WebControls.Label LabelCantidad;
 
         /// <summary>
         /// Control LinkButtonMas.
@@ -229,6 +274,24 @@ namespace Web.cursos.adults
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.LinkButton LinkButtonMas;
+
+        /// <summary>
+        /// Control LinkButtonMasDi.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LinkButton LinkButtonMasDi;
+
+        /// <summary>
+        /// Control row_mensaje_max.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTableCell row_mensaje_max;
 
         /// <summary>
         /// Control LinkButtonNext.
