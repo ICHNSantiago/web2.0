@@ -188,7 +188,7 @@
                                         <i class="fas fa-clock me-2"></i>Lunes a Viernes 9:00 a 19:00 hrs
                                     </td>
                                     <td>
-                                        <i class="fas fa-mobile-alt me-2"></i>+56 22677 7124
+                                        <i class="fas fa-mobile-alt me-2"></i>+56 227127130 - Anexo 119
                                     </td>
                                 </tr>
                             </table>
