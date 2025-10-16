@@ -134,8 +134,8 @@ namespace Negocio
                     Body = emailHtml.ToString(),
                 };
 
-                //message.To.Add("fundacion@norteamericano.cl");
-                message.To.Add("cgaray@norteamericano.cl");
+                message.To.Add("fundacion@norteamericano.cl");
+                //message.To.Add("cgaray@norteamericano.cl");
 
                 SmtpClient smtpClient = new SmtpClient
                 {
