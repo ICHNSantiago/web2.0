@@ -168,29 +168,8 @@ namespace Web.cursos
         }
 
         protected void LinkButtonContinuar_Click(object sender, EventArgs e)
-        {
-            string alumnoID = LabelRun.Text;
-            string tipo = LabelCurso.Text;
-            string link;
-
-            switch (tipo)
-            {
-                case "adultos":
-                link = "../Inscripcion/Alumno.aspx?usuario=" + alumnoID + "&tipo=alumno";
-                    break;
-                case "preescolares":
-                    link = "../Inscripcion/Alumno.aspx";
-                    break;
-                case "kid":
-                    link = "../Inscripcion/Alumno.aspx";
-                    break;
-                case "adolescentes":
-                    link = "../Inscripcion/Alumno.aspx";
-                    break;
-                default:
-                    link = "../Inscripcion/Alumno.aspx";
-                    break;
-            }
+        {         
+            string link = "https://alumnos.sam.norteamericano.cl/";          
             Response.Redirect(link);
         }
     }
