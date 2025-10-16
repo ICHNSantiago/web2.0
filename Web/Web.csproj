@@ -128,8 +128,13 @@
     <Content Include="CompraLibros.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Correos\finalizar.html" />
+    <Content Include="Correos\fundacion.html" />
     <Content Include="Correos\inscripcion.html" />
     <Content Include="cursos\kid\ShopCart.aspx" />
+    <Content Include="cursos\MiddleTerm\Index.aspx" />
+    <Content Include="cursos\MiddleTerm\Kid.aspx" />
+    <Content Include="cursos\MiddleTerm\Teen.aspx" />
+    <Content Include="cursos\preparacion\Teachers.aspx" />
     <Content Include="cursos\pre\ShopCart.aspx" />
     <Content Include="Diagnostico\Kid\Beginner.aspx" />
     <Content Include="Diagnostico\Kid\Elementary.aspx" />
@@ -186,8 +191,18 @@
     <Content Include="Diagnostico\Kid\Validador.aspx" />
     <Content Include="Error\404.aspx" />
     <Content Include="Error\GenericError.aspx" />
+    <Content Include="Fundacion.aspx" />
+    <Content Include="FundacionPage\Asesorias.aspx" />
+    <Content Include="FundacionPage\ATE.aspx" />
+    <Content Include="FundacionPage\Docentes.aspx" />
+    <Content Include="FundacionPage\NorteamericanoEXP.aspx" />
     <Content Include="img\blackfriday.png" />
     <Content Include="img\Black_Friday.jpg" />
+    <Content Include="img\Fundacion\F05.jpg" />
+    <Content Include="img\Fundacion\icono01.png" />
+    <Content Include="img\Fundacion\icono02.png" />
+    <Content Include="img\Fundacion\icono03.png" />
+    <Content Include="img\Fundacion\icono04.png" />
     <Content Include="img\postBF.jpg" />
     <Content Include="img\evaluacion.png" />
     <Content Include="img\inicial.png" />
@@ -399,6 +414,7 @@
     <Content Include="Tematica\hallo\halloween2.png" />
     <Content Include="Tematica\hallo\halloween3.png" />
     <Content Include="Tematica\hallo\halloween4.png" />
+    <Content Include="Tematica\hallo\Halloweenv2.png" />
     <Content Include="Tematica\independence\4thjuly01.gif" />
     <Content Include="Tematica\independence\4thjuly02.gif" />
     <Content Include="Tematica\independence\4thjuly03.gif" />
@@ -601,6 +617,27 @@
     <Compile Include="cursos\kid\ShopCart.aspx.designer.cs">
       <DependentUpon>ShopCart.aspx</DependentUpon>
     </Compile>
+    <Compile Include="cursos\MiddleTerm\Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cursos\MiddleTerm\Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cursos\MiddleTerm\Kid.aspx.cs">
+      <DependentUpon>Kid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cursos\MiddleTerm\Kid.aspx.designer.cs">
+      <DependentUpon>Kid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cursos\MiddleTerm\Teen.aspx.cs">
+      <DependentUpon>Teen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cursos\MiddleTerm\Teen.aspx.designer.cs">
+      <DependentUpon>Teen.aspx</DependentUpon>
+    </Compile>
     <Compile Include="cursos\preparacion\Index.aspx.cs">
       <DependentUpon>Index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -614,6 +651,13 @@
     </Compile>
     <Compile Include="cursos\preparacion\PTE.aspx.designer.cs">
       <DependentUpon>PTE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="cursos\preparacion\Teachers.aspx.cs">
+      <DependentUpon>Teachers.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="cursos\preparacion\Teachers.aspx.designer.cs">
+      <DependentUpon>Teachers.aspx</DependentUpon>
     </Compile>
     <Compile Include="cursos\preparacion\TOEFL.aspx.cs">
       <DependentUpon>TOEFL.aspx</DependentUpon>
@@ -930,6 +974,41 @@
     <Compile Include="Error\GenericError.aspx.designer.cs">
       <DependentUpon>GenericError.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Fundacion.aspx.cs">
+      <DependentUpon>Fundacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fundacion.aspx.designer.cs">
+      <DependentUpon>Fundacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FundacionPage\Asesorias.aspx.cs">
+      <DependentUpon>Asesorias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FundacionPage\Asesorias.aspx.designer.cs">
+      <DependentUpon>Asesorias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FundacionPage\ATE.aspx.cs">
+      <DependentUpon>ATE.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FundacionPage\ATE.aspx.designer.cs">
+      <DependentUpon>ATE.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FundacionPage\Docentes.aspx.cs">
+      <DependentUpon>Docentes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FundacionPage\Docentes.aspx.designer.cs">
+      <DependentUpon>Docentes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FundacionPage\NorteamericanoEXP.aspx.cs">
+      <DependentUpon>NorteamericanoEXP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FundacionPage\NorteamericanoEXP.aspx.designer.cs">
+      <DependentUpon>NorteamericanoEXP.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Ichn.Master.cs">
       <DependentUpon>Ichn.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1067,6 +1146,15 @@
     <Content Include="img\programas\preparar.webp" />
     <Content Include="img\programas\spring.webp" />
     <Content Include="img\Black_Friday.webp" />
+    <Content Include="img\Fundacion\DSC07997.webp" />
+    <Content Include="img\Fundacion\DSC07997NEW.webp" />
+    <Content Include="img\Fundacion\F01.webp" />
+    <Content Include="img\Fundacion\F02.webp" />
+    <Content Include="img\Fundacion\F03.webp" />
+    <Content Include="img\Fundacion\F04.webp" />
+    <Content Include="img\Fundacion\F06.webp" />
+    <Content Include="img\Fundacion\F07.webp" />
+    <Content Include="img\Fundacion\F08.webp" />
     <None Include="packages.config" />
     <Content Include="Tematica\18sep\volantin.webp" />
     <Content Include="Tematica\hallo\halloween2.webp" />
@@ -1118,6 +1206,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="img\carouselAmerican\Mobil\" />
+    <Folder Include="img\NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Negocio\Negocio.csproj">

@@ -1,4 +1,5 @@
 ﻿using Datos;
+using Microsoft.SqlServer.Server;
 using System.Collections.Generic;
 using System.Data;
 using System.IO;
@@ -11,6 +12,9 @@ namespace Negocio
 {
     public class Mails
     {
+        readonly string samMail = "noresponder@norteamericano.cl";
+        readonly string samPass = "oiycliymxtfuoptw";
+
         public string SendEmailPago(string mailUsuario, string cotiID, string fecha, string tarjeta, string codaAuto, string monto, string digitos)
         {
             try
@@ -42,7 +46,7 @@ namespace Negocio
                     Host = "smtp.gmail.com",
                     Port = 587,
                     EnableSsl = true,
-                    Credentials = new System.Net.NetworkCredential("noresponder@norteamericano.cl", "smith2251!"),                    
+                    Credentials = new System.Net.NetworkCredential(samMail, samPass),
                 };
 
                 smtpClient.Send(message);
@@ -95,7 +99,7 @@ namespace Negocio
                     Host = "smtp.gmail.com",
                     Port = 587,
                     EnableSsl = true,
-                    Credentials = new System.Net.NetworkCredential("noresponder@norteamericano.cl", "smith2251!"),
+                    Credentials = new System.Net.NetworkCredential(samMail, samPass),
                 };
 
                 smtpClient.Send(message);
@@ -108,5 +112,50 @@ namespace Negocio
             }
 
         }
+
+
+        public string SendEmailFundacion(string nombre, string empresa, string mail, string fono, string programa, string mensaje)
+        {
+            try
+            {
+                StringBuilder emailHtml = new StringBuilder(File.ReadAllText(HttpContext.Current.Server.MapPath("~/Correos/fundacion.html")));
+                emailHtml.Replace("[**VAR_Nom**]", nombre);
+                emailHtml.Replace("[**VAR_Ins**]", empresa);
+                emailHtml.Replace("[**VAR_Cor**]", mail);
+                emailHtml.Replace("[**VAR_Tel**]", fono);
+                emailHtml.Replace("[**VAR_Pro**]", programa);
+                emailHtml.Replace("[**VAR_M**]", mensaje);
+
+                MailMessage message = new MailMessage
+                {
+                    From = new MailAddress("noresponder@norteamericano.cl"),
+                    Subject = "Contacto ATE",
+                    IsBodyHtml = true,
+                    Body = emailHtml.ToString(),
+                };
+
+                //message.To.Add("fundacion@norteamericano.cl");
+                message.To.Add("cgaray@norteamericano.cl");
+
+                SmtpClient smtpClient = new SmtpClient
+                {
+                    UseDefaultCredentials = true,
+                    Host = "smtp.gmail.com",
+                    Port = 587,
+                    EnableSsl = true,
+                    Credentials = new System.Net.NetworkCredential(samMail, samPass),
+                };
+
+                smtpClient.Send(message);
+
+                return "ok";
+            }
+            catch (System.Exception)
+            {
+                return "Error al enviar el correo al mail de contacto";
+            }
+
+        }
+
     }
 }

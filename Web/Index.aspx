@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-    <meta name="description" content="Norteamericano, Cursos de Inglés para adultos, jovenes, niños  regulares e intensivos. Somos expertos en la enseñanza presencial. curso de inglés, español">
+  <meta name="description" content="Norteamericano, Cursos de Inglés para adultos, jovenes, niños  regulares e intensivos. Somos expertos en la enseñanza presencial. curso de inglés, español">
     <title>Cursos de Inglés - Norteamericano </title>
     <link rel="canonical" href="https://norteamericano.cl/" />
     <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -40,6 +40,14 @@
         }
     </style>
 
+     <style>
+     .article-card:hover {
+         transform: translateY(-15px);
+         box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+         transition: all 500ms
+     }
+ </style>
+
 
     <!-- Google Tag Manager (noscript) -->
     <noscript>
@@ -48,11 +56,11 @@
     </noscript>
     <!-- End Google Tag Manager (noscript) -->
 
-    <script type="text/javascript">
+   <!-- <script type="text/javascript">
         $(window).load(function () {
 
             let fecha = new Date().getTime();
-            let birthday = new Date("2024-10-10").getTime();
+            let birthday = new Date("2025-05-03").getTime();
             var diff = fecha - birthday;
             var days = diff / (1000 * 60 * 60 * 24);
 
@@ -65,7 +73,7 @@
         });
     </script>
 
-
+        -->
 
 
     <!-- Carousel Start -->
@@ -73,46 +81,58 @@
     <div class="header-carousel owl-carousel">
         <div class="item" runat="server" id="div_banner_01">
             <a runat="server" id="link_banner_01">
-                <img runat="server" id="banner_01"  class="d-block w-100" />
+                <img runat="server" id="banner_01" class="d-block w-100" />
 
             </a>
         </div>
         <div class="item" runat="server" id="div_banner_02">
             <a runat="server" id="link_banner_02">
-                <img runat="server" id="banner_02"  class="d-block w-100" /></a>
+                <img runat="server" id="banner_02" class="d-block w-100" /></a>
         </div>
         <div class="item" runat="server" id="div_banner_03">
             <a runat="server" id="link_banner_03">
-                <img runat="server" id="banner_03"  class="d-block w-100" /></a>
+                <img runat="server" id="banner_03" class="d-block w-100" /></a>
         </div>
         <div class="item" runat="server" id="div_banner_04">
             <a runat="server" id="link_banner_04">
-                <img runat="server" id="banner_04"  class="d-block w-100" /></a>
+                <img runat="server" id="banner_04" class="d-block w-100" /></a>
         </div>
         <div class="item" runat="server" id="div_banner_05">
             <a runat="server" id="link_banner_05">
-                <img runat="server" id="banner_05"  class="d-block w-100" /></a>
+                <img runat="server" id="banner_05" class="d-block w-100" /></a>
         </div>
     </div>
     <!-- Carousel End -->
+
+
 
     <!-- programas Start -->
     <div class="container-fluid service text-center py-5" runat="server" id="div_programa">
         <div class="container">
             <div class="row g-4 justify-content-center mb-5 wow fadeInUp" data-wow-delay="0.2s" style="margin-top: 50px;">
 
-                <div class="col-xl-12">
-                    <div class="text-center mx-auto pb-5">
+                <div class="col-md-1"></div>
+                <div class="col-md-10">
+                    <div class="text-center mx-auto pb-5" runat="server" id="div_titulo_b">
                         <br />
                         <br />
-                        <h1 class="display-4 mb-4">Programas</h1>
+                        <h1 class="display-4 mb-4">Programas
+                        </h1>
                         <p class="mb-0 text-dark">
+                            El Instituto Chileno Norteamericano cree en la capacidad e interés de las personas para aprender y desarrollarse. Estamos convencidos del poder que tiene la educación para mejorar la calidad de vida de las personas. Por ello proveemos el mejor ambiente para el aprendizaje.
+                        </p>
+                    </div>
+                    <div class="text-center mx-auto pb-5" visible="false" runat="server" id="div_titulo_w">
+                        <br />
+                        <br />
+                        <h1 class="display-4 mb-4 text-white">Programas</h1>
+                        <p class="mb-0 text-white">
                             El Instituto Chileno Norteamericano cree en la capacidad e interés de las personas para aprender y desarrollarse. Estamos convencidos del poder que tiene la educación para mejorar la calidad de vida de las personas. Por ello proveemos el mejor ambiente para el aprendizaje.
                         </p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3">
-                    <div class="service-item bg-light shadow">
+                    <div class="service-item bg-light shadow  article-card">
                         <a href="cursos/adults/Index.aspx">
                             <div class="service-img">
                                 <img src="img/programas/adulto.webp" class="img-fluid rounded-top w-100" alt="">
@@ -126,7 +146,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3 ">
-                    <div class="service-item bg-light shadow">
+                    <div class="service-item bg-light shadow  article-card">
                         <a href="cursos/teen/Index.aspx">
                             <div class="service-img">
                                 <img src="img/programas/teens.webp" class="img-fluid rounded-top w-100" alt="">
@@ -140,7 +160,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3 ">
-                    <div class="service-item bg-light shadow">
+                    <div class="service-item bg-light shadow  article-card">
                         <a href="cursos/kid/Index.aspx">
                             <div class="service-img">
                                 <img src="img/programas/kids.webp" class="img-fluid rounded-top w-100" alt="">
@@ -154,7 +174,7 @@
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-xl-3 ">
-                    <div class="service-item bg-light shadow">
+                    <div class="service-item bg-light shadow  article-card">
                         <a href="cursos/pre/Index.aspx">
                             <div class="service-img">
                                 <img src="img/programas/preschool.webp" class="img-fluid rounded-top w-100" alt="">
@@ -450,59 +470,59 @@
             <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.2s" style="max-width: 800px;">
                 <h1 class="display-4">Colaboradores</h1>
             </div>
-            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.2s">
-                <div class="testimonial-item bg-light rounded">
+            <div class="owl-carousel testimonial-carousel wow fadeInUp" runat="server" id="div_carousel" data-wow-delay="0.2s">
+                <div class="testimonial-item bg-light ">
                     <div class="row g-0">
-                        <div class="col-4  col-lg-4 col-xl-8">
+                        <div class="col-4  text-center col-lg-4 col-xl-8">
                             <div class="h-100">
-                                <img src="img/colaboradores/abla.webp" class="img-fluid h-100 rounded" style="object-fit: cover;" alt="">
+                                <img src="img/colaboradores/abla.webp" class="img-fluid h-100 " style="object-fit: cover;" alt="">
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-item bg-light rounded">
+                <div class="testimonial-item bg-light ">
                     <div class="row g-0">
-                        <div class="col-4  col-lg-4 col-xl-8">
+                        <div class="col-4 text-center col-lg-4 col-xl-8">
                             <div class="h-100">
-                                <img src="img/colaboradores/amcham.webp" class="img-fluid h-100 rounded" style="object-fit: cover;" alt="">
+                                <img src="img/colaboradores/amcham.webp" class="img-fluid h-100 " style="object-fit: cover;" alt="">
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-item bg-light rounded">
+                <div class="testimonial-item bg-light ">
                     <div class="row g-0">
-                        <div class="col-4  col-lg-4 col-xl-8">
+                        <div class="col-4 text-center col-lg-4 col-xl-8">
                             <div class="h-100">
-                                <img src="img/colaboradores/americanspaces.webp" class="img-fluid h-100 rounded" style="object-fit: cover;" alt="">
+                                <img src="img/colaboradores/americanspaces.webp" class="img-fluid h-100 " style="object-fit: cover;" alt="">
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-item bg-light rounded">
+                <div class="testimonial-item bg-light ">
                     <div class="row g-0">
-                        <div class="col-4  col-lg-4 col-xl-8">
+                        <div class="col-4 text-center col-lg-4 col-xl-8">
                             <div class="h-100">
-                                <img src="img/colaboradores/educationusa.webp" class="img-fluid h-100 rounded" style="object-fit: cover;" alt="">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="testimonial-item bg-light rounded">
-                    <div class="row g-0">
-                        <div class="col-4  col-lg-4 col-xl-8">
-                            <div class="h-100">
-                                <img src="img/colaboradores/embajadausa.webp" class="img-fluid h-100 rounded" style="object-fit: cover;" alt="">
+                                <img src="img/colaboradores/educationusa.webp" class="img-fluid h-100 " style="object-fit: cover;" alt="">
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="testimonial-item bg-light rounded">
+                <div class="testimonial-item bg-light ">
                     <div class="row g-0">
-                        <div class="col-4  col-lg-4 col-xl-8">
+                        <div class="col-4 text-center col-lg-4 col-xl-8">
                             <div class="h-100">
-                                <img src="img/colaboradores/tiec.webp" class="img-fluid h-100 rounded" style="object-fit: cover;" alt="">
+                                <img src="img/colaboradores/embajadausa.webp" class="img-fluid h-100 " style="object-fit: cover;" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-item bg-light ">
+                    <div class="row g-0">
+                        <div class="col-4 text-center col-lg-4 col-xl-8">
+                            <div class="h-100">
+                                <img src="img/colaboradores/tiec.webp" class="img-fluid h-100 " style="object-fit: cover;" alt="">
                             </div>
                         </div>
                     </div>
@@ -515,80 +535,7 @@
 
     <!-- Modal -->
 
-    <script>
-        (function () {
-            const second = 1000,
-                minute = second * 60,
-                hour = minute * 60,
-                day = hour * 24;
-
-            //I'm adding this section so I don't have to keep updating this pen every year :-)
-            //remove this if you don't need it
-            let today = new Date(),
-                dd = String(today.getDate()).padStart(2, "0"),
-                mm = String(today.getMonth() + 1).padStart(2, "0"),
-                yyyy = today.getFullYear(),
-                nextYear = yyyy + 1,
-                dayMonth = "9/28/",
-                birthday = dayMonth + yyyy;
-
-            today = mm + "/" + dd + "/" + yyyy;
-            if (today > birthday) {
-                birthday = dayMonth + nextYear;
-            }
-            //end
-
-            const countDown = new Date(birthday).getTime(),
-                x = setInterval(function () {
-                    const now = new Date().getTime(),
-                        distance = countDown - now;
-
-                    var hora;
-
-                    if (Math.floor((distance % (day)) / (hour)) > 9) {
-                        hora = Math.floor((distance % (day)) / (hour));
-                    }
-                    else {
-                        hora = "0" + Math.floor((distance % (day)) / (hour));
-                    }
-
-                    var minutos;
-
-                    if (Math.floor((distance % (hour)) / (minute)) > 9) {
-                        minutos = Math.floor((distance % (hour)) / (minute));
-                    }
-                    else {
-                        minutos = "0" + Math.floor((distance % (hour)) / (minute));
-                    }
-
-                    var segundos;
-
-                    if (Math.floor((distance % (minute)) / second) > 9) {
-                        segundos = Math.floor((distance % (minute)) / second);
-                    }
-                    else {
-                        segundos = "0" + Math.floor((distance % (minute)) / second);
-                    }
-
-
-                    document.getElementById("days").innerText = Math.floor(distance / (day)),
-                        document.getElementById("hours").innerText = hora,
-                        document.getElementById("minutes").innerText = minutos,
-                        document.getElementById("seconds").innerText = segundos;
-
-                    //do something later when date is reached
-                    if (distance < 0) {
-                        document.getElementById("headline").innerText = "Hoy es el Inicio de clases!";
-                        document.getElementById("headline2").innerText = "Inscripciones Abiertas";
-                        document.getElementById("countdown").style.display = "none";
-                        document.getElementById("content").style.display = "block";
-                        clearInterval(x);
-                    }
-                    //seconds
-
-                }, 0)
-        }());
-    </script>
+ 
 
     <style>
         .bodyICHN {
@@ -661,7 +608,7 @@
     </style>
 
     <div class="modal fade" id="staticBackdrop" data-bs-toggle="modal" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
+        <%-- <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content" style="background: rgb(2,0,36); background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(24,1,48,1) 50%, rgba(53,50,201,1) 100%);">
                 <div class="modal-body">
                     <button type="button" class="btn btn-light float-end" data-bs-dismiss="modal">Close</button>
@@ -685,12 +632,21 @@
                                 </li>
                             </ul>
 
-                            <%--   <img class="img-fluid" src="img/modal/modal.png" />--%>
+                         
                         </div>
                         <div id="content" class="emoji">
-                            <%--     <img class="img-fluid" src="img/modal/modal.png" />--%>
+                          
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>--%>
+
+
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background-image: url('img/CartelAviso.png');width: 396px;height: 522px;">
+                <div class="modal-body text-center">
+                  
                 </div>
             </div>
         </div>

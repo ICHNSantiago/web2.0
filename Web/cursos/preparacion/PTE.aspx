@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-    <meta name="description" content="Norteamericano, Cursos de Inglés para adolescentes, jovenes, regulares e intensivos. Somos expertos en la enseñanza presencial. curso de inglés, español">
+   <meta name="description" content="Norteamericano, Cursos de Inglés para adolescentes, jovenes, regulares e intensivos. Somos expertos en la enseñanza presencial. curso de inglés, español">
     <title>Preparación PTE | Norteamericano </title>
     <link rel="canonical" href="https://norteamericano.cl/" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -26,9 +26,7 @@
                                 <h4 class="text-primary">Programa</h4>
                                 <h5 class="display-6">Curso Preparación   | <span class="text-primary">PTE </span></h5>
                                 <h5>
-                                    <i class="fas fa-user me-2"></i>Presencial                                   
-                                       <span class="me-2 ms-2">|</span>
-                                    <i class="fas fa-clock me-2"></i>40 Horas 
+                                    <i class="fas fa-user me-2"></i>Presencial                                                                     
                                 </h5>
                             </div>
                             <div class="col-md-4">

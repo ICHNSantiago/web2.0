@@ -159,6 +159,24 @@ namespace Web
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_programa;
 
         /// <summary>
+        /// Control div_titulo_b.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_titulo_b;
+
+        /// <summary>
+        /// Control div_titulo_w.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_titulo_w;
+
+        /// <summary>
         /// Control contacto_lead.
         /// </summary>
         /// <remarks>
@@ -265,5 +283,14 @@ namespace Web
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl mensaje_lead;
+
+        /// <summary>
+        /// Control div_carousel.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_carousel;
     }
 }

@@ -65,11 +65,11 @@ namespace Web
                 case "Preparación PTE":
                     programaSelect = "PREPARATIVO PTE";
                     break;
-                case "Spring Program Kid":
-                    programaSelect = "KIDS SPRING PROGRAM";
+                case "Middle Term Kid":
+                    programaSelect = "KIDS MIDDLE TERM";
                     break;
-                case "Spring Program teen":
-                    programaSelect = "TEENS SPRING PROGRAM";
+                case "Middle Term teen":
+                    programaSelect = "TEENS MIDDLE TERM";
                     break;
                 default:
                     break;
@@ -139,12 +139,12 @@ namespace Web
                 ListaPrograma.Items.Add("Empresas");
                 ListaPrograma.Items.Add("Preparación TOEFL");
                 ListaPrograma.Items.Add("Preparación PTE");
-                ListaPrograma.Items.Add("Spring Program Kid");
-                ListaPrograma.Items.Add("Spring Program teen");
+                ListaPrograma.Items.Add("Middle Term Kid");
+                ListaPrograma.Items.Add("Middle Term teen");
 
                 string token = Convert.ToString(Request["programa"]);
 
-                string rrss = Convert.ToString(Request["rrss"]);
+                string rrss = Convert.ToString(Request["rrss"]);          
 
                 if (!string.IsNullOrEmpty(token))
                 {

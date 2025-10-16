@@ -8,5 +8,25 @@ namespace Web
         {
 
         }
+
+        protected void LinkButtonA_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void LinkButtonJ_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void LinkButtonE_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void LinkButtonT_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

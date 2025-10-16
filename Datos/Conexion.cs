@@ -13,7 +13,7 @@ namespace Datos
                 if (ConnectionMySql.State == System.Data.ConnectionState.Closed)
                 {
                     MySqlConnection.ClearAllPools();
-                     ConnectionMySql = new MySqlConnection("server=ec2-18-223-30-246.us-east-2.compute.amazonaws.com; database=sam; Uid=root; pwd=Smith3976!; SslMode=none; Pooling=false;");
+                     ConnectionMySql = new MySqlConnection("server=ec2-18-222-25-254.us-east-2.compute.amazonaws.com; database=sam; Uid=root; pwd=Smith3976!; SslMode=none; Pooling=false;");
                     ConnectionMySql.Open();
                     return ConnectionMySql;
                 }
@@ -22,7 +22,7 @@ namespace Datos
                     CerrarConnectionMysql();
 
                     MySqlConnection.ClearAllPools();
-                    ConnectionMySql = new MySqlConnection("server=ec2-18-223-30-246.us-east-2.compute.amazonaws.com; database=sam; Uid=root; pwd=Smith3976!; SslMode=none; Pooling=false;");
+                    ConnectionMySql = new MySqlConnection("server=ec2-18-222-25-254.us-east-2.compute.amazonaws.com; database=sam; Uid=root; pwd=Smith3976!; SslMode=none; Pooling=false;");
                     ConnectionMySql.Open();
                     return ConnectionMySql;
                 }
@@ -40,7 +40,7 @@ namespace Datos
                 if (ConnectionMySql.State == System.Data.ConnectionState.Closed)
                 {
                     MySqlConnection.ClearAllPools();
-                   ConnectionMySql = new MySqlConnection("server=ec2-18-223-30-246.us-east-2.compute.amazonaws.com; database=caja_tbk; Uid=root; pwd=Smith3976!; SslMode=none; Pooling=false;");
+                   ConnectionMySql = new MySqlConnection("server=ec2-18-222-25-254.us-east-2.compute.amazonaws.com; database=caja_tbk; Uid=root; pwd=Smith3976!; SslMode=none; Pooling=false;");
                     ConnectionMySql.Open();
                     return ConnectionMySql;
                 }
@@ -49,7 +49,7 @@ namespace Datos
                     CerrarConnectionMysql();
 
                     MySqlConnection.ClearAllPools();
-                    ConnectionMySql = new MySqlConnection("server=ec2-18-223-30-246.us-east-2.compute.amazonaws.com; database=caja_tbk; Uid=root; pwd=Smith3976!; SslMode=none; Pooling=false;");
+                    ConnectionMySql = new MySqlConnection("server=ec2-18-222-25-254.us-east-2.compute.amazonaws.com; database=caja_tbk; Uid=root; pwd=Smith3976!; SslMode=none; Pooling=false;");
                     ConnectionMySql.Open();
                     return ConnectionMySql;
                 }
@@ -70,7 +70,7 @@ namespace Datos
                 }
 
                 MySqlConnection.ClearAllPools();
-                ConnectionMySql = new MySqlConnection("server=ec2-18-223-30-246.us-east-2.compute.amazonaws.com; database=sam_diagnostico; Uid=root; pwd=Smith3976!; SslMode=none; Pooling=false;");
+                ConnectionMySql = new MySqlConnection("server=ec2-18-222-25-254.us-east-2.compute.amazonaws.com; database=sam_diagnostico; Uid=root; pwd=Smith3976!; SslMode=none; Pooling=false;");
                 ConnectionMySql.Open();
                 return ConnectionMySql;
             }

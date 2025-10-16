@@ -231,7 +231,7 @@ namespace Web
                     div_programa.Attributes.Add("style", "background-image: url('Tematica/tg/Thanksgiving2.webp'); background-repeat: no-repeat; background-size: contain");
                     break;
                 case "halloween":
-                    div_programa.Attributes.Add("style", "background-image: url('Tematica/hallo/halloween4.webp'); background-repeat: no-repeat; background-size: contain");
+                    div_programa.Attributes.Add("style", "background-image: url('Tematica/hallo/Halloweenv2.png'); background-repeat: no-repeat; background-size: contain");
                     break;
                 case "navidad":
 

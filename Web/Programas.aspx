@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-    <meta name="description" content="Norteamericano, Cursos de Inglés para adultos, jovenes, niños niñas, empresas  regulares e intensivos. Somos expertos en la enseñanza presencial. curso de inglés, español">
+     <meta name="description" content="Norteamericano, Cursos de Inglés para adultos, jovenes, niños niñas, empresas  regulares e intensivos. Somos expertos en la enseñanza presencial. curso de inglés, español">
     <title>Norteamericano - Programas</title>
     <link rel="canonical" href="https://norteamericano.cl/" />
 
@@ -30,6 +30,59 @@
             }
     </style>
 
+    <style>
+        .article-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+            transition: all 500ms
+        }
+    </style>
+
+
+    <script>
+        function mostrarAdultos() {
+            document.getElementById("ContentPlaceHolder1_div_adults").style.display = "block";
+            document.getElementById("ContentPlaceHolder1_div_teens").style.display = "none";
+            document.getElementById("ContentPlaceHolder1_div_kids").style.display = "none";
+            document.getElementById("ContentPlaceHolder1_div_preschool").style.display = "none";
+            document.getElementById("ContentPlaceHolder1_div_empresas").style.display = "block";
+            document.getElementById("ContentPlaceHolder1_div_preparacion").style.display = "block";
+            document.getElementById("ContentPlaceHolder1_div_fall").style.display = "none";
+        }
+
+        function mostrarTodos() {
+            document.getElementById("ContentPlaceHolder1_div_adults").style.display = "block";
+            document.getElementById("ContentPlaceHolder1_div_teens").style.display = "block";
+            document.getElementById("ContentPlaceHolder1_div_kids").style.display = "block";
+            document.getElementById("ContentPlaceHolder1_div_preschool").style.display = "block";
+            document.getElementById("ContentPlaceHolder1_div_empresas").style.display = "block";
+            document.getElementById("ContentPlaceHolder1_div_preparacion").style.display = "block";
+            document.getElementById("ContentPlaceHolder1_div_fall").style.display = "block";
+        }
+
+        function mostrarEmpresas() {
+            document.getElementById("ContentPlaceHolder1_div_adults").style.display = "none";
+            document.getElementById("ContentPlaceHolder1_div_teens").style.display = "none";
+            document.getElementById("ContentPlaceHolder1_div_kids").style.display = "none";
+            document.getElementById("ContentPlaceHolder1_div_preschool").style.display = "none";
+            document.getElementById("ContentPlaceHolder1_div_empresas").style.display = "block";
+            document.getElementById("ContentPlaceHolder1_div_preparacion").style.display = "block";
+            document.getElementById("ContentPlaceHolder1_div_fall").style.display = "none";
+        }
+
+
+        function mostrarTKP() {
+            document.getElementById("ContentPlaceHolder1_div_adults").style.display = "none";
+            document.getElementById("ContentPlaceHolder1_div_teens").style.display = "block";
+            document.getElementById("ContentPlaceHolder1_div_kids").style.display = "block";
+            document.getElementById("ContentPlaceHolder1_div_preschool").style.display = "block";
+            document.getElementById("ContentPlaceHolder1_div_empresas").style.display = "none";
+            document.getElementById("ContentPlaceHolder1_div_preparacion").style.display = "none";
+            document.getElementById("ContentPlaceHolder1_div_fall").style.display = "block";
+        }
+    </script>
+
+
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
@@ -56,8 +109,31 @@
             </div>
 
             <div class="row g-4 justify-content-center">
-                <div class="col-md-6 col-lg-6 col-xl-3">
-                    <div class="service-item shadow">
+
+
+                <div class="col-md-12">
+                    <div class="alert bg-white text-center">
+                        <div class="btn-group " role="group" aria-label="Basic outlined example" runat="server" visible="false">
+                            <asp:LinkButton ID="LinkButtonA" class="btn btn-outline-primary" runat="server" OnClick="LinkButtonA_Click">Adultos</asp:LinkButton>
+                            <asp:LinkButton ID="LinkButtonJ" class="btn btn-outline-danger" runat="server" OnClick="LinkButtonJ_Click">Jovenes y Niños</asp:LinkButton>
+                            <asp:LinkButton ID="LinkButtonE" class="btn btn-outline-success" runat="server" OnClick="LinkButtonE_Click">Empresas</asp:LinkButton>
+                            <asp:LinkButton ID="LinkButtonT" class="btn btn-outline-dark" runat="server" OnClick="LinkButtonT_Click">Todos</asp:LinkButton>
+                        </div>
+
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" onclick="mostrarAdultos()" class="btn btn-outline-primary">Adultos</button>
+                            <button type="button" onclick="mostrarTKP()" class="btn btn-outline-danger">Jovenes y Niños</button>
+                            <button type="button" onclick="mostrarEmpresas()" class="btn btn-outline-success">Empresas</button>
+                            <button type="button" onclick="mostrarTodos()" class="btn btn-outline-dark">Todos</button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <%--<div id="nombre" style="display: block;">--%>
+
+                <div class="col-md-6 col-lg-6 col-xl-3" runat="server" id="div_adults" style="display: block;">
+                    <div class="service-item shadow article-card">
                         <a href="cursos/adults/Index.aspx">
                             <div class="service-img">
                                 <img src="img/programas/adulto.webp" class="img-fluid rounded-top w-100" alt="">
@@ -70,8 +146,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-6 col-xl-3 ">
-                    <div class="service-item shadow">
+
+                <div class="col-md-6 col-lg-6 col-xl-3 " runat="server" id="div_teens" style="display: block;">
+                    <div class="service-item shadow article-card">
                         <a href="cursos/teen/Index.aspx">
                             <div class="service-img">
                                 <img src="img/programas/teens.webp" class="img-fluid rounded-top w-100" alt="">
@@ -84,8 +161,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-6 col-xl-3 ">
-                    <div class="service-item shadow">
+
+                <div class="col-md-6 col-lg-6 col-xl-3 " runat="server" id="div_kids" style="display: block;">
+                    <div class="service-item shadow article-card">
                         <a href="cursos/kid/Index.aspx">
                             <div class="service-img">
                                 <img src="img/programas/kids.webp" class="img-fluid rounded-top w-100" alt="">
@@ -99,8 +177,8 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-6 col-xl-3 ">
-                    <div class="service-item shadow">
+                <div class="col-md-6 col-lg-6 col-xl-3 " runat="server" id="div_preschool" style="display: block;">
+                    <div class="service-item shadow article-card">
                         <a href="cursos/pre/Index.aspx">
                             <div class="service-img">
                                 <img src="img/programas/preschool.webp" class="img-fluid rounded-top w-100" alt="">
@@ -113,14 +191,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="row g-4 mt-5 justify-content-center">
-                <div class="col-md-6 col-lg-6 col-xl-3 ">
-                    <div class="service-item shadow">
+                <div class="col-md-6 col-lg-6 col-xl-3 " runat="server" id="div_empresas" style="display: block;">
+                    <div class="service-item shadow article-card">
                         <a href="cursos/empresas/Index.aspx">
                             <div class="service-img">
-                                <img src="img/programas/corp.webp" class="img-fluid rounded-top w-100" alt="">
+                                <img src="img/programas/corp1.webp" class="img-fluid rounded-top w-100" alt="">
                             </div>
                         </a>
                         <div class="service-content p-4 bg-light rounded">
@@ -130,11 +206,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-6 col-xl-3 ">
-                    <div class="service-item shadow">
+
+                <div class="col-md-6 col-lg-6 col-xl-3 " runat="server" id="div_preparacion" style="display: block;">
+                    <div class="service-item shadow article-card">
                         <a href="cursos/preparacion/Index.aspx">
                             <div class="service-img">
-                                <img src="img/programas/preparar.webp" class="img-fluid rounded-top w-100" alt="">
+                                <img src="img/programas/preparar1.webp" class="img-fluid rounded-top w-100" alt="">
                             </div>
                         </a>
                         <div class="service-content p-4 bg-light rounded">
@@ -143,35 +220,23 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-6 col-xl-3 ">
-                    <div class="service-item shadow">
-                        <a href="cursos/sprim/Index.aspx">
+                </div>             
+
+                <div class="col-md-6 col-lg-6 col-xl-3 " runat="server" id="div_fall" style="display: block;">
+                    <div class="service-item shadow article-card">
+                        <a href="cursos/MiddleTerm/Index.aspx">
                             <div class="service-img">
-                                <img src="img/programas/spring.webp" class="img-fluid rounded-top w-100" alt="">
+                                <img src="img/programas/fall4.png" class="img-fluid rounded-top w-100" alt="">
                             </div>
                         </a>
                         <div class="service-content p-4 bg-light rounded">
                             <div class="service-content-inner text-center">
-                                <a class="btn btn-primary rounded-pill py-2 px-4" href="cursos/sprim/Index.aspx">Saber más</a>
+                                <a class="btn btn-primary rounded-pill py-2 px-4" href="cursos/MiddleTerm/Index.aspx">Saber más</a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-6 col-xl-3">
-                    <div class="service-item shadow">
-                        <a href="cursos/especiales/Index.aspx">
-                            <div class="service-img">
-                                <img src="img/programas/especial.webp" class="img-fluid rounded-top w-100" alt="">
-                            </div>
-                        </a>
-                        <div class="service-content p-4 bg-light rounded">
-                            <div class="service-content-inner text-center">
-                                <a class="btn btn-primary rounded-pill py-2 px-4" href="cursos/especiales/Index.aspx">Saber más</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>

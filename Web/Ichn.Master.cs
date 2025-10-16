@@ -24,120 +24,103 @@ namespace Web
 
             if (Request.Browser.IsMobileDevice)
             {
+                div_btn_movil.Visible = true;
+                div_btn_web.Visible = false;
+
                 switch (fiestaSelect)
                 {
                     case "18 sep":
-                        gif_fiesta.Src = "~/Tematica/18sep/volantin.webp";
-                        gif_fiesta.Attributes.Add("style", "width:14%");
+                        logo_ichn.Src = "~/Tematica/18sep/volantin.webp";
+                        logo_ichn.Attributes.Add("style", "width:14%");
                         break;
                     case "thanksgiving":
-                        gif_fiesta.Src = "~/Tematica/tg/pavo.gif";
-                        gif_fiesta.Attributes.Add("style", "width:15%");
+                        logo_ichn.Src = "~/Tematica/tg/pavo.gif";
+                        logo_ichn.Attributes.Add("style", "width:15%");
                         break;
                     case "halloween":
-                        gif_fiesta.Src = "~/Tematica/hallo/bat.webp";
-                        gif_fiesta.Attributes.Add("style", "width:15%");
+                        logo_ichn.Src = "~/Tematica/hallo/bat.webp";
+                        logo_ichn.Attributes.Add("style", "width:15%");
                         break;
                     case "navidad":
-                        gif_fiesta.Src = "~/Tematica/pascua/tree.webp";
-                        gif_fiesta.Attributes.Add("style", "width:14%");
+                        logo_ichn.Src = "~/Tematica/pascua/tree.webp";
+                        logo_ichn.Attributes.Add("style", "width:14%");
                         break;
                     case "new year":
-                        gif_fiesta.Src = "~/Tematica/newYear/hny.gif";
-                        gif_fiesta.Attributes.Add("style", "width:14%");
+                        logo_ichn.Src = "~/Tematica/newYear/hny.gif";
+                        logo_ichn.Attributes.Add("style", "width:14%");
                         break;
                     case "Patricks":
-                        gif_fiesta.Src = "~/Tematica/Patrick/duende.gif";
-                        gif_fiesta.Attributes.Add("style", "width:15%");
+                        logo_ichn.Src = "~/Tematica/Patrick/duende.gif";
+                        logo_ichn.Attributes.Add("style", "width:15%");
                         break;
                     case "independence":
-                        gif_fiesta.Src = "~/Tematica/independence/4thjuly05.webp";
-                        gif_fiesta.Attributes.Add("style", "width:15%");
+                        logo_ichn.Src = "~/Tematica/independence/4thjuly05.webp";
+                        logo_ichn.Attributes.Add("style", "width:15%");
                         break;
                     case "valentin":
-                        gif_fiesta.Src = "~/Tematica/Valentin/love.webp";
-                        gif_fiesta.Attributes.Add("style", "width:15%");
+                        logo_ichn.Src = "~/Tematica/Valentin/love.webp";
+                        logo_ichn.Attributes.Add("style", "width:15%");
                         break;
                     default:
-                        gif_fiesta.Visible = false;
+                        logo_ichn.Src = "~/img/logocuadrado.png";
+                        logo_ichn.Attributes.Add("style", "width:15%");
                         break;
                 }
             }
             else
             {
+                div_btn_movil.Visible = false;
+                div_btn_web.Visible = true;
+
                 switch (fiestaSelect)
                 {
                     case "18 sep":
-                        gif_fiesta.Src = "~/Tematica/18sep/volantin.webp";
-                        gif_fiesta.Attributes.Add("style", "width:4%");
+                        logo_ichn.Src = "~/Tematica/18sep/volantin.webp";
+                        logo_ichn.Attributes.Add("style", "width:4%");
                         break;
                     case "thanksgiving":
-                        gif_fiesta.Src = "~/Tematica/tg/pavo.gif";
-                        gif_fiesta.Attributes.Add("style", "width:5%");
+                        logo_ichn.Src = "~/Tematica/tg/pavo.gif";
+                        logo_ichn.Attributes.Add("style", "width:5%");
                         break;
                     case "halloween":
-                        gif_fiesta.Src = "~/Tematica/hallo/bat.webp";
-                        gif_fiesta.Attributes.Add("style", "width:5%");
+                        logo_ichn.Src = "~/Tematica/hallo/bat.webp";
+                        logo_ichn.Attributes.Add("style", "width:5%");
                         break;
                     case "navidad":
-                        gif_fiesta.Src = "~/Tematica/pascua/tree.webp";
-                        gif_fiesta.Attributes.Add("style", "width:4%");
+                        logo_ichn.Src = "~/Tematica/pascua/tree.webp";
+                        logo_ichn.Attributes.Add("style", "width:4%");
                         break;
                     case "new year":
-                        gif_fiesta.Src = "~/Tematica/newYear/hny.gif";
-                        gif_fiesta.Attributes.Add("style", "width:4%");
+                        logo_ichn.Src = "~/Tematica/newYear/hny.gif";
+                        logo_ichn.Attributes.Add("style", "width:4%");
                         break;
                     case "Patricks":
-                        gif_fiesta.Src = "~/Tematica/Patrick/duende.gif";
-                        gif_fiesta.Attributes.Add("style", "width:5%");
+                        logo_ichn.Src = "~/Tematica/Patrick/duende.gif";
+                        logo_ichn.Attributes.Add("style", "width:5%");
                         break;
                     case "independence":
-                        gif_fiesta.Src = "~/Tematica/independence/4thjuly05.webp";
-                        gif_fiesta.Attributes.Add("style", "width:5%");
+                        logo_ichn.Src = "~/Tematica/independence/4thjuly05.webp";
+                        logo_ichn.Attributes.Add("style", "width:5%");
                         break;
                     case "valentin":
-                        gif_fiesta.Src = "~/Tematica/Valentin/love.webp";
-                        gif_fiesta.Attributes.Add("style", "width:5%");
+                        logo_ichn.Src = "~/Tematica/Valentin/love.webp";
+                        logo_ichn.Attributes.Add("style", "width:5%");
                         break;
                     default:
-                        gif_fiesta.Visible = false;
+                        logo_ichn.Src = "~/img/logocuadrado.png";
+                        logo_ichn.Attributes.Add("style", "width:5%");
                         break;
                 }
             }
         }
 
-        public void BlackFriday()
-        {
-            FechaApi fechaApi = new FechaApi();
-
-            DateTime hoy = DateTime.Parse(fechaApi.GetNetworkTime().ToString("yyyy-MM-dd"));
-            DateTime fin = new DateTime(2024, 12, 07);
-            DateTime inicio = new DateTime(2024, 11, 20);
-
-            if (hoy >= inicio)
-            {
-                if (hoy <= fin)
-                {
-                    div_black.Visible = true;
-                }
-                else
-                {
-                    div_black.Visible = false;
-                }
-            }
-            else
-            {
-                div_black.Visible = false;
-            }
-        }
-
+      
 
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
             {
-                Fiestas();
-                BlackFriday();
+                Fiestas();               
             }
         }
     }

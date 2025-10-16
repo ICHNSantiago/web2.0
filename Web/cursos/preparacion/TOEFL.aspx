@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
-    <meta name="description" content="Norteamericano, Cursos de Inglés para adolescentes, jovenes, regulares e intensivos. Somos expertos en la enseñanza presencial. curso de inglés, español">
+   <meta name="description" content="Norteamericano, Cursos de Inglés para adolescentes, jovenes, regulares e intensivos. Somos expertos en la enseñanza presencial. curso de inglés, español">
     <title>Preparación TOEFL | Norteamericano </title>
     <link rel="canonical" href="https://norteamericano.cl/" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -29,6 +29,8 @@
                                 <h5>
                                     <i class="fas fa-user me-2"></i>Presencial 
                                     <span class="me-2 ms-2">|</span>
+                                    <i class="fas fa-laptop me-2"></i>Online
+                                      <span class="me-2 ms-2">|</span>
                                     <i class="fas fa-laptop me-2"></i>Autoinstrucción
                                        <span class="me-2 ms-2">|</span>
                                     <i class="fas fa-user me-2"></i>3 Modalidades
@@ -244,10 +246,10 @@
                                             </tr>
                                             <tr>
                                                 <td>Dual</td>
-                                                <td>6</td>
+                                                <td>8</td>
                                                 <td>2</td>
                                                 <td>18</td>
-                                                <td>9</td>
+                                                <td>12</td>
                                                 <td>$680.320</td>
                                             </tr>
                                             <tr>

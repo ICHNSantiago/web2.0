@@ -15,24 +15,6 @@ namespace Web.cursos.adults
     {
 
         /// <summary>
-        /// Control div_inicio.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_inicio;
-
-        /// <summary>
-        /// Control LabelInicios.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label LabelInicios;
-
-        /// <summary>
         /// Control table_tarifas.
         /// </summary>
         /// <remarks>
@@ -42,40 +24,40 @@ namespace Web.cursos.adults
         protected global::System.Web.UI.HtmlControls.HtmlTable table_tarifas;
 
         /// <summary>
-        /// Control btn_m.
+        /// Control btn_m_x.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl btn_m;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl btn_m_x;
 
         /// <summary>
-        /// Control btn_p.
+        /// Control btn_p_x.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl btn_p;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl btn_p_x;
 
         /// <summary>
-        /// Control btn_f.
+        /// Control btn_f_x.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl btn_f;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl btn_f_x;
 
         /// <summary>
-        /// Control btn_o.
+        /// Control btn_o_x.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl btn_o;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl btn_o_x;
 
         /// <summary>
         /// Control div_m.
@@ -148,5 +130,23 @@ namespace Web.cursos.adults
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DataList DataListHorariosRegularOnline;
+
+        /// <summary>
+        /// Control div_inicio.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_inicio;
+
+        /// <summary>
+        /// Control LabelInicios.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label LabelInicios;
     }
 }

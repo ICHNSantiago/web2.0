@@ -50,11 +50,30 @@
     // testimonial carousel
     $(".testimonial-carousel").owlCarousel({
         animateOut: 'fadeOut',
-        items: 5,
+        items: 4,
         margin: 0,
         stagePadding: 0,
         autoplay: true,
         autoHeight: true,
+        smartSpeed: 100,
+        dots: true,
+        loop: true,
+        nav: false,
+        navText: [
+            '<i class="bi bi-arrow-right"></i>',
+            '<i class="bi bi-arrow-left"></i>'
+
+        ],
+    });
+
+    $(".testimonial-carousel-web").owlCarousel({
+        animateOut: 'fadeOut',
+        items: 1,
+        margin: 0,
+        stagePadding: 0,
+        autoplay: true,
+        autoHeight: true,
+        autoWidth: true,
         smartSpeed: 100,
         dots: true,
         loop: true,

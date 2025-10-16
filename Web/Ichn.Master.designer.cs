@@ -33,22 +33,31 @@ namespace Web
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Control gif_fiesta.
+        /// Control logo_ichn.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlImage gif_fiesta;
+        protected global::System.Web.UI.HtmlControls.HtmlImage logo_ichn;
 
         /// <summary>
-        /// Control div_black.
+        /// Control div_btn_movil.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_black;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_btn_movil;
+
+        /// <summary>
+        /// Control div_btn_web.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl div_btn_web;
 
         /// <summary>
         /// Control ContentPlaceHolder1.

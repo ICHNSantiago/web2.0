@@ -100,29 +100,29 @@ namespace Web.cursos.adults
                 
                     div_m.Visible = true;
                     DataListHorariosRegularMoneda.DataSource = moneda;
-                    DataListHorariosRegularMoneda.DataBind();                  
-                    btn_m.Visible = true;
+                    DataListHorariosRegularMoneda.DataBind();
+                    btn_m_x.Visible = true;
                 }
 
                 if (provi.Rows.Count > 0)
                 {                  
                     DataListHorariosRegularProvi.DataSource = provi;
-                    DataListHorariosRegularProvi.DataBind();                   
-                    btn_p.Visible = true;
+                    DataListHorariosRegularProvi.DataBind();
+                    btn_p_x.Visible = true;
                 }
 
                 if (florida.Rows.Count > 0)
                 {
                     DataListHorariosRegularFlorida.DataSource = florida;
-                    DataListHorariosRegularFlorida.DataBind();                   
-                    btn_f.Visible = true;
+                    DataListHorariosRegularFlorida.DataBind();
+                    btn_f_x.Visible = true;
                 }
 
                 if (online.Rows.Count > 0)
                 {
                     DataListHorariosRegularOnline.DataSource = online;
-                    DataListHorariosRegularOnline.DataBind();                  
-                    btn_o.Visible = true;
+                    DataListHorariosRegularOnline.DataBind();
+                    btn_o_x.Visible=true;
                 }
             }
         }
