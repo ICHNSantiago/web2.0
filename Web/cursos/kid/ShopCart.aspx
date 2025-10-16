@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Ichn.Master" AutoEventWireup="true" CodeBehind="ShopCart.aspx.cs" Inherits="Web.cursos.kid.ShopCart" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <meta name="description" content="Norteamericano, Cursos de Inglés para adultos, regulares e intensivos. Somos expertos en la enseñanza presencial. curso de inglés, español">
+   <meta name="description" content="Norteamericano, Cursos de Inglés para adultos, regulares e intensivos. Somos expertos en la enseñanza presencial. curso de inglés, español">
     <title>Niños | Cursos de Inglés </title>
     <link rel="canonical" href="https://norteamericano.cl/" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -88,10 +88,10 @@
 
             <div class="row g-4 bg-white" runat="server" id="shop_programa">
                 <div class="col-md-2">
-                    <img src="../../img/programas/kids.webp" class="img-fluid rounded w-100" alt="">
+                    <img src="../../img/programas/kids.jpg" class="img-fluid rounded w-100" alt="">
                 </div>
                 <div class="col-md-6">
-                    <table class="table table-sm text-dark table-borderless" runat="server" id="table_summer" visible="false" style="font-size: 18px">
+                    <table class="table table-sm text-dark table-borderless" runat="server" id="table_summer" visible="false" style="font-size: 14px">
                         <tr>
                             <td style="width: 40%">Curso de Inglés</td>
                             <th>
@@ -119,7 +119,7 @@
                         </tr>
                     </table>
 
-                    <table class="table table-sm text-dark " runat="server" id="table_regular" visible="false" style="font-size: 18px">
+                    <table class="table table-sm text-dark mb-0 " runat="server" id="table_regular" visible="false" style="font-size: 14px">
                         <tr>
                             <td style="width: 40%">Curso de Inglés</td>
                             <th>
@@ -148,7 +148,7 @@
 
 
 
-                    <table class="table table-sm text-dark" style="font-size: 18px">
+                    <table class="table table-sm text-dark" style="font-size: 14px">
                         <tr>
                             <td style="width: 40%">Modalidad de Clases</td>
                             <th class="presente">
@@ -160,68 +160,118 @@
                         <tr>
                             <td>Sede</td>
                             <th>
-                                <asp:DropDownList ID="ListaSedes" class="form-select" runat="server"></asp:DropDownList>
+                                <asp:DropDownList ID="ListaSedes" class="form-select form-select-sm" runat="server"></asp:DropDownList>
                                 <span class="badge bg-danger" runat="server" id="error_sede" visible="false" style="font-size: 14px">Tiene que seleccionar una sede</span>
                             </th>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="text-center">
+                                <small>* Para más opciones de inicio comunícate con nuestros ejecutivos</small>
+                            </td>
                         </tr>
                     </table>
                 </div>
 
                 <div class="col-md-4">
-                    <table class="table text-dark table-borderless" style="font-size: 18px">
-                        <tr class="text-center" runat="server" id="row_sin_promo" visible="false">
-                            <th colspan="3">
-                                <h1>$ 
+                    <table class="table text-dark table-borderless " style="font-size: 16px">
+                        <tr runat="server" id="row_sin_promo" visible="false">
+                            <td>
+                                <div class="mt-2">
+                                    Precio
+                                </div>
+                            </td>
+                            <th class="text-center">
+                                <h4>$ 
                                     <asp:Label ID="LabelTarifa" runat="server" Text="Label"></asp:Label>
                                     <asp:Label ID="LabelTarifaID" Visible="false" runat="server" Text="Label"></asp:Label>
-                                </h1>
+                                </h4>
                             </th>
                         </tr>
-                        <tr class="text-center" runat="server" id="row_con_promo" visible="false">
-                            <th colspan="3">
-                                <span class="badge bg-warning text-dark" style="font-size: 14px">
-                                    <asp:Label ID="LabelPromoMonto" runat="server" Text="Label"></asp:Label>
-                                    <asp:Label ID="LabelPromoMontoID" Visible="false" runat="server" Text="1"></asp:Label>
-                                </span>
-
-                                <h1 class="text-primary">$ 
-                                    <asp:Label ID="LabelTarifaPromo" runat="server" Text="Label"></asp:Label>
-                                </h1>
-                                <del>
-                                    <h4>$ 
-                                    <asp:Label ID="LabelTarifaOld" runat="server" Text="Label"></asp:Label>
-                                    </h4>
+                        <tr runat="server" id="row_con_promo_a" visible="false">
+                            <td>
+                                <div class="mt-2">
+                                    Precio Especial
+                                </div>
+                            </td>
+                            <th class="text-center">
+                                <h4 class="text-primary">$ 
+        <asp:Label ID="LabelTarifaPromo" runat="server" Text="Label"></asp:Label>
+                                </h4>
+                            </th>
+                        </tr>
+                        <tr runat="server" id="row_con_promo_c" visible="false">
+                            <td>
+                                <div class="mt-2">
+                                    Descuento
+                                </div>
+                            </td>
+                            <th class="text-center">
+                                <div class="mt-1">
+                                    <span runat="server" id="span_promo" class="badge bg-warning text-dark text-start" style="font-size: 14px">
+                                        <asp:Label ID="LabelPromoMonto" runat="server" Text="Label"></asp:Label>
+                                        <asp:Label ID="LabelPromoMontoID" Visible="false" runat="server" Text="1"></asp:Label>
+                                    </span>
+                                </div>
+                            </th>
+                        </tr>
+                        <tr runat="server" id="row_con_promo_b" visible="false">
+                            <td>
+                                <div class="mt-2">
+                                    Normal
+                                </div>
+                            </td>
+                            <th class="text-center">
+                                <del class="text-muted">
+                                    <h5 class="text-muted">$
+            <asp:Label ID="LabelTarifaOld" runat="server" Text="Label"></asp:Label></h5>
                                 </del>
                             </th>
                         </tr>
-                        <tr class="text-center" runat="server" visible="false">
-                            <td class="text-end">
-                                <asp:LinkButton ID="LinkButtonMenos" CssClass="btn btn-primary" runat="server" OnClick="LinkButtonMenos_Click"> - </asp:LinkButton>
+                        <tr>
+                            <td>
+                                <div class="mt-2">
+                                    Cantidad
+                                </div>
                             </td>
-                            <td style="width: 20%">
-                                <asp:TextBox ID="TextBoxCantidad" CssClass="form-control" Text="1" runat="server"></asp:TextBox>
+                            <td class="text-center">
+                                <div class="btn-group btn-group-sm" role="group" aria-label="Basic example">
+                                    <asp:LinkButton ID="LinkButtonMenosDi" Visible="false"  CssClass="btn btn-outline-primary " runat="server"> <div class="ms-2 me-2">-</div> </asp:LinkButton>
+                                    <asp:LinkButton ID="LinkButtonMenos" Visible="false" CssClass="btn btn-primary " runat="server" OnClick="LinkButtonMenos_Click"> <div class="ms-2 me-2">-</div> </asp:LinkButton>
+                                    <button type="button" disabled class="btn btn-outline-primary ">
+                                        <div class="ms-2 me-2">
+                                            <asp:Label ID="LabelCantidad" runat="server" Text="1"></asp:Label>
+                                        </div>
+                                    </button>
+                                    <asp:LinkButton ID="LinkButtonMas" Visible="false"  CssClass="btn btn-primary " runat="server" OnClick="LinkButtonMas_Click"><div class="ms-2 me-2"> +</div> </asp:LinkButton>
+                                    <asp:LinkButton ID="LinkButtonMasDi" Visible="false" CssClass="btn btn-outline-primary " runat="server"><div class="ms-2 me-2"> + </div></asp:LinkButton>
+                                </div>
+
                             </td>
-                            <td class="text-start">
-                                <asp:LinkButton ID="LinkButtonMas" CssClass="btn btn-primary" runat="server" OnClick="LinkButtonMas_Click"> + </asp:LinkButton>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="text-center" runat="server" visible="false" id="row_mensaje_max">
+                                <small class="text-danger">Llegaste al máximo de cursos por compra</small>
+                            </td>
+                        </tr>
+
+                        <tr class="text-center">
+                            <td colspan="3">
+                                <div class="d-grid gap-2">
+                                    <asp:LinkButton class="btn btn-primary" ID="LinkButtonNext" runat="server" OnClick="LinkButtonNext_Click">Ir al Pago</asp:LinkButton>
+                                </div>
                             </td>
                         </tr>
                         <tr class="text-center">
                             <td colspan="3">
                                 <small>* Precio no incluye el valor del libro de clases. </small>
                             </td>
-                        </tr>
-                        <tr class="text-center">
-                            <td colspan="3">
-                                <asp:LinkButton class="btn btn-success btn-lg rounded-pill py-2 px-4 mt-4" ID="LinkButtonNext" runat="server" OnClick="LinkButtonNext_Click">Ir al Pago</asp:LinkButton>
-                            </td>
+
                         </tr>
                     </table>
                 </div>
 
-                <div class="col-xl-2 text-dark"></div>
-                <div class="col-xl-8 text-dark">
-                    * Para más opciones de inicio comunícate con nuestro ejecutivos
-                </div>
+
+                <div class="col-xl-12 mb-5 text-dark"></div>
             </div>
 
             <div class="row g-4 justify-content-center" runat="server" id="shop_pago" visible="false">
@@ -824,9 +874,9 @@
         </div>
     </div>
 
-     <div style="display: none">
-     <asp:Label ID="LabelTipoDoc" Text="Run" runat="server"></asp:Label>
-     <asp:Label ID="LabelTipoDocAlum" Text="Run" runat="server"></asp:Label>
- </div>
+    <div style="display: none">
+        <asp:Label ID="LabelTipoDoc" Text="Run" runat="server"></asp:Label>
+        <asp:Label ID="LabelTipoDocAlum" Text="Run" runat="server"></asp:Label>
+    </div>
 </asp:Content>
 

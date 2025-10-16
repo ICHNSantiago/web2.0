@@ -58,7 +58,7 @@
                                     </tr>
                                     <tr class="text-center" runat="server" id="row_sin_promo_regular">
                                         <th colspan="2">
-                                            <h1>$ 
+                                            <h1> <span style="font-size: 20px">*</span> $  
                                                 <asp:Label ID="LabelTarifaRegular" runat="server" Text="Label"></asp:Label>
                                             </h1>
                                             <h4>&nbsp;  </h4>
@@ -155,7 +155,7 @@
 
 
                 <div class="col-md-6 col-lg-6 col-xl-12 text-dark text-center" data-wow-delay="0.2s">
-                    <h5>* Para más opciones de inicio comunícate con nuestro ejecutivos </h5>
+                    <h5>* Para más opciones de inicio comunícate con nuestros ejecutivos </h5>
                         <h5>* Precio no incluye el valor del libro de clases.</h5>
                 </div>
             </div>
