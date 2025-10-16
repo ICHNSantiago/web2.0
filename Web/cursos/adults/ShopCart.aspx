@@ -467,7 +467,7 @@
                                             <asp:Label ID="LabelProductoModalidad" runat="server" Text="Label"></asp:Label>
                                             <asp:Label ID="LabelProductoSede" runat="server" Text="Label"></asp:Label>
                                             x                                            
-                                                   <asp:Label ID="LabelProductoCant" runat="server" Text="Label"></asp:Label>
+                                                   <asp:Label ID="LabelProductoCant" runat="server" Text="1"></asp:Label>
 
                                         </td>
                                         <td class="text-end">
