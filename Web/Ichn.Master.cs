@@ -31,19 +31,19 @@ namespace Web
                 {
                     case "18 sep":
                         logo_ichn.Src = "~/Tematica/18sep/volantin.webp";
-                        logo_ichn.Attributes.Add("style", "width:14%");
+                        //logo_ichn.Attributes.Add("style", "width:14%");
                         break;
                     case "thanksgiving":
                         logo_ichn.Src = "~/Tematica/tg/pavo.gif";
-                        logo_ichn.Attributes.Add("style", "width:15%");
+                        //logo_ichn.Attributes.Add("style", "width:15%");
                         break;
                     case "halloween":
                         logo_ichn.Src = "~/Tematica/hallo/bat.webp";
-                        logo_ichn.Attributes.Add("style", "width:15%");
+                        //logo_ichn.Attributes.Add("style", "width:15%");
                         break;
                     case "navidad":
                         logo_ichn.Src = "~/Tematica/pascua/tree.webp";
-                        logo_ichn.Attributes.Add("style", "width:14%");
+                        //logo_ichn.Attributes.Add("style", "width:14%");
                         break;
                     case "new year":
                         logo_ichn.Src = "~/Tematica/newYear/hny.gif";
@@ -51,19 +51,19 @@ namespace Web
                         break;
                     case "Patricks":
                         logo_ichn.Src = "~/Tematica/Patrick/duende.gif";
-                        logo_ichn.Attributes.Add("style", "width:15%");
+                        //logo_ichn.Attributes.Add("style", "width:15%");
                         break;
                     case "independence":
                         logo_ichn.Src = "~/Tematica/independence/4thjuly05.webp";
-                        logo_ichn.Attributes.Add("style", "width:15%");
+                        //logo_ichn.Attributes.Add("style", "width:15%");
                         break;
                     case "valentin":
                         logo_ichn.Src = "~/Tematica/Valentin/love.webp";
-                        logo_ichn.Attributes.Add("style", "width:15%");
+                        //logo_ichn.Attributes.Add("style", "width:15%");
                         break;
                     default:
                         logo_ichn.Src = "~/img/logocuadrado.png";
-                        logo_ichn.Attributes.Add("style", "width:15%");
+                        //logo_ichn.Attributes.Add("style", "width:15%");
                         break;
                 }
             }
@@ -76,27 +76,27 @@ namespace Web
                 {
                     case "18 sep":
                         logo_ichn.Src = "~/Tematica/18sep/volantin.webp";
-                        logo_ichn.Attributes.Add("style", "width:4%");
+                        //logo_ichn.Attributes.Add("style", "width:4%");
                         break;
                     case "thanksgiving":
                         logo_ichn.Src = "~/Tematica/tg/pavo.gif";
-                        logo_ichn.Attributes.Add("style", "width:5%");
+                        //logo_ichn.Attributes.Add("style", "width:5%");
                         break;
                     case "halloween":
                         logo_ichn.Src = "~/Tematica/hallo/bat.webp";
-                        logo_ichn.Attributes.Add("style", "width:5%");
+                        //logo_ichn.Attributes.Add("style", "width:5%");
                         break;
                     case "navidad":
                         logo_ichn.Src = "~/Tematica/pascua/tree.webp";
-                        logo_ichn.Attributes.Add("style", "width:4%");
+                        //logo_ichn.Attributes.Add("style", "width:4%");
                         break;
                     case "new year":
                         logo_ichn.Src = "~/Tematica/newYear/hny.gif";
-                        logo_ichn.Attributes.Add("style", "width:4%");
+                        //logo_ichn.Attributes.Add("style", "width:4%");
                         break;
                     case "Patricks":
                         logo_ichn.Src = "~/Tematica/Patrick/duende.gif";
-                        logo_ichn.Attributes.Add("style", "width:5%");
+                        //logo_ichn.Attributes.Add("style", "width:5%");
                         break;
                     case "independence":
                         logo_ichn.Src = "~/Tematica/independence/4thjuly05.webp";
@@ -104,11 +104,11 @@ namespace Web
                         break;
                     case "valentin":
                         logo_ichn.Src = "~/Tematica/Valentin/love.webp";
-                        logo_ichn.Attributes.Add("style", "width:5%");
+                        //logo_ichn.Attributes.Add("style", "width:5%");
                         break;
                     default:
                         logo_ichn.Src = "~/img/logocuadrado.png";
-                        logo_ichn.Attributes.Add("style", "width:5%");
+                        //logo_ichn.Attributes.Add("style", "width:5%");
                         break;
                 }
             }
