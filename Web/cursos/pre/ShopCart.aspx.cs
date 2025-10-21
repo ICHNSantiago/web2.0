@@ -161,7 +161,25 @@ namespace Web.cursos.pre
                 int descto = int.Parse(LabelPromoMontoID.Text);
                 int edadAlum = int.Parse(LabelProductoEdad.Text.Replace("años", string.Empty));
                 int tarifaID = int.Parse(LabelTarifaID.Text);
-                cotizacion.IngresarDetalle(idCotizacion, curso, modalidad, sede, cantidad, tarifa, descto, total, rutAlu, edadAlum, rutApo, tarifaID);
+
+
+                int sedeID = 1;
+                switch (sede)
+                {
+                    case "Providencia":
+                        sedeID = 2;
+                        break;
+                    case "La Florida":
+                        sedeID = 3;
+                        break;
+                    case "Online":
+                        sedeID = 4;
+                        break;
+                    default:
+                        break;
+                }
+
+                cotizacion.IngresarDetalleV2(idCotizacion, curso, modalidad, sede, cantidad, tarifa, descto, total, rutAlu, edadAlum, rutApo, tarifaID, sedeID, 1);
             }
             return idCotizacion;
         }

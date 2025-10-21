@@ -216,7 +216,24 @@ namespace Web.cursos.teen
                 int tarifa = int.Parse(LabelProductoMonto.Text.Replace(".", string.Empty));
                 int descto = int.Parse(LabelPromoMontoID.Text);
                 int tarifaID = int.Parse(LabelTarifaID.Text);
-                cotizacion.IngresarDetalle(idCotizacion, curso, modalidad, sede, cantidad, tarifa, descto, total, rutAlu, 0, rutApo, tarifaID);
+
+                int sedeID = 1;
+                switch (sede)
+                {
+                    case "Providencia":
+                        sedeID = 2;
+                        break;
+                    case "La Florida":
+                        sedeID = 3;
+                        break;
+                    case "Online":
+                        sedeID = 4;
+                        break;
+                    default:
+                        break;
+                }
+
+                cotizacion.IngresarDetalleV2(idCotizacion, curso, modalidad, sede, cantidad, tarifa, descto, total, rutAlu, 0, rutApo, tarifaID, sedeID, 3);
             }
             return idCotizacion;
         }

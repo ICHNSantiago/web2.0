@@ -181,7 +181,32 @@ namespace Web.cursos.adults
                 int tarifa = int.Parse(LabelProductoMonto.Text.Replace(".", string.Empty));
                 int descto = int.Parse(LabelPromoMontoID.Text);
                 int tarifaID = int.Parse(LabelTarifaID.Text);
-                cotizacion.IngresarDetalle(idCotizacion, curso, modalidad, sede, cantidad, tarifa, descto, total, rut,0, rut, tarifaID);
+
+
+                int sedeID = 1;
+                switch (sede)
+                {
+                    case "Providencia":
+                        sedeID = 2;
+                        break;
+                    case "La Florida":
+                        sedeID = 3;
+                        break;
+                    case "Online":
+                        sedeID = 4;
+                        break;
+                    default:
+                        break;
+                }
+
+                int programa = 5;
+
+                if(modalidad == "Intensivo")
+                {
+                    programa = 6;
+                }
+
+                cotizacion.IngresarDetalleV2(idCotizacion, curso, modalidad, sede, cantidad, tarifa, descto, total, rut,0, rut, tarifaID, sedeID, programa);
             }
 
             return idCotizacion;

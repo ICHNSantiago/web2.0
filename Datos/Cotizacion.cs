@@ -122,6 +122,42 @@ namespace Datos
             }
         }
 
+        public string IngresarDetalleV2(int cotizacion, string curso, string modalidad, string sede, int cantidad, int tarifa, int idDescto, int totalPago,
+            string alumID, int alumEdad, string apoID, int tarifaID, int sedeID, int programID)
+        {
+            try
+            {
+                Comando = new MySqlCommand("sam.WEB_ingresarCotizacionDetalleEcommerceV2", Conexion.AbrirConnectionMySql())
+                {
+                    CommandType = CommandType.StoredProcedure
+                };
+                Comando.Parameters.AddWithValue("@cotiID", cotizacion);
+                Comando.Parameters.AddWithValue("@nomCurso", curso);
+                Comando.Parameters.AddWithValue("@tipoCurso", modalidad);
+                Comando.Parameters.AddWithValue("@sedeCurso", sede);
+                Comando.Parameters.AddWithValue("@cantCurso", cantidad);
+                Comando.Parameters.AddWithValue("@netoCurso", tarifa);
+                Comando.Parameters.AddWithValue("@desctoID", idDescto);
+                Comando.Parameters.AddWithValue("@totalCurso", totalPago);
+                Comando.Parameters.AddWithValue("@alumno", alumID);
+                Comando.Parameters.AddWithValue("@apoderado", apoID);
+                Comando.Parameters.AddWithValue("@edadAlum", alumEdad);
+                Comando.Parameters.AddWithValue("@tarifaCurso", tarifaID);
+                Comando.Parameters.AddWithValue("@idSede", sedeID);
+                Comando.Parameters.AddWithValue("@programa", programID);
+
+                Comando.ExecuteReader();
+                Conexion.CerrarConnectionMysql();
+                return "ok";
+            }
+            catch (MySqlException ex)
+            {
+                Conexion.CerrarConnectionMysql();
+                return "Error: " + ex.Message;
+            }
+        }
+
+
         public string IngresarAlumno(string idAlumno, string paterno, string materno, string nombre, string comunaID, string direccion, DateTime nace, int fono, string mail)
         {
             try
