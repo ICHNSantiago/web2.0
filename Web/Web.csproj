@@ -196,6 +196,11 @@
     <Content Include="FundacionPage\ATE.aspx" />
     <Content Include="FundacionPage\Docentes.aspx" />
     <Content Include="FundacionPage\NorteamericanoEXP.aspx" />
+    <Content Include="img\ATE\11.png" />
+    <Content Include="img\ATE\12.png" />
+    <Content Include="img\ATE\13.png" />
+    <Content Include="img\ATE\2.jpg" />
+    <Content Include="img\ATE\Checkblanco.png" />
     <Content Include="img\blackfriday.png" />
     <Content Include="img\Black_Friday.jpg" />
     <Content Include="img\Fundacion\F05.jpg" />
@@ -1155,6 +1160,15 @@
     <Content Include="img\Fundacion\F06.webp" />
     <Content Include="img\Fundacion\F07.webp" />
     <Content Include="img\Fundacion\F08.webp" />
+    <Content Include="img\ATE\1.webp" />
+    <Content Include="img\ATE\10.webp" />
+    <Content Include="img\ATE\3.webp" />
+    <Content Include="img\ATE\4.webp" />
+    <Content Include="img\ATE\5.webp" />
+    <Content Include="img\ATE\6.webp" />
+    <Content Include="img\ATE\7.webp" />
+    <Content Include="img\ATE\8.webp" />
+    <Content Include="img\ATE\9.webp" />
     <None Include="packages.config" />
     <Content Include="Tematica\18sep\volantin.webp" />
     <Content Include="Tematica\hallo\halloween2.webp" />

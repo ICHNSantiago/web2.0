@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Ichn.Master" AutoEventWireup="true" CodeBehind="Fundacion.aspx.cs" Inherits="Web.Fundacion" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
- <meta name="description" content="Norteamericano, Cursos de Inglés para adolescentes, jovenes, regulares e intensivos. Somos expertos en la enseñanza presencial. curso de inglés, español">
+    <meta name="description" content="Norteamericano, Cursos de Inglés para adolescentes, jovenes, regulares e intensivos. Somos expertos en la enseñanza presencial. curso de inglés, español">
     <title>Fundación | Norteamericano </title>
     <link rel="canonical" href="https://norteamericano.cl/" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -25,22 +26,35 @@
         <div class="container py-5">
             <div class="row g-5" runat="server" id="div_main">
                 <div class="col-md-12 text-center">
-                    <span class="text-dark" style="font-family: Crimson Pro; font-weight: 600; font-size: 40px; line-height: 130%; letter-spacing: 0%;">Fundación Instituto Chileno Norteamericano</span>
+                    <span class="text-dark" style="font-family: Crimson Pro; font-weight: 600; font-size: 60px; line-height: 130%; letter-spacing: 0%;">El inglés es solo el comienzo</span>
+                    <br />
+                    <span class="text-dark" style="font-family: Crimson Pro; font-weight: 600; font-size: 30px; line-height: 130%; letter-spacing: 0%;">Transformamos la eduacación con innovación y propósito</span>
                 </div>
+
                 <div class="col-md-12 rounded" style="background: #396B95;">
                     <div class="row g-5">
                         <div class="col-md-12 mt-5"></div>
                         <div class="col-md-1"></div>
-                        <div class="col-md-5">
-                            <img class="img-fluid rounded" src="../../img/Fundacion/f01.webp" />
+                        <div class="col-md-5 ">
+                            <br />
+                            <img class="img-fluid rounded" src="img/ATE/1.webp" />
                         </div>
                         <div class="col-md-5 text-white" style="font-size: 20px;">
                             <div class="row">
-                                <div class="col-md-12" style="font-family: Work Sans; font-weight: 400; font-size: 20px; line-height: 130%; letter-spacing: 0%;">
-                                    La Fundación Instituto Chileno Norteamericano de Cultura de Santiago es una organización sin fines de lucro dedicada a estrechar los lazos entre Chile y Estados Unidos a través de la educación, la diplomacia pública y el intercambio cultural.
+
+                                <div class="col-md-12" style="font-family: Work Sans; font-weight: 400; font-size: 30px; line-height: 130%; letter-spacing: 0%;">
+                                    Quiénes somos
+                                       <br />
+                                </div>
+
+                                <div class="col-md-12" style="font-family: Work Sans; font-weight: 400; font-size: 18px; line-height: 130%; letter-spacing: 0%;">
+                                    Somos una Asistencia Técnica Educativa que combina experiencia pedagógica, datos e innovación para fortalecer la gestión y los aprendizajes en cada comunidad escolar.
                                     <br />
                                     <br />
-                                    Trabajamos en alianza con la Embajada de los Estados Unidos en Chile, instituciones educativas, organismos públicos y organizaciones de la sociedad civil para diseñar e implementar programas que potencien el aprendizaje del inglés, la formación docente y el desarrollo de competencias globales en estudiantes y comunidades escolares.
+                                    Creemos que el inglés es mucho más que un idioma: es una herramienta de movilidad social y una vía para transformar la educación con sentido y propósito.
+                                    <br />
+                                    <br />
+                                    Acompañamos a los colegios en las cuatro dimensiones de la gestión educativa con cercanía y profesionalismo, promoviendo una cultura educativa basada en la colaboración, la mejora continua y el liderazgo pedagógico.        
                                 </div>
                             </div>
                         </div>
@@ -53,7 +67,14 @@
                     </div>
                 </div>
 
+
                 <div class="col-md-12 text-center">
+                    <a href="../FundacionPage/ATE.aspx" style="cursor: pointer">
+                        <img src="../../img/Fundacion/F05.jpg" style="width: 400px" />
+                    </a>
+                </div>
+
+                <%--     <div class="col-md-12 text-center">
                     <div class="row">
                         <div class="col-md-1"></div>
                         <div class="col-md-10 text-center">
@@ -89,11 +110,14 @@
                             </div>
                         </div>
                     </div>
+                </div>--%>
+
+
+                <div class="col-md-12 text-center">
+                    <span class="text-dark" style="font-family: Crimson Pro; font-weight: 600; font-size: 40px; line-height: 130%; letter-spacing: 0%;">¿Cómo transformamos tus desafíos en oportunidades?</span>
                 </div>
 
                 <div class="col-md-12">
-
-
                     <style>
                         .article-card:hover {
                             transform: translateY(-10px);
@@ -105,85 +129,81 @@
                     <div class="row">
                         <div class="col-md-4 mb-5">
                             <div class="service-item bg-light shadow rounded article-card">
-                                <a href="../FundacionPage/NorteamericanoEXP.aspx">
-                                    <div class="service-img">
-                                        <img src="../../img/Fundacion/f02.webp" class="img-fluid rounded-top w-100" alt="">
-                                    </div>
-                                </a>
+
+                                <div class="service-img">
+                                    <img src="../../img/ate/3.webp" class="img-fluid rounded-top w-100" alt="">
+                                </div>
+
                                 <div class="service-content p-4">
 
                                     <div class="service-content-inner mb-5">
-                                        <span style="font-family: Work Sans; font-weight: 600; font-size: 24px; line-height: 130%; letter-spacing: 0%;">Norteamericano Experience
+                                        <span style="font-family: Work Sans; font-weight: 600; font-size: 24px; line-height: 130%; letter-spacing: 0%;">Asesorías
                                         </span>
                                     </div>
-                                    <div class="service-content-inner mb-5" style="min-height: 200px; font-family: Work Sans; font-weight: 400; font-size: 16px; line-height: 130%; letter-spacing: 0%;">
-                                        Transformamos el aula en una experiencia inolvidable con juegos, cultura y desafíos en inglés como Spelling Bees, Scavenger Hunts y más. Programas after-school y jornadas especiales que hacen del aprendizaje una aventura inmersiva… ¡directamente en tu colegio!
-                                   
+                                    <div class="service-content-inner mb-5" style="min-height: 100px; font-family: Work Sans; font-weight: 400; font-size: 16px; line-height: 130%; letter-spacing: 0%;">
+                                        Acompañamos a los equipos directivos y docentes para enriquecer su práctica y fortalecer su gestión hacia los aprendizajes.
                                     </div>
 
-                                    <div class="d-grid gap-2">
+                                    <%--   <div class="d-grid gap-2">
                                         <asp:LinkButton PostBackUrl="~/FundacionPage/NorteamericanoEXP.aspx" class="btn btn-danger rounded-pill py-2 px-4" Style="text-transform: uppercase" ID="LinkButtonPE" runat="server">
                                               <span class="me-3 ms-3" style="font-family: Work Sans;  font-weight: 600; font-size: 16px; line-height: 100%; letter-spacing: 10%; text-align: center; text-transform: uppercase;">Saber más
                                                   </span>
                                         </asp:LinkButton>
-                                    </div>
+                                    </div>--%>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-4 mb-5">
                             <div class="service-item bg-light shadow rounded article-card">
-                                <a href="../FundacionPage/Docentes.aspx">
-                                    <div class="service-img">
-                                        <img src="../../img/Fundacion/DSC07997.webp" class="img-fluid rounded-top w-100" alt="">
-                                    </div>
-                                </a>
+
+                                <div class="service-img">
+                                    <img src="../../img/ate/4.webp" class="img-fluid rounded-top w-100" alt="">
+                                </div>
+
                                 <div class="service-content p-4">
 
                                     <div class="service-content-inner mb-5">
-                                        <span style="font-family: Work Sans; font-weight: 600; font-size: 24px; line-height: 130%; letter-spacing: 0%;">Capacitaciones Docentes
+                                        <span style="font-family: Work Sans; font-weight: 600; font-size: 24px; line-height: 130%; letter-spacing: 0%;">Capacitaciones
                                         </span>
                                     </div>
-                                    <div class="service-content-inner mb-5" style="min-height: 200px; font-family: Work Sans; font-weight: 400; font-size: 16px; line-height: 130%; letter-spacing: 0%;">
-                                        Formación práctica, actualizada y 100 % aplicable desde el primer día. Cursos ATE para docentes, directivos y equipos educativos, con facilitadores expertos y enfoque real en el aula. ¡Aprende, aplica y transforma!
-
-
-
+                                    <div class="service-content-inner mb-5" style="min-height: 100px; font-family: Work Sans; font-weight: 400; font-size: 16px; line-height: 130%; letter-spacing: 0%;">
+                                        Creamos experiencias formativas que inspiran, actualizan y transforman la práctica docente desde la evidencia y la colaboración.
                                           
                                     </div>
-                                    <div class="d-grid gap-2">
+                                    <%-- <div class="d-grid gap-2">
                                         <asp:LinkButton PostBackUrl="~/FundacionPage/Docentes.aspx" class="btn btn-danger rounded-pill py-2 px-4" Style="text-transform: uppercase" ID="LinkButtonFE" runat="server">
                                               <span class="me-3 ms-3" style="font-family: Work Sans;  font-weight: 600; font-size: 16px; line-height: 100%; letter-spacing: 10%; text-align: center; text-transform: uppercase;">
                                                   Saber más
                                                   </span>
                                         </asp:LinkButton>
-                                    </div>
+                                    </div>--%>
                                 </div>
                             </div>
                         </div>
 
                         <div class="col-md-4 mb-5">
                             <div class="service-item bg-light shadow rounded article-card">
-                                <a href="../FundacionPage/Asesorias.aspx">
-                                    <div class="service-img">
-                                        <img src="../../img/Fundacion/f04.webp" class="img-fluid rounded-top w-100" alt="">
-                                    </div>
-                                </a>
+
+                                <div class="service-img">
+                                    <img src="../../img/ate/5.webp" class="img-fluid rounded-top w-100" alt="">
+                                </div>
+
                                 <div class="service-content p-4">
 
                                     <div class="service-content-inner mb-5">
-                                        <span style="font-family: Work Sans; font-weight: 600; font-size: 24px; line-height: 130%; letter-spacing: 0%;">Asesorías Educativas
+                                        <span style="font-family: Work Sans; font-weight: 600; font-size: 24px; line-height: 130%; letter-spacing: 0%;">Evaluaciones
                                         </span>
                                     </div>
-                                    <div class="service-content-inner mb-5" style="min-height: 200px; font-family: Work Sans; font-weight: 400; font-size: 16px; line-height: 130%; letter-spacing: 0%;">
-                                        Te acompañamos con un programa diagnóstico que culmina con acciones concretas: mejora del plan de inglés, implementación del plan lector y análisis de datos. ¡Educación con foco, medición y transformación real!
+                                    <div class="service-content-inner mb-5" style="min-height: 100px; font-family: Work Sans; font-weight: 400; font-size: 16px; line-height: 130%; letter-spacing: 0%;">
+                                        Realizamos diagnósticos formativos y certificaciones que entregan información clave para orientar la mejora y el crecimiento educativo.                                   
                                     </div>
-                                    <div class="d-grid gap-2">
+                                    <%--<div class="d-grid gap-2">
                                         <asp:LinkButton PostBackUrl="~/FundacionPage/Asesorias.aspx" class="btn btn-danger rounded-pill py-2 px-4" Style="text-transform: uppercase" ID="LinkButton1" runat="server">
                                               <span class="me-3 ms-3" style="font-family: Work Sans;  font-weight: 600; font-size: 16px; line-height: 100%; letter-spacing: 10%; text-align: center; text-transform: uppercase;">Saber más
                                                   </span>
 
                                         </asp:LinkButton>
-                                    </div>
+                                    </div>--%>
                                 </div>
                             </div>
                         </div>
@@ -191,7 +211,183 @@
 
                 </div>
 
+
                 <div class="col-md-12 text-center">
+                    <span class="text-dark" style="font-family: Crimson Pro; font-weight: 600; font-size: 40px; line-height: 130%; letter-spacing: 0%;">Dimensiones de la Gestión Educativa</span>
+                </div>
+
+                <div class="col-md-12">
+                    <style>
+                        .article-card:hover {
+                            transform: translateY(-10px);
+                            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+                            transition: all 500ms
+                        }
+                    </style>
+
+                    <div class="row">
+                        <div class="col-md-2 mb-5"></div>
+
+                        <div class="col-md-4 mb-5">
+                            <div class="service-item shadow rounded article-card" style="background-color: #396b95">
+
+                                <div class="service-img">
+                                    <img src="../../img/ate/6.webp" class="img-fluid rounded-top w-100" alt="">
+                                </div>
+
+                                <div class="service-content p-4">
+
+                                    <div class="service-content-inner mb-5 text-white">
+                                        <span style="font-family: Work Sans; font-weight: 600; font-size: 20px; line-height: 130%; letter-spacing: 0%;">Dimensión Pedagógica Curricular
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-4 mb-5">
+                            <div class="service-item shadow rounded article-card" style="background-color: #59cef6">
+
+                                <div class="service-img">
+                                    <img src="../../img/ate/7.webp" class="img-fluid rounded-top w-100" alt="">
+                                </div>
+
+                                <div class="service-content p-4">
+
+                                    <div class="service-content-inner mb-5">
+                                        <span style="font-family: Work Sans; font-weight: 600; font-size: 20px; line-height: 130%; letter-spacing: 0%;">Convivencia Escolar
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-md-2 mb-5"></div>
+
+                            <div class="col-md-4 mb-5">
+                                <div class="service-item shadow rounded article-card" style="background-color: #cd353b">
+
+                                    <div class="service-img">
+                                        <img src="../../img/ate/8.webp" class="img-fluid rounded-top w-100" alt="">
+                                    </div>
+
+                                    <div class="service-content p-4">
+                                        <div class="service-content-inner text-white mb-5">
+                                            <span style="font-family: Work Sans; font-weight: 600; font-size: 20px; line-height: 130%; letter-spacing: 0%;">Liderazgo Educativo
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 mb-5">
+                                <div class="service-item shadow rounded article-card" style="background-color: #7ebca3">
+
+                                    <div class="service-img">
+                                        <img src="../../img/ate/9.webp" class="img-fluid rounded-top w-100" alt="">
+                                    </div>
+
+                                    <div class="service-content p-4">
+                                        <div class="service-content-inner mb-5">
+                                            <span style="font-family: Work Sans; font-weight: 600; font-size: 20px; line-height: 130%; letter-spacing: 0%;">Recursos Educativos
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 mb-5 text-center">
+                    <a style="text-transform: uppercase" href="#" class="btn btn-danger rounded-pill py-4 px-4">
+                        <span class="me-3 ms-3" style="font-family: Work Sans; font-weight: 600; font-size: 24px; line-height: 100%; letter-spacing: 10%; text-align: center; text-transform: uppercase;">Descargar Brochure <i class="ms-2 fas fa-file-download"></i></span></a>
+                </div>
+
+                <div class="col-md-12 rounded text-white" style="background: #396B95;">
+                    <div class="row g-5">
+                        <div class="col-md-12 mt-5"></div>
+                        <div class="col-md-1"></div>
+
+                        <div class="col-md-5" style="font-size: 20px;">
+                            <div class="row">
+
+                                <div class="col-md-12" style="font-family: Work Sans; font-weight: 400; font-size: 40px; line-height: 130%; letter-spacing: 0%;">
+                                    Nuestro compromiso  
+                                    <br />
+                                    <br />
+                                </div>
+
+                                <div class="col-md-12 mb-4" style="font-family: Work Sans; font-weight: 400; font-size: 20px; line-height: 130%; letter-spacing: 0%;">
+                                    <div class="row">
+                                        <div class="col-md-1 text-center">
+                                            <img class="img-fluid" src="img/ATE/Checkblanco.png" />
+                                        </div>
+                                        <div class="col-md-11">
+                                            Acompañamos a las comunidades educativas con cercanía, innovación y propósito.
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="col-md-12 mb-4" style="font-family: Work Sans; font-weight: 400; font-size: 20px; line-height: 130%; letter-spacing: 0%;">
+                                    <div class="row">
+                                        <div class="col-md-1 text-center">
+                                            <img class="img-fluid" src="img/ATE/Checkblanco.png" />
+                                        </div>
+                                        <div class="col-md-11">
+                                            Creemos en el poder del inglés y en la educación como fuerza transformadora.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12" style="font-family: Work Sans; font-weight: 400; font-size: 20px; line-height: 130%; letter-spacing: 0%;">
+                                    <div class="row">
+                                        <div class="col-md-1 text-center">
+                                            <img class="img-fluid" src="img/ATE/Checkblanco.png" />
+                                        </div>
+                                        <div class="col-md-11">
+                                            Certificamos en inglés y trabajamos junto a los colegios para generar impacto real y construir futuro.                                       
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <img class="img-fluid rounded" src="../../img/ATE/10.webp" />
+                        </div>
+
+
+                        <div class="col-md-12 mb-5 mt-3 text-center">
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-md-12 text-center">
+                    <br />
+                    <br />
+                    <span class="text-dark" style="font-family: Crimson Pro; font-weight: 600; font-size: 40px; line-height: 130%; letter-spacing: 0%;">Estamos acreditados</span>
+                    <br />
+                    <br />
+                </div>
+
+                <div class="col-md-12 mb-5">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img class="img-fluid rounded w-75" src="img/ATE/11.png" />
+                        </div>
+                        <div class="col-md-4">
+                            <img class="img-fluid rounded w-75" src="img/ATE/12.png" />
+                        </div>
+                        <div class="col-md-4">
+                            <img class="img-fluid rounded w-75" src="img/ATE/13.png" />
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 mt-5 text-center">
                     <div class="row">
                         <div class="col-md-3">
                         </div>
@@ -218,15 +414,10 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="col-md-12 text-center">
-                    <a href="../FundacionPage/ATE.aspx" style="cursor: pointer">
-                    <img src="../../img/Fundacion/F05.jpg" style="width: 240px" />
-                        </a>
-                </div>
             </div>
         </div>
     </div>
+
     <!-- About End -->
 
     <script type="text/javascript">            
