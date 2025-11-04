@@ -125,6 +125,7 @@
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="BlackFriday.aspx" />
+    <Content Include="Colegios.aspx" />
     <Content Include="CompraLibros.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Correos\finalizar.html" />
@@ -203,6 +204,16 @@
     <Content Include="img\ATE\Checkblanco.png" />
     <Content Include="img\blackfriday.png" />
     <Content Include="img\Black_Friday.jpg" />
+    <Content Include="img\colegios\1.JPG" />
+    <Content Include="img\colegios\2.png" />
+    <Content Include="img\colegios\3.JPG" />
+    <Content Include="img\colegios\3icon.png" />
+    <Content Include="img\colegios\4.png" />
+    <Content Include="img\colegios\5.jpg" />
+    <Content Include="img\colegios\6.png" />
+    <Content Include="img\colegios\7.JPG" />
+    <Content Include="img\colegios\8.png" />
+    <Content Include="img\colegios\9.JPG" />
     <Content Include="img\Fundacion\F05.jpg" />
     <Content Include="img\Fundacion\icono01.png" />
     <Content Include="img\Fundacion\icono02.png" />
@@ -511,6 +522,13 @@
     </Compile>
     <Compile Include="BlackFriday.aspx.designer.cs">
       <DependentUpon>BlackFriday.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Colegios.aspx.cs">
+      <DependentUpon>Colegios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Colegios.aspx.designer.cs">
+      <DependentUpon>Colegios.aspx</DependentUpon>
     </Compile>
     <Compile Include="CompraLibros.aspx.cs">
       <DependentUpon>CompraLibros.aspx</DependentUpon>

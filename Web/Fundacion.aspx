@@ -302,10 +302,10 @@
                     </div>
                 </div>
 
-                <div class="col-md-12 mb-5 text-center">
+<%--                <div class="col-md-12 mb-5 text-center">
                     <a style="text-transform: uppercase" href="#" class="btn btn-danger rounded-pill py-4 px-4">
                         <span class="me-3 ms-3" style="font-family: Work Sans; font-weight: 600; font-size: 24px; line-height: 100%; letter-spacing: 10%; text-align: center; text-transform: uppercase;">Descargar Brochure <i class="ms-2 fas fa-file-download"></i></span></a>
-                </div>
+                </div>--%>
 
                 <div class="col-md-12 rounded text-white" style="background: #396B95;">
                     <div class="row g-5">
