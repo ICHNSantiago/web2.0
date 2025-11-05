@@ -24,8 +24,7 @@
     <!-- About Start -->
     <div class="container-fluid alert-secondary text-dark about py-5">
         <div class="container py-5">
-            <div class="row g-5" runat="server" id="div_main">
-
+            <div class="row g-5">
                 <div class="col-md-12 rounded">
                     <div class="row g-5">
                         <div class="col-md-12 mt-5"></div>
@@ -50,8 +49,15 @@
 
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
 
-                <div class="col-md-12 rounded" style="background: var(--Crema-oscuro, #D1B58C); color: #222D42">
+    <div class="container-fluid text-dark about py-5" style="background: var(--Crema-oscuro, #D1B58C); color: #222D42">
+        <div class="container py-5">
+            <div class="row g-5">
+
+                <div class="col-md-12 rounded">
                     <div class="row g-5">
                         <div class="col-md-12 mt-5"></div>
                         <div class="col-md-1"></div>
@@ -87,6 +93,13 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid alert-secondary text-dark about py-5">
+        <div class="container py-5">
+            <div class="row g-5">
 
                 <div class="col-md-12 rounded">
                     <div class="row g-5">
@@ -122,8 +135,15 @@
 
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
 
-                <div class="col-md-12 rounded" style="background: #d2eee2">
+    <div class="container-fluid text-dark about py-5" style="background: #d2eee2">
+        <div class="container py-5">
+            <div class="row g-5">
+
+                <div class="col-md-12 rounded">
                     <div class="row g-5">
                         <div class="col-md-12 mt-5"></div>
                         <div class="col-md-1"></div>
@@ -157,6 +177,13 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid alert-secondary text-dark about py-5">
+        <div class="container py-5">
+            <div class="row g-5">
 
                 <div class="col-md-12 rounded">
                     <div class="row g-5">
