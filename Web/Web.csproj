@@ -227,9 +227,6 @@
     <Content Include="img\programas\toefl01.png" />
     <Content Include="img\programas\toefl02.png" />
     <Content Include="img\webpay.png" />
-    <Content Include="Inscripcion\Alumno.aspx" />
-    <Content Include="Inscripcion\FacturadorBoleta.aspx" />
-    <Content Include="Inscripcion\Voucher.aspx" />
     <Content Include="Intranet.aspx" />
     <Content Include="lib\css\check-radio.css" />
     <Content Include="lib\ls\validarRUT.js" />
@@ -720,29 +717,6 @@
     </Compile>
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Inscripcion\Alumno.aspx.cs">
-      <DependentUpon>Alumno.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Inscripcion\Alumno.aspx.designer.cs">
-      <DependentUpon>Alumno.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Inscripcion\CDATA.cs" />
-    <Compile Include="Inscripcion\FacturaChileBoleta.cs" />
-    <Compile Include="Inscripcion\FacturadorBoleta.aspx.cs">
-      <DependentUpon>FacturadorBoleta.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Inscripcion\FacturadorBoleta.aspx.designer.cs">
-      <DependentUpon>FacturadorBoleta.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Inscripcion\Voucher.aspx.cs">
-      <DependentUpon>Voucher.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Inscripcion\Voucher.aspx.designer.cs">
-      <DependentUpon>Voucher.aspx</DependentUpon>
     </Compile>
     <Compile Include="Intranet.aspx.cs">
       <DependentUpon>Intranet.aspx</DependentUpon>
