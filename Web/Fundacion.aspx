@@ -69,7 +69,7 @@
 
                 <div class="col-md-4 text-center"></div>
                 <div class="col-md-4 text-center">
-                    <a href="../FundacionPage/ATE.aspx" style="cursor: pointer">
+                    <a href="../FundacionPage/ATE.aspx" target="_blank" style="cursor: pointer">
                         <img class="img-fluid" src="../../img/Fundacion/F05.jpg" />
                     </a>
                 </div>
@@ -303,10 +303,10 @@
                     </div>
                 </div>
 
-                <%--                <div class="col-md-12 mb-5 text-center">
-                    <a style="text-transform: uppercase" href="#" class="btn btn-danger rounded-pill py-4 px-4">
+                <div class="col-md-12 mb-5 text-center">
+                    <a style="text-transform: uppercase" href="FundacionPage/Brochure.aspx" target="_blank" class="btn btn-danger rounded-pill py-4 px-4 cursor: pointer">
                         <span class="me-3 ms-3" style="font-family: Work Sans; font-weight: 600; font-size: 24px; line-height: 100%; letter-spacing: 10%; text-align: center; text-transform: uppercase;">Descargar Brochure <i class="ms-2 fas fa-file-download"></i></span></a>
-                </div>--%>
+                </div>
 
                 <div class="col-md-12 rounded text-white" style="background: #396B95;">
                     <div class="row g-5">
@@ -325,7 +325,7 @@
                                 <div class="col-md-12 mb-4" style="font-family: Work Sans; font-weight: 400; font-size: 20px; line-height: 130%; letter-spacing: 0%;">
                                     <table class="table text-white table-borderless">
                                         <tr>
-                                            <td style="width:10%">
+                                            <td style="width: 10%">
                                                 <img class="img-fluid" src="img/ATE/Checkblanco.png" />
                                             </td>
                                             <td>Acompañamos a las comunidades educativas con cercanía, innovación y propósito.
@@ -336,7 +336,7 @@
                                 <div class="col-md-12 mb-4" style="font-family: Work Sans; font-weight: 400; font-size: 20px; line-height: 130%; letter-spacing: 0%;">
                                     <table class="table  text-white table-borderless">
                                         <tr>
-                                            <td style="width:10%">
+                                            <td style="width: 10%">
                                                 <img class="img-fluid" src="img/ATE/Checkblanco.png" />
                                             </td>
                                             <td>Creemos en el poder del inglés y en la educación como fuerza transformadora.
@@ -345,10 +345,10 @@
                                     </table>
                                 </div>
                                 <div class="col-md-12" style="font-family: Work Sans; font-weight: 400; font-size: 20px; line-height: 130%; letter-spacing: 0%;">
-                                   
+
                                     <table class="table text-white table-borderless">
                                         <tr>
-                                            <td style="width:10%">
+                                            <td style="width: 10%">
                                                 <img class="img-fluid" src="img/ATE/Checkblanco.png" />
                                             </td>
                                             <td>Certificamos en inglés y trabajamos junto a los colegios para generar impacto real y construir futuro.</td>
@@ -358,7 +358,9 @@
                             </div>
                         </div>
                         <div class="col-md-5">
-                            <img class="img-fluid rounded" src="../../img/ATE/ate_10.webp" />
+                            <div class="mt-5">
+                                <img class="img-fluid rounded" src="../../img/ATE/ate_10.webp" />
+                            </div>
                         </div>
 
 
