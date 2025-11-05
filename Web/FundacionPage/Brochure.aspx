@@ -26,7 +26,7 @@
                 <div class="col-md-12">
                     <div class="ratio" style="--bs-aspect-ratio: 150%;">
                         <%--<embed src="Brochure_ATE.pdf" type="application/pdf" frameborder="0" >--%>
-                        <iframe src="Brochure_ATE.pdf#scrollbar=0&navpanes=0" width="100%" style="border: none;"></iframe>
+                        <iframe src="Brochure_ATE.pdf#scrollbar=0&navpanes=0&zoom=200" width="200%" style="border: none;"></iframe>
                     </div>
                 </div>
             </div>
