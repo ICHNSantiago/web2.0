@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Ichn.Master" AutoEventWireup="true" CodeBehind="Brochure.aspx.cs" Inherits="Web.FundacionPage.Brochure" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-<meta name="description" content="Norteamericano, Cursos de Inglés para adolescentes, jovenes, regulares e intensivos. Somos expertos en la enseñanza presencial. curso de inglés, español">
+    <meta name="description" content="Norteamericano, Cursos de Inglés para adolescentes, jovenes, regulares e intensivos. Somos expertos en la enseñanza presencial. curso de inglés, español">
     <title>Brochure  | Norteamericano </title>
     <link rel="canonical" href="https://norteamericano.cl/" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -22,13 +23,8 @@
     <!-- About Start -->
     <div class="container-fluid alert-secondary about py-5">
         <div class="container py-5">
-            <div class="row g-5">               
-                <div class="col-md-12">
-                    <div class="ratio" style="--bs-aspect-ratio: 150%;">
-                        <%--<embed src="Brochure_ATE.pdf" type="application/pdf" frameborder="0" >--%>
-                        <iframe src="Brochure_ATE.pdf#scrollbar=0&navpanes=0&zoom=200" width="200%" style="border: none;"></iframe>
-                    </div>
-                </div>
+            <div class="ratio" style="--bs-aspect-ratio: 150%;">               
+                <iframe src="Brochure_ATE.pdf#scrollbar=0&navpanes=0&zoom=200" width="100%" style="border: none;"></iframe>
             </div>
         </div>
     </div>
