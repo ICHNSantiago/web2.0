@@ -12,7 +12,20 @@ namespace Web
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Request.Browser.IsMobileDevice)
+            {
+                row_01.Attributes.Add("style", "width:30%");
+                row_02.Attributes.Add("style", "width:30%");
+                row_03.Attributes.Add("style", "width:30%");
+                row_04.Attributes.Add("style", "width:30%");
+            }
+            else
+            {
+                row_01.Attributes.Add("style", "width:15%");
+                row_02.Attributes.Add("style", "width:15%");
+                row_03.Attributes.Add("style", "width:15%");
+                row_04.Attributes.Add("style", "width:15%");
+            }
         }
 
         protected void LinkButtonEnviar_Click(object sender, EventArgs e)

@@ -37,7 +37,7 @@
                         <div class="col-md-1"></div>
                         <div class="col-md-5 ">
                             <br />
-                            <img class="img-fluid rounded" src="img/ATE/1.webp" />
+                            <img class="img-fluid rounded" src="img/ATE/ate_1.webp" />
                         </div>
                         <div class="col-md-5 text-white" style="font-size: 20px;">
                             <div class="row">
@@ -67,12 +67,13 @@
                     </div>
                 </div>
 
-
-                <div class="col-md-12 text-center">
+                <div class="col-md-4 text-center"></div>
+                <div class="col-md-4 text-center">
                     <a href="../FundacionPage/ATE.aspx" style="cursor: pointer">
-                        <img src="../../img/Fundacion/F05.jpg" style="width: 400px" />
+                        <img class="img-fluid" src="../../img/Fundacion/F05.jpg" />
                     </a>
                 </div>
+                <div class="col-md-4 text-center"></div>
 
                 <%--     <div class="col-md-12 text-center">
                     <div class="row">
@@ -131,7 +132,7 @@
                             <div class="service-item bg-light shadow rounded article-card">
 
                                 <div class="service-img">
-                                    <img src="../../img/ate/3.webp" class="img-fluid rounded-top w-100" alt="">
+                                    <img src="../../img/ate/ate_3.webp" class="img-fluid rounded-top w-100" alt="">
                                 </div>
 
                                 <div class="service-content p-4">
@@ -157,7 +158,7 @@
                             <div class="service-item bg-light shadow rounded article-card">
 
                                 <div class="service-img">
-                                    <img src="../../img/ate/4.webp" class="img-fluid rounded-top w-100" alt="">
+                                    <img src="../../img/ate/ate_4.webp" class="img-fluid rounded-top w-100" alt="">
                                 </div>
 
                                 <div class="service-content p-4">
@@ -185,7 +186,7 @@
                             <div class="service-item bg-light shadow rounded article-card">
 
                                 <div class="service-img">
-                                    <img src="../../img/ate/5.webp" class="img-fluid rounded-top w-100" alt="">
+                                    <img src="../../img/ate/ate_5.webp" class="img-fluid rounded-top w-100" alt="">
                                 </div>
 
                                 <div class="service-content p-4">
@@ -232,7 +233,7 @@
                             <div class="service-item shadow rounded article-card" style="background-color: #396b95">
 
                                 <div class="service-img">
-                                    <img src="../../img/ate/6.webp" class="img-fluid rounded-top w-100" alt="">
+                                    <img src="../../img/ate/ate_6.webp" class="img-fluid rounded-top w-100" alt="">
                                 </div>
 
                                 <div class="service-content p-4">
@@ -249,7 +250,7 @@
                             <div class="service-item shadow rounded article-card" style="background-color: #59cef6">
 
                                 <div class="service-img">
-                                    <img src="../../img/ate/7.webp" class="img-fluid rounded-top w-100" alt="">
+                                    <img src="../../img/ate/ate_7.webp" class="img-fluid rounded-top w-100" alt="">
                                 </div>
 
                                 <div class="service-content p-4">
@@ -271,7 +272,7 @@
                                 <div class="service-item shadow rounded article-card" style="background-color: #cd353b">
 
                                     <div class="service-img">
-                                        <img src="../../img/ate/8.webp" class="img-fluid rounded-top w-100" alt="">
+                                        <img src="../../img/ate/ate_8.webp" class="img-fluid rounded-top w-100" alt="">
                                     </div>
 
                                     <div class="service-content p-4">
@@ -287,7 +288,7 @@
                                 <div class="service-item shadow rounded article-card" style="background-color: #7ebca3">
 
                                     <div class="service-img">
-                                        <img src="../../img/ate/9.webp" class="img-fluid rounded-top w-100" alt="">
+                                        <img src="../../img/ate/ate_9.webp" class="img-fluid rounded-top w-100" alt="">
                                     </div>
 
                                     <div class="service-content p-4">
@@ -302,7 +303,7 @@
                     </div>
                 </div>
 
-<%--                <div class="col-md-12 mb-5 text-center">
+                <%--                <div class="col-md-12 mb-5 text-center">
                     <a style="text-transform: uppercase" href="#" class="btn btn-danger rounded-pill py-4 px-4">
                         <span class="me-3 ms-3" style="font-family: Work Sans; font-weight: 600; font-size: 24px; line-height: 100%; letter-spacing: 10%; text-align: center; text-transform: uppercase;">Descargar Brochure <i class="ms-2 fas fa-file-download"></i></span></a>
                 </div>--%>
@@ -322,40 +323,42 @@
                                 </div>
 
                                 <div class="col-md-12 mb-4" style="font-family: Work Sans; font-weight: 400; font-size: 20px; line-height: 130%; letter-spacing: 0%;">
-                                    <div class="row">
-                                        <div class="col-md-1 text-center">
-                                            <img class="img-fluid" src="img/ATE/Checkblanco.png" />
-                                        </div>
-                                        <div class="col-md-11">
-                                            Acompañamos a las comunidades educativas con cercanía, innovación y propósito.
-                                        </div>
-
-                                    </div>
+                                    <table class="table text-white table-borderless">
+                                        <tr>
+                                            <td style="width:10%">
+                                                <img class="img-fluid" src="img/ATE/Checkblanco.png" />
+                                            </td>
+                                            <td>Acompañamos a las comunidades educativas con cercanía, innovación y propósito.
+                                            </td>
+                                        </tr>
+                                    </table>
                                 </div>
                                 <div class="col-md-12 mb-4" style="font-family: Work Sans; font-weight: 400; font-size: 20px; line-height: 130%; letter-spacing: 0%;">
-                                    <div class="row">
-                                        <div class="col-md-1 text-center">
-                                            <img class="img-fluid" src="img/ATE/Checkblanco.png" />
-                                        </div>
-                                        <div class="col-md-11">
-                                            Creemos en el poder del inglés y en la educación como fuerza transformadora.
-                                        </div>
-                                    </div>
+                                    <table class="table  text-white table-borderless">
+                                        <tr>
+                                            <td style="width:10%">
+                                                <img class="img-fluid" src="img/ATE/Checkblanco.png" />
+                                            </td>
+                                            <td>Creemos en el poder del inglés y en la educación como fuerza transformadora.
+                                            </td>
+                                        </tr>
+                                    </table>
                                 </div>
                                 <div class="col-md-12" style="font-family: Work Sans; font-weight: 400; font-size: 20px; line-height: 130%; letter-spacing: 0%;">
-                                    <div class="row">
-                                        <div class="col-md-1 text-center">
-                                            <img class="img-fluid" src="img/ATE/Checkblanco.png" />
-                                        </div>
-                                        <div class="col-md-11">
-                                            Certificamos en inglés y trabajamos junto a los colegios para generar impacto real y construir futuro.                                       
-                                        </div>
-                                    </div>
+                                   
+                                    <table class="table text-white table-borderless">
+                                        <tr>
+                                            <td style="width:10%">
+                                                <img class="img-fluid" src="img/ATE/Checkblanco.png" />
+                                            </td>
+                                            <td>Certificamos en inglés y trabajamos junto a los colegios para generar impacto real y construir futuro.</td>
+                                        </tr>
+                                    </table>
                                 </div>
                             </div>
                         </div>
                         <div class="col-md-5">
-                            <img class="img-fluid rounded" src="../../img/ATE/10.webp" />
+                            <img class="img-fluid rounded" src="../../img/ATE/ate_10.webp" />
                         </div>
 
 
@@ -374,11 +377,11 @@
                 </div>
 
                 <div class="col-md-12 mb-5">
-                    <div class="row">
-                        <div class="col-md-4">
+                    <div class="row text-center">
+                        <div class="col-md-4 mb-5">
                             <img class="img-fluid rounded w-75" src="img/ATE/11.png" />
                         </div>
-                        <div class="col-md-4">
+                        <div class="col-md-4 mb-5">
                             <img class="img-fluid rounded w-75" src="img/ATE/12.png" />
                         </div>
                         <div class="col-md-4">

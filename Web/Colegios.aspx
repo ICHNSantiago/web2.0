@@ -25,28 +25,22 @@
     <div class="container-fluid alert-secondary text-dark about py-5">
         <div class="container py-5">
             <div class="row g-5">
-                <div class="col-md-12 rounded">
-                    <div class="row g-5">
-                        <div class="col-md-12 mt-5"></div>
-                        <div class="col-md-1"></div>
-                        <div class="col-md-6">
-                            <br />
-                            <img class="img-fluid rounded" src="img/colegios/1.jpg" />
-                        </div>
-                        <div class="col-md-4">
-                            <div class="row">
-                                <div class="col-md-12 mb-5 mt-5 text-center">
-                                </div>
-
-                                <div class="col-md-12 text-center" style="font-family: Work Sans; font-weight: 600; font-size: 30px; line-height: 130%; letter-spacing: 0%;">
-                                    Conoce el nivel de inglés de tus estudiantes y actúa con información real             
-                                </div>
-                                <div class="col-md-12">
-                                    <img class="img-fluid" src="img/colegios/2.png" />
-                                </div>
-                            </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-6">
+                    <br />
+                    <img class="img-fluid rounded" src="img/colegios/1.jpg" />
+                </div>
+                <div class="col-md-4 text-center">
+                    <div class="row">
+                        <div class="col-md-12 mb-5 mt-5">
                         </div>
 
+                        <div class="col-md-12 text-center" style="font-family: Work Sans; font-weight: 600; font-size: 30px; line-height: 130%; letter-spacing: 0%;">
+                            Conoce el nivel de inglés de tus estudiantes y actúa con información real             
+                        </div>
+                        <div class="col-md-12 text-end">
+                            <img class="img-fluid" src="img/colegios/2.png" />
+                        </div>
                     </div>
                 </div>
             </div>
@@ -56,42 +50,49 @@
     <div class="container-fluid text-dark about py-5" style="background: var(--Crema-oscuro, #D1B58C); color: #222D42">
         <div class="container py-5">
             <div class="row g-5">
-
-                <div class="col-md-12 rounded">
-                    <div class="row g-5">
-                        <div class="col-md-12 mt-5"></div>
-                        <div class="col-md-1"></div>
-                        <div class="col-md-5 " style="font-size: 20px;">
-                            <div class="row">
-                                <div class="col-md-2">
-                                    <img class="img-fluid" src="img/colegios/3icon.png" />
-                                </div>
-                                <div class="col-md-10" style="font-family: Work Sans; font-weight: 600; font-size: 25px; line-height: 130%; letter-spacing: 0%;">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <table class="table table-borderless text-dark">
+                        <tr>
+                            <td runat="server" id="row_01" style="width: 15%">
+                                <img class="img-fluid" src="img/colegios/3icon.png" />
+                            </td>
+                            <td>
+                                <div style="font-family: Work Sans; font-weight: 600; font-size: 25px; line-height: 130%; letter-spacing: 0%;">
                                     <div class="mt-3">
                                         Native Speaker Sessions      
                                     </div>
                                 </div>
-
-                                <div class="col-md-12 mt-3" style="font-family: Work Sans; font-weight: 400; font-size: 18px; line-height: 130%; letter-spacing: 0%;">
-                                    Clases periódicas con profesores nativos diseñadas para fortalecer las habilidades de speaking y listening. 
-                                      <br />
-                                    <br />
-                                    Estas sesiones se integran directamente con el plan de estudios de inglés del colegio, potenciando el aprendizaje curricular y ofreciendo una experiencia auténtica y comunicativa del idioma. 
-                                      <br />
-                                    <br />
-                                    Una oportunidad para que los estudiantes practiquen inglés de forma natural, mejoren su pronunciación y ganen confianza al expresarse.
-
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div style="font-family: Work Sans; font-weight: 400; font-size: 18px; line-height: 130%; letter-spacing: 0%;">
+                                    Clases periódicas con profesores nativos diseñadas para fortalecer las habilidades de speaking y listening.                                     
                                 </div>
-                            </div>
-                        </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div style="font-family: Work Sans; font-weight: 400; font-size: 18px; line-height: 130%; letter-spacing: 0%;">
+                                    Estas sesiones se integran directamente con el plan de estudios de inglés del colegio, potenciando el aprendizaje curricular y ofreciendo una experiencia auténtica y comunicativa del idioma. 
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div style="font-family: Work Sans; font-weight: 400; font-size: 18px; line-height: 130%; letter-spacing: 0%;">
+                                    Una oportunidad para que los estudiantes practiquen inglés de forma natural, mejoren su pronunciación y ganen confianza al expresarse.
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
 
-                        <div class="col-md-5 ">
-                            <br />
-                            <img class="img-fluid rounded" src="img/colegios/3.JPG" />
-                        </div>
-                        <div class="col-md-12 mb-5 mt-3 text-center">
-                        </div>
-                    </div>
+                </div>
+
+                <div class="col-md-5 ">
+                    <br />
+                    <img class="img-fluid rounded" src="img/colegios/3.JPG" />
                 </div>
             </div>
         </div>
@@ -100,40 +101,47 @@
     <div class="container-fluid alert-secondary text-dark about py-5">
         <div class="container py-5">
             <div class="row g-5">
-
-                <div class="col-md-12 rounded">
-                    <div class="row g-5">
-                        <div class="col-md-12 mt-5"></div>
-                        <div class="col-md-1"></div>
-                        <div class="col-md-5">
-                            <img class="img-fluid rounded" src="img/colegios/5.jpg" />
-                        </div>
-                        <div class="col-md-5">
-                            <div class="row">
-                                <div class="col-md-2">
-                                    <img class="img-fluid" src="img/colegios/4.png" />
-                                </div>
-                                <div class="col-md-10" style="font-family: Work Sans; font-weight: 600; font-size: 25px; line-height: 130%; letter-spacing: 0%;">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <img class="img-fluid rounded" src="img/colegios/5.jpg" />
+                </div>
+                <div class="col-md-5">
+                    <table class="table table-borderless text-dark">
+                        <tr>
+                            <td runat="server" id="row_02" style="width: 15%">
+                                <img class="img-fluid" src="img/colegios/4.png" />
+                            </td>
+                            <td>
+                                <div style="font-family: Work Sans; font-weight: 600; font-size: 25px; line-height: 130%; letter-spacing: 0%;">
                                     <div class="mt-3">
-                                        Immersive Experiences
+                                        Immersive Experiences   
                                     </div>
                                 </div>
-
-                                <div class="col-md-12 mt-3" style="font-family: Work Sans; font-weight: 400; font-size: 18px; line-height: 130%; letter-spacing: 0%;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div style="font-family: Work Sans; font-weight: 400; font-size: 18px; line-height: 130%; letter-spacing: 0%;">
                                     Disfruta de una jornada completamente en inglés con nuestras experiencias educativas de un día. 
-                                    <br />
-                                    <br />
-                                    A través de actividades como Spelling Bee, Quiz Bowl o Scavenger Hunt, los estudiantes viven una inmersión total en el idioma y la cultura estadounidense. 
-                                    <br />
-                                    <br />
-                                    Cada experiencia está diseñada para fortalecer la confianza al hablar inglés, fomentar el trabajo en equipo y convertir el aprendizaje en un momento único y divertido.
-
-
                                 </div>
-                            </div>
-                        </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div style="font-family: Work Sans; font-weight: 400; font-size: 18px; line-height: 130%; letter-spacing: 0%;">
+                                    A través de actividades como Spelling Bee, Quiz Bowl o Scavenger Hunt, los estudiantes viven una inmersión total en el idioma y la cultura estadounidense. 
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div style="font-family: Work Sans; font-weight: 400; font-size: 18px; line-height: 130%; letter-spacing: 0%;">
+                                    Cada experiencia está diseñada para fortalecer la confianza al hablar inglés, fomentar el trabajo en equipo y convertir el aprendizaje en un momento único y divertido.
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
 
-                    </div>
                 </div>
             </div>
         </div>
@@ -142,39 +150,49 @@
     <div class="container-fluid text-dark about py-5" style="background: #d2eee2">
         <div class="container py-5">
             <div class="row g-5">
-
-                <div class="col-md-12 rounded">
-                    <div class="row g-5">
-                        <div class="col-md-12 mt-5"></div>
-                        <div class="col-md-1"></div>
-                        <div class="col-md-4 " style="font-size: 20px;">
-                            <div class="row">
-                                <div class="col-md-2">
-                                    <img class="img-fluid" src="img/colegios/6.png" />
-                                </div>
-                                <div class="col-md-10" style="font-family: Work Sans; font-weight: 600; font-size: 25px; line-height: 130%; letter-spacing: 0%;">
-                                    <div class="mt-2">
+                <div class="col-md-1"></div>
+                <div class="col-md-6">
+                    <table class="table table-borderless text-dark">
+                        <tr>
+                            <td runat="server" id="row_03" style="width: 15%">
+                                <img class="img-fluid" src="img/colegios/6.png" />
+                            </td>
+                            <td>
+                                <div style="font-family: Work Sans; font-weight: 600; font-size: 25px; line-height: 130%; letter-spacing: 0%;">
+                                    <div class="mt-3">
                                         Afterschool Programs   
                                     </div>
                                 </div>
-
-                                <div class="col-md-12 mt-3" style="font-family: Work Sans; font-weight: 400; font-size: 18px; line-height: 130%; letter-spacing: 0%;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div style="font-family: Work Sans; font-weight: 400; font-size: 18px; line-height: 130%; letter-spacing: 0%;">
                                     Aprende inglés de forma dinámica y entretenida después de clases con nuestros programas afterschool. 
-                                    <br />
-                                    <br />
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div style="font-family: Work Sans; font-weight: 400; font-size: 18px; line-height: 130%; letter-spacing: 0%;">
                                     A través de proyectos, juegos y actividades culturales inspiradas en la metodología Norteamericana, fortalecemos las habilidades de speaking y listening mientras promovemos la creatividad, el trabajo en equipo y la curiosidad por el mundo. 
-                                    <br />
-                                    <br />
+                           
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div style="font-family: Work Sans; font-weight: 400; font-size: 18px; line-height: 130%; letter-spacing: 0%;">
                                     Disponible para colegios y comunidades educativas de todas las comunas de la Región Metropolitana.
                                 </div>
-                            </div>
-                        </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
 
-                        <div class="col-md-6">
-                            <img class="img-fluid rounded" src="img/colegios/7.JPG" />
-                        </div>
-                        <div class="col-md-12 mb-5 mt-3 text-center">
-                        </div>
+                <div class="col-md-4">
+                    <div class="mt-4">
+                        <img class="img-fluid rounded" src="img/colegios/7.JPG" />
                     </div>
                 </div>
             </div>
@@ -187,32 +205,50 @@
 
                 <div class="col-md-12 rounded">
                     <div class="row g-5">
-                        <div class="col-md-12 mt-5"></div>
+
                         <div class="col-md-1"></div>
                         <div class="col-md-5">
                             <img class="img-fluid rounded" src="img/colegios/9.jpg" />
                         </div>
-                        <div class="col-md-5">
-                            <div class="row">
-                                <div class="col-md-2">
-                                    <img class="img-fluid" src="img/colegios/8.png" />
-                                </div>
-                                <div class="col-md-10" style="font-family: Work Sans; font-weight: 600; font-size: 25px; line-height: 130%; letter-spacing: 0%;">
-                                    <div class="mt-3">
-                                        American Day
-                                    </div>
-                                </div>
+                        <div class="col-md-5">                           
+                            <table class="table table-borderless text-dark">
+                                <tr>
+                                    <td runat="server" id="row_04" style="width: 15%">
+                                        <img class="img-fluid" src="img/colegios/8.png" />
+                                    </td>
+                                    <td>
+                                        <div style="font-family: Work Sans; font-weight: 600; font-size: 25px; line-height: 130%; letter-spacing: 0%;">
+                                            <div class="mt-3">
+                                                American Day
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <div style="font-family: Work Sans; font-weight: 400; font-size: 18px; line-height: 130%; letter-spacing: 0%;">
+                                            Vive una jornada única de inmersión en la cultura estadounidense con nuestro American Day. 
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <div style="font-family: Work Sans; font-weight: 400; font-size: 18px; line-height: 130%; letter-spacing: 0%;">
+                                              A través de actividades interactivas, música, juegos y desafíos en inglés, los estudiantes descubren aspectos clave de la historia, tradiciones y valores de Estados Unidos. 
+                                  
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <div style="font-family: Work Sans; font-weight: 400; font-size: 18px; line-height: 130%; letter-spacing: 0%;">
+                                             Una experiencia educativa y entretenida que fomenta el aprendizaje del idioma y la apertura cultural dentro de un ambiente colaborativo y lleno de energía.
+                                        </div>
+                                    </td>
+                                </tr>
+                            </table>
 
-                                <div class="col-md-12 mt-3" style="font-family: Work Sans; font-weight: 400; font-size: 18px; line-height: 130%; letter-spacing: 0%;">
-                                    Vive una jornada única de inmersión en la cultura estadounidense con nuestro American Day. 
-                                    <br />
-                                    <br />
-                                    A través de actividades interactivas, música, juegos y desafíos en inglés, los estudiantes descubren aspectos clave de la historia, tradiciones y valores de Estados Unidos. 
-                                    <br />
-                                    <br />
-                                    Una experiencia educativa y entretenida que fomenta el aprendizaje del idioma y la apertura cultural dentro de un ambiente colaborativo y lleno de energía.
-                                </div>
-                            </div>
+
                         </div>
 
                     </div>

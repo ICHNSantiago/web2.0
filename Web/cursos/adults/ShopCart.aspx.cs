@@ -7,7 +7,6 @@ using System.Web.Security;
 using Transbank.Common;
 using Transbank.Webpay.Common;
 using Transbank.Webpay.WebpayPlus;
-using Web.Inscripcion;
 
 namespace Web.cursos.adults
 {

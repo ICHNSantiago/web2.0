@@ -225,7 +225,7 @@ enable-ga="false"
                             <div runat="server" id="div_btn_movil">
                                 <a href="<%=Page.ResolveUrl("~/AmericanSpace.aspx") %>" class="nav-item nav-link">American Space</a>
                                 <a href="<%=Page.ResolveUrl("~/Fundacion.aspx") %>" class="nav-item nav-link ">ATE</a>
-                                <a href="<%=Page.ResolveUrl("~/Colegios.aspx") %>" class="btn btn-outline-success btn-sm me-1">Colegios</a>
+                                <a href="<%=Page.ResolveUrl("~/Colegios.aspx") %>" class="nav-item nav-link ">Colegios</a>
                                 <a href="<%=Page.ResolveUrl("https://testingcenter.cl") %>" target="_blank" class="nav-item nav-link ">Testing Center</a>
                                 <a href="<%=Page.ResolveUrl("~/Contact.aspx") %>" class="ms-2 btn btn-success rounded-pill py-1 px-3 ms-3 flex-shrink-0">Contáctanos</a>
                             </div>
