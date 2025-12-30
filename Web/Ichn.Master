@@ -1,0 +1,567 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Ichn.master.cs" Inherits="Web.Ichn" %>
+
+<!DOCTYPE html>
+<html lang="es">
+<head runat="server">
+     <meta name="theme-color" content="#00285d" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:slnt,wght@-10..0,100..900&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+
+
+    <!-- Libraries Stylesheet -->
+    <link rel="stylesheet" href="<%=Page.ResolveUrl("~/lib/animate/animate.min.css") %>" />
+    <link rel="stylesheet" href="<%=Page.ResolveUrl("~/lib/lightbox/css/lightbox.min.css") %>">
+    <link rel="stylesheet" href="<%=Page.ResolveUrl("~/lib/owlcarousel/assets/owl.carousel.min.css") %>">
+
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link rel="stylesheet" href="<%=Page.ResolveUrl("~/lib/ls/bootstrap.min.css") %>" />
+    <!-- Template Stylesheet -->
+    <link rel="stylesheet" href="<%=Page.ResolveUrl("~/lib/ls/style.css") %>" />
+
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-WXKF9VF4H9"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-WXKF9VF4H9');
+    </script>
+
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-W7349HX');</script>
+    <!-- End Google Tag Manager -->
+
+
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '225459886396079');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" src="https://www.facebook.com/tr?id=225459886396079&ev=PageView&noscript=1" />
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+
+    <!-- LinkedIn  Pixel Code -->
+    <script type="text/javascript">
+        _linkedin_partner_id = "7073650";
+        window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+        window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+    </script>
+    <script type="text/javascript">
+        (function (l) {
+            if (!l) {
+                window.lintrk = function (a, b) { window.lintrk.q.push([a, b]) };
+                window.lintrk.q = []
+            }
+            var s = document.getElementsByTagName("script")[0];
+            var b = document.createElement("script");
+            b.type = "text/javascript"; b.async = true;
+            b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+            s.parentNode.insertBefore(b, s);
+        })(window.lintrk);
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display: none;" alt="" src="https://px.ads.linkedin.com/collect/?pid=7073650&fmt=gif" />
+    </noscript>
+    <!-- End LinkedIn Pixel Code -->
+
+    <!--Use the below code snippet to provide real time updates to the live chat plugin without the need of copying and paste each time to your website when changes are made via PBX-->
+    <call-us-selector phonesystem-url="https://phone.norteamericano.cl" enable-chat="false" party="LiveChat554988"></call-us-selector>
+
+    <!--Incase you don't want real time updates to the live chat plugin when options are changed, use the below code snippet. Please note that each time you change the settings you will need to copy and paste the snippet code to your website-->
+    <!--<call-us 
+phonesystem-url="https://phone.norteamericano.cl" 
+style="position:fixed;font-size:16px;line-height:17px;z-index: 99999;right: 20px; bottom: 20px;" 
+id="wp-live-chat-by-3CX" 
+minimized="true" 
+animation-style="noanimation" 
+party="LiveChat554988" 
+minimized-style="bubbleright" 
+allow-call="true" 
+allow-video="false" 
+allow-soundnotifications="true" 
+enable-mute="true" 
+       enable-chat="false"
+enable-onmobile="true" 
+offline-enabled="true" 
+enable="true" 
+ignore-queueownership="false" 
+authentication="both" 
+operator-name="Samito" 
+show-operator-actual-name="true" 
+aknowledge-received="true" 
+operator-icon="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAUN0lEQVR4Xu1deXRU1Rn/JsvMZEPARJKAkARCUVDcLdaF2taitNbj0lXAqih6xK1qT12ObU/3PzwtLrWirSIVrEp73Kpy5FCxUj0iHjASwQQDhABhkQAhmWQyvd+b3MmdN/e9u7xl3sg8Ox0y77vfXX6/b7n3vfteCPJHagQ+K6tZT/6Ywg7JuIPbuSPUVl5r/F53qCOUy0OY043XHfgEOXhlKagqBDDryTVCfOEJ0ASTw2Vle3t1QRV5AB6RcokEX0gCsBbu1KrzBND1sz6X88qt6xAgl3KDnPYAJGlLxXIVoLySHeJ86PO6Q9tH+GwDWtXlJAFY4GmvvQJVRS9tSz4H0OKifSHi4ruJRAlK8eI6/s4Da0tlPSR60nJArpyV3jwBPABTVSUvvjtJ7lRA5ckOHDgIW2smWnYj7wFUEbaQR1fvFCyeZTvV2btmLew4b2aeAC7hzFVD47xTsJwQoLB6FIz5dG1G+zrOngGxD9dx251L1o8dCGQS6HV2L0sqWTmWCXkCuOAWzFm+LBDZksvF7J+2OfAewCq7d+La3SZKngAuWD2rIlse4PAbK2DXpVemmiJLFCyQa67/C+kBwidOgZp33uDSkZ02jt29GULRiFAuTwCXLVtWnawHiHfshG2NJ6eplQVNRk5GJpetP7CzAGyYLAnMC0KyoMnIycjkCSBr1opyeQIoDpimeCBnAbnkAXI1+Qt0EpgngKY5axQLrAcwk6Dqmceh9OKLXMvcZeK7jEzeA2iwTraITh5gBZp54UgGXBmZPAFk0dSQ84MAodkParSMKfL0zYH2oqLOBbrxW4eNGRmPx/fQTshYJMry5BwDbTWSeQKIOObsvMyVQbN7f+65l+HOJf91VrFs6TwBZEdKT042DHhm4aJm5wkgGiFn5z+rqL0WBhILeWEga6APNiaxaD6EyOGsh9ktnRONZ71A3aU/czxiBnBOkz/SijwBHEMhpwAJ4AbwWBuChocTAvzzlplwyakNST15DyAHoiOpWQu4mzl1dFIC6JCALUvrzhNABwXFMnhbuBOLpdXxAGSbsratE065b6lt68w68gRQBFNHnOA/oWb+E5t27Me9IfJHVUUJ7Hr4WukCsiRL8yL5ECA9vo4EeZtDdACzaoSsLiy/8Orz4drpk93PAdhQ59P0MidmAU7Al3H/KuCziaRrSaBVjuMDCY4YApiBYz1B1ggw56EbYGDgEVvX6DEJcpIAqoDhAO979DoYXsq/EVRVX9o6gg5AsxasIk06Wyom6uiXUpwUOmIIwJv+0d9Ov/9ZeH/zLoVhY0RVANKZzqro1+jBEUcAnrU7WhmUAUgHeARTRrcG6Gnhz2F5X4qTJPB3vbG+n0bCxan6VN22pw3lAaULOm2oD+DnTAgwEjhmMciRxXrBBAqWU9B9snr/PABvQDSZ7dZqoBv4l733TEpN98mXQaKYn1wq1aU5Lkp1cIS9ywFUrUFmAFR1Ohid4vb1ECYfq+PQGT90oF0ziXSnxjQtwSGAuHOriOWdIxZzV8I1oM3NkiG8u13hasslAvA70J98AFSIfCeKkq6YfvswfmpVBAR0f3IAH921Ggr+Sr9203kw48yp3hmaw+5427AjlAQtv/hWBizjGxq8HWtNIvjTqCOACDzQeZgEjQj+EIA3ErMXvAoJuFCTuFktJgt2ngAaMLW0tibG3/+yRkn3i3ReFYaKwcXH9jEXpFXQMHoMtLZvy/gNfzD/bm5ZkLxA9jwABy8EXwfGZ95vg/tesp6zU50nVYZg2QVFUFum320ZImB9SBDzwRCjj5AgrNNXt8voj4TLLdEFH5sxehv/uUAuNzGlzkwCCji+iGTz9napaoPiBQJBACfgZ4MAFGEeEVjrjw8MwI49u6E3FssgRZ4Ag0OSq+CziFoRwc4V5AlARoeAv5x8fd1uoI4+6ijYs3+/IcJLvPx2/yL/bkUGbCd7Lk+AJAG0kj4KAg98O2tUIctAYTF01HzVFm8VfagoTwBmOEXgm63d/DcdfFX3KwuaH3qD4AWylgTaEUAEPvLomJ3vwK5RZ4k8MoRj+yEWPsqQkwXfbK34dygxAIlQgbA+UR1ILLZ/2SZBoAiAA4PTKPa9jry4z0NBNPBC5BwIsN5Cph1BIkFgCGC1smZeVTMnUzID7gBb6aKUBDLtQdnK4SNg9+f7DP3Z9AJZJ4CVhYsy/s6qM6Cq8z1pgIImGBQvkHUC8ICxIoWMdQUNaKv2mJPMbHmBQBHALt5/kcBnk0za54F4PNrY2Jj+fjsf2Jw1AmDf2JnAkQQ+xTUIYSAwBLAiu47l33T1PfDz3/8EKqtGumZDqJMeD/31167oDUIYyBoBRAtBOsAjKl4AZdaLf7tBAr8J0PPWo8bKa/TceSncs0IAr8D3Ciiv9CIBIsVh6O1LXi30MhGk4FMC4N9IhDQC8Bjiiq9jlFiBz+YAutZvBurG2+bA8SdYv+JVpW9eeBavPIAZRx74lAhcApjdhMpA2cmawWdBd4sALAnccNMqfe9tHso5IpP2Cot6dXGIJQALvrlBKQ9gVYDGCjOjmpubawcSBe3HHzdRKYTYZf1uEkA48i4LsMCbVdsRwU0P8PGGjUZ8b+hcYTQhEgqP703EWnhdzcgBrFwEGy9Yr0Arw99kSSCK+3kCJKHSyQNYPCgBrDgeKRpZ2tu/N/W4tZQF27kKqowIr4+cO+9EtkJZEojm/KoESMRDENs0Iq2fMm7XZeMHO+undVm1i3vJORS6f3x9/S8z2kn3VjDby8w4sB5App9GCGCBj8R3FPcWVvfZFW6tOp97OuUJOA0VWb/RcOY2a1ESqOtyZQZFVcZ1AvC8gHljDSEBD3zadpEXsA0BogGwIoDhCX7zmql4aCE8Pf86kfW7SQDU5acncIsA5pXQVCjg7Kr6+O4ZtjCJCMAWtpwF8GqwA59PgKQWdidNUWEh9MfjGeplPYCTAaeV4pTOaoZw8MAhKK8oE9lB6nwiVgCx1uGW8pGJZDZgcR+J3R4DgwA2W+rcIEFGCJDptWUIyLD+IW0yW6n8JAC2jM7rKRG6ug7C3bf+VmuFTzckiW47s9shZUcAWw8Qgk+i58ybRNFJywFkCIAyPBJkuv+ktmVzz4apY5IWYnfBR5YAqEfkBfwMAXTMeG0StYNHgNJoFLp7egy1oi1yPBJYgc/GfRZnpRBAC5oJYAU+yi+fPx0aKsuVCIDCdolgEAkgazxUbt/IKdBdWptRjDWEB978BB5+a5OlajMBzOAXQOjU8LnXf2DXNu5Cjt2UUMX6acU0BMh6ABEB7LyAyOpUgfJK3m5XEXsbnI4XoG2WWaOxXcljiUCB37J5I0RLyuCY6tFGPXbW7yUBDN0DIejdmFwLyBXg6ZhYEaCK3CvYOXivoEoYQFzG1k8E+i1LAqmlXDrnZJXv29sJI0ZWKRFAxZoquj6FYV2tKkWyKmtOKkWNoQQQ3fUs8gBYDxsKWIyKi6ITGhvHcpeDafukCGBUQtaaWeWfEwKc9egaUT+N8+ws4NhR1bB15w5uOavNH6JKcPAXbtoNG176GzQMz9yIKSqvc77wzKugKJx8KNXcxkrjW/biE2v9bhEAscEDvYCs9aOcNAEoCba1fQpF5Bp2de1YKeunjVGdCmI50Yog1U2tD0kgOrZvaoadyxcKLxMXT/oaFFRNEKlLEUAWfCwgmv7RSmWsn8qaE0KZ+K9MAEoC/JaJ/ezoyRCAN9pekEAKVYEQtXoVyzeDL9oLoUsAWfB9JQBWpkMCWQKgfvamDYqfjFeQJQQLOi2jYvleEsAwTrJErAK+FgGw0LC5f0509dheM7IcU69JsGrFu/Ds4heFmIqI8cervwtNq5LX1q0Ot8Fn61Gxflqu+Z4ZN0yaNPFRYecZAaUcIFXOwWPfdAiA9ap4AitvoDIwIllV8OOFEdhRc56hNkT+S5D/zEfaplGdB2VpPIk0cARwc1cQLySIgBWdVwWe6hMlfmy/m3cegJmP/EfUlMzzvhEAq9b0AjKrglY9V/UCVI8bRNAFHtsgmvNnXAr2yfqT3sjJoUECGQJ4uUtIhQx/ePBeKC0rcTJCyuB/tH0/fOcv+E4phUPD8ql2ZwTQ8AQyBBB1XdcTiPS6fd689csu5tNzysmfA/CdewDa6lkLOsg/q2UGUJYAohUyN0ggistO6hDp5vXPb/DdI8AQEYQPfZpWfzQsvmqa7b0BVJ1XJBCBwxJZhwQq+rNl+e6FALPZS+QFKlNBt0mgA44KCaILh65FyPYzG5bvHQEkvAEdmGg4DLVVx6Qeroxgx/r7YZvFxSKWay+ua4fbXlhr/NQzV+6xuzrgG24yEYfa9jeFEY4FnyfMEkIZdKrQYcw3t8t5Emg3LDbeQNY6eOqtBk9EBFUCyN6mJgJeyBxZAZfBdz8H4HXkyod/BKH4Yqs+Pj/3K3DymPQNHmZZVWvhEUHlEqxVW82hwDfgsUEegO8PASRCgqwBqMqxRKAEqKuphc86tqdUiXIMnheInHO9Ud63t5d6BL6/BMDaJBJEVZBl5XnTTyvwbe9drK9PVVk+aZrx73hFFfQc9w3ZpqjJeQi+/wTw2BtEm1dAYdfQ3UYHm1cbNbZu3qw06AUFBTBAHvVOj7Rt7AwBBsj7AQrnPATsm0SxjGvvGvQY/OwRwCVvYB54VNt9yuXkvYHJWQF9PTwlgMjdW7HEigC8MOAaGXwAP7sEwNqv+EchRHf0y5ineWCXb++EMf2ZW8xYXYU1o6C25X8pD6BLAFZn8WT+5lhzH8ZefjuUrH8FCg4nH3WPR/8xE6C37gxxd30CP/sEoENhkRsUdH8OJR+9mhow6lq3PP+AeBAZib6m5I0dsgSwk5MlAK0eiUAPKe/gI/jBIQC2xIIEOGh9o0+AGPnQw2sCmNnFEsIJAVgicPMEn8EPFgFsvAGSgB0wXQJEyMoj7/09Incyjkwd28jUEcF/Yph9xLqmqyhNHesB8AT1AhkEyAL4wSQAxxuYB81MACtQavtDcGF3oQEIDQM0FFCUeO/4Q4vnnVe1ftQx9eIbYV84mhYGggJ+cAlgQQLdHMAgwIfk1XLF6dYpsnz2vA74tDz1AmZPZpzPkuXTtnl7LUBlhM2ynJyADqBqCKCqnyuPwyXvatxrRxQsmnYumN27qHv02vi4y28jrn+JIX7ojB+Q/x8c9iyDn1MeABtrhALy2pYNbUNLuXYgsKGBBY8NByIQ6XmzBzhEMFxaMZQP4ENAfkziPwV96DsB9ZclCZACn31Qa5ZJkFMegJIAQwHPC1DAj4+FYFpPMvbzDlUCyLp/BN34FBVCHdncSo+yicm5f/dp3yMEJkOO7x4yHtJKPotvQe4Ib6SRJaqqXE4SADu5YQt/g6nMANR0bYItW7fKiBoyDczyLy3UMWU69Le2pXRQ8Md1Wy87h674FcGcELOA+fz9NmQqLS7dJrcEc44A1AvEiDW1LPuTcByOtQFE5hoBD3xaadvuA1B3+5PQRhamCuvHwugmcX4RuvhuINuKyYfsLCbvJpy8/slIU1MTxpKskCCYBJj14GNkPObaoYv5gJ0XsAPeSm/qmgHH4nllkpeDCW74v6dvFpKRCoQuugMgTG43J58vrVs0rLy8vGfNmjW4rj10BUpamzPBgBJggTAm0rUBMwnolIteCHI2PPalKQESi5Lgbxo9HhrbW9K+8Xf2N/w7dD65nyBCHkUXIc9OCkcPntq6bBQhAN5MiCQQ9t3NPuUsAWgooAmhecXNHwIsSFk/D/xLjz4b1q97KoMYKRKUVJC3N1RA3QdPjigrK+smoQB33OYJIHvjiOWyKo7iovnahvL6v18xyn7zwpm2OkKzkQAJ2LhiQYblU/BPOHEOlwShc2YDlAwjn6Ogfv2S6urqvq7Vq7fhS6N8DQM55wF49wDwLqzoEgDBp8Cz/+bnAIQA5MaRxOJbuSEAwV+25+0McmBICE37vgE+lA6H2rWLx1ZWVu5dt24dPiAQCeCbFwg0AXhg40jL3HGTDQKY8wBz/KdhYvy3r4HWXQeSHoAQoG7DC/WRSGRPTU3N4ZUrV/qaBwSaAGyc1/HnTkhQVFQE/WSPgl0YMEIA3jrWH4PE0rtSTWTzAV4SGKkaC7GGMwcJMCJPgAxwmesAdnFeRApdAoj00vMpAsT7ILHkTqli4cpjySIgecD0+C8T60+GAPQEkzcsrSBJIIaAvAcwJ4Hcq2gSw61CgDdeexUumHGRhNakSMuu/TDhjqeMJBDiZB0ndhgSz99rW376NXfB6heXQqzuNDL9I9PA0mQSiDOBadseKR1MAn1dEAp8CKBhQDb2swioEECU8JmRZReBYIAQgIQB6D0EcLgLEq9nrlCGTpoJ4fb1kCBg9x17YnINAHOAKPmQBaHJHy2iK4JH+Cxg9oPziVWR4Jp+6HgB7wmAbSQGi3kAeoF+4sF7CAl6SYLXS17L00f+JuEBEgNQ3NkKIXKDaGz8WeS+BHKDSJQQAD/hUmNZeHrHHcUrV/rr/rH1wfMANvcGqnqBA4/Ng/JosZRbN3sA0VrA0K6g5FIwDJDQjWD3k6l8jIBPQkKKAIQgkZa3obeRPCSqiLSnmICOdwkNgg+F5EaV5EUhX60/pwhAQ4HMFFAnDFjN/61CQ/q2MCQBfnBGgCQg4QCJECffxDNEm143mtQzmbzqhVwAMi4GFePFIPJN3qBiXCFEU3z6Ft8N0vcKheZos31MZ0YgGwacEWAwFFAS4CtxMC9Ar0A+pR/+C7qnXjx4GZhc/i8gFm98EHi8N2DQFrNwc0hOEUDHC+gQAOuRDwFp/mbwoi7xBINkKH3/Weg+9YpBIbwZhHzI1jMDeESego8SeQKQQRBsIFX1At2P3wAlYfHNoCqzAPtdwYOruOQr1dbTybKvYeTU3ijwpiicBQL8H1uTbblCknOnAAAAAElFTkSuQmCC" 
+gdpr-enabled="false" 
+message-userinfo-format="both" 
+message-dateformat="both" 
+lang="browser" 
+button-icon-type="default" 
+greeting-visibility="none" 
+greeting-offline-visibility="none" 
+chat-delay="2000" 
+enable-direct-call="true" 
+enable-ga="false" 
+></call-us>-->
+    <script defer src="https://downloads-global.3cx.com/downloads/livechatandtalk/v1/callus.js" id="tcx-callus-js" charset="utf-8"></script>
+
+
+
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <a></a>
+    <form id="form1" runat="server">
+        <!-- Topbar Start -->
+
+        <%--        <div class="container-fluid topbar px-0 px-lg-4 py-2 d-none d-lg-block bg-warning">
+            <div class="container">
+                <div class="row gx-0 align-items-center">
+                    <div class="col-lg-4 text-center text-lg-start mb-lg-0 text-dark">
+                        <strong>Modo Desarrollo</strong>
+                    </div>
+                    <div class="col-lg-4 text-center text-lg-start mb-lg-0 text-dark">
+                        <asp:DropDownList ID="Fiestas" AutoPostBack="true" CssClass="form-select" runat="server" OnSelectedIndexChanged="Fiestasiestas_SelectedIndexChanged"></asp:DropDownList>
+                    </div>
+                </div>
+            </div>
+        </div>--%>
+
+
+        <div class="container-fluid topbar px-0 px-lg-4 py-2 d-none d-lg-block" style="background-color: #00285d;">
+            <div class="container">
+                <div class="row gx-0 align-items-center">
+                    <div class="col-lg-8 text-center text-lg-start mb-lg-0">
+                        <div class="d-flex flex-wrap">
+                            <div class="border-end border-primary pe-3 ">
+                                <a href="<%=Page.ResolveUrl("~/Sedes.aspx") %>" class="small text-white"><i class="fas fa-map-marker-alt me-2"></i>Encuentra tu Sede</a>
+                            </div>
+                            <div class="border-end border-primary pe-3 ps-3">
+                                <a href="mailto:contacto@norteamericano.cl" class="text-white small"><i class="fas fa-envelope text-light me-2"></i>contacto@norteamericano.cl</a>
+                            </div>
+                            <div class="ps-3 ">
+                                <a href="https://alumnos.sam.norteamericano.cl" target="_blank" class="small text-white"><i class="fas fa-user me-2"></i>Acceso Alumnos</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 text-center text-lg-end">
+                        <div class="d-flex justify-content-end">
+                            <div class="d-flex pe-3 ">
+                                <a class="btn p-0 text-primary me-3 text-white" target="_blank" href="https://www.facebook.com/ICHNorteamericano"><i class="fab fa-facebook-f"></i></a>
+                                <a class="btn p-0 text-primary me-3 text-white" target="_blank" href="https://www.instagram.com/ichnorteamericano/"><i class="fab fa-instagram"></i></a>
+                                <a class="btn p-0 text-primary me-3 text-white" target="_blank" href="https://www.linkedin.com/company/instituto-norteamericano"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="btn p-0 text-primary me-3 text-white" target="_blank" href="https://www.youtube.com/channel/UCH2h9HUTqfuXKOtCvPJ0DBg"><i class="fab fa-youtube"></i></a>
+                                <a class="btn p-0 text-primary me-0 text-white" target="_blank" href="https://www.tiktok.com/@institutochnortemericano?_t=8o6EXXmID5C&_r=1"><i class="fab fa-tiktok"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- Topbar End -->
+        <!-- Navbar & Hero Start -->
+        <div class="container-fluid nav-bar px-0 px-lg-4 py-lg-0">
+            <div>
+                <nav class="navbar navbar-expand-lg navbar-light">
+
+                    <%--<img src="#" class="img-fluid w-1" runat="server" id="gif_fiesta" />--%>
+
+                    <a href="<%=Page.ResolveUrl("~/index.aspx") %>" class="navbar-brand p-0">
+                        <img class="img-fluid" src="#" runat="server" id="logo_ichn" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="fa fa-bars"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <div class="navbar-nav mx-0 mx-lg-auto">
+                            <a href="<%=Page.ResolveUrl("~/index.aspx") %>" class="nav-item nav-link active">Home</a>
+                            <a href="<%=Page.ResolveUrl("~/programas.aspx") %>" class="nav-item nav-link">Programas</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link" data-bs-toggle="dropdown">
+                                    <span class="dropdown-toggle">Sobre Nosotros</span>
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a href="<%=Page.ResolveUrl("~/Intranet.aspx") %>" class="dropdown-item">Intranet</a>
+                                    <a href="<%=Page.ResolveUrl("~/Sedes.aspx") %>" class="dropdown-item">Sedes</a>
+                                    <a href="<%=Page.ResolveUrl("~/About.aspx") %>" class="dropdown-item">Nuestra Institución</a>
+                                </div>
+                            </div>
+
+                            <div runat="server" id="div_btn_movil">
+                                <a href="<%=Page.ResolveUrl("~/AmericanSpace.aspx") %>" class="nav-item nav-link">American Space</a>
+                                <a href="<%=Page.ResolveUrl("~/Fundacion.aspx") %>" class="nav-item nav-link ">ATE</a>
+                                <a href="<%=Page.ResolveUrl("~/Colegios.aspx") %>" class="nav-item nav-link ">Colegios</a>
+                                <a href="<%=Page.ResolveUrl("https://testingcenter.cl") %>" target="_blank" class="nav-item nav-link ">Testing Center</a>
+                                <a href="<%=Page.ResolveUrl("~/Contact.aspx") %>" class="ms-2 btn btn-success rounded-pill py-1 px-3 ms-3 flex-shrink-0">Contáctanos</a>
+                            </div>
+
+                            <div class="nav-btn px-2" runat="server" id="div_btn_web">                                
+                                <a href="<%=Page.ResolveUrl("~/AmericanSpace.aspx") %>" class="btn btn-outline-primary btn-sm me-1">American Space</a>
+                                <a href="<%=Page.ResolveUrl("~/Fundacion.aspx") %>" class="btn btn-outline-dark btn-sm me-1">ATE</a>
+                                <a href="<%=Page.ResolveUrl("~/Colegios.aspx") %>" class="btn btn-outline-success btn-sm me-1">Colegios</a>
+                                <a href="<%=Page.ResolveUrl("https://testingcenter.cl") %>" target="_blank" class="btn btn-sm btn-outline-danger me-1">Testing Center</a>
+                                <a href="<%=Page.ResolveUrl("~/Contact.aspx") %>" class="ms-1 btn btn-success rounded-pill py-1 px-3 ms-3 flex-shrink-0">Contáctanos</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="d-none d-xl-flex flex-shrink-0 ps-3">
+                        <a href="#" class="btn btn-light btn-lg-square rounded-circle position-relative wow tada" data-wow-delay="1.9s">
+                            <i class="fas fa-mobile-alt fa-2x"></i>
+                        </a>
+                        <div class="d-flex flex-column ms-3 text-center">
+                            <span><small>Venta Telefónica</small></span>
+                            <a href="tel:+56227127130"><span class="text-dark">+56227127130</span></a>
+                          
+                        </div>
+                    </div>
+
+                </nav>
+            </div>
+
+        </div>
+        <!-- Navbar & Hero End -->
+
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5">
+        <div class="container text-white py-5">
+            <div class="row g-4" style="font-size: 14px;">
+
+
+                <div class="col-md-12" style="border-bottom: 1px solid rgba(255, 255, 255, 0.08);">
+                    <h5 class="text-white">
+                        <i class="fas fa-star text-primary me-2"></i><i class="fas fa-star text-white me-2"></i><i class="fas fa-star text-danger me-2"></i>Instituto Chileno Norteamericano<i class="fas fa-star text-primary ms-2 me-2"></i><i class="fas fa-star text-white me-2"></i><i class="fas fa-star text-danger me-2"></i>  </h5>
+                    Estamos convencidos del poder que tiene la educación para mejorar la calidad de vida de las personas.
+                    <br />
+                    <br />
+                </div>
+
+                <div class="col-md-2">
+                    <table class="table table-borderless">
+                        <tr>
+                            <th>Síguenos
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="text-white" target="_blank" href="https://www.facebook.com/ICHNorteamericano"><i class="fab fa-facebook-f me-2"></i>Facebook </a>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="text-white" target="_blank" href="https://www.instagram.com/ichnorteamericano/"><i class="fab fa-instagram me-2"></i>Instagram</a>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="text-white" target="_blank" href="https://www.linkedin.com/company/instituto-norteamericano"><i class="fab fa-linkedin-in me-2"></i>Linked in</a>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="text-white" target="_blank" href="https://www.youtube.com/channel/UCH2h9HUTqfuXKOtCvPJ0DBg"><i class="fab fa-youtube me-2"></i>Youtube</a>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a class="text-white" target="_blank" href="https://www.tiktok.com/@institutochnortemericano?_t=8o6EXXmID5C&_r=1"><i class="fab fa-tiktok me-2"></i>Tiktok</a>
+
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+                <div class="col-md-3">
+                    <table class="table table-borderless">
+                        <tr>
+                            <th>Comunidad
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="<%=Page.ResolveUrl("~/AmericanSpace.aspx") %>" class="text-white"><i class="fas fa-angle-right me-2"></i>American Space</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="<%=Page.ResolveUrl("~/Fundacion.aspx") %>" class="text-white"><i class="fas fa-angle-right me-2"></i>Fundación Ichn</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="https://testingcenter.cl" class="text-white" target="_blank"><i class="fas fa-angle-right me-2"></i>Testing Center</a>
+                            </td>
+                        </tr>
+                        <tr>
+                        </tr>
+                        <tr>
+                        </tr>
+                    </table>
+                </div>
+
+
+                <div class="col-md-3">
+                    <table class="table table-borderless">
+                        <tr>
+                            <th>Norteamericano
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="<%=Page.ResolveUrl("~/About.aspx") %>" class="text-white"><i class="fas fa-angle-right me-2"></i>Nuestra Institución</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="<%=Page.ResolveUrl("~/Sedes.aspx") %>" class="text-white"><i class="fas fa-angle-right me-2"></i>Sedes</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="<%=Page.ResolveUrl("~/CompraLibros.aspx") %>" class="text-white"><i class="fas fa-angle-right me-2"></i>Compra Librería Inglesa</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="<%=Page.ResolveUrl("~/TerminosCondiciones.aspx") %>" class="text-white"><i class="fas fa-angle-right me-2"></i>Términos y condiciones</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="<%=Page.ResolveUrl("~/PoliticaPrivacidad.aspx") %>" class="text-white"><i class="fas fa-angle-right me-2"></i>Política de privacidad</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+
+                <div class="col-md-4">
+                    <table class="table table-borderless">
+                        <tr>
+                            <th>Atención al Cliente</th>
+                        </tr>
+                        <tr class="text-white">
+                            <td>Sede Moneda +56 227127130 (anexo 801)
+                            </td>
+                        </tr>
+                        <tr class="text-white">
+                            <td>Sede Providencia +56 227127130 (anexo 805)
+                            </td>
+                        </tr>
+                        <tr class="text-white">
+                            <td>Sede La Florida +56 227127130 (anexo 806)
+                            </td>
+                        </tr>
+                        <tr class="text-white">
+                            <td>Sede Online +56 227127130 (anexo 807)
+                            </td>
+                        </tr>
+                        <tr class="text-white">
+                            <td>Empresas +56 227127130 (anexo 125)
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+
+            <div class="pt-5" style="border-top: 1px solid rgba(255, 255, 255, 0.08);">
+                <div class="row g-0">
+                    <div class="col-12">
+                        <div class="row g-4">
+                            <div class="col-lg-6 col-xl-4">
+                                <div class="d-flex">
+                                    <div class="btn-xl-square bg-white text-primary rounded p-4 me-4">
+                                        <i class="fas fa-map-marker-alt fa-2x"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-white">Address</h4>
+                                        <p class="mb-0">Moneda 1467, Santiago. CHILE</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-xl-4">
+                                <div class="d-flex">
+                                    <div class="btn-xl-square bg-white text-danger rounded p-4 me-4">
+                                        <i class="fas fa-envelope fa-2x"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-white">Mail Us</h4>
+                                        <p class="mb-0">contacto@norteamericano.cl</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-xl-4">
+                                <div class="d-flex">
+                                    <div class="btn-xl-square bg-white text-success rounded p-4 me-4">
+                                        <i class="fa fa-phone-alt fa-2x"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-white">Venta Telefónica</h4>
+                                        <p class="mb-0">+56 227127130 (Anexo 808)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Footer End -->
+
+    <!-- Copyright Start -->
+    <div class="container-fluid copyright py-4">
+        <div class="container">
+            <div class="row g-4 align-items-center">
+                <div class="col-md-6 text-center text-md-end mb-md-0">
+                    <span class="text-white"><span class="border-bottom text-white"><i class="fas fa-copyright text-white me-2"></i>Norteamericano.cl - <span id="demo"></span></span>, All right reserved.</span>
+                </div>
+                <div class="col-md-6 text-center text-md-start text-white">
+                    Designed By <span class="border-bottom text-white">Departamento TI</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <%--<a href="#" class="btn btn-primary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>--%>
+    <!-- Back to Top End-->
+
+    <!-- Boton Whatsapp-->
+    <style>
+        .btn-flotante {
+            font-size: 35px; /* Cambiar el tamaño de la tipografia */
+            text-transform: uppercase; /* Texto en mayusculas */
+
+            color: #ffffff; /* Color del texto */
+            border-radius: 30px; /* Borde del boton */
+            background-color: #3D912F; /* Color de fondo */
+            padding: 2px 12px; /* Relleno del boton */
+            position: fixed;
+            bottom: 90px;
+            right: 23px;
+            transition: all 300ms ease 0ms;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            z-index: 99;
+        }
+
+            .btn-flotante:hover {
+                background-color: #3D912F; /* Color de fondo al pasar el cursor */
+                box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.3);
+                transform: translateY(-7px);
+                color: white;
+            }
+
+        @media only screen and (max-width: 600px) {
+            .btn-flotante {
+                font-size: 35px;
+                padding: -1px 20px;
+                bottom: 90px;
+                right: 30px;
+            }
+        }
+    </style>
+
+    <div class="btn-flotante  wow bounceInRight" data-wow-delay="1s">
+        <%--<a target="_blank" href="https://web.whatsapp.com/send?phone=+56994408529&text=Hola,%20estuve%20revisando%20su%20pagina%20web%20y%20me%20gustaria%20obtener%20mas%20informacion"><i class="fab fa-whatsapp text-white"></i></a>--%>
+        <a aria-label="Chat on WhatsApp" href="https://wa.me/56977165225?text=Hola,%20estuve%20revisando%20su%20pagina%20web%20y%20me%20gustaria%20obtener%20mas%20informacion"><i class="fab fa-whatsapp text-white"></i></a>
+    </div>
+    <!-- Boton Whatsapp End -->
+
+    <!-- JavaScript Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src='<%=Page.ResolveUrl("~/lib/wow/wow.min.js") %>'></script>
+    <script src='<%=Page.ResolveUrl("~/lib/easing/easing.min.js") %>'></script>
+    <script src='<%=Page.ResolveUrl("~/lib/waypoints/waypoints.min.js") %>'></script>
+    <script src='<%=Page.ResolveUrl("~/lib/counterup/counterup.min.js") %>'></script>
+    <script src='<%=Page.ResolveUrl("~/lib/lightbox/js/lightbox.min.js") %>'></script>
+    <script src='<%=Page.ResolveUrl("~/lib/owlcarousel/owl.carousel.min.js") %>'></script>
+    <!-- Template Javascript -->
+    <script src='<%=Page.ResolveUrl("~/lib/ls/main.js") %>'></script>
+ 
+
+    <script>
+        $('.dropdown-menu a.dropdown-toggle').on('click', function (e) {
+            if (!$(this).next().hasClass('show')) {
+                $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+            }
+            var $subMenu = $(this).next(".dropdown-menu");
+            $subMenu.toggleClass('show');
+
+
+            $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function (e) {
+                $('.dropdown-submenu .show').removeClass("show");
+            });
+
+
+            return false;
+        });
+    </script>
+
+
+    <script>
+        const d = new Date();
+        let year = d.getFullYear();
+        document.getElementById("demo").innerHTML = year;
+    </script>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
+
+</body>
+
+</html>
