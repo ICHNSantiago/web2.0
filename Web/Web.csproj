@@ -111,6 +111,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="abcd.aspx" />
     <Content Include="About.aspx" />
     <Content Include="Admin\Banner\AmericanSpace.aspx" />
     <Content Include="Admin\Banner\Index.aspx" />
@@ -235,6 +236,11 @@
     <Content Include="img\programas\toefl01.png" />
     <Content Include="img\programas\toefl02.png" />
     <Content Include="img\summerprogram.png" />
+    <Content Include="img\test\test01.png" />
+    <Content Include="img\test\test02.png" />
+    <Content Include="img\test\test03.png" />
+    <Content Include="img\test\test04.png" />
+    <Content Include="img\test\test05.png" />
     <Content Include="img\webpay.png" />
     <Content Include="Intranet.aspx" />
     <Content Include="lib\css\check-radio.css" />
@@ -338,6 +344,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="abcd.aspx.cs">
+      <DependentUpon>abcd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="abcd.aspx.designer.cs">
+      <DependentUpon>abcd.aspx</DependentUpon>
+    </Compile>
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -918,7 +931,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="img\carouselAmerican\Mobil\" />
-    <Folder Include="img\NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Negocio\Negocio.csproj">
