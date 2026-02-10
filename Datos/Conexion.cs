@@ -12,7 +12,7 @@ namespace Datos
 
         public void FFFF()
         {
-            string envFilePath = @"C:/inetpub/wwwroot/webichn/ichn.env"; // Asegúrate que esté en la raíz
+            string envFilePath = @"C:\inetpub\wwwroot\webichn\.env"; // Asegúrate que esté en la raíz
             if (File.Exists(envFilePath))
             {
                 string[] lines = File.ReadAllLines(envFilePath);
