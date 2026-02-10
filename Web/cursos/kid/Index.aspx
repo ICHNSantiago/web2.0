@@ -92,7 +92,7 @@
                                             <a runat="server" id="tab1tab" data-bs-toggle="tab" href="#ContentPlaceHolder1_tab1" role="tab" aria-controls="tab1" aria-selected="true">Descripción</a>
                                         </li>
                                         <li class="nav-item">
-                                            <a runat="server" id="tab2tab" data-bs-toggle="tab" href="#ContentPlaceHolder1_tab2" role="tab" aria-controls="tab2" aria-selected="false">Summer School</a>
+                                            <a runat="server" id="tab2tab" visible="false" data-bs-toggle="tab" href="#ContentPlaceHolder1_tab2" role="tab" aria-controls="tab2" aria-selected="false">Summer School</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link" id="tab4-tab" data-bs-toggle="tab" href="#tab3" role="tab" aria-controls="tab3" aria-selected="false">Niveles</a>
